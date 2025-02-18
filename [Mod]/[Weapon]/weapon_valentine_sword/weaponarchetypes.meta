@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		
+	    <!-- Truler -->
+		<Item>
+		  <modelName>weapon_valentine_sword</modelName>
+		  <txdName>weapon_valentine_sword</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="50"/>
+		</Item>
+		
+		
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
