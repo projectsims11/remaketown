@@ -26,7 +26,7 @@ Config.Quest = {
         Picture = "nui://esx_inventoryhud/html/img/items/exp.png",
         Reward = {
             {name = 'exp', quantity = 50, type = "item" },
-            {name = 'money', quantity = 50000, type = "money"},
+            {name = 'money', quantity = 5000, type = "money"},
         },
     },
     ['quest_cement'] = { -- ไอดีของ Quest เวลาจะอัพเดต
