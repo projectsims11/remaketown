@@ -102,7 +102,7 @@ function OpenShopMenu(accessory)
 
 				TriggerEvent('skinchanger:getSkin', function(skin)
 					ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'outfit_name_acessory', {
-						title = "ใส่ชื่อ"..String_accessory..'(4-30 ตัวอักษร) ราคา $' .. Config.Price
+						title = "ใส่ชื่อ"..String_accessory..'(4-25 ตัวอักษร) ราคา $' .. Config.Price
 					}, function(data3, menu3)
 
 						if data3.value == nil then
