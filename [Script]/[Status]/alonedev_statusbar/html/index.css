@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5vh;
+    font-family: "Kanit", serif;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    left: 0.5%;
+    bottom: 0.5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-container {
+    padding-left: 0.7vh;
+    margin-bottom: 0.2vh;
+    height: 2vh;
+    width: 28.5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-id {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5vh;
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+    border-radius: 0.5vh;
+}
+
+.player-id img {
+    padding: 0.2vh;
+    width: 1.4vh;
+    height: 1.4vh;
+    margin-right: 0.5vh;
+    background: linear-gradient(to right, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%);
+    border-radius: 0.3vh;
+}
+
+.date-time {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5vh;
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+    border-radius: 0.5vh;
+}
+
+.date-time img {
+    padding: 0.2vh;
+    width: 1.4vh;
+    height: 1.4vh;
+    margin-right: 0.5vh;
+    background: linear-gradient(to right, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%);
+    border-radius: 0.3vh;
+}
+
+.player-id span {
+    color: rgb(70, 145, 231);
+    font-size: 1.2vh;
+}
+
+.player-id span:last-child {
+    margin-left: 0.5vh;
+}
+
+.date-time span {
+    color: #fff;
+    font-size: 1.2vh;
+}
+
+.status_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28vh;
+    height: 6vh;
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+    border-radius: 0.5vh;
+    color: white;
+    font-size: 3vh;
+    transform: skewX(-10deg);
+}
+
+.UI {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bar {
+    width: 93%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.healt-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin-left: 0.5vh;
+    width: 100%;
+    height: 2.3vh;
+    background: linear-gradient(180deg, rgb(41, 41, 41) 0%, rgb(55, 55, 55) 50%, rgb(41, 41, 41) 100%);
+    border-radius: 0.3vh;
+}
+
+.health-bar-percent {
+    position: absolute;
+    width: 100%;
+    border-radius: 0.3vh;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background: linear-gradient(to right, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%);
+}
+
+.bubble-container {
+    position: absolute;
+    width: 28vh;
+    z-index: 100;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+
+.bubble-container div {
+    position: absolute;
+    bottom: 10%;
+}
+
+.bubble {
+    transform: skewX(10deg);
+    z-index: 100;
+    height: 3.5px;
+    width: 3.5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* background: rgba(255, 255, 255, 0.5); */
+    position: absolute;
+    bottom: -30%;
+}
+
+.bubble-container div:nth-child(1) {
+    top: 37%;
+    left: 5%;
+    animation: animate 4s linear infinite;
+}
+
+.bubble-container div:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    animation: animate 6s linear infinite;
+}
+
+
+.bubble-container div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+}
+
+.bubble-container div:nth-child(4) {
+    top: 16%;
+    left: 30%;
+    animation: animate 4s linear infinite;
+}
+
+.bubble-container div:nth-child(5) {
+    top: 40%;
+    left: 10%;
+    animation: animate 5s linear infinite;
+}
+
+
+.bubble-container div:nth-child(6) {
+    top: 13%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+}
+
+.bubble-container div:nth-child(7) {
+    top: 20%;
+    left: 20%;
+    animation: animate 7s linear infinite;
+}
+
+.bubble-container div:nth-child(8) {
+    top: 35%;
+    left: 50%;
+    animation: animate 4s linear infinite;
+}
+
+.bubble-container div:nth-child(9) {
+    top: 50%;
+    left: 55%;
+    animation: animate 6s linear infinite;
+}
+
+.bubble-container div:nth-child(10) {
+    top: 45%;
+    left: 15%;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0);
+    }
+
+    90% {
+        transform: scale(1.2) translateY(-90%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2) translateY(-100%);
+        opacity: 0;
+    }
+}
+
+
+.armor-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    margin-left: 0.5vh;
+    width: 100%;
+    height: 1.6vh;
+    background: linear-gradient(180deg, rgb(41, 41, 41) 0%, rgb(55, 55, 55) 50%, rgb(41, 41, 41) 100%);
+    border-radius: 0.3vh;
+}
+
+.armor-bar-percent {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 0.3vh;
+    background: linear-gradient(to right, rgb(179, 179, 179) 0%, rgb(207, 207, 207) 100%);
+}
+
+.bar-text {
+    z-index: 5;
+    margin-left: 1.5%;
+}
+
+.effect-3dot {
+    width: 1vh;
+    margin-left: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.dot {
+    width: 0.5vh;
+    height: 20%;
+    background: linear-gradient(to right, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%);
+    border-radius: 0.1vh;
+}
+
+.effect-3dot .dot:last-child {
+    background: linear-gradient(to right, rgb(0, 55, 117) 0%, rgb(0, 62, 133) 100%);
+}
+
+.second-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vh;
+}
+
+.upper-container2 {
+    padding-left: 0.7vh;
+    margin-bottom: 0.2vh;
+    height: 2vh;
+    display: flex;
+}
+
+.voice-chat-level {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5vh;
+    width: 8vh;
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+    border-radius: 0.5vh;
+}
+
+.voice-chat-level img {
+    padding: 0.2vh;
+    width: 1.4vh;
+    height: 1.4vh;
+    margin-right: 0.5vh;
+    background: linear-gradient(to right, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%);
+    border-radius: 0.3vh;
+}
+
+.voice-chat-dots {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.voice-chat-dots .dot2 {
+    width: 0.7vh;
+    height: 0.7vh;
+    background: linear-gradient(180deg, rgb(41, 41, 41) 0%, rgb(55, 55, 55) 50%, rgb(41, 41, 41) 100%);
+    /* background: linear-gradient(180deg, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%); */
+    border-radius: 100%;
+}
+
+.active {
+    border-radius: 100%;
+    box-shadow: 0 0 2px 2px rgba(31, 124, 230, 0.329);
+}
+
+.status_bar {
+    width: max-content;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.status {
+    position: relative;
+    margin: 0 0.5vh;
+    width: 4.0vh;
+    height: 4.0vh;
+    border-radius: 1.5vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+}
+
+
+
+.status .status_img {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width: 50%;
+    height: 50%;
+    stroke: rgb(31, 122, 226);
+}
+
+.status .status_img img {
+    width: 80%;
+    height: 80%;
+}
+
+.status svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+.status svg rect {
+    transform: rotate(90deg) translate(0vh, -11.3vh);
+}
+
+.department-count-container {
+    position: absolute;
+    /* right: 1%;
+    top: 10%; */
+    width: 10vh;
+}
+
+.job {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    margin: 2vh 0;
+    height: 3.5vh;
+    border-radius: 2vh;
+    border: 0.5vh solid rgb(48, 48, 48);
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+}
+
+.job span {
+    margin-left: 2vh;
+    font-size: 2vh;
+}
+
+.job_img {
+    position: absolute;
+    right: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4vh;
+    height: 4vh;
+    transform: rotate(45deg);
+    border-radius: 1vh;
+    border: 1px solid rgb(31, 122, 226);
+    box-shadow: 0 0 5px 2px rgba(31, 122, 226, 0.3);
+    background: linear-gradient(180deg, rgb(8, 8, 8) 0%, rgb(17, 17, 17) 50%, rgb(8, 8, 8) 100%);
+}
+
+.job_img img {
+    width: 65%;
+    height: 65%;
+    transform: rotate(-45deg);
+}

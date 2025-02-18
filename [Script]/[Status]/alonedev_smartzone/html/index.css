@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5vh;
+    font-family: "Montserrat", serif;
+    user-select: none;
+}
+
+.container {
+    position: absolute;
+    top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: max-content;
+    padding: 0 5vh;
+    height: 4vh;
+    background-color: rgba(22, 22, 22, 0.7);
+    color: white;
+    font-size: 3vh;
+}

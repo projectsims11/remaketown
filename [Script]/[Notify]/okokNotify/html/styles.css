@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@500;600&display=swap');
+
+body {
+    margin-top: 13%;
+    font-family: 'Athiti', sans-serif;
+    overflow: hidden;
+}
+
+.toast {
+    width: 100px;
+    float: right;
+}
+
+.wrapper {
+    width: 100px;
+    height: auto;
+    background-color: #1e1e1eee;
+    float: right;
+}
+
+.main {
+    margin: 5px 16px 5px 35px;
+    position: relative;
+}
+
+.main::before {
+    font-size: 24px;
+    top: calc(50% - 12px);
+    left: -40px;
+    line-height: 24px;
+    position: absolute;
+}
+
+/* Success Notification*/
+
+.success-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    color: #47cf73;
+}
+
+.success {
+    background-color: #1e1e1eee;
+    border-radius: 5px;
+    padding: 0.438em 0.725em;
+    margin-bottom: 0.313em;
+    width: 100%;
+    color: white;
+}
+
+.success-border {
+    border-left: 5px solid #47cf73;
+}
+
+/* Info Notification*/
+
+.info-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f05a";
+    color: #2f83ff;
+}
+
+.info {
+    background-color: #1e1e1eee;
+    border-radius: 5px;
+    padding: 0.438em 0.725em;
+    margin-bottom: 0.313em;
+    width: 100%;
+    color: white;
+}
+
+.info-border {
+    border-left: 5px solid #2f83ff;
+}
+
+/* Warning Notification */
+
+.warning-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f071";
+    color: #4490e7;
+}
+
+.warning {
+    background-color: #1e1e1eee;
+    border-radius: 5px;
+    padding: 0.438em 0.725em;
+    margin-bottom: 0.313em;
+    width: 100%;
+    color: white;
+}
+
+.warning-border {
+    border-left: 5px solid #4490e7;
+}
+
+/* Error Notification */
+
+
+.error-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f06a";
+    color: #dc3545;
+}
+
+.error {
+    background-color: #1e1e1eee;
+    border-radius: 5px;
+    padding: 0.438em 0.725em;
+    margin-bottom: 0.313em;
+    width: 100%;
+    color: white;
+}
+
+.error-border {
+    border-left: 5px solid #dc3545;
+}
+
+/* SMS Notification */
+
+.phonemessage-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f7cd";
+    color: #4490e7;
+}
+
+.phonemessage {
+    background-color: #1e1e1eee;
+    border-radius: 5px;
+    padding: 0.438em 0.725em;
+    margin-bottom: 0.313em;
+    width: 100%;
+    color: white;
+}
+
+.phonemessage-border {
+    border-left: 5px solid #4490e7;
+}
+
+/* Long Text Notification */
+
+.neutral-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f11c";
+    color: #6c757d;
+}
+
+.neutral {
+    background-color: #1e1e1eee;
+    border-radius: 5px;
+    padding: 0.438em 0.725em;
+    margin-bottom: 0.313em;
+    width: 100%;
+    color: white;
+}
+
+.neutral-border {
+    border-left: 5px solid #6c757d;
+}

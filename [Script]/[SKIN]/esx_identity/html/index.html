@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js"
+	integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+	<link href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<title>CB - REGISTER</title>
+</head>
+<body>
+
+	<div class="bg"></div>
+	<div class="all-class-body">
+		<form id="register">
+			<div class="all-body">
+				<img class="logo" src="./img/Logo.png">
+
+				<div class="title">PLAYER<span>REGISTER</span></div>
+				
+				<div class="line1">
+					<div class="rot1"></div>
+				</div>
+				<div class="line2">
+					<div class="rot2"></div>
+				</div>
+
+				<div class="sub-title">Apply for your character
+					<div class="dot1"></div>
+					<div class="dot2"></div>
+				</div>
+
+				<div class="body-inner">
+					<div class="banner"></div>
+
+					<div class="inner">
+						<div class="icon">
+							<img src="./img/icon.png" >
+							<div class="icon-text">INFOR</div>
+							<div class="icon-under">MATION</div>
+
+							<div class="line3">
+								<div class="dot"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="input-body">
+
+					<div class="input-body-bar">
+						<input id="firstname" type="text" placeholder="กรุณากรอก ชื่อ" maxlength="18" minlength="1" oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,''); audio3.play()" required>
+
+						<div class="icon-body">
+							<img src="./img/user.png" >
+							<div class="triangle"></div>
+							<span>FIRSTNAME</span>
+						</div>
+
+					</div>
+					<div class="input-body-bar">
+						<input id="lastname" type="text" placeholder="กรุณากรอก นามสกุล" maxlength="18" minlength="1" oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,''); audio3.play()"  required>
+
+						<div class="icon-body">
+							<img src="./img/group.png" >
+							<div class="triangle"></div>
+							<span>LASTNAME</span>
+						</div>
+
+						<div class="top">PLAYER NAME
+							<div class="dd1"></div>
+							<div class="dd2"></div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="input-foot">
+					<div class="input-foot-bar">
+						<input id="dateofbirth" type="date" required="required" oninput="audio3.play()">
+
+						<div class="icon-body">
+							<img src="./img/calendar.png" >
+							<div class="triangle"></div>
+							<span>BIRTHDAY</span>
+						</div>
+
+					</div>
+
+					<div class="input-foot-bar">
+						<input id="height" type="text" placeholder="ส่วนสูง 120-200cm." maxlength="3" oninput="this.value=this.value.replace(/[^0-9\s]/g,''); audio3.play()" required >
+						
+						<div class="icon-body">
+							<img src="./img/masculine-user.png" >
+							<div class="triangle"></div>
+							<span>HEIGHT</span>
+						</div>
+
+						<div class="top">PLAYER INFO
+							<div class="dd1"></div>
+							<div class="dd2"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="sex-body-radio" onclick="audio.play()">
+					<input type="radio" name="sex" value="m" checked="checked" id="sex-m"> 
+					<label for="sex-m">MALE</label>
+					<input type="radio" name="sex" value="f" id="sex-f">
+					<label for="sex-f">FEMALE</label>
+
+					<img src="./img/male.png" class="male">
+					<img src="./img/female.png" class="female">
+
+					<div class="triangle1"></div>
+					<div class="triangle2"></div>
+				</div>
+
+				<div class="button-body">
+					<button class="bt" type="submit" onclick="audio2.play()">CONFIRM</button>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	
+	<script src="script.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+        const audio = new Audio();
+        audio.src = "sounds/click.mp3";
+		audio.volume = 0.2
+        
+        const audio2 = new Audio ();
+        audio2.src = "sounds/submit.mp3";
+		audio2.volume = 0.2
+
+		const audio3 = new Audio ();
+        audio3.src = "sounds/input.wav";
+		audio3.volume = 0.2
+
+	</script>
+</body>
+</html>

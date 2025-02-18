@@ -1,0 +1,89 @@
+body {
+    background-color: transparent !important;
+}
+
+.template, .notification {
+    display: none;
+}
+
+.notif-container {
+    width: 350px;
+    position: absolute;
+    right: 20px;
+    top: 300px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.notification {
+    padding: 5px 16px;
+    width: fit-content;
+    margin: 5px;
+    font: caption;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', 'Kanit';
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+}
+
+.success {
+    /*background: rgb(114, 204, 114);*/
+    color: #fff;
+}
+
+.success span {
+    border-bottom: 1.5px solid rgb(61, 218, 145);
+}
+
+.error span {
+    border-bottom: 1.5px solid rgb(207, 70, 70);
+}
+
+.inform span {
+    border-bottom: 1.5px solid rgb(47, 92, 115);
+}
+
+.inform {
+    /*background-color: rgb(47, 92, 115);*/
+    color: #ffffff;
+}
+
+.error {
+    /*background: rgb(224, 50, 50);*/
+    color: #fff;
+}
+
+
+.verde {
+    background: rgb(119, 218, 119);
+    color: #fff;
+}
+
+.azul {
+    background-color: rgb(18, 106, 149);
+    color: #ffffff;
+}
+
+.vermelho {
+    background: rgb(224, 50, 50);
+    color: #fff;
+}
+.amarelo {
+    background: rgb(230, 217, 41);
+    color: #000;
+}
+
+.preto {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.branco {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
