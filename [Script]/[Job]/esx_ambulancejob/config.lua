@@ -103,7 +103,7 @@ Config.Hospitals = {
 	Pillbox = {
 
 		Blip = {
-			coords = vector3(358.5400085449219, -1417.3199462890625, 32.5099983215332),
+			coords = vector3(358.54, -1417.3199462890625, 32.5099983215332),
 			sprite = 61,
 			scale  = 0.8,
 			color  = 0
