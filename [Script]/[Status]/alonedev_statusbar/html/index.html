@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="first-section">
+            <div class="upper-container">
+                <div class="player-id">
+                    <img src="./assests/id.png" alt="">
+                    <span style="color: #fff;">ID: </span><span id="player_id">9999</span>
+                </div>
+                <div class="date-time">
+                    <img src="./assests/clock.png" alt="">
+                    <span id="time_date">xx:xx:xx xx/xx/xxxx</span>
+                </div>
+            </div>
+            <div class="status_container" style="display: flex;">
+                <div class="UI">
+                    <div class="bar">
+                        <div class="healt-bar">
+                            <div style="font-size: 1.7vh; font-weight: 700;" class="bar-text">HP</div>
+                            <div id="health_percent" class="health-bar-percent">
+                                <div class="bubble-container">
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                    <div><span class="bubble"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="armor-bar">
+                            <div style="font-size: 1vh; font-weight: 700;" class="bar-text">ARMOUR</div>
+                            <div id="armour_percent" class="armor-bar-percent"></div>
+                        </div>
+
+                    </div>
+                    <div class="effect-3dot">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-section">
+            <div class="upper-container2">
+                <div class="voice-chat-level">
+                    <img src="./assests/microphone.png" alt="">
+                    <div class="voice-chat-dots">
+                        <div class="dot2 "></div>
+                        <div class="dot2 "></div>
+                        <div class="dot2 "></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status_bar" id="status_list">
+                <!-- <div class="status">
+                    <svg id="loadingSquare" width="3.5vh" height="3.5vh" viewBox="0 0 120 120"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#1F7AE2;" />
+                                <stop offset="100%" style="stop-color:#96C0F0;" />
+                            </linearGradient>
+                        </defs>
+
+                        <rect id="rect" x="10" y="10" width="100" height="100" fill="none" stroke="url(#grad1)"
+                            stroke-width="12" stroke-dasharray="320" stroke-dashoffset="320" stroke-linecap="round"
+                            rx="25" ry="25" />
+                    </svg>
+
+                    <div class="status_img">
+                        <img src="./assests/food.png" alt="">
+                    </div>
+                </div>
+                <div class="status">
+                    <svg id="loadingSquare" width="3.5vh" height="3.5vh" viewBox="0 0 120 120"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#1F7AE2;" />
+                                <stop offset="100%" style="stop-color:#96C0F0;" />
+                            </linearGradient>
+                        </defs>
+
+                        <rect id="rect" x="10" y="10" width="100" height="100" fill="none" stroke="url(#grad1)"
+                            stroke-width="12" stroke-dasharray="320" stroke-dashoffset="200" stroke-linecap="round"
+                            rx="25" ry="25" />
+                    </svg>
+                    <div class="status_img">
+                        <img src="./assests/stress.png" alt="">
+                    </div>
+                </div>
+                <div class="status">
+                    <svg id="loadingSquare" width="3.5vh" height="3.5vh" viewBox="0 0 120 120"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#1F7AE2;" />
+                                <stop offset="100%" style="stop-color:#96C0F0;" />
+                            </linearGradient>
+                        </defs>
+
+                        <rect id="rect" x="10" y="10" width="100" height="100" fill="none" stroke="url(#grad1)"
+                            stroke-width="12" stroke-dasharray="320" stroke-dashoffset="200" stroke-linecap="round"
+                            rx="25" ry="25" />
+                    </svg>
+                    <div class="status_img">
+                        <img src="./assests/dive.png" alt="">
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="department-count-container">
+        <!-- <div class="job">
+            <span>99</span>
+            <div class="job_img">
+                <img src="./assests/police.png" alt="police">
+            </div>
+        </div>
+        <div class="job">
+            <span>99</span>
+            <div class="job_img">
+                <img src="./assests/ambulance.png" alt="police">
+            </div>
+        </div>
+        <div class="job">
+            <span>99</span>
+            <div class="job_img">
+                <img src="./assests/council.png" alt="police">
+            </div>
+        </div> -->
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
