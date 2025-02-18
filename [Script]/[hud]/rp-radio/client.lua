@@ -823,7 +823,7 @@ AddEventHandler('mail3ee-radio:startRadio', function(source)
     local isFalling = IsPedFalling(playerPed)
     local isDead = IsEntityDead(playerPed)
    
-    TriggerEvent('esx_inventoryhud:closeInventory')
+    TriggerEvent('Fewthz_inventory:closeInventory')
 
     if not isFalling and Radio.Enabled and Radio.Has and not isDead then
         Radio:Toggle(not Radio.Open)

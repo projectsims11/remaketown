@@ -1,0 +1,52 @@
+Config = Config or {}
+Config.Locales = {
+    ['info'] = "Information",
+    ['error'] = "Error!",
+    ['successs'] = "Success",
+    ['JOB_RESET'] = "Job Reset",
+    ['electrician'] = "Electrician",
+    ['LEVEL'] = "Level",
+    ['reuiredexp'] = "required exp",
+    ['xp'] = "xp",
+    ['SELECT_JOB_REGION'] = "Select Job Region",
+    ['TOTAL_REGION'] = "Total Region",
+    ['REGIONS'] = "Regions",
+    ['regionDetails'] = "Region Details",
+    ['EXP'] = "Exp",
+    ['NO_LEVEL_REQUIRED'] = "No Level Required",
+    ['PLAYER'] = "Player",
+    ['jobtask'] = "Job Task;",
+    ['invite'] = "Invite",
+    ['JOB_DETAILS'] = "Job Details",
+
+    ['JOB_STEP_ONE'] = "Job Step 1",
+    ['JOB_STEP_TWO'] = "Job Step 2",
+    ['ITEMSGIVEN'] = "Items Given;",
+    ['REWARDS_RECEIVE'] = "Rewards you will receive",
+    ["MONEY"] = "Money",
+    ["SELECT_MISSION"] = "SELECT Mission",
+    ['JOB_START'] = "Job Start",
+    ["Required"] = "Level Required",
+    ['your_earnings'] = "Your Earnings;",
+    ['LEVELEXP'] = "Level Exp",
+    ['Received'] = "Received",
+    ['REWARDMONEY'] = "Reward Money",
+
+    ['MISSION'] = "Mission",
+    ['COMPLETED'] = "Completed",
+    ['PLAYER_LIST'] = "Player List",
+    ['OWNER'] = "Owner",
+    ['YOUR_SCORE'] = "Your Score;",
+    ['YOUR_SCOREE'] = "Your Score",
+
+    ['PLAYER_INVITE'] = "Player Invite",
+    ['DENY'] = "Deny",
+    ['ACCEPT'] = "Accept",
+    ["INVITE_TEXT"] =
+    "Dear ElectricJob, Join us to solve urban power failures and create sustainable environments. Your expertise is needed for our city to thrive. Let's work together! Sincerely yours,",
+    ['PANO'] = "PANO",
+    ['ELECTVOLT'] = "Electric Volt",
+    ['ladderremove'] = "Ladder Remove",
+    ['liftremove'] = "Lift Remove"
+
+}

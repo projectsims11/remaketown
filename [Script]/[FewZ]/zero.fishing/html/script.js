@@ -14,7 +14,7 @@ window.addEventListener('message', function(event) {
     
     // $("#item-pic").attr(
     //   "src",
-    //   `nui://esx_inventoryhud/html/img/items/${data.countitem}.png`
+    //   `nui://Fewthz_inventory/html/img/items/${data.countitem}.png`
     // );
 
     

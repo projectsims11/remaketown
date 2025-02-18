@@ -95,7 +95,7 @@ do
         RegisterNetEvent("scotty-gachapon:StartWheel")
         AddEventHandler("scotty-gachapon:StartWheel",
             function(KnlAL_J4aT8, djJZ82ppup6LVtZOtYwP, uDs7W1)
-                TriggerEvent("esx_inventoryhud:closeInventory")
+                TriggerEvent("Fewthz_inventory:closeInventory")
                 AlnZm9ac3Vn = KnlAL_J4aT8
                 local URhm2SZ_pEXk1SbR = N_v1PGp9zZwh4Dx["gachapon"][KnlAL_J4aT8]
                 local jTmyGiMyB = {}

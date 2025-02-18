@@ -17,7 +17,7 @@ Citizen.CreateThread(function()
 end)
 ESX = nil;
 _InventoryHudInsObj = nil;
-_InventoryHudInsObjScriptName = 'esx_inventoryhud'
+_InventoryHudInsObjScriptName = 'Fewthz_inventory'
 xZero = {}
 xZero.Events = {}
 xZero.Threads = {}

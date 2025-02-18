@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tworst-Electirian</title>
+        <script src="./js/vue.global.js"></script>
+        <script src="./js/vuex.global.js"></script>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="General" v-show="mainShow">
+                <div class="exitBox" @click="closeNUI()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width=".7813vw" height=".7813vw" viewBox="0 0 15 15" fill="none">
+                        <g clip-path="url(#clip0_8_1375)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.50016 8.72008L10.5494 11.7693C10.7112 11.9311 10.9306 12.022 11.1595 12.022C11.3883 12.022 11.6077 11.9311 11.7695 11.7693C11.9313 11.6075 12.0222 11.3881 12.0222 11.1592C12.0222 10.9304 11.9313 10.711 11.7695 10.5492L8.71916 7.49993L11.769 4.4507C11.849 4.37059 11.9126 4.27548 11.9559 4.17082C11.9992 4.06616 12.0215 3.95399 12.0215 3.84071C12.0214 3.72744 11.9991 3.61528 11.9557 3.51064C11.9124 3.40599 11.8488 3.31092 11.7687 3.23084C11.6886 3.15076 11.5935 3.08725 11.4888 3.04393C11.3841 3.0006 11.272 2.97832 11.1587 2.97834C11.0454 2.97837 10.9332 3.00071 10.8286 3.04408C10.724 3.08745 10.6289 3.15101 10.5488 3.23113L7.50016 6.28035L4.45094 3.23113C4.37141 3.14871 4.27627 3.08296 4.17107 3.03771C4.06586 2.99246 3.95269 2.96861 3.83817 2.96757C3.72365 2.96652 3.61007 2.98829 3.50405 3.0316C3.39803 3.07492 3.3017 3.13892 3.22068 3.21986C3.13966 3.30081 3.07557 3.39708 3.03216 3.50305C2.98874 3.60903 2.96686 3.72259 2.9678 3.83711C2.96874 3.95164 2.99248 4.06482 3.03763 4.17007C3.08279 4.27532 3.14845 4.37053 3.23079 4.45013L6.28116 7.49993L3.23136 10.5497C3.14902 10.6293 3.08336 10.7245 3.03821 10.8298C2.99306 10.935 2.96932 11.0482 2.96838 11.1627C2.96744 11.2773 2.98931 11.3908 3.03273 11.4968C3.07615 11.6028 3.14024 11.6991 3.22126 11.78C3.30228 11.8609 3.39861 11.9249 3.50462 11.9683C3.61064 12.0116 3.72423 12.0333 3.83875 12.0323C3.95327 12.0312 4.06643 12.0074 4.17164 11.9621C4.27685 11.9169 4.37199 11.8511 4.45151 11.7687L7.50016 8.72008Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8_1375">
+                                <rect width="13.8" height="13.8" fill="white" transform="translate(0.600098 0.599976)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="Title">
+                    <div class="titleIcon">
+                        <img src="./img/title.png" alt="" class="Logo" />
+                    </div>
+                    <div class="titleTextBox">
+                        <h2 class="titleText">{{scriptName}}</h2>
+                        <span class="titleSubText">{{Locales['electrician']}}</span>
+                    </div>
+                    <div class="titleLine"></div>
+                </div>
+                <div class="topSide">
+                    <div class="levelBox">
+                        <div class="levelTextBox">
+                            <div class="levelText">
+                                <div class="levelLine"></div>
+                                <h2 class="levelSay">{{Locales['LEVEL']}} {{playerData.playerLevel}}</h2>
+                            </div>
+                            <div class="requiredExpText">
+                                {{Locales['reuiredexp']}}
+                                <span>{{formatNumber(requiredPercentage)}} {{Locales['xp']}}</span>
+                            </div>
+                        </div>
+                        <div class="levelProgressBox">
+                            <div class="levelProgress">
+                                <div class="levelProg" :style="{ width: progressPercentage + '%' }"></div>
+                            </div>
+                            <div class="levelProgText">
+                                <h2 class="levelProgTexts">{{formatNumber(playerData.playerXp)}} {{Locales['EXP']}}</h2>
+                                <h2 class="levelProgTexts">{{formatNumber(playerData.playerNextXp)}} {{Locales['EXP']}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profileBox" v-if="playerData">
+                        <div class="profileImg" :style="`background-image: url('${playerData.playerImage}')`"></div>
+                        <div class="profileTextBox">
+                            <h2 class="profileText">{{playerData.playerName}}</h2>
+                            <p class="profileSubText">{{moneyType}} {{formatNumber(playerData.playerMoney)}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="centerSide">
+                    <div class="regionBox">
+                        <div class="regionTitleBox">
+                            <div class="regionTitle">
+                                <svg width="1.7188vw" height="1.7188vw" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="mdi:location">
+                                        <path id="Vector" d="M16.5 15.8125C15.5883 15.8125 14.714 15.4503 14.0693 14.8057C13.4247 14.161 13.0625 13.2867 13.0625 12.375C13.0625 11.4633 13.4247 10.589 14.0693 9.94432C14.714 9.29966 15.5883 8.9375 16.5 8.9375C17.4117 8.9375 18.286 9.29966 18.9307 9.94432C19.5753 10.589 19.9375 11.4633 19.9375 12.375C19.9375 12.8264 19.8486 13.2734 19.6758 13.6905C19.5031 14.1075 19.2499 14.4865 18.9307 14.8057C18.6115 15.1249 18.2325 15.3781 17.8155 15.5508C17.3984 15.7236 16.9514 15.8125 16.5 15.8125ZM16.5 2.75C13.9473 2.75 11.4991 3.76406 9.6941 5.5691C7.88906 7.37413 6.875 9.82229 6.875 12.375C6.875 19.5938 16.5 30.25 16.5 30.25C16.5 30.25 26.125 19.5938 26.125 12.375C26.125 9.82229 25.1109 7.37413 23.3059 5.5691C21.5009 3.76406 19.0527 2.75 16.5 2.75Z" fill="white" />
+                                    </g>
+                                </svg>
+                                <div class="regionTitleText">
+                                    {{Locales['SELECT_JOB_REGION']}}
+                                    <p>Choose</p>
+                                </div>
+                            </div>
+                            <div class="regionTitleText" style="align-items: flex-end">
+                                <p>{{Locales['TOTAL_REGION']}}</p>
+                                {{Object.values(regionData).length}} {{Locales['REGIONS']}}
+                            </div>
+                        </div>
+
+                        <swiper-container class="regionList" space-between="12" slides-per-view="4">
+                            <swiper-slide
+                                class="region"
+                                v-for="(data, key) in regionData"
+                                @click="selectMission(data, data.regionKey)"
+                                :style="{
+                                'opacity': selectRegionData && data.regionKey === selectRegionData.regionKey ? 1 : (selectRegionData ? 0.5 : 1)
+                              }"
+                            >
+                                <div class="regionBottomSide">
+                                    <div class="regionAwardButton regionAwardPriceButton">{{moneyType}} {{formatNumber(data.regionAwards.money)}}</div>
+                                    <div class="regionAwardButton regionAwardExpButton">{{formatNumber(data.regionAwards.xp)}} {{Locales['EXP']}}</div>
+                                </div>
+                                <div class="regionTopSide">
+                                    <div class="regionTopSideIcon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width=".7292vw" height=".7292vw" viewBox="0 0 14 14" fill="none">
+                                            <path d="M6.99999 6.70829C6.61322 6.70829 6.24228 6.55465 5.96879 6.28116C5.6953 6.00767 5.54166 5.63673 5.54166 5.24996C5.54166 4.86319 5.6953 4.49225 5.96879 4.21876C6.24228 3.94527 6.61322 3.79163 6.99999 3.79163C7.38676 3.79163 7.7577 3.94527 8.03119 4.21876C8.30468 4.49225 8.45832 4.86319 8.45832 5.24996C8.45832 5.44147 8.4206 5.63111 8.34731 5.80804C8.27403 5.98497 8.16661 6.14574 8.03119 6.28116C7.89577 6.41658 7.735 6.524 7.55807 6.59728C7.38114 6.67057 7.1915 6.70829 6.99999 6.70829ZM6.99999 1.16663C5.91702 1.16663 4.87841 1.59683 4.11264 2.36261C3.34686 3.12838 2.91666 4.16699 2.91666 5.24996C2.91666 8.31246 6.99999 12.8333 6.99999 12.8333C6.99999 12.8333 11.0833 8.31246 11.0833 5.24996C11.0833 4.16699 10.6531 3.12838 9.88734 2.36261C9.12157 1.59683 8.08296 1.16663 6.99999 1.16663Z" fill="white" fill-opacity="0.6" />
+                                        </svg>
+                                    </div>
+                                    <h2 class="regionTopSideText">{{Locales['REGIONS']}} {{key+1}}</h2>
+                                </div>
+                                <div class="regionInfoBox">
+                                    <div class="regionInfo">
+                                        <h2 class="regionInfoText">{{Locales['regionDetails']}}</h2>
+                                        <p class="regionInfoSubText">{{data.regionInfo.regionDetails}}</p>
+                                    </div>
+                                    <div class="regionRequiredList">
+                                        <div class="regionRequired levelRequired" v-if="data.regionMinimumLevel == 0">{{Locales['NO_LEVEL_REQUIRED']}}</div>
+                                        <div class="regionRequired" :class="playerData.playerLevel >= data.regionMinimumLevel ? 'levelRequired' : 'redBackground'" v-else>{{data.regionMinimumLevel}} {{Locales['Required']}} </div>
+                                        <div class="regionRequired playerRequired">1-{{data.regionMaxPlayer}} {{Locales['PLAYER']}}</div>
+                                    </div>
+                                </div>
+                                <div class="jobTaskBox" style="display: flex">
+                                    <h2 class="jobTaskTitle">{{Locales['jobtask']}}</h2>
+                                    <div class="jobTaskBoxList">
+                                        <div class="jobTask" v-for="(jobData,jobKey) in data.regionJobTask">
+                                            <div class="jobTaskLine"></div>
+                                            <h2 class="jobTaskText">{{jobData.jobCount}} {{jobData.jobLabel}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="./img/region.png" alt="" class="regionImg" />
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+                    <div class="bottomSide">
+                        <div class="playerListBox">
+                            <div class="playerListTitle">
+                                <svg width="1.5104vw" height="1.5104vw" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="mdi:users">
+                                        <path id="Vector" d="M19.3333 20.5416V22.9583H2.41663V20.5416C2.41663 20.5416 2.41663 15.7083 10.875 15.7083C19.3333 15.7083 19.3333 20.5416 19.3333 20.5416ZM15.1041 9.06248C15.1041 8.22603 14.8561 7.40837 14.3914 6.71288C13.9267 6.0174 13.2662 5.47534 12.4934 5.15524C11.7206 4.83515 10.8703 4.75139 10.0499 4.91458C9.22951 5.07776 8.47595 5.48055 7.88449 6.07201C7.29303 6.66347 6.89024 7.41703 6.72705 8.23741C6.56387 9.05779 6.64762 9.90813 6.96772 10.6809C7.28781 11.4537 7.82988 12.1142 8.52536 12.5789C9.22084 13.0436 10.0385 13.2916 10.875 13.2916C11.9966 13.2916 13.0723 12.8461 13.8654 12.053C14.6586 11.2598 15.1041 10.1841 15.1041 9.06248ZM19.2608 15.7083C20.0036 16.2832 20.6114 17.0138 21.0415 17.8489C21.4715 18.6839 21.7134 19.6031 21.75 20.5416V22.9583H26.5833V20.5416C26.5833 20.5416 26.5833 16.1554 19.2608 15.7083ZM18.125 4.83332C17.2932 4.82868 16.4798 5.07735 15.7929 5.54623C16.5269 6.57179 16.9215 7.80133 16.9215 9.06248C16.9215 10.3236 16.5269 11.5532 15.7929 12.5787C16.4798 13.0476 17.2932 13.2963 18.125 13.2916C19.2466 13.2916 20.3223 12.8461 21.1154 12.053C21.9086 11.2598 22.3541 10.1841 22.3541 9.06248C22.3541 7.94084 21.9086 6.86513 21.1154 6.07201C20.3223 5.27889 19.2466 4.83332 18.125 4.83332Z" fill="white" />
+                                    </g>
+                                </svg>
+                               {{Locales['PLAYER_LIST']}}
+                            </div>
+                            <div class="playerList">
+                                <div v-for="(index, key) in 4" :key="key">
+                                    <div class="playerBox" v-if="playerListData && playerListData[key]" @click="firePlayer(playerListData[key].playerIdentifier, key)">
+                                        <div class="playerImg" :style="`background-image: url('${ playerListData[key].playerImage}')`"></div>
+
+                                        <div class="playerTextBox">
+                                            <h2 class="playerName">
+                                                {{playerListData[key].playerName}}
+                                                <span v-if="playerListData[key].playerOwner">({{Locales['OWNER']}})</span>
+                                            </h2>
+                                            <div class="playerLevel">
+                                                <div class="playerLevelLine"></div>
+                                                <h2 class="playerLevelText">{{Locales['LEVEL']}} {{playerListData[key].playerLevel}}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div v-else>
+                                        <div v-if="this.invitePlayer[key]">
+                                            <div class="playerBox invitePlayer">
+                                                <div class="input-wrapper">
+                                                    <input type="text" placeholder="player ID..." class="modern-input" v-model="inviteModal" />
+                                                </div>
+
+                                                <div class="inviteButton" @click="InvitePlayer(key)">
+                                                    <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g id="ph:plus-fill">
+                                                            <path id="Vector" d="M20.3125 3.125H4.6875C4.2731 3.125 3.87567 3.28962 3.58265 3.58265C3.28962 3.87567 3.125 4.2731 3.125 4.6875V20.3125C3.125 20.7269 3.28962 21.1243 3.58265 21.4174C3.87567 21.7104 4.2731 21.875 4.6875 21.875H20.3125C20.7269 21.875 21.1243 21.7104 21.4174 21.4174C21.7104 21.1243 21.875 20.7269 21.875 20.3125V4.6875C21.875 4.2731 21.7104 3.87567 21.4174 3.58265C21.1243 3.28962 20.7269 3.125 20.3125 3.125ZM17.9688 13.2812H13.2812V17.9688C13.2812 18.176 13.1989 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V13.2812H7.03125C6.82405 13.2812 6.62534 13.1989 6.47882 13.0524C6.33231 12.9059 6.25 12.7072 6.25 12.5C6.25 12.2928 6.33231 12.0941 6.47882 11.9476C6.62534 11.8011 6.82405 11.7188 7.03125 11.7188H11.7188V7.03125C11.7188 6.82405 11.8011 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V11.7188H17.9688C18.176 11.7188 18.3747 11.8011 18.5212 11.9476C18.6677 12.0941 18.75 12.2928 18.75 12.5C18.75 12.7072 18.6677 12.9059 18.5212 13.0524C18.3747 13.1989 18.176 13.2812 17.9688 13.2812Z" />
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div v-else>
+                                            <div class="playerBox playerInvite" @click="openInvitePlayer(this.playerData.playerIdentifier, key)">
+                                                <svg width="1.3021vw" height="1.3021vw" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="ph:plus-fill">
+                                                        <path id="Vector" d="M20.3125 3.125H4.6875C4.2731 3.125 3.87567 3.28962 3.58265 3.58265C3.28962 3.87567 3.125 4.2731 3.125 4.6875V20.3125C3.125 20.7269 3.28962 21.1243 3.58265 21.4174C3.87567 21.7104 4.2731 21.875 4.6875 21.875H20.3125C20.7269 21.875 21.1243 21.7104 21.4174 21.4174C21.7104 21.1243 21.875 20.7269 21.875 20.3125V4.6875C21.875 4.2731 21.7104 3.87567 21.4174 3.58265C21.1243 3.28962 20.7269 3.125 20.3125 3.125ZM17.9688 13.2812H13.2812V17.9688C13.2812 18.176 13.1989 18.3747 13.0524 18.5212C12.9059 18.6677 12.7072 18.75 12.5 18.75C12.2928 18.75 12.0941 18.6677 11.9476 18.5212C11.8011 18.3747 11.7188 18.176 11.7188 17.9688V13.2812H7.03125C6.82405 13.2812 6.62534 13.1989 6.47882 13.0524C6.33231 12.9059 6.25 12.7072 6.25 12.5C6.25 12.2928 6.33231 12.0941 6.47882 11.9476C6.62534 11.8011 6.82405 11.7188 7.03125 11.7188H11.7188V7.03125C11.7188 6.82405 11.8011 6.62534 11.9476 6.47882C12.0941 6.33231 12.2928 6.25 12.5 6.25C12.7072 6.25 12.9059 6.33231 13.0524 6.47882C13.1989 6.62534 13.2812 6.82405 13.2812 7.03125V11.7188H17.9688C18.176 11.7188 18.3747 11.8011 18.5212 11.9476C18.6677 12.0941 18.75 12.2928 18.75 12.5C18.75 12.7072 18.6677 12.9059 18.5212 13.0524C18.3747 13.1989 18.176 13.2812 17.9688 13.2812Z" fill="white" fill-opacity="0.51" />
+                                                    </g>
+                                                </svg>
+                                                {{Locales['invite']}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detailBox" v-if="selectRegionData">
+                            <div class="detailTitle">
+                                <svg width="1.1458vw" height="1.1458vw" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="bxs:detail">
+                                        <path id="Vector" d="M17.8462 2.677H3.56928C3.09597 2.677 2.64205 2.86502 2.30737 3.1997C1.97269 3.53438 1.78467 3.98831 1.78467 4.46162V16.9539C1.78467 17.4272 1.97269 17.8812 2.30737 18.2158C2.64205 18.5505 3.09597 18.7385 3.56928 18.7385H17.8462C18.3195 18.7385 18.7734 18.5505 19.1081 18.2158C19.4428 17.8812 19.6308 17.4272 19.6308 16.9539V4.46162C19.6308 3.98831 19.4428 3.53438 19.1081 3.1997C18.7734 2.86502 18.3195 2.677 17.8462 2.677ZM9.81544 15.1693H4.46159V13.3847H9.81544V15.1693ZM16.9539 11.6001H4.46159V9.81546H16.9539V11.6001ZM16.9539 8.03085H4.46159V6.24623H16.9539V8.03085Z" fill="white" />
+                                    </g>
+                                </svg>
+                                {{Locales['JOB_DETAILS']}}
+                            </div>
+                            <div class="detailInfoBox">
+                                <div class="detailInfo">
+                                    <h2 class="detailInfoText">{{Locales['JOB_STEP_ONE']}}</h2>
+                                    <p class="detailInfoSubText">{{selectRegionData.regionInfo.regionJobTask}}</p>
+                                </div>
+                            </div>
+                            <div class="detailBottomBox">
+                                <div class="detailGivenBox">
+                                    {{Locales['ITEMSGIVEN']}}
+                                    <div class="detailGivenList">
+                                        <div class="detailGiven" v-for="(data, key) in selectRegionData.regionItems" :key="key">
+                                            <div v-if="key < 2" class="detailGiven">
+                                                <div class="givenLine"></div>
+                                                <h2 class="detailGivenText" :style="((key) % 2 === 0) ? '' : 'width: 9.1563vw !important'">
+                                                    {{ playerListData.length > 2 ? data.itemCount + 1 : data.itemCount }}  {{ data.itemLabel }}
+                                                  </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailGivenList">
+                                        <div class="detailGiven" v-for="(data, key) in selectRegionData.regionItems" :key="key">
+                                            <div v-if="key >= 2 && key < 4" class="detailGiven">
+                                                <div class="givenLine"></div>
+                                                <h2 class="detailGivenText" :style="((key) % 2 === 0) ? '' : 'width: 9.1563vw !important'">{{data.itemCount}} {{data.itemLabel}}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rewardBox">
+                                    <div class="rewardTopBox">{{Locales['REWARDS_RECEIVE']}}</div>
+                                    <div class="reward">
+                                        {{Locales['MONEY']}}
+                                        <h2 class="rewardText">{{moneyType}} {{formatNumber(selectRegionData.regionAwards.money)}}</h2>
+                                    </div>
+                                    <div class="reward expReward">
+                                        {{Locales['EXP']}}
+                                        <h2 class="rewardText">{{formatNumber(selectRegionData.regionAwards.xp)}} {{Locales['EXP']}}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-else>
+                            <div class="detailBoxND">
+                                <div class="detailTitle">
+                                    <svg width="1.1458vw" height="1.1458vw" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="bxs:detail">
+                                            <path id="Vector" d="M17.8462 2.677H3.56928C3.09597 2.677 2.64205 2.86502 2.30737 3.1997C1.97269 3.53438 1.78467 3.98831 1.78467 4.46162V16.9539C1.78467 17.4272 1.97269 17.8812 2.30737 18.2158C2.64205 18.5505 3.09597 18.7385 3.56928 18.7385H17.8462C18.3195 18.7385 18.7734 18.5505 19.1081 18.2158C19.4428 17.8812 19.6308 17.4272 19.6308 16.9539V4.46162C19.6308 3.98831 19.4428 3.53438 19.1081 3.1997C18.7734 2.86502 18.3195 2.677 17.8462 2.677ZM9.81544 15.1693H4.46159V13.3847H9.81544V15.1693ZM16.9539 11.6001H4.46159V9.81546H16.9539V11.6001ZM16.9539 8.03085H4.46159V6.24623H16.9539V8.03085Z" fill="white" />
+                                        </g>
+                                    </svg>
+                                    {{Locales['JOB_DETAILS']}}
+                                </div>
+                                <div class="noDetail">
+                                    <svg width="1.5104vw" height="1.5625vw" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="bxs:detail">
+                                            <path id="Vector" d="M24.167 4.125H4.83366C4.19272 4.125 3.57803 4.37961 3.12482 4.83283C2.6716 5.28604 2.41699 5.90073 2.41699 6.54167V23.4583C2.41699 24.0993 2.6716 24.714 3.12482 25.1672C3.57803 25.6204 4.19272 25.875 4.83366 25.875H24.167C24.8079 25.875 25.4226 25.6204 25.8758 25.1672C26.329 24.714 26.5837 24.0993 26.5837 23.4583V6.54167C26.5837 5.90073 26.329 5.28604 25.8758 4.83283C25.4226 4.37961 24.8079 4.125 24.167 4.125ZM13.292 21.0417H6.04199V18.625H13.292V21.0417ZM22.9587 16.2083H6.04199V13.7917H22.9587V16.2083ZM22.9587 11.375H6.04199V8.95833H22.9587V11.375Z" fill="white" fill-opacity="0.42" />
+                                        </g>
+                                    </svg>
+                                    <h2 class="noDetailText">{{Locales['SELECT_MISSION']}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="startButton" @click="startJob()">
+                    <img src="./img/button.png" alt="" class="startImg" />
+                    <h2 class="startText">{{ jobStart ? Locales['JOB_RESET'] : Locales['JOB_START'] }}</h2>
+                </div>
+                <img src="./img/effect.png" alt="" class="effect" />
+                <img src="./img/leftTopEffect.png" alt="" class="leftTopEffect" />
+                <img src="./img/rightTopEffect.png" alt="" class="rightTopEffect" />
+                <img src="./img/topCenterEffect.png" alt="" class="centerTopEffect" />
+            </div>
+            <div v-if="progressbar > 0" class="loadingBox">
+                <div class="loadingText">
+                  <div class="loadingLine"></div>
+                  {{progressbarLabel}}
+                </div>
+                <div class="loadingBar">
+                  <div class="bars">
+                    <div class="bar":style="{'width' : progressbar + '%'}"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="finishBox" v-show="finishShow">
+                <div class="earnBox">
+                    <h2 class="earnTitle">{{Locales['your_earnings']}} </h2>
+                    <div class="earnList">
+                        <div class="earn expEarn">
+                            <div class="earnTopSide">{{Locales['LEVELEXP']}}</div>
+                            <div class="earnTextBox">
+                                <h2 class="earnText">{{formatNumber(finishjobData.xp)}} Exp</h2>
+                                <p class="earnSubText">{{Locales['Received']}}</p>
+                            </div>
+                        </div>
+                        <div class="earn moneyEarn">
+                            <div class="earnTopSide">{{Locales['REWARDMONEY']}}</div>
+                            <div class="earnTextBox">
+                                <h2 class="earnText">${{formatNumber(finishjobData.money)}}</h2>
+                                <p class="earnSubText">{{Locales['Received']}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="finishTitleBox">
+                    <p class="finishSubTitle">{{Locales['MISSION']}}</p>
+                    <h2 class="finishTitle">{{Locales['COMPLETED']}}</h2>
+                    <h3 class="finishName">{{finishjobData.playerName}}</h3>
+                </div>
+                <div class="earnBox" style="background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 100%)">
+                    <h2 class="earnTitle">{{Locales['YOUR_SCORE']}}</h2>
+                    <div class="earnList">
+                        <div class="earn moneyEarn scoreEarn">
+                            <div class="earnTopSide">{{Locales['YOUR_SCOREE']}}</div>
+                            <div class="earnTextBox">
+                                <h2 class="earnText">{{finishjobData.scoreAmount}} {{Locales['MISSION']}}</h2>
+                                <p class="earnSubText">{{Locales['Received']}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/finishEffect.png" alt="" class="finishEffect" />
+            </div>
+            <div class="requestMenu" v-show="requestMenuShow">
+                <h2 class="requestTitle">{{Locales['PLAYER_INVITE']}}</h2>
+                <p class="requestText" v-if="this.requstData">{{Locales['INVITE_TEXT']}} {{requstData["hostName"]}}</p>
+                <div class="requestButtonList">
+                    <div class="denyButton requestButton" @click="declineInvite">{{Locales['DENY']}}</div>
+                    <div class="acceptButton requestButton" @click="acceptInvite">{{Locales['ACCEPT']}}</div>
+                </div>
+            </div>
+            <div class="panoSide" v-show="switchShow">
+                <div class="panoLineBox">
+                    <div class="panoLine"></div>
+                    <div class="panoLine"></div>
+                    <div class="panoLine2"></div>
+                </div>
+                <div class="panoTitle">
+                    <h2 class="panoTitleText">{{Locales['PANO']}}</h2>
+                    <p class="panoTitleSubText">LOS SANTOS</p>
+                </div>
+
+                <div class="panoList">
+                    <div v-for="pano in panos" :key="pano.id" :id="pano.id" class="panoBox" @mousedown="handleMouseDown($event, pano.id)" @mouseup="handleMouseUp(pano.id)" @click="handlePanoClick(pano.id)">
+                        <div class="screwBox screw1" @click.stop="handleScrewClick(pano.id, 1)"></div>
+                        <div class="screwBox screw2" @click.stop="handleScrewClick(pano.id, 2)"></div>
+                        <div class="screwBox screw3" @click.stop="handleScrewClick(pano.id, 3)"></div>
+                        <div class="screwBox screw4" @click.stop="handleScrewClick(pano.id, 4)"></div>
+                        <img src="./img/panoo.png" alt="" class="panoo" @click.stop="handleSwitchCoverClick(pano.id)" />
+                    </div>
+                </div>
+
+                <img src="./img/cables.png" alt="" class="cablePng" />
+            </div>
+            <div class="voltBox" v-show="voltShow">
+                <div class="meterBox">
+                    <h2 class="meterText">{{Locales['ELECTVOLT']}}</h2>
+                    <div class="meterSay">
+                        <h2 class="meterSayText">{{voltVolumeModal}}</h2>
+                        <p class="meterSaySubText">V</p>
+                        <img src="./img/voltstokepng.png" alt="" class="meterSayBg" />
+                    </div>
+                    <div class="meterInfo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width=".7292vw" height="1.3542vw" viewBox="0 0 14 26" fill="none">
+                            <rect x="5" width="4" height="26" fill="white" />
+                            <rect width="14" height="2" fill="white" />
+                        </svg>
+                    </div>
+                    <div class="meterLine"></div>
+                </div>
+                <div class="meterLightBox">
+                    <div class="meterLightRed"></div>
+                    <div class="meterLightGreen"></div>
+                </div>
+                <div class="meterSwitch"></div>
+                <div class="meterGreenCable">
+                    <div class="meterGreen"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.7708vw" height="8.8542vw" viewBox="0 0 34 170" fill="none">
+                        <g filter="url(#filter0_i_406_611)">
+                            <path d="M24.5002 1C42.5406 114.221 -24.9998 35.5 24.5001 291" stroke="#2DFF42" stroke-width="11" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_406_611" x="0.500488" y="0.134521" width="32.6494" height="291.912" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="2.85" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_406_611" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="meterRedCable">
+                    <div class="meterRed"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.3542vw" height="8.8542vw" viewBox="0 0 26 170" fill="none">
+                        <g filter="url(#filter0_i_406_610)">
+                            <path d="M15.4999 1C33.5403 114.221 -13 198 15.4999 291" stroke="#FF4545" stroke-width="11" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_406_610" x="0.511719" y="0.134521" width="24.7744" height="292.477" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="2.85" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_406_610" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="meterYellowCable">
+                    <div class="meterYellow"></div>
+                    <div class="meterYellowLine"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.6042vw" height="8.5417vw" viewBox="0 0 50 164" fill="none">
+                        <g filter="url(#filter0_i_406_617)">
+                            <path d="M7.48834 0.999998C-4.99994 113.5 95 98.5 7.48833 291" stroke="#FFCF24" stroke-width="11" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_406_617" x="0.904785" y="0.393066" width="48.3481" height="292.883" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="2.85" />
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_406_617" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="lineMeter" id="lineMeter" v-if="lineMeterShow"></div>
+            <div class="notifyList" v-show="notifyShow">
+                <div v-for="(notification, index) in notifications" :key="index" :class="['notifyBox', notification.type]">
+                  <div class="notifyLine"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" v-if="notification.type === 'infoNotify'">
+                    <path d="M17 3.1875C14.2682 3.1875 11.5976 3.99759 9.32619 5.51533C7.05474 7.03306 5.28436 9.19028 4.23892 11.7142C3.19348 14.2381 2.91995 17.0153 3.45291 19.6947C3.98587 22.374 5.30138 24.8352 7.23309 26.7669C9.16481 28.6986 11.626 30.0141 14.3053 30.5471C16.9847 31.0801 19.7619 30.8065 22.2858 29.7611C24.8097 28.7156 26.9669 26.9453 28.4847 24.6738C30.0024 22.4024 30.8125 19.7319 30.8125 17C30.8086 13.3379 29.3522 9.82687 26.7626 7.23736C24.1731 4.64785 20.6621 3.19137 17 3.1875ZM16.4688 9.5625C16.784 9.5625 17.0921 9.65597 17.3542 9.83109C17.6163 10.0062 17.8206 10.2551 17.9412 10.5463C18.0618 10.8376 18.0934 11.158 18.0319 11.4672C17.9704 11.7763 17.8186 12.0603 17.5957 12.2832C17.3728 12.5061 17.0888 12.6579 16.7797 12.7194C16.4705 12.7809 16.1501 12.7493 15.8589 12.6287C15.5676 12.5081 15.3187 12.3038 15.1436 12.0417C14.9685 11.7796 14.875 11.4715 14.875 11.1562C14.875 10.7336 15.0429 10.3282 15.3418 10.0293C15.6407 9.73041 16.0461 9.5625 16.4688 9.5625ZM18.0625 24.4375C17.4989 24.4375 16.9584 24.2136 16.5599 23.8151C16.1614 23.4166 15.9375 22.8761 15.9375 22.3125V17C15.6557 17 15.3855 16.8881 15.1862 16.6888C14.9869 16.4895 14.875 16.2193 14.875 15.9375C14.875 15.6557 14.9869 15.3855 15.1862 15.1862C15.3855 14.9869 15.6557 14.875 15.9375 14.875C16.5011 14.875 17.0416 15.0989 17.4401 15.4974C17.8386 15.8959 18.0625 16.4364 18.0625 17V22.3125C18.3443 22.3125 18.6146 22.4244 18.8138 22.6237C19.0131 22.823 19.125 23.0932 19.125 23.375C19.125 23.6568 19.0131 23.927 18.8138 24.1263C18.6146 24.3256 18.3443 24.4375 18.0625 24.4375Z">
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" v-if="notification.type === 'errorNotify'">
+                    <path
+                      d="M18.2522 3.58703C17.7621 2.66053 16.2377 2.66053 15.7476 3.58703L2.99757 27.6704C2.88279 27.8862 2.82589 28.1281 2.83241 28.3725C2.83893 28.6169 2.90864 28.8554 3.03476 29.0649C3.16088 29.2743 3.33909 29.4475 3.55205 29.5676C3.765 29.6876 4.00543 29.7505 4.2499 29.75H29.7499C29.9942 29.7505 30.2345 29.6877 30.4473 29.5677C30.6601 29.4477 30.8382 29.2746 30.9642 29.0653C31.0901 28.856 31.1597 28.6176 31.1662 28.3734C31.1726 28.1291 31.1156 27.8874 31.0008 27.6718L18.2522 3.58703ZM18.4166 25.5H15.5832V22.6667H18.4166V25.5ZM15.5832 19.8334V12.75H18.4166L18.418 19.8334H15.5832Z"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" v-if="notification.type === 'succesNotify'">
+                    <path
+                      d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7971 21.5697C13.9429 21.6304 14.0991 21.6616 14.257 21.6616C14.4149 21.6616 14.5711 21.6304 14.7169 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z"
+                    />
+                  </svg>
+                  <div class="notifyTextBox">
+                    <h2 class="notifyText" v-if="notification.type === 'infoNotify'">{{Locales["info"]}}</h2>
+                    <h2 class="notifyText" v-if="notification.type === 'errorNotify'">{{Locales["error"]}}</h2>
+                    <h2 class="notifyText" v-if="notification.type === 'succesNotify'">{{Locales["successs"]}}</h2>
+                    <p class="notifySubText">{{ notification.message }}</p>
+                  </div>
+                </div>
+            </div>
+            <div class="allScoreList" v-show="scoreBoxShow">
+                <div class="allScoreBox" v-if="progressData && progressData.regionJobTask" v-for="(data, index) in progressData.regionJobTask" :key="index"> 
+                  <div class="allScoreLine"></div>
+                  <div class="allScoreIcon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1.8229vw"
+                      height="1.8229vw"
+                      viewBox="0 0 35 35"
+                      fill="none"
+                    >
+                      <path
+                        d="M17.75 3.48438C14.978 3.48438 12.2682 4.30638 9.96334 5.84643C7.65848 7.38649 5.86207 9.57543 4.80126 12.1365C3.74045 14.6975 3.46289 17.5155 4.00369 20.2343C4.54448 22.9531 5.87934 25.4504 7.83946 27.4105C9.79958 29.3707 12.2969 30.7055 15.0157 31.2463C17.7345 31.7871 20.5525 31.5096 23.1136 30.4487C25.6746 29.3879 27.8635 27.5915 29.4036 25.2867C30.9436 22.9818 31.7656 20.272 31.7656 17.5C31.7617 13.784 30.2838 10.2214 27.6562 7.59379C25.0286 4.9662 21.466 3.4883 17.75 3.48438ZM17.2109 9.95312C17.5308 9.95312 17.8435 10.048 18.1094 10.2257C18.3753 10.4034 18.5826 10.6559 18.705 10.9514C18.8274 11.2469 18.8595 11.5721 18.7971 11.8858C18.7347 12.1995 18.5806 12.4877 18.3545 12.7138C18.1283 12.94 17.8401 13.094 17.5264 13.1564C17.2127 13.2188 16.8876 13.1868 16.5921 13.0644C16.2966 12.942 16.044 12.7347 15.8663 12.4688C15.6886 12.2028 15.5938 11.8902 15.5938 11.5703C15.5938 11.1414 15.7641 10.7301 16.0674 10.4268C16.3707 10.1235 16.782 9.95313 17.2109 9.95312ZM18.8281 25.0469C18.2563 25.0469 17.7078 24.8197 17.3034 24.4153C16.8991 24.0109 16.6719 23.4625 16.6719 22.8906V17.5C16.3859 17.5 16.1117 17.3864 15.9095 17.1842C15.7073 16.982 15.5938 16.7078 15.5938 16.4219C15.5938 16.1359 15.7073 15.8617 15.9095 15.6595C16.1117 15.4573 16.3859 15.3438 16.6719 15.3438C17.2438 15.3438 17.7922 15.5709 18.1966 15.9753C18.601 16.3797 18.8281 16.9281 18.8281 17.5V22.8906C19.1141 22.8906 19.3883 23.0042 19.5905 23.2064C19.7927 23.4086 19.9063 23.6828 19.9063 23.9688C19.9063 24.2547 19.7927 24.5289 19.5905 24.7311C19.3883 24.9333 19.1141 25.0469 18.8281 25.0469Z"
+                        fill="#48BDFF"
+                      />
+                    </svg>
+                  </div>
+                  <div class="allScoreTextBox">
+                    <h2 class="allScoreText">{{Locales['info']}}</h2>
+                    <h2 class="allScoreSubText">{{data.jobCount}}  {{data.jobLabel}}</h2>
+                    <div class="allScoreTaskBox">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width=".625vw"
+                        height=".625vw"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                      >
+                        <path
+                          d="M2.5 10.5C2.35833 10.5 2.23967 10.452 2.144 10.356C2.04833 10.26 2.00033 10.1413 2 10V9.5H1.5V7.5C1.5 7.35833 1.548 7.23967 1.644 7.144C1.74 7.04833 1.85867 7.00033 2 7H2.5V3.5C2.5 2.95 2.69583 2.47917 3.0875 2.0875C3.47917 1.69583 3.95 1.5 4.5 1.5C5.05 1.5 5.52083 1.69583 5.9125 2.0875C6.30417 2.47917 6.5 2.95 6.5 3.5V8.5C6.5 8.775 6.598 9.0105 6.794 9.2065C6.99 9.4025 7.22533 9.50033 7.5 9.5C7.77467 9.49967 8.01017 9.40183 8.2065 9.2065C8.40283 9.01117 8.50067 8.77567 8.5 8.5V5H8C7.85833 5 7.73967 4.952 7.644 4.856C7.54833 4.76 7.50033 4.64133 7.5 4.5V2.5H8V2C8 1.85833 8.048 1.73967 8.144 1.644C8.24 1.54833 8.35867 1.50033 8.5 1.5H9.5C9.64167 1.5 9.7605 1.548 9.8565 1.644C9.9525 1.74 10.0003 1.85867 10 2V2.5H10.5V4.5C10.5 4.64167 10.452 4.7605 10.356 4.8565C10.26 4.9525 10.1413 5.00033 10 5H9.5V8.5C9.5 9.05 9.30417 9.52083 8.9125 9.9125C8.52083 10.3042 8.05 10.5 7.5 10.5C6.95 10.5 6.47917 10.3042 6.0875 9.9125C5.69583 9.52083 5.5 9.05 5.5 8.5V3.5C5.5 3.225 5.40217 2.98967 5.2065 2.794C5.01083 2.59833 4.77533 2.50033 4.5 2.5C4.22467 2.49967 3.98933 2.59767 3.794 2.794C3.59867 2.99033 3.50067 3.22567 3.5 3.5V7H4C4.14167 7 4.2605 7.048 4.3565 7.144C4.4525 7.24 4.50033 7.35867 4.5 7.5V9.5H4V10C4 10.1417 3.952 10.2605 3.856 10.3565C3.76 10.4525 3.64133 10.5003 3.5 10.5H2.5Z"
+                          fill="white"
+                          fill-opacity="0.57"
+                        />
+                      </svg>
+                      <h2 class="allScoreTaskText">{{data.madeAmount}}<span>/{{data.jobCount}}</span></h2>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="scoreList" v-show="playerShow">
+                <div class="scoreBox" v-if="progressData && progressData.Players" v-for="(data, index) in progressData.Players" :key="index">
+                  <div class="scorePlayerBox">
+                    <div class="scorePlayerImg" 
+                    :style="`background-image: url('${data.playerImage}')`"></div>
+                    <div class="scorePlayerTextBox">
+                      <h2 class="scorePlayerName">{{data.playerName}}</h2>
+                      <div class="scorePlayerLevel">
+                        <div class="scorePlayerLevelLine"></div>
+                        <h2 class="scorePlayerLevelText">{{data.playerLevel}} {{Locales["LEVEL"]}}</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="scoreSay">
+                    <img src="./img/tb.png" alt="" class="kn" />
+                    <h2 class="scoreSayText"> {{data.scoreAmount}} </h2>
+                  </div>
+                </div>
+            </div>
+
+            <div class="fixwiring" v-show="wiringShow">
+                <div class="game">
+                    <img src="./img/cableTop.png" alt="" class="cableTop top1" />
+                    <img src="./img/cableTop.png" alt="" class="cableTop top2" />
+                    <img src="./img/cableTop.png" alt="" class="cableTop top3" />
+                    <img src="./img/cableTop.png" alt="" class="cableTop top4" />
+                    <img src="./img/cableBottom.png" alt="" class="cableBottom bottom1" />
+                    <img src="./img/cableBottom.png" alt="" class="cableBottom bottom2" />
+                    <img src="./img/cableBottom.png" alt="" class="cableBottom bottom3" />
+                    <img src="./img/cableBottom.png" alt="" class="cableBottom bottom4" />
+                    <svg width="907" height="907" viewBox="0 0 907 907">
+                        <linearGradient id="a" y1="453.5" x2="907" y2="453.5" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" stop-color="#1d1d1b" />
+                            <stop offset="0" stop-color="#272726" />
+                            <stop offset=".2" stop-color="#262625" stop-opacity=".93" />
+                            <stop offset=".35" stop-color="#232322" stop-opacity=".69" />
+                            <stop offset=".48" stop-color="#1e1e1c" stop-opacity=".29" />
+                            <stop offset=".51" stop-color="#1d1d1b" stop-opacity=".2" />
+                            <stop offset="1" stop-color="#1d1d1b" />
+                        </linearGradient>
+    
+                        <g style="isolation: isolate">
+                            <path class="m" d="M8.5 167.5h66v33h-66z" />
+                            <path class="n" d="M8.5 176.5h66v17h-66z" />
+    
+                            <path class="o" d="M8.5 357.5h66v33h-66z" />
+                            <path class="p" d="M8.5 366.5h66v17h-66z" />
+    
+                            <path class="q" d="M8.5 542.5h66v33h-66z" />
+                            <path class="r" d="M8.5 551.5h66v17h-66z" />
+    
+                            <path class="s" d="M8.5 728.5h66v33h-66z" />
+                            <path class="t" d="M8.5 737.5h66v17h-66z" />
+                            <path class="k" d="M845.5 142.5h56v63h-56z" />
+                            <path class="o" d="M794.5 169.5h108v33h-108z" />
+                            <path class="p" d="M794.5 178.5h108v17h-108z" />
+    
+                            <path class="k" d="M845.5 514.5h56v63h-56z" />
+                            <path class="k" d="M845.5 699.5h56v63h-56z" />
+                            <path class="k" d="M845.5 330.5h56v63h-56z" />
+                            <path class="s" d="M793.5 726.5h108v33h-108z" />
+                            <path class="t" d="M793.5 735.5h108v17h-108z" />
+                            <path class="q" d="M791.5 541.5h110v33h-110z" />
+                            <path class="r" d="M791.5 550.5h110v17h-110z" />
+                            <path class="m" d="M791.5 357.5h111v33h-111z" />
+                            <path class="n" d="M791.5 366.5h111v17h-111z" />
+                            <path class="m" d="M8.5 167.5h66v33h-66z" />
+                            <path class="n" d="M8.5 176.5h66v17h-66z" />
+                        </g>
+                        <rect x="60" y="165" width="3.125vw" height="2.0833vw" class="drag drag-1" />
+                        <rect x="60" y="355" width="3.125vw" height="2.0833vw" class="drag drag-2" />
+                        <rect x="60" y="540" width="3.125vw" height="2.0833vw" class="drag drag-3" />
+                        <rect x="60" y="725" width="3.125vw" height="2.0833vw" class="drag drag-4" />
+    
+                        <!-- DRAG LINES -->
+                        <line x1="45" y1="185" x2="70" y2="185" class="line line-back line-1" />
+                        <line x1="70" y1="185" x2="70" y2="185" class="line line-1" />
+                        <line x1="65" y1="375" x2="65" y2="375" class="line line-back line-2" />
+                        <line x1="65" y1="375" x2="65" y2="375" class="line line-2" />
+                        <line x1="65" y1="560" x2="65" y2="560" class="line line-back line-3" />
+                        <line x1="65" y1="560" x2="65" y2="560" class="line line-3" />
+                        <line x1="65" y1="745" x2="65" y2="745" class="line line-back line-4" />
+                        <line x1="65" y1="745" x2="65" y2="745" class="line line-4" />
+                        <!-- DRAG LINES -->
+                    </svg>
+                </div>
+                <div class="bg"></div>
+            </div>
+
+            <div class="forminigame" ondragstart="return false;" ondrop="return false;" v-show="foringShow">
+                <div id="app-minigame">
+                    <div id="am-hinge">
+                        <div class="left">
+                            <div><div></div></div>
+                            <div><div></div></div>
+                            <div><div></div></div>
+                        </div>
+                        <div class="right">
+                            <div><div></div></div>
+                            <div><div></div></div>
+                            <div><div></div></div>
+                        </div>
+                    </div>
+                    <div id="am-latch"></div>
+                    <div id="am-overlay" ></div>
+                    <div id="am-screen">
+                        <div id="ams-nodes">
+                            <div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="am-timer">00:00</div>
+                </div>
+                <div id="ams-welding"></div>
+            </div>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://unpkg.com/swiper@5.3.8/js/swiper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./js/app.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+* {
+  font-family: Kanit;
+  padding: 0;
+  margin: 0;
+}
+
+.xZR-Notify {
+  display: flex;
+  width: 15.5rem;
+  position: absolute;
+}
+
+.layout-uptodown {
+  flex-direction: column-reverse;
+  top: 50px;
+}
+.layout-downtoup {
+  bottom: 8%;
+  right: 1.4rem;
+
+  flex-direction: column;
+}
+
+.box-item {
+  background-color: rgba(12, 12, 12, 0.954);
+  display: flex;
+  align-items: center;
+  height: 4rem;
+     
+  margin-top: 14px;
+  position: relative;
+  border-radius:  8px;
+  /* border-left: 4px solid #079cff; */
+}
+
+.header {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: absolute;
+     top: -7px;
+     right: 10rem;
+     z-index: 111;
+     border-radius: 5px;
+     font-size: 10px;
+     font-weight: 300;
+     width: 4.4rem;
+     height: 1rem;
+     color: #fff;
+}
+
+.addheader {
+     background: linear-gradient(175deg, rgb(1, 96, 228) 0%, rgb(19, 45, 63) 100%);
+     
+}
+
+.addheader p {
+     color: #fff;
+     margin-top: 14px;
+}
+.removeheader {
+     background: linear-gradient(125deg,#800707,#ff0303);
+}
+
+.removeheader p {
+     color: #fff;
+     margin-top: 14px;
+}
+.box-item.add {
+     border-left: solid 3px rgb(20, 93, 196);
+}
+
+.box-item.remove {
+     border-left: solid 3px rgb(230, 0, 0);
+}
+
+/* .item-img {
+  padding: 10px;
+} */
+
+/* Item Image */
+.item-img {
+     position: absolute;
+     right: 5px;
+     z-index: 10000;
+     height: 81%;
+     width: 3.5rem;
+     border-radius: 5px;
+     background-color: rgba(22, 22, 22, 0.897);
+     margin-top: -1.6rem;
+     /* border: solid 2px rgb(22, 22, 22); */
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.item-img img {
+     width: 85%;
+}
+
+/* Item Info */
+.item-info {
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #c7c7c7;
+     text-align: left;
+     right: 4.3rem;
+     font-weight: 400;
+     bottom: -7%;
+     font-size: 11px;
+}
+
+.fa-solid {
+     position: relative;
+     top: 35%;
+     font-size: 0.7vw;
+     text-align: center;
+     justify-content: center;
+}
+
+.item-info-name {
+     position: absolute;
+     color: #eee;
+     text-align: left;
+     right: 4.3rem;
+     font-weight: 400;
+     top: 15%;
+     font-size: 14px;
+     display: flex;
+     align-items: center;
+}
+
+.iconadd {
+     color: #03a3ff;
+     font-size: 8px;
+     margin-bottom: 10px;
+     margin-left: 3px;
+     /* text-shadow: 0 0 5px #03a3ff; */
+}
+.iconremove {
+     color: #ff0303;
+     font-size: 8px;
+     margin-bottom: 10px;
+     margin-left: 3px;
+     /* text-shadow: 0 0 5px #ff0303; */
+}
+
+
+@keyframes moveIn {
+     from {
+          right: -5rem;
+
+          opacity: 0;
+     }
+
+     to {
+          right: 1.4rem;
+
+          opacity: 1;
+     }
+}
+
+@keyframes moveOut {
+     from {
+          right: 1.4rem;
+          opacity: 1;
+     }
+
+     to {
+          right: -5rem;
+
+
+          opacity: 0;
+     }
+}
+

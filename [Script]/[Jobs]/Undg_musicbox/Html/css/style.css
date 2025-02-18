@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@450;500&display=swap"); @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); 
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Prompt", serif;    
+    /* font-family: "Prompt", sans-serif; */
+    color: rgb(214, 212, 212);
+    user-select: none;
+    font-size: 1.2vh;
+    font-style: normal;
+    font-weight: 600;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0));
+}
+
+.containers {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.Hud {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    zoom: 92%;
+}
+
+.Box-Mains {
+    display: flex;
+    position: relative;
+    width: 34vh;
+    height: 61vh;
+    /* top: -15vh; */
+}
+
+.Box-Blackjob {
+    position: relative;
+    width: 34vh;
+    height: 61vh;
+    justify-content: center;
+    background-color: rgba(31, 31, 31, 0.705);
+    border-radius: 2vh;
+    margin: 1vh;
+}
+
+.Header {
+    display: flex;
+    position: relative;
+    width: 35vh;
+    height: 6vh;
+    top: -1vh;
+    left: -1vh;
+    /* background-color: rebeccapurple; */
+}
+
+.s img {
+    position: absolute;
+    width: 9vh;
+}
+
+.Icon {
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    top: 1vh;
+    left: 1vh;
+}
+
+.Icon img {
+    height: 6vh;
+    filter: drop-shadow(rgb(148, 149, 150) 0px 0px 4vh);
+}
+
+.Text {
+    display: grid;
+    position: relative;
+    top: 2.6vh;
+    left: 1vh;
+}
+
+.up {
+    position: relative;
+    font-size: 1.4vh;
+}
+
+.down {
+    position: relative;
+    top: -1.2vh;
+    color: rgb(136, 133, 139);
+}
+
+.Box-Logs {
+    position: relative;
+    top: 3.7vh;
+    width: 95%;
+    height: 44.4vh;
+    left: 1.25vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    zoom: 94%;
+}
+
+.Logs-s {
+    display: inline-flex;
+    position: relative;
+    width: 32.5vh;
+    height: 6.2vh;
+    background-color: rgba(71, 68, 68, 0.39);
+    border-radius: 1vh;
+    margin-top: 0.5vh;
+    margin-left: 0.6vh;
+    transition: .5s;
+}
+
+.Logs-s:hover {
+    transition: .5s;
+    position: relative;
+    background-color: rgba(39, 39, 39, 0.51);
+}
+
+.Img-Checks {
+    border-radius: 1vh;
+    display: flex;
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    margin-left: 0.15vh;
+    top: 0.6vh;
+    left: 0.5vh;
+    justify-content: center;
+    align-items: center;
+    background: #232323e0;
+    /* filter: drop-shadow(rgba(241, 6, 6, 0.363) 0vh 0vh 0.5vh); */
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+
+.Logs-s:hover > .del {
+    opacity: 1;
+    width: 5vh;
+    transition-duration: 0.4s;
+}
+
+.Logs-s:hover > .dels {
+    opacity: 1;
+    width: 5vh;
+    transition-duration: 0.4s;
+}
+
+.Img-Checks img {
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 1vh;
+    filter: drop-shadow(rgba(37, 37, 37, 0.363) 0px 0px 1vh);
+    zoom: 140%;
+}
+
+.fa-parachute-box , .fa-music {
+    position: relative;
+    font-size: 3.6vh;
+    left: -0.4vh;
+}
+
+.Name-Check {
+    display: grid;
+    width: 18vh;
+    position: relative;
+    height: 5vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    top: 1.8vh;
+    left: 1.5vh;
+}
+
+.fa-headphones {
+  position: relative;
+  font-size: 0.8vh;
+  top: -0.3vh;
+}
+
+.f {
+    width: 22vh; /* กำหนดความกว้าง */
+    white-space: nowrap; /* ให้ข้อความสามารถตัดเป็นบรรทัดใหม่ได้ */
+    word-wrap: break-word; /* ตัดข้อความยาวเกินขอบเขต */
+    overflow: hidden; /* ซ่อนข้อความที่เกินออกมา */
+}
+  
+
+.f span {
+  position: relative;
+  font-size: 0.8vh;
+  font-weight: 500;
+}
+
+.e {
+    position: relative;
+    top: -1vh;
+    font-size: 1.05vh;
+    font-weight: 500;
+    color: #919090;
+}
+
+.g {
+  position: absolute;
+  top: -1vh;
+  font-size: 0.9vh;
+  font-weight: 500;
+  color: #7f7f7f;
+}
+
+.Sell-Check {
+    position: absolute;
+    width: 4vh;
+    top: 0.7vh;
+    height: 3.4vh;
+    left: 24vh;
+    background: rgb(32, 32, 32);
+    border-radius: 0.4vh;
+}
+
+.Box-Textdown {
+    display: flex;
+    position: absolute;
+    top: 57vh;
+    width: 100%;
+    justify-content: center;
+    color: #707070;
+}
+
+button {
+    position: relative;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 0.5vh;
+    width: 6vh;
+    height: 3vh;
+    transition: .3s;
+    background-color: #3b82f6;
+    color: #fff;
+    top: 1vh;
+    left: 3vh;
+}
+  
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    filter: drop-shadow(rgb(6, 135, 241) 0px 0px 4vh);
+}
+
+::-webkit-scrollbar {
+  display: none;
+    width: 0.5vh;
+    border-radius: 0.7vh;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(20, 20, 20, 0.61);
+    border-radius: 0.7vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #2974ec 0%, #3b82f6 100%);
+    border-radius: 0.5vh;
+}
+
+.Headers {
+    display: grid;
+    position: relative;
+    top: 1vh;
+    width: 60vh;
+    height: 7vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.Box-Category {
+    display: flex;
+    position: relative;
+    background-color: rgb(22 22 22 / 86%);
+    width: 56vh;
+    height: 4.4vh;
+    border-radius: 1vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.Log-Category {
+    position: relative;
+    margin: 2vh;
+    transition-duration: 0.4s;
+}
+
+.Log-Category:hover {
+    color: #2974ec;
+    transition-duration: 0.4s;
+}
+
+ion-icon {
+    font-size: 1.4vh;
+    position: relative;
+    left: -0.6vh;
+    top: 0.3vh;
+
+}
+
+.del {
+    z-index: 91111111111;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 5vh;
+    height: 6.2vh;    
+    left: 27.5vh;
+    border-radius: 0vh 1vh 1vh 0vh;
+    background: linear-gradient(90deg, #eeeeee00, rgba(241, 165, 2, 0.342));
+    transition-duration: 0.4s;
+    top: vh;
+}
+
+.del:hover {
+    cursor: pointer;
+}
+
+.dels {
+    z-index: 91111111111;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 5vh;
+    height: 6.2vh;    
+    left: 27.5vh;
+    border-radius: 0vh 1vh 1vh 0vh;
+    background: linear-gradient(90deg, #eeeeee00, rgba(241, 2, 2, 0.342));
+    transition-duration: 0.4s;
+    top: vh;
+}
+
+.dels:hover {
+    cursor: pointer;
+}
+
+.fa-pause, .fa-trash-can, .fa-list, .fa-circle-up , .fa-circle-play, .fa-backward-step, .fa-forward-step, .fa-down-left-and-up-right-to-center, .fa-repeat {
+    position: relative;
+    font-size: 2vh;
+    transition-duration: 0.5s;
+    color: #d8d5d5de;
+    left: 0.2vh;
+}
+
+.loader-dot {
+    zoom: 62%;
+    position: absolute;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.6vh;
+    left: 50vh;
+    top: 3vh;
+    background-color: rgb(12, 128, 236);
+    color: rgb(12, 128, 236);
+    animation: dot 1s infinite linear alternate;
+    animation-delay: .2s;
+    filter: drop-shadow(rgba(12, 128, 236, 0.624) 0vh 0px 3vh);
+  }
+  
+  .loader-dot::before,
+  .loader-dot::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .loader-dot::before {
+    left: -1.4vh;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 1vh;
+    background-color: rgb(12, 128, 236);
+    color: rgb(12, 128, 236);
+    animation: dot 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  
+  .loader-dot::after {
+    left: 1.4vh;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 1vh;
+    background-color: rgb(12, 128, 236);
+    color: rgb(12, 128, 236);
+    animation: dot 1s infinite alternate;
+    animation-delay: .2s;
+  }
+  
+  @keyframes dot {
+    0% {
+        background-color: rgb(12, 128, 236);
+    }
+  
+    50%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+.person {
+    position: relative;
+    font-size: 1.3vh;
+    color: rgb(168, 168, 168);
+    top: 0.5vh;
+    left: 2vh;
+}
+
+.fa-user {
+    position: relative;
+    font-size: 1vh;
+    top: -0.123vh;
+    left: -0.3vh;
+    color: rgb(168, 168, 168);
+}
+
+.Box-search {
+  position: relative;
+  width: 31vh;
+  left: 1.5vh;
+  height: 4.5vh;
+  top: 1vh;
+  background-color: rgba(12, 12, 12, 0.925);
+  border-radius: 1vh;
+}
+
+.hrllll {
+  position: relative;
+  height: 0.1vh;
+  width: 100%;
+  /* background-color: rgb(91 91 91 / 53%); */
+  top: 1.7vh;
+  /* left: 4vh; */
+  text-align: left;
+  color: #abaaaaba;
+  border-radius: 1vh;
+  font-weight: 500;
+  font-size: 1vh;
+  left: 2.2vh;
+}
+
+.fa-circle-down {
+  position: relative;
+  color: #abaaaaba;
+  left: -0.3vh;
+  font-weight: 500;
+  font-size: 0.95vh;
+}
+
+.search {
+  position: relative;
+  width: 26vh;
+  height: 4.5vh;
+  background-color: rgb(20 20 20);
+  border-radius: 1vh 0vh 0vh 1vh;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-variant: all-petite-caps;
+  font-size: 1.7vh;
+  font-weight: 500;
+}
+
+.back {
+  position: absolute;
+  left: 31vh;
+  top: 2vh;
+  transform: rotate(180deg);
+  /* z-index: 1111111; */
+}
+
+.fa-arrow-right-from-bracket {
+  position: relative;
+  color: #e7e4e4;
+  transition: .5s;
+}
+
+.fa-arrow-right-from-bracket:hover {
+  color: #aaa5a5;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.Box-top {
+    position: relative;
+    height: 25vh;
+    width: 100%;
+    top: -5vh;
+}
+
+.bc-cb {
+    position: relative;
+    width: 100%;
+    height: 111%;
+    border-radius: 2vh 2vh 0vh 0vh;
+}
+
+.bc-cb img {
+    position: relative;
+    width: 100%;
+    height: 110%;
+    border-radius: 2vh 2vh 0vh 0vh;
+    filter: blur(5vh);
+}
+
+.bc-info {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 4vh;
+    justify-content: center;
+}
+
+.info {
+    position: relative;
+    width: 16vh;
+    height: 16vh;
+    top: 3vh;
+    background-color: rgba(30, 30, 31, 0.205);
+    border-radius: 1vh;
+    overflow: hidden;
+}
+
+.info img {
+    position: relative;
+    width: 16vh;
+    height: 16vh;
+    border-radius: 1vh;
+    -webkit-box-reflect: below -0.5vh linear-gradient(transparent 45%, rgba(245, 246, 255, 0.199));
+    zoom: 140%;
+    left: -2.25vh;
+    top: -2.25vh;
+}
+
+.bc-text-font {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 25vh;
+    justify-content: center;
+}
+
+.bc-name-font {
+    position: relative;
+    top: -0.5vh;
+}
+
+.name-music {
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    color: #d8d5d5;
+    font-size: 1.6vh;
+    width: 29vh;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.name-music-s {
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    color: #7f7f7f;
+}
+
+.box-action {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 3.6vh;
+    justify-content: center;
+    align-items: center;
+    height: 5.5vh;
+}
+
+.action {
+    position: relative;
+    display: flex;
+    top: -1vh;
+}
+
+.log-action {
+    margin: 1.3vh;
+}
+
+.hrlss {
+    position: absolute;
+    height: 0.6vh;
+    width: 26vh;
+    background-color: #5d5d5d7d;
+    top: 5.5vh;
+    border-radius: 100vh;
+    transition: .5s;
+}
+.hrls {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100vh;
+    transition: .5s;
+    box-sizing: border-box; /* รวมขอบและ padding ในการคำนวณขนาด */
+}
+.hp {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(237 237 237);
+    border-radius: 100vh;
+    transition: .5s;
+}
+
+.playplayplay:hover {
+    position: relative;
+    color: #f8f5f5;
+    cursor: pointer;
+}
+
+.page2 {
+    display: none; 
+    opacity: 0;
+} 
+
+.fa-square-plus {
+    position: absolute;
+    z-index: 1;
+    font-size: 2vh;
+    top: 1.25vh;
+    left: 27.7vh;
+    opacity: 70%;
+}
+
+.box-btn {
+	cursor: pointer;
+	position: absolute;
+	width: 3.9vh;
+	height: 4vh;
+	background-color: rgb(100 100 100 / 23%);
+	border-radius: 1.3vh;
+	font-size: 2vh;
+	color: white;
+	transition: .3s;
+	top: 8vh;
+	left: 2.5vh;
+	z-index: 1111;
+    transition: .5s;
+}
+
+#btn-volume:hover {
+	height: 15vh;
+    transition: .5s;
+}
+
+#btn-volume:hover > .volume {
+	display: block;
+	width: 10vh;
+    transition: .5s;
+}
+
+#btn-volume > #icon {
+	position: absolute;
+	top: 1vh;
+	left: 1.18vh;
+	transform: translate(0%, -50%);
+	transform: rotate(90deg);
+    transition: .5s;
+}
+
+.volume {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	width: 0;
+	top: 8vh;
+	right: -3.1vh;
+	transform: translate(0%, -50%);
+	transition: .3s;
+	transform: rotate(-90deg);
+}
+
+/* เปลี่ยนสีของแถบเลื่อน */
+input[type="range"].volume {
+    -webkit-appearance: none;
+    /* width: 100%; */
+    height: 1vh;
+    background: #d1cfcf18;
+    border-radius: 2vh;
+    outline: none;
+    transition: background 0.3s;
+    transform: rotate(450deg);
+  }
+  
+  /* เปลี่ยนสีเมื่อมีการโฮเวอร์ */
+  input[type="range"].volume:hover {
+    background: #5d5d5d7d;
+  }
+  
+  /* เปลี่ยนสีของตัวจับ (thumb) */
+  input[type="range"].volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2vh;
+    height: 1.2vh;
+    border-radius: 50%;
+    background: #0877dfb9; /* สีของตัวจับ */
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    filter: drop-shadow(rgba(6, 135, 241, 0.39) 0px 0px 4vh);
+  }
+  
+  /* เปลี่ยนสีของตัวจับเมื่อโฮเวอร์ */
+  input[type="range"].volume::-webkit-slider-thumb:hover {
+    background: #19ace6;
+  }
+  
+  /* สำหรับเบราว์เซอร์อื่น */
+  input[type="range"].volume::-moz-range-thumb {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background: #ff5722;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  input[type="range"].volume::-ms-thumb {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background: #ff5722;
+    cursor: pointer;
+    transition: background 0.3s;
+  }

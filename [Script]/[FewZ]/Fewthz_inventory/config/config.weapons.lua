@@ -23,12 +23,7 @@ Config["Weapons"] = {
 	{name = 'WEAPON_POOLCUELV3', label = 'POOLCUES_LV3', components = {}},
 	{name = 'WEAPON_POOLCUELV4', label = 'POOLCUES_LV4', components = {}},
 	{name = 'WEAPON_POOLCUELV5', label = 'POOLCUES_LV5', components = {}},
-
-	{ name = 'weapon_valentine_dagger', label = 'weapon_valentine_dagger', components = {} },
-	{ name = 'weapon_valentine_machete', label = 'weapon_valentine_machete', components = {} },
-	{ name = 'weapon_valentine_staff', label = 'weapon_valentine_staff', components = {} },
-	{ name = 'weapon_valentine_sword', label = 'weapon_valentine_sword', components = {} },
-
+	
 	{
 		name = 'WEAPON_KNIFE',
 		label = ('มีด'),

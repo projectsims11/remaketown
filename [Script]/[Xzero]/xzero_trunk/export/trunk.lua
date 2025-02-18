@@ -3,7 +3,7 @@
 --]]
 
 
-scriptName = 'esx_inventoryhud'
+scriptName = 'Fewthz_inventory'
 xZTScriptName = 'xzero_trunk'
 GetName = function(a)
 	return scriptName..a
