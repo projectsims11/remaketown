@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WeaponShopItemArray>
+	<weaponShopItems>
+		<Item>
+			<lockHash>CU_WEP_BATLV5</lockHash>
+			<nameHash>WEAPON_BATLV5</nameHash>
+			<cost value ="14500"/>
+			<ammoCost value="100"/>
+			<textLabel>WT_BATLV5</textLabel>
+			<weaponDesc>WTD_BATLV5</weaponDesc>
+			<weaponTT>WTT_BATLV5</weaponTT>
+			<weaponUppercase>WTU_BATLV</weaponUppercase>
+			<id value = "32"/>
+			<weaponComponents />
+		</Item>
+	</weaponShopItems>
+</WeaponShopItemArray>

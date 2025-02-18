@@ -78,7 +78,7 @@ body {
 .warning-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f071";
-    color: #4490e7;
+    color: #ffc107;
 }
 
 .warning {
@@ -91,7 +91,7 @@ body {
 }
 
 .warning-border {
-    border-left: 5px solid #4490e7;
+    border-left: 5px solid #ffc107;
 }
 
 /* Error Notification */
@@ -121,7 +121,7 @@ body {
 .phonemessage-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f7cd";
-    color: #4490e7;
+    color: #f38847;
 }
 
 .phonemessage {
@@ -134,7 +134,7 @@ body {
 }
 
 .phonemessage-border {
-    border-left: 5px solid #4490e7;
+    border-left: 5px solid #f38847;
 }
 
 /* Long Text Notification */

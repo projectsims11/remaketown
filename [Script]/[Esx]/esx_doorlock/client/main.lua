@@ -148,7 +148,7 @@ Citizen.CreateThread(function()
 								v.locked = not v.locked
 								TriggerServerEvent('esx_doorlock:updateState', k, v.locked) 
 							elseif v.item then
-								if exports["alonedev_check"]:Item(v.itemname,1) then
+								if exports["Fewthz_Check"]:Item(v.itemname,1) then
 
 									if v.remove then
 									TriggerServerEvent("FewZ:Remove",v.itemname, 1)
@@ -164,7 +164,7 @@ Citizen.CreateThread(function()
 						
 						--if v.boom and IsControlJustReleased(0, Config.bommdoor) and not v.isAuthorized and staus then -- G -- มี item เเล้วระเบิดได้ เปิดบรรทัดนี้
 						if v.boom and IsControlJustReleased(0, Config.bommdoor) and not v.isAuthorized  then -- G		-- มี item เเล้วระเบิดไม่ได้ เปิดบรรทัดนี้
-								if exports["alonedev_check"]:Item(Config.item,1) then
+								if exports["Fewthz_Check"]:Item(Config.item,1) then
 									local pos = GetEntityCoords(playerped)
 									TriggerEvent("esx:setstatus", k, false)
 									TriggerServerEvent("FewZ:Remove", Config.item, Config.itemremove)
@@ -227,7 +227,7 @@ Citizen.CreateThread(function()
 					else
 						DrawText3Ds((v.textCoords- vector3( 0, 0, 0.1)), 'กด [G] เพื่อซ่อมประตู', size)
 						if IsControlJustReleased(0, Config.bommdoor) then
-								if exports["alonedev_check"]:Item(Config.repairitem,1) then
+								if exports["Fewthz_Check"]:Item(Config.repairitem,1) then
 									local pos = GetEntityCoords(playerped)
 									TriggerServerEvent("FewZ:Remove", Config.repairitem, Config.repairremove)
 									TriggerEvent("mythic_progbar:client:progress", {

@@ -45,7 +45,7 @@ Citizen.CreateThread(function()
 			canSleep = false
 			ShowToolTip( Config.Text, Text["x"], Text["y"], Text["z"] + 0.42)
 			if IsControlJustPressed(0, Keys["E"]) and not IsPedInAnyVehicle(playerPed, true) then
-				local money = exports["alonedev_check"]:Money()
+				local money = exports["Fewthz_Check"]:Money()
                 if money > Config.Price then   
 					TriggerEvent("esx-qalle-jail:havemoney")
 					TriggerServerEvent("esx-qalle-jail:removemoney")

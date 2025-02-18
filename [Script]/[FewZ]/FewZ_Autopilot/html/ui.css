@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+:root {
+    --BgHeadbox : rgb(221, 40, 27);
+}
+
+.con-box {
+    display: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 58%;
+    width: 800px;
+    height: 180px;
+    /* background-color: antiquewhite; */
+}
+
+.head-box {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 80%;
+    width: 35%;
+    height: 23%;
+    border-radius: 5px ;
+    background-color: var(--BgHeadbox);
+}
+
+.head-box span {
+    position: relative;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    text-align: center;
+    left: 5%;
+    top: 10%;
+    font-size: 22px;
+    color: white;
+}
+
+.swtih-thmem {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 84%;
+    width: 20%;
+    height: 75%;
+    border-radius: 5px;
+    background-color: rgba(41, 142, 209, 0.842);
+}
+
+.btn-theme {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.btn-theme:hover {
+    color: rgb(224, 221, 7);
+}
+
+#moon {
+    display: none;
+}
+
+.body-box {
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    transform: translate(-50%,-50%);
+    top: 65%;
+    left: 80%;
+    width: 35%;
+    height: 40%;
+    border-radius: 5px ;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.btn-box {
+    position: relative;
+    margin: 5px;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    left: 35%;
+    width: 20%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: rgba(99, 96, 96, 0.856);
+    transition: 0.5s;
+}
+
+#b1:hover {
+    background-color: rgb(23, 184, 31);
+    border-radius: 8px;
+}
+
+#b2:hover {
+    background-color: rgb(184, 23, 23);
+    border-radius: 8px;
+}
+
+
+#b3:hover {
+    background-color: rgb(32, 155, 192);
+    border-radius: 8px;
+}
+
+#b4:hover {
+    background-color: rgb(184, 141, 23);
+    border-radius: 8px;
+}
+
+#b3 {
+    display: none;
+}
+
+#b4 {
+  display: none;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+  
+
+.scale-up-ver-center {
+	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) reverse both;
+}
+
+@-webkit-keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+}
+@keyframes scale-up-ver-center {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+ }
+  
+
+@media only screen and (max-width: 1600px) {
+    .con-box {
+        display: none;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 48%;
+        width: 800px;
+        height: 180px;
+        /* background-color: antiquewhite; */
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .con-box {
+        display: none;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 44%;
+        width: 800px;
+        height: 180px;
+        /* background-color: antiquewhite; */
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .con-box {
+        display: none;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 41%;
+        width: 800px;
+        height: 180px;
+        /* background-color: antiquewhite; */
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>carhud-statushud</title>
+</head>
+<body>
+    <script src="js/main.js"></script>
+    <div class="shortcut">
+        <div class="img"><img src="img/door_bl.png" onclick="doorcontrol(2)"></div>
+
+        <div class="img"><img src="img/door_fl.png" onclick="doorcontrol(0)"></div>
+        <div class="img"><img src="img/chair.png" onclick="chaircontrol(1)"></div>
+        
+        <div class="img"><img src="img/chair.png" onclick="chaircontrol(-1)" ></div>
+        <div class="img"><i class='bx bx-power-off' onclick="enginecontrol()"></i></div>
+        <div class="img"><img src="img/chair.png" onclick="chaircontrol(0)"></div>
+        <div class="img"><img src="img/chair.png" onclick="chaircontrol(2)"></div>
+        <div class="img"><img src="img/door_fr.png" onclick="doorcontrol(1)"></div>
+        <div class="img"><img src="img/door_br.png" onclick="doorcontrol(3)"></div>
+
+
+    </div>
+    <div class="car-container">
+      
+        <div class="fuelLine">
+            <div id="fuel"></div>
+        </div>
+        <div class="healthLine">
+            <div id="health-car"></div>
+        </div>
+        <div class="fuel"></div>
+        <div class="helth"></div>
+        <img src="img/health.png" class='health' alt="">
+        <img src="img/fuel.png" class="fuel" alt="">
+        <img src="img/bg.png">
+        <div class="lineL"></div>
+        <div class="lineR"></div>
+        <div class="rpmText">RPM 1000</div>
+        <div class="car-detail">
+            <div class="left">
+                <div class="speed">345</div>
+                <div class="unit">KM/H</div>
+            </div>
+            <div class="mid">
+                <div class="whell-all">
+                    <div class="front">
+                        <div class="whell" id='lf'></div>
+                        <div class="whell" id ='rf'></div>
+                    </div>
+                    <div class="back">
+                        <div class="whell" id ='lb'></div>
+                        <div class="whell" id ='rb'></div>
+                    </div>
+
+                    
+                </div>
+                <img src="img/car.png" id="typeCar">
+            </div>
+            <div class="right">
+                <div class="row">
+                    <p>GEAR</p>
+                    <div class="gear">N</div>
+                </div>
+                <div class="row">
+                    <img src="img/light_1.png" id="light">
+                    <img src="img/wheel__.png" >
+                    <img src="img/area.png" >
+                </div>
+            </div>
+        </div>
+        <div class="add-on">
+            <div class="belt">
+                <img src="img/belt.png" id="belt">
+            </div>
+            <div class="rpm">
+                <div class="loadrpm"></div>
+            </div>
+            <div class="lock">
+                <i class='bx bxs-lock-alt' id="lock"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</body>
+</html>

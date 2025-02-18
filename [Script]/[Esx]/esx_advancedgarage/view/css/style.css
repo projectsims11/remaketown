@@ -34,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     background: rgba(44, 44, 44, 0.9);
-    background-image: linear-gradient(to right, rgb(68, 144, 231), rgb(68, 144, 231));
+    background-image: linear-gradient(to right, rgb(255, 196, 0), rgb(255, 207, 48));
     margin-bottom: 6px;
     border-radius: 8px;
     padding: 8px 30px;
@@ -135,7 +135,7 @@ ion-icon {
     align-items: center;
     border: 0;
     outline: 0;
-    background-image: linear-gradient(to right, rgb(68, 144, 231), rgb(68, 144, 231));
+    background-image: linear-gradient(to right, rgb(255, 196, 0), rgb(255, 207, 48));
     padding: 5px 20px;
     border-radius: 8px;
     font-size: 1.6vh;
@@ -152,7 +152,7 @@ ion-icon {
 }
 
 .btn:hover {
-    background-color: rgb(68, 144, 231);
+    background-color: rgb(240, 152, 25);
     cursor: pointer;
 }
 
@@ -165,7 +165,7 @@ ion-icon {
 }
 
 .btn:focus {
-    box-shadow: 0 0 0 4px rgb(68, 144, 231);
+    box-shadow: 0 0 0 4px rgb(112, 69, 9);
 }
 
 .items::-webkit-scrollbar {
@@ -177,7 +177,7 @@ ion-icon {
 }
 
 .itu:hover {
-    background-image: repeating-linear-gradient(to right, rgb(68, 144, 231), rgb(68, 144, 231));
+    background-image: repeating-linear-gradient(to right, rgb(240, 152, 25), rgb(237, 222, 93));
     background-size: 200% 200%;
     background-position: 100% 100%;  
 }

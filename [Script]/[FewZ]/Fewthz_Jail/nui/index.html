@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-divider flex">
+            <div class="flex">
+                <div class="header-dot"></div>
+                <div class="header-dot"></div>
+                <div class="header-dot"></div>
+            </div>
+            <span class="ml-auto flex">
+                <ion-icon name="settings"></ion-icon>&nbsp;Officer
+            </span>
+        </div>
+        <div class="container-body">
+            <h3 class="flex">
+                <ion-icon name="cog-outline" class="mr-1"></ion-icon>
+                Police Jail Menu
+            </h3>
+            <div class="container-bg">
+                <table class="table">
+                    <tr>
+                        <td width="27%">
+                            <div class="flex">
+                                <ion-icon name="man-outline" class="mr-1"></ion-icon>
+                                ไอดี
+                            </div>
+                        </td>
+                        <td width="63%">
+                            <input type="text" class="text-control" id="playerid-text" placeholder="Ex. 1/2/109">
+                        </td>
+                        <td width="10%">
+                            <button type="button" role="button" class="btn btn-submit btn-selector" id="select-nearest-player">
+                                <ion-icon name="person-add-outline"></ion-icon>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="27%">
+                            <ion-icon name="business-outline"></ion-icon>
+                            สถานที่
+                        </td>
+                        <td width="73%">
+                            <select id="location-selector" class="selector-control"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="27%">
+                            <div class="flex">
+                                <ion-icon name="megaphone-outline" class="mr-1"></ion-icon>
+                                ข้อหา
+                            </div>
+                        </td>
+                        <td width="73%">
+                            <input type="text" class="text-control" id="announce-text" placeholder="Ex. escape + cement 1 / drug ice 1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="27%">
+                            <div class="flex">
+                                <ion-icon name="timer-outline" class="mr-1"></ion-icon>
+                                เวลา (นาที)
+                            </div>
+                        </td>
+                        <td width="73%">
+                            <input type="number" class="text-control" id="timer-selector" min="1" max="1000" value="1" placeholder="Ex. 1 / 10 / 60">
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="submit" id="submit" class="btn btn-submit" value="ยืนยัน">
+                <input type="reset" id="cancel" class="btn btn-cancel" value="ยกเลิก">
+            </div>
+        </div>
+        <div class="container-divider"></div>
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

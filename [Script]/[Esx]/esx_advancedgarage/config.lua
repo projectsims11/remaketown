@@ -2,10 +2,10 @@ Config = {}
 
 Config.Locale     	 	  	= 'en'
 Config.Price 				= 50	-- Price Store.
-Config.CarPoundPrice      	= 3000 	-- Car Pound Price.
+Config.CarPoundPrice      	= 1500 	-- Car Pound Price.
 
-Config.halPoundPrice      	= 3000 	-- Car Pound Price.
-Config.BoatPoundPrice		= 3000  -- Boat Pound Price.
+Config.halPoundPrice      	= 1000 	-- Car Pound Price.
+Config.BoatPoundPrice		= 1000 -- Boat Pound Price.
 Config.UseCarGarages	    = true 	-- Allows use of Car Garages.
 Config.ShowSpacer1 		  	= true 	-- If true it shows Spacer 1 in the List.
 Config.ShowSpacer2 			= false -- If true it shows Spacer 2 in the List | Don't use if spacer3 is set to true.

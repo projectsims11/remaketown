@@ -58,7 +58,7 @@ AddEventHandler('esx_vehicleshop:setVehicleOwned', function (vehicleProps)
 		['@plate']   = vehicleProps.plate,
 		['@vehicle'] = json.encode(vehicleProps)
 	}, function (rowsChanged)
-		TriggerClientEvent("esx_inventoryhud:getOwnerVehicle", _source)
+		TriggerClientEvent("Fewthz_inventory:getOwnerVehicle", _source)
 		TriggerClientEvent('esx:showNotification', _source, _U('vehicle_belongs', vehicleProps.plate))
 	end)
 end)
@@ -73,7 +73,7 @@ AddEventHandler('esx_vehicleshop:setVehicleOwnedPlayerId', function (playerId, v
 		['@plate']   = vehicleProps.plate,
 		['@vehicle'] = json.encode(vehicleProps)
 	}, function (rowsChanged)
-		TriggerClientEvent("esx_inventoryhud:getOwnerVehicle", _source)
+		TriggerClientEvent("Fewthz_inventory:getOwnerVehicle", _source)
 		TriggerClientEvent('esx:showNotification', playerId, _U('vehicle_belongs', vehicleProps.plate))
 	end) 
 end)
@@ -89,7 +89,7 @@ AddEventHandler('esx_vehicleshop:setVehicleOwnedSociety', function (society, veh
 		['@plate']   = vehicleProps.plate,
 		['@vehicle'] = json.encode(vehicleProps),
 	}, function (rowsChanged)
-		TriggerClientEvent("esx_inventoryhud:getOwnerVehicle", _source)
+		TriggerClientEvent("Fewthz_inventory:getOwnerVehicle", _source)
 	end)
 end)
 

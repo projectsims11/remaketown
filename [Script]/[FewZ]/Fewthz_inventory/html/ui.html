@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fz Developer</title>
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/scotty.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200&family=Kanit:wght@300;400&family=Mitr:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sarabun">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body style="background: none;">
+    <script src="js/config.js"></script>
+    <script src="locales/cs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/scotty.js"></script>
+    <script>
+        function setInputFilter(textbox, inputFilter) {
+            ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+                textbox.addEventListener(event, function() {
+                    if (inputFilter(this.value)) {
+                        this.oldValue = this.value;
+                        this.oldSelectionStart = this.selectionStart;
+                        this.oldSelectionEnd = this.selectionEnd;
+                    } else if (this.hasOwnProperty("oldValue")) {
+                        this.value = this.oldValue;
+                        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                    }
+                });
+            });
+        }
+        $(function() {
+            setInputFilter(document.getElementById("count"), function(value) {
+                return /^\d*\.?\d*$/.test(value);
+            });
+        });
+    </script>
+
+<div class="hotbar">
+	<div id="fastHotbar">
+	</div>
+</div>
+
+<div class="ui" style="display: none;">
+	<div class="row" style="margin: 0;">
+		<div id="give_id" class="give_id_class" style="display: none;z-index: 99999999;">
+			<div class="form-group mx-sm-3 mb-1" style="margin-top: 5%;"><input type="number" class="form-control text-center" id="give_id_player" min="1" placeholder="กรุณาใส่ไอดี"></div>
+			<div class="text-center"> <button type="button" class="btn btn-outline-light" id="confirm_id" style="width: 90%;margin-top: 15px;">CONFIRM</button></div>
+		</div>
+		<div id="count_give" style="display: none;">
+			<div class="count_id_class">
+				<div class="form-group mx-sm-3 mb-1" style="margin-top: 5%;">
+					<div id="count_input"><input type="number" class="form-control text-center" id="count" placeholder="กรุณาใส่จำนวน"></div>
+				</div>
+				<div class="text-center"> <button type="button" class="btn btn-outline-light" id="confirm_count" style="width: 90%;margin-top: 15px;">CONFIRM</button></div>
+			</div>
+			<div class="count_id_classbt text-center" id="confirm_count_max"><button type="button" class="btn btn-outline-light" style="margin-top: 5px;">MAX</button></div>
+		</div>
+        
+	</div>
+
+
+    
+        <div id="col-inventory" class="col s6" style="padding: 0;">
+            <div class="middle">
+                <div class="inventory">
+
+                    <!-- Fz Player Inventory -->
+                    <div class="top-container1">
+                
+                        <div class="icon-bag-ohter"><ion-icon name="bag-check-outline"></ion-icon></div>
+
+                        <div class="text-left-ohter">
+                            INVENTORY
+                        </div>
+                    </div>
+                    <div class="ffast"></div>
+                    <div class="box-container-slot"></div>      
+  
+                    <div class="pfast"><div class="sfast"><div class="keed"></div></div></div>  
+                    <div id="playerInventory">
+                        <div class="bfast"></div>
+                        <div class="fastSlot">
+                            <div id="fastSlotElements">
+                                <div class="slot">
+                                    <div class="item">
+                                        <div class="item-icon"><i class="fad fa-plus"></i></div>
+                                        <div class="box-key"> <div class="number"></div></div>
+                                        <div class="item-keybind">1</div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="slot">
+                                    <div class="item">
+                                        <div class="item-icon"><i class="fad fa-plus"></i></div>
+                                        <div class="box-key"></div>
+                                        
+                                        <div class="item-keybind">2</div>
+                                    </div>
+                                </div>
+                                <div class="slot">
+                                    <div class="item">
+                                        <div class="item-icon"><i class="fad fa-plus"></i></div>
+                                        <div class="box-key"></div>
+                                        <div class="item-keybind">3</div>
+                                    </div>
+                                </div>
+                                <div class="slot">
+                                    <div class="item">
+                                        <div class="item-icon"><i class="fad fa-plus"></i></div>
+                                        <div class="box-key"></div>
+                                        <div class="item-keybind">4</div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="slot">
+                                    <div class="item">
+                                       
+                                        <div class="item-icon"><i class="fad fa-plus"></i></div>
+
+                                        <div class="box-key"></div>
+                                        <div class="item-keybind">5</div>
+                                    </div>                                
+                                </div>
+                                <div class="slot">
+                                    <div class="item">
+                                        <div class="item-icon"><i class="fad fa-plus"></i></div>
+                                        <div class="box-key"></div>
+                                        <div class="item-keybind">6</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="top-container">
+                            <div class="nav">
+                                    <div class="nav selected" data-category="inventory_all">ALL</div>
+                                    <div class="nav" data-category="inventory_keys">KEYS</div>
+                                    <div class="nav" data-category="inventory_weapon">WEAPON</div>
+                                    <div class="nav" data-category="inventory_clothes">CLOTHES</div>
+                                    <div class="nav" data-category="inventory_food">FOOD</div>
+                    </div>
+                        <div class="indicator"></div>
+                        <div class="icon-bag"><ion-icon name="bag-check-outline"></ion-icon></div>
+                        <div class="text-left">
+                            INVENTORY
+                        </div>
+                        </div>
+                        <div class="content-warp">
+                            <div class="inventory-scroll">
+                                <div class="inventory-grid" id="mainInventory">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-container">
+                     
+                            <!--<div class="weight-label">
+                                <span id="fWeight">0</span> ❘ <span id="fMaxWeight"></span> kg.
+                            </div> -->
+                           <!-- <div class="uid-id"></div>
+                           <div class="uid-text"><i class="fa-solid fa-id-card"></i> ID : </div> -->
+                             <div class="text-inventory">
+                                REMAKE TOWN
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SCSHOP Other Inventory -->
+
+                    <div id="otherInventory">
+                        <div class="top-container"></div>
+                        <div class="content-warp">
+                            <div class="inventory-scroll">
+                                <div class="inventory-grid" id="secondInventory">
+                                    <div class="slot">
+                                        <div class="icon-limit"><ion-icon name="grid"></ion-icon></div>
+                                        <div class="box-nameslot"></div>
+                                        <div class="box-itemname"></div>
+                                        <div class="item-name">BlackMoney</div>
+                                        <div class="item-weight">1.10</div>
+                                        <div class="item-count"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-container">
+                            <div class="text-left"> </div>
+                            <div class="weight-bar1">
+                                <div class="weight-bar">
+                                    <div id="boxWeight2"></div>                          
+                                </div>
+                            </div>
+                            <div class="weight-label">
+                                <span id="pWeight">0</span> ❘ <span id="pMaxWeight"></span> kg.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalCount" aria-hidden="true" aria-labelledby="modalCountLabel" tabindex="99">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+		  <div class="modal-content bg-pholist text-white">
+			<div class="modal-body">
+				<center>
+				  <label for="count" class="form-label mb-2">&nbsp;กรุณากรอกจำนวน</label>
+					<div class="input-group">
+						<input type="number" name="count" id="count" min="1" placeholder="กรุณาใส่จำนวน" class="form-control text-center">
+						<div class="btn btn-outline-light btn-shadow" id="maxBTN">&nbsp;MAX</div>
+					</div>
+					<hr>
+					<div class="btn btn-outline-light col-5 btn-shadow" data-bs-dismiss="modal">ยกเลิก</div>
+					<div class="btn btn-outline-light col-5 btn-shadow" id="confirmBTN">ตกลง</div>
+				</center>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="modalGive" aria-hidden="true" tabindex="99">
+		<div class="modal-dialog modal-dialog-centered modal-sm">
+		  <div class="modal-content bg-pholist text-white">
+			<div class="modal-body">
+				<center>
+					<h5>
+						เลือกไอดีที่ต้องการ
+					</h5>
+					<div id="nearPlayers" class="row">
+						
+					</div>
+					<hr>
+					<div class="btn btn-outline-light" data-bs-dismiss="modal">ยกเลิก</div>
+					<div class="btn btn-outline-light" id="confirmBTN">ตกลง</div>
+				</center>
+			</div>
+		  </div>
+		</div>
+	</div>
+</body>
+
+</html>

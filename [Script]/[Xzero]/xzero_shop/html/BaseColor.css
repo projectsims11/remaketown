@@ -1,0 +1,163 @@
+.base-bg-color {
+  background: linear-gradient(90deg, rgba(0, 60, 255, 0.4) 0%, rgba(0, 153, 255, 0.8) 50%, rgba(0, 89, 255, 0.4) 100%);
+  background-blend-mode: multiply;
+
+}
+
+/* Shop Layout */
+.shop-layout {
+  background-color: var(--bg-black-color);
+  width: 100%;
+  max-height: 690px;
+  height: 100%;
+  border-radius: .5vmin;
+  /* border: solid 2px rgb(255, 255, 255); */
+  /* box-shadow: 0 0 15px rgb(255, 255, 255); */
+  background: rgba(0, 0, 0, 0.514);
+  overflow: hidden;
+  border-bottom: 5px solid linear-gradient(#00a2ff,#006eff);
+}
+
+/* Shop ItemList */
+.shop-item {
+  width: 160px;
+  margin: 5px;
+  /* border: solid 2px rgb(255, 255, 255); */
+  /* box-shadow: 0 0 15px rgb(255, 255, 255); */
+  background: linear-gradient(87deg, rgb(27, 27, 27) 0%, rgb(34, 34, 34) 100%);
+  color: #fff;
+  transform: skew(-10deg, 1deg) ;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.shop-item:before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(#00a2ff,rgb(0, 140, 255));
+  animation: animate 5s linear infinite ;
+  z-index: -2;
+  border-radius: 20px;
+
+}
+.shop-item:after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  z-index: -2;
+  background: #0e1538;
+  border-radius: 20px;
+}
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+.shop-item:hover,
+.shop-item:focus,
+.shop-item:active {
+  border-radius: 20px;
+  /* border: solid 2px rgb(255, 255, 255); */
+  /* box-shadow: 0 0 15px rgb(255, 255, 255); */
+}
+
+/* Button Count Add/Remove */
+.btn-count-add,
+.btn-count-remove {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+.btn-count-add:hover,
+.btn-count-remove:hover {
+  /* box-shadow: 0px 0px 6px 1px #fff; */
+  background: linear-gradient(45deg, #008cff, #0084ff);
+  border: solid 2px #fff;
+}
+.btn-count-add {
+  background-color: rgb(90 90 90 / 35%);
+}
+.btn-count-remove {
+  background-color: rgb(90 90 90 / 35%);
+}
+
+/* Button Buy */
+.btn-item-buy {
+  width: 100%;
+  border-radius: .5vmin;
+  background: linear-gradient(45deg, #0084ff, #008cff);
+}
+.btn-item-buy:hover {
+  border-radius: .5vmin;
+  box-shadow: 0px 0px 6px 1px #fff;
+  background: linear-gradient (45deg, #0077ff, #008cff);
+  opacity: 0.7;
+}
+
+/* Button Style */
+.btn.btn-xzero {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #0077ff, #008cff);
+  padding: 0.3em 0.6em;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+.btn-xzero:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+/* Loading */
+.xloading-container {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.xloading-fullbox {
+  --loading-red-fade: 80, 80, 80;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--loading-red-fade), 0.5) 30%,
+    rgba(var(--loading-red-fade), 1) 48%,
+    rgba(var(--loading-red-fade), 0.5) 70%,
+    rgba(var(--loading-red-fade), 0.1) 100%,
+    transparent
+  );
+  width: 910px;
+  height: 80px;
+}
+.xloading-content {
+  font-size: 30px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xloading-content i {
+  margin: 15px;
+}

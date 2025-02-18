@@ -95,7 +95,7 @@ AddEventHandler('replayx.skinui:saveOutfitaccessory', function(label, skin, acce
 					queue = "global"
 				})
 				xPlayer.removeMoney(money)
-				TriggerClientEvent("esx_inventoryhud:getOwnerAccessories", _source)
+				TriggerClientEvent("Fewthz_inventory:getOwnerAccessories", _source)
 			end
 		end)
 	end

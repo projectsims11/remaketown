@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 17px;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.Body {
+    transform: translate(79.2vh, 26vh);
+    height: 8vh;
+    width: 19.5vh;
+    background-color: rgb(40, 40, 40);
+    border-radius: 5px;
+}
+
+.InBody {
+    text-align: center;
+    color: #ffffff;
+    transform: translateY(35%);
+    height: 4.6vh;
+    width: 19.5vh;
+    background: linear-gradient(45deg,rgb(0, 27, 190),rgb(0, 27, 190),rgb(0, 27, 190));
+    padding: 1vh;
+    border-radius: 5px;
+}
+
+p {
+    pointer-events: none;
+}

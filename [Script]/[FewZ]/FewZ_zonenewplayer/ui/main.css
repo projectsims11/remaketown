@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@450;500&display=swap);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    user-select: none;
+    color: #FFF;
+    font-size: 1.3vh;
+}
+body
+{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    min-height: 100vh;
+}
+
+.container {
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 1vh;
+    margin-bottom: 10vh;
+    width: 25vh;
+    height: 80vh; 
+}
+
+.box {
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    border-radius: .5vh;
+    background-color: #161616;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 5vh;
+    border-radius: .5vh;
+    background-color: #161616;
+}
+
+.name {
+    height: 3vh;
+    font-size: 2.5vh;
+    color: #001bbe;
+}
+
+.textd {
+    font-size: 1vh;
+}
+
+.textd i {
+    margin-right: .5vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: .5vh;
+    border-radius: .5vh;
+    width: 95%;
+    height: 3vh;
+    background-color: rgb(0, 27, 190);
+    font-size: 1.4vh;
+}
+
+.menu:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: .5vh;
+    border-radius: .5vh;
+    width: 95%;
+    height: 3vh;
+    background-color: rgb(0, 27, 190);
+    font-size: 1.8vh;
+}
+
+.menu > i {
+    font-size: 2vh;
+    margin-right: .5vh;
+}
+

@@ -1,0 +1,45 @@
+.icon-start {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+}
+
+.icon-stop {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+}
+
+
+.speed-up {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 52%;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+}
+
+.speed-down {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 48%;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+}
+
+/* .icon-moon {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 48%;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+} */

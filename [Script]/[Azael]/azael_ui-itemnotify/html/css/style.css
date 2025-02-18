@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap&subset=thai');
+
+.bottomCenter {
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.bottomRight {
+	margin-top: 3px;
+}
+
+.noty_theme__azael .noty_bar {
+    margin: 4px 0;
+    overflow: hidden;
+    border-radius: 1px;
+	font-family: 'Poppins', 'Prompt', sans-serif;
+    position: relative;
+    height: auto;
+	word-wrap: break-word;
+}
+
+.noty_theme__azael.noty_bar .noty_buttons {
+    padding: 0px; 
+}
+
+.noty_theme__azael.noty_bar .noty_progressbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.noty_theme__azael .img-wrapper {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.5);
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.noty_theme__azael .img-wrapper:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 180%;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	z-index: 1;
+	transform: skew(45deg);
+	transition: .5s;
+  	animation: effect 1.25s infinite;
+  	animation-iteration-count: 1;
+}
+
+.noty_theme__azael .img-wrapper:hover:before {
+	left: -180%;
+}
+
+@-webkit-keyframes effect { 
+	to {left: -180%;}
+}
+
+@keyframes effect { 
+	to {left: -180%;}
+}
+
+.noty_theme__azael .img-wrapper img {
+	display: block;
+ 	margin-left: auto;
+	margin-right: auto;
+	width: 70px;
+	transition: 2s;
+  	animation: img 2s infinite;
+  	animation-iteration-count: 1;
+}
+
+.noty_theme__azael .img-wrapper:hover img {
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+@-webkit-keyframes img { 
+	from { filter: grayscale(100%); transform: scale(0.9);}
+	to { filter: grayscale(0%); transform: scale(1);}
+}
+
+@keyframes img { 
+	from { filter: grayscale(100%); transform: scale(0.9);}
+	to { filter: grayscale(0%); transform: scale(1);}
+}
+
+.noty_theme__azael .img-wrapper h6 {
+	background: rgba(0, 0, 0, 0.5);
+	font-family: 'Poppins', 'Prompt', sans-serif;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 8px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform-origin: right;
+	transition: 1s;
+  	animation: name 2s infinite;
+  	animation-iteration-count: 1;
+}
+
+.noty_theme__azael .img-wrapper:hover h6 {
+	transform: perspective(400px) rotateY(0deg);
+}
+
+@-webkit-keyframes name { 
+	from { transform: perspective(400px) rotateY(90deg);}
+ 	to { transform: perspective(400px) rotateY(0deg);}
+}
+
+@keyframes name { 
+	from { transform: perspective(400px) rotateY(90deg);}
+ 	to { transform: perspective(400px) rotateY(0deg);}
+}
+
+.noty_theme__azael .img-wrapper ul.a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.noty_theme__azael .img-wrapper ul.a li {
+	width: 20px;
+	font-size: 8px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 15px;
+	transition: .5s;
+	transform-origin: left;
+	padding: 2px;
+  	animation: text 2s infinite;
+	animation-iteration-count: 1;
+	overflow: hidden;
+}
+
+.noty_theme__azael .img-wrapper:hover ul.a li {
+	transform: perspective(800px) rotateY(0deg);
+}
+
+@-webkit-keyframes text { 
+	from { transform: perspective(800px) rotateY(90deg);} 
+	to {transform: perspective(800px) rotateY(0deg);}
+}
+
+@keyframes text { 
+ 	from { transform: perspective(800px) rotateY(90deg);} 
+	to {transform: perspective(800px) rotateY(0deg);}
+}
+
+.noty_theme__azael .img-wrapper ul.a li {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.noty_theme__azael .img-wrapper ul.a li.remove {
+	background: rgba(255, 0, 64, 0.5);
+}
+
+.noty_theme__azael .img-wrapper ul.a li.set,
+.noty_theme__azael .img-wrapper ul.a li.add {
+	background: rgba(0, 255, 124, 0.5);
+}
+
+.noty_theme__azael .img-wrapper ul.b {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.noty_theme__azael .img-wrapper ul.b li {
+	background: transparent;
+	border-bottom-right-radius: 5px;
+	font-size: 11px;
+	text-align: right;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 15px;
+	padding: 2.5px 5px 0 0;
+}

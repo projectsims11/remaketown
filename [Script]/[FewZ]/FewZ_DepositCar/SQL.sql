@@ -1,0 +1,1 @@
+ALTER TABLE owned_vehicles ADD deposit_car varchar(50) DEFAULT 'none';

@@ -136,7 +136,7 @@ function StoreOwnedCarsMenu()
 	
 	ESX.TriggerServerCallback(GetCurrentResourceName() .. ':storeVehicle',function(valid)
 		if(valid) then
-			local hasEnoughMoney = exports["alonedev_check"]:Money()
+			local hasEnoughMoney = exports["Fewthz_Check"]:Money()
 			if hasEnoughMoney > Config.Price then
 				SaveDamage(vehicle, vehicleProps)
 				DeleteEntity(vehicle)
@@ -230,7 +230,7 @@ function ReturnOwnedCarsMenu()
 end
 
 function ReturnPoliceOwnedCarsMenu()
-	if Config.NoPolicePound == exports.alonedev_check:CheckPoliceonline() then
+	if Config.NoPolicePound == exports.Fewthz_Check:CheckPoliceonline() then
 		ESX.TriggerServerCallback('esx_advancedgarage:getOutOwnedCarsNonpolice', function(ownedCars)
 			local elements = {}
 
@@ -1171,7 +1171,7 @@ RegisterNUICallback('helicopter', function(data, cb)
 				local vehicleName = GetLabelText(aheadVehName)
 				local labelvehicle
 				local plate = v.plate
-				local hasEnoughMoney = exports["alonedev_check"]:Money()
+				local hasEnoughMoney = exports["Fewthz_Check"]:Money()
 				if hasEnoughMoney > Config.halPoundPrice then
 						if not status then
 							if data.item == json.decode(v.vehicle).plate then
@@ -1237,7 +1237,7 @@ RegisterNUICallback('boat', function(data, cb)
 				local labelvehicle
 				local plate = v.plate
 				
-				local hasEnoughMoney = exports["alonedev_check"]:Money()
+				local hasEnoughMoney = exports["Fewthz_Check"]:Money()
 				if hasEnoughMoney > Config.BoatPoundPrice then
 						if not status then
 							if data.item == json.decode(v.vehicle).plate then

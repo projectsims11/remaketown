@@ -10,10 +10,10 @@ Config.DefaultWeaponTints = {
 }
 
 Config.Weapons = {
-	{ name = 'WEAPON_VALENTINR_DAGGER', label = TranslateCap('weapon_valentine_dagger'), components = {} },
-	{ name = 'WEAPON_VALENTINR_MACHETE', label = TranslateCap('weapon_valentine_machete'), components = {} },
-	{ name = 'WEAPON_VALENTINR_STAFF', label = TranslateCap('weapon_valentine_staff'), components = {} },
-	{ name = 'WEAPON_VALENTINR_SWORD', label = TranslateCap('weapon_valentine_sword'), components = {} },
+	{ name = 'weapon_valentine_dagger', label = 'weapon_valentine_dagger', components = {} },
+	{ name = 'weapon_valentine_machete', label = 'weapon_valentine_machete', components = {} },
+	{ name = 'weapon_valentine_staff', label = 'weapon_valentine_staff', components = {} },
+	{ name = 'weapon_valentine_sword', label = 'weapon_valentine_sword', components = {} },
 
 	-- Melee
 	{ name = 'WEAPON_DAGGER',    label = TranslateCap('weapon_dagger'),    components = {} },

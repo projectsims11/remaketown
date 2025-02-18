@@ -1,0 +1,26 @@
+
+/* Hover ปุุ่มเพิ่มลดจำนวน */
+.plus:hover,
+.minus:hover { 
+    background: rgb(0, 27, 190);
+}
+
+/* Hover เวลาจะกดซื้อ */
+.hover-buy  {
+    background: linear-gradient(90deg, rgb(0, 27, 190) 0%, rgb(0, 27, 190) 100%);
+}
+
+/* สีพื้นหลังหัวข้อตรงคำว่าร้านค้า */
+#headertext { 
+    background: linear-gradient(90deg, rgb(0, 27, 190) 0%, rgb(0, 27, 190) 100%);
+}
+
+/* สีของ Icon ใน header */
+.header i {
+    color: rgb(0, 27, 190);
+}
+
+/* สีพื้นหลังของราคา */
+.item-price {
+    background: linear-gradient(90deg, rgb(0, 27, 190) 0%, rgb(0, 27, 190) 100%);
+}

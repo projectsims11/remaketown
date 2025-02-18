@@ -76,7 +76,7 @@ body {
 .info-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f129";
-    background: #2f83ff;
+    background: #001bbe;
 }
 
 .info {
@@ -85,7 +85,7 @@ body {
 }
 
 .info-border {
-    border-bottom: 4px solid #2f83ff;
+    border-bottom: 4px solid #001bbe;
 }
 
 /* Warning Notification */
@@ -93,7 +93,7 @@ body {
 .warning-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f12a";
-    background: #4490e7;
+    background: #ffc107;
 }
 
 .warning {
@@ -102,7 +102,7 @@ body {
 }
 
 .warning-border {
-    border-bottom: 4px solid #4490e7;
+    border-bottom: 4px solid #ffc107;
 }
 
 /* Error Notification */
@@ -111,7 +111,7 @@ body {
 .error-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f00d";
-    background: #4490e7;
+    background: #dc3545;
 }
 
 .error {
@@ -120,7 +120,7 @@ body {
 }
 
 .error-border {
-    border-bottom: 4px solid #4490e7;
+    border-bottom: 4px solid #dc3545;
 }
 
 /* SMS Notification */
@@ -128,7 +128,7 @@ body {
 .phonemessage-icon::before {
     font-family: "Font Awesome 5 Free";
     content: "\f7cd";
-    background: #4490e7;
+    background: #f38847;
 }
 
 .phonemessage {
@@ -137,7 +137,7 @@ body {
 }
 
 .phonemessage-border {
-    border-bottom: 4px solid #4490e7;
+    border-bottom: 4px solid #f38847;
 }
 
 /* Long Text Notification */

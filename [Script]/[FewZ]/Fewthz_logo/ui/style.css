@@ -1,0 +1,23 @@
+/*-------------- LOGO DISPLAY - Made By Fewthz -------------- */
+
+#logo .contenair {
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    right: 3%;
+    top: 19%;
+    margin: -150px 0 0 -115px;
+    opacity: 80%;
+    background: url('img/logo.png');
+    padding: none;
+}
+
+#logo .spacer {
+    z-index: 2;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    text-align: right;
+    background: transparent;
+}

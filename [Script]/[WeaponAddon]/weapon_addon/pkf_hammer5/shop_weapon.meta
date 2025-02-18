@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WeaponShopItemArray>
+	<weaponShopItems>
+		<Item>
+			<lockHash>CU_WEP_HAMMER5</lockHash>
+			<nameHash>WEAPON_HAMMER5</nameHash>
+			<cost value ="14500"/>
+			<ammoCost value="100"/>
+			<textLabel>WT_HAMMER5</textLabel>
+			<weaponDesc>WTD_HAMMER5</weaponDesc>
+			<weaponTT>WTT_HAMMER5</weaponTT>
+			<weaponUppercase>WTU_HAMMER5</weaponUppercase>
+			<id value = "32"/>
+			<weaponComponents />
+		</Item>
+	</weaponShopItems>
+</WeaponShopItemArray>	

@@ -1,0 +1,215 @@
+:root {
+    /**
+     * * Main Color
+     * * And Linear Color
+    */
+    --mainColor: #001bbe;
+    --mainSecondColor: #001bbe;
+
+    /** (When Mouse Is Over)
+     * * Main Color
+     * * And Linear Color
+    */
+    --mainColorOver: #001bbe;
+    --mainSecondColorOver: #001bbe;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+* {
+    font-family: 'Prompt';
+}
+
+body,
+html {
+    overflow: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(78, 78, 78);
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.45);
+    transition: opacity .3s;
+    opacity: 0;
+}
+
+.container-divider {
+    padding: 3px 12px;
+    background: var(--mainColor);
+}
+
+.container-body {
+    padding: 30px 12px 36px 12px;
+    color: #eee;
+    font-size: 0.8rem;
+}
+
+.container-bg {
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.header-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background: rgb(255, 255, 255);
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.header-dot:not(:last-child) {
+    margin-right: 4px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+span {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.table {
+    display: table;
+    position: relative;
+    border: 0;
+    width: 100%;
+}
+
+.selector-control {
+    border-radius: 12px;
+    padding: 2px 12px;
+    font-size: 0.8rem;
+    border: none;
+    background: linear-gradient(to right, var(--mainColor), var(--mainSecondColor));
+    color: #eee;
+    outline: 0;
+    transition: .25s ease-in-out;
+}
+
+.selector-control:hover {
+    background: linear-gradient(to right, var(--mainColorOver), var(--mainSecondColorOver));
+    cursor: pointer;
+}
+
+.selector-control option {
+    color: #222;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.mr-1 {
+    margin-right: 4px;
+}
+
+.text-control {
+    outline: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 2px 8px;
+    color: #eee;
+    width: 100%;
+    font-size: 0.75rem;
+    transition: all .125s ease-in-out;
+}
+
+.table tr:not(:last-child) td {
+    padding-bottom: 6px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn-submit {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    outline: 0;
+    border-radius: 12px;
+    border: none;
+    padding: 4px 16px;
+    cursor: pointer;
+    color: #fff;
+    transition: .35s ease-in-out;
+}
+
+.btn-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.btn-submit {
+    background: linear-gradient(to right, var(--mainColor), var(--mainSecondColor));
+}
+
+.btn-submit:hover {
+    background: linear-gradient(to right, var(--mainColorOver), var(--mainSecondColorOver));
+}
+
+.btn-cancel {
+    background: linear-gradient(to right, #808080, #505050);
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(to right, #808080c4, #505050c5);
+}
+
+.not-input {
+    border-color: #001bbe !important;
+    background: rgba(0, 27, 190) !important;
+}

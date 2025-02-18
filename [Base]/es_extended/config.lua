@@ -21,11 +21,11 @@ Config["Function_Base"] = {
 	['Font'] = 'Kanit'                    -- [ Config : ฟ้อนต์ สามารถเปลี่ยนฟ้อนต์ได้เองเลย ชื่อฟ้อนต์ในโฟลเดอร์ stream ] --
 }
 
-Config.StartingAccountMoney = { money = 10000, bank = 10000, black_money = 0 }
+Config.StartingAccountMoney = { money = 0, bank = 0, black_money = 0 }
 Config.StartingInventoryItems = false -- table/false
 
 Config.DefaultSpawns = { -- If you want to have more spawn positions and select them randomly uncomment commented code or add more locations
-	{ x = 212.20220947265626, y = 7416.7646484375, z = 18.73193359375, heading = 1.0 }
+	{ x = -257.261536, y = -980.571411, z = 31.217529, heading = 28.346457 }
 }
 
 Config.AdminGroups = {
