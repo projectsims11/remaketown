@@ -3,10 +3,10 @@ cfg.List = {
         Title = "ริมทะเล", -- หัวข้อ
         Mode = "Default", -- Default = Minigame / AFK = ทิ้งตัวไว้ AFK
         NeedPolice = 0, -- ต้องการตำรวจกี่คน
-        Status = { "hunger", "thirst" }, -- บันทึกค่าสเตตัส
+        Status = { "hunger", "stress" }, -- บันทึกค่าสเตตัส
     },
     [1] = { --- Zone ที่จะตกปลาได้
-        Title = "ตกเต่า", -- หัวข้อ
+        Title = "ตกปลาธรรมดา", -- หัวข้อ
         Mode = "Default", -- Default = Minigame / AFK = ทิ้งตัวไว้ AFK
         Coords = vector3( -2147.49, -526.150, -0.281 ), -- ตำแหน่งในการตกปลาของจุดนี้
         NeedPolice = 0, -- ต้องการตำรวจกี่คน
@@ -22,38 +22,38 @@ cfg.List = {
         Status = {}, -- บันทึกค่าสเตตัส
     },
     [2] = {
-        Title = "ตกปลา - AFK",
+        Title = "ตกปลา - auto",
         Mode = "AFK",
-        Coords = vector3( -3077.08, 27.02849, 1.3723 ), 
+        Coords = vector3( -1979.6627, -704.7554, 2.9717), 
         Distance = 50.0, 
         IsInWater = true,
-        CustomText = true,
+        CustomText = false,
         Passive = true,
         Blips = {
             Id = 86,
             Color = 26,
             Size = 0.8,
-            Name = "<font face='Sarabun'>ตกปลา - AFK</font>",
+            Name = "<font face='Sarabun'>ตกปลา - auto</font>",
             Radius = true,
         },
-        Status = { "hunger", "thirst" },
+        Status = { "hunger", "stress" },
     },
     [3] = {
-        Title = "ตกฉลาม",
-        Mode = "Default",
-        Coords = vector3( -3689.10, 802.5145, 4.28 ), 
+        Title = "ตก AFK",
+        Mode = "AFK",
+        Coords = vector3( -1888.7744, -834.9020, 1.6429 ), 
         Distance = 50.0, 
         IsInWater = false,
         Anchor = true,
-        CustomText = true,
+        CustomText = false,
         Passive = false,
         Blips = {
             Id = 86,
             Color = 26,
             Size = 0.8,
-            Name = "<font face='Sarabun'>ตกฉลาม - MINIGAME</font>",
+            Name = "<font face='Sarabun'>ตก AFK</font>",
             Radius = true,
         },
-        Status = { "hunger", "thirst" },
+        Status = { },
     },
 }
