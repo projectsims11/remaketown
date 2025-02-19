@@ -60,7 +60,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'likemod_rock_anim_props', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_stone', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -130,11 +130,11 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        ['carrot'] = {
-            Coords = vector3(822.1364, 6643.8540, 1.9304),
+        ['orange'] = {
+            Coords = vector3(337.0147,3571.4290,33.3405-1), 
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] CARROT',   -- Text ใน Blip
+                Text = '[FARM] ORANGE',   -- Text ใน Blip
                 Sprite = 56,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -171,7 +171,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'luxe_rabbit_carrot_animation', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_orange', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -186,11 +186,11 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        ['honey'] = {
-            Coords = vector3(266.7896, 6460.7861, 31.3423),
+        ['wheat'] = {
+            Coords = vector3(570.5230, 6486.4790, 30.6890),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] HONEY',   -- Text ใน Blip
+                Text = '[FARM] WHEAT',   -- Text ใน Blip
                 Sprite = 59,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -226,7 +226,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'likemod_honeybee_props', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_wheat_rice', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -241,11 +241,11 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        ['pumpkin'] = {
-            Coords = vector3(-1631.7769, 4736.9663, 53.3382),
+        ['rice'] = {
+            Coords = vector3(-693.9963, 6076.7842, 2.6592),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] PUMPKIN',   -- Text ใน Blip
+                Text = '[FARM] RICE',   -- Text ใน Blip
                 Sprite = 60,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -282,7 +282,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'halloweencat', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_wheat', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -297,67 +297,12 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        ['rice'] = {
-            Coords = vector3(2843.7861, 4629.0586, 48.6679),
+        
+        ['wood'] = {
+            Coords = vector3(-1633.8253, 4737.3867, 53.2419),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] RICE',   -- Text ใน Blip
-                Sprite = 61,			-- id | รูปลักษณ์
-                Color = 0,				-- สี
-                Scale = 1.2,			-- ขนาด
-            },
-            ShowMarkerArea = {        
-                Show = false,         -- เปิดวงเลี้ยงสัตว์หรือไม่ ถ้าหากเปิดจะเพิ่มการทำงานของสคริป 0.02
-                MakerDistance = 50.0, -- ระยะมองเห็นวง
-                MakerConfig = { type = 28,  r = 12, g = 128, b = 236, alpha = 100, }, 
-            },
-
-            Distance = { -- ระยะต่างๆ
-                Pickup = 3.20, -- ระยะในการเก็บตอนอยู่ใกล้ Prop งาน
-                Inzone = 25.0, -- เมื่ออยู่ในระยะนี้จะขึ้น Ui 
-            },
-
-            Progress = 2, -- เวลาในการทำงาน 4 = 4 วิ
-            Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
-            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
-
-            MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
-                -- ['work_x2'] = 2,
-            },
-
-            Animation = { 
-                dict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
-                anim = "machinic_loop_mechandplayer",
-                flag = 1
-            },
-            Prop = {
-                enable = false,			-- เปิด true / ปิด false | เปิดใช้งาน Prop ในมือผู้เล่น
-                model = "prop_tool_pickaxe", -- Model Prop 
-                bone = 57005,  -- กระดูกของมือ
-                coords = { x = 0.05, y = 0.0, z = 0.0 },  -- ปรับค่าตำแหน่งให้ใกล้มือมากขึ้น
-                rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
-            },                     
-
-            Object = 'likemod_wheat_anim_props', -- ชื่อ Prop ต่างๆ
-            PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
-            MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
-            SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
-
-            Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'rice', count = {1,2}},
-            },
-
-            Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
-                { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
-                -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
-            },
-        },
-        ['strawberry'] = {
-            Coords = vector3(2539.77001953125, 4811.7900390625, 33.72999954223633),
-            Blips = {
-                enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] STRAWBERRY',   -- Text ใน Blip
+                Text = '[FARM] WOOD',   -- Text ใน Blip
                 Sprite = 124,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -394,7 +339,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'vip_strawberry_cut01', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_log', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -409,11 +354,11 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        --[[['steel'] = {
-            Coords = vector3(1969.9651, 3380.1304, 43.5251),
+        ['Cabbage'] = {
+            Coords = vector3(-3105.2300, 3241.9221, 2.0250),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] STEEL',   -- Text ใน Blip
+                Text = '[FARM] CABBAGE',   -- Text ใน Blip
                 Sprite = 119,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -450,7 +395,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'ironos', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_cabbage', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -464,7 +409,7 @@ Config.Default = {
                 -- { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
-        },]]--
+        },
         ['chamomile'] = {
             Coords = vector3(3285.7952, 5157.5752, 18.6212),
             Blips = {
