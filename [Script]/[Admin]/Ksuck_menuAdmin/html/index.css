@@ -65,7 +65,7 @@ header {
     /* main set */
     width: 100%;
     height: 50px;
-    color: #001bbe;
+    color: #ffffff;
     font-size: 24px;
     overflow: hidden;
 }
@@ -96,7 +96,7 @@ main {
     font-size: 14px;
     display: inline-block;
     box-sizing: border-box;
-    color: #001bbe;
+    color: #ffffff;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.664);
     width: 100%;
@@ -236,7 +236,7 @@ footer {
 .btn {
     background: linear-gradient(270deg, #131313 0%, #2c2c2c 100%);
     border: none;
-    color: #001bbe;
+    color: #ffffff;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
@@ -282,7 +282,7 @@ footer {
     height: 64px;
     margin-left: 0px;
     background-color: rgba(0, 27, 190);
-    color: #001bbe;
+    color: #ffffff;
 }
 
 .btn:hover {
@@ -398,7 +398,7 @@ footer {
 }
 
 .banitem .time {
-    color: #001bbe !important;
+    color: #ffffff !important;
     width: 140px;
     font-weight: 700
 }
@@ -441,7 +441,7 @@ footer {
     display: block;
     padding: 0.3rem 0.5rem;
     text-align: center;
-    color: #001bbe;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 700px;
 }
@@ -528,8 +528,8 @@ select {
 
 .btn.confirm {
     /* !important */
-    background-color: #001bbe;
-    color: #001bbe;
+    background-color: #ffffff;
+    color: #ffffff;
     width: 100px;
     height: 30px;
     /*height: auto;*/
@@ -586,7 +586,7 @@ select {
 }
 
 #confirminput {
-    background-color: #001bbe;
+    background-color: #ffffff;
     margin-top: 10px
 }
 
@@ -600,7 +600,7 @@ select {
 #cancelinput,
 #confirm,
 #confirminput {
-    background-color: #001bbe;
+    background-color: #ffffff;
     margin-top: 10px;
     margin-right: 15px;
     color: #fff;
@@ -631,7 +631,7 @@ select {
 }
 
 #info .titlebox {
-    color: #001bbe;
+    color: #ffffff;
     font-size: 18px;
     padding: 15px;
     text-align: left
@@ -642,7 +642,7 @@ select {
     width: 120px;
     padding-right: 5px;
     padding-left: 15px;
-    color: #001bbe
+    color: #ffffff
 }
 
 .back {
@@ -766,7 +766,7 @@ select {
 
 .inventoryitem:active {
     transition: .1s;
-    background-color: #001bbe
+    background-color: #ffffff
 }
 
 .inventoryitem:hover {
