@@ -23,7 +23,7 @@ Config.Default = {
             Coords = vector3(2947.8, 2789.16, 40.64),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] STONE',   -- Text ใน Blip
+                Text = '[CRAFT] STONE',   -- Text ใน Blip
                 Sprite = 1,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -75,11 +75,66 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
+        ['steel'] = {
+            Coords = vector3(2722.7400, 1362.1624, 24.5210),
+            Blips = {
+                enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
+                Text = '[CRAFT] STEEL',   -- Text ใน Bwawlip
+                Sprite = 89,			-- id | รูปลักษณ์
+                Color = 0,				-- สี
+                Scale = 1.2,			-- ขนาด
+            },
+            ShowMarkerArea = {        
+                Show = false,         -- เปิดวงเลี้ยงสัตว์หรือไม่ ถ้าหากเปิดจะเพิ่มการทำงานของสคริป 0.02
+                MakerDistance = 50.0, -- ระยะมองเห็นวง
+                MakerConfig = { type = 28,  r = 12, g = 128, b = 236, alpha = 100, }, 
+            },
+
+            Distance = { -- ระยะต่างๆ
+                Pickup = 4.20, -- ระยะในการเก็บตอนอยู่ใกล้ Prop งาน
+                Inzone = 25.0, -- เมื่ออยู่ในระยะนี้จะขึ้น Ui 
+            },
+
+            Progress = 2, -- เวลาในการทำงาน 4 = 4 วิ
+            Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
+            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
+
+            MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
+                -- ['work_x2'] = 2,
+            },
+
+            Animation = { 
+                dict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
+                anim = "machinic_loop_mechandplayer",
+                flag = 1
+            },
+            Prop = {
+                enable = false,			-- เปิด true / ปิด false | เปิดใช้งาน Prop ในมือผู้เล่น
+                model = "prop_tool_pickaxe", -- Model Prop 
+                bone = 57005,  -- กระดูกของมือ
+                coords = { x = 0.05, y = 0.0, z = 0.0 },  -- ปรับค่าตำแหน่งให้ใกล้มือมากขึ้น
+                rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
+            },                     
+
+            Object = 'un_hope_prop_scrap', -- ชื่อ Prop ต่างๆ
+            PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
+            MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
+            SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
+
+            Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
+                { name = 'steel', count = {1,2}},
+            },
+
+            Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
+                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
+            },
+        },
         ['wood'] = {
             Coords = vector3(-842.3062, 5805.7642, 5.3092),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] WOOD',   -- Text ใน Bwawlip
+                Text = '[CRAFT] WOOD',   -- Text ใน Bwawlip
                 Sprite = 89,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -177,7 +232,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'carrot', count = {1,2}},
+                { name = 'orange', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -208,7 +263,7 @@ Config.Default = {
 
             Progress = 2, -- เวลาในการทำงาน 4 = 4 วิ
             Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
-            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
+            AutoFarm = 'wheat', -- บัตรออโต้ฟาร์ม
 
             MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
                 -- ['work_x2'] = 2,
@@ -288,7 +343,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'pumpkin', count = {1,2}},
+                { name = 'rice', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -345,7 +400,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'strawberry', count = {1,2}},
+                { name = 'wood', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -354,12 +409,12 @@ Config.Default = {
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        ['Cabbage'] = {
+        ['cabbage'] = {
             Coords = vector3(-3105.2300, 3241.9221, 2.0250),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] CABBAGE',   -- Text ใน Blip
-                Sprite = 119,			-- id | รูปลักษณ์
+                Sprite = 124,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
@@ -385,11 +440,11 @@ Config.Default = {
             Animation = { 
                 dict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
                 anim = "machinic_loop_mechandplayer",
-            
+                flag = 1
             },
             Prop = {
                 enable = false,			-- เปิด true / ปิด false | เปิดใช้งาน Prop ในมือผู้เล่น
-                model = "prop_weld_torch", -- Model Prop 
+                model = "vip_strawberry_cut01", -- Model Prop 
                 bone = 57005,  -- กระดูกของมือ
                 coords = { x = 0.05, y = 0.0, z = 0.0 },  -- ปรับค่าตำแหน่งให้ใกล้มือมากขึ้น
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
@@ -401,20 +456,20 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'steel', count = {1,2}},
+                { name = 'cabbage', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
                 { name = 'exp', count = {1,2}, percent = 75, x2 = false},
-                -- { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
+                { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
-        ['chamomile'] = {
-            Coords = vector3(3285.7952, 5157.5752, 18.6212),
+        ['chemical'] = {
+            Coords = vector3(1873.2518, 4798.8008, 44.4854),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] CHAMOMILE',   -- Text ใน Blip
+                Text = '[FARM] CHEMICAL',   -- Text ใน Blip
                 Sprite = 424,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -451,13 +506,13 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'vip_sunflower_cut', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_chemical', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'chamomile', count = {1,2}},
+                { name = 'chemical', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -467,29 +522,29 @@ Config.Default = {
             },
         },
 
-        ['COKE'] = {
-            Coords = vector3(1395.0571, 3613.9897, 34.9809),
+        ['herb'] = {
+            Coords = vector3(3288.9263, 5152.6387, 18.3919),
             Blips = {
-                enable = false,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[FARM] COKE',   -- Text ใน Blip
+                enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
+                Text = '[CRAFT] HERB',   -- Text ใน Blip
                 Sprite = 424,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
             ShowMarkerArea = {        
                 Show = false,         -- เปิดวงเลี้ยงสัตว์หรือไม่ ถ้าหากเปิดจะเพิ่มการทำงานของสคริป 0.02
-                MakerDistance = 1.0, -- ระยะมองเห็นวง
+                MakerDistance = 50.0, -- ระยะมองเห็นวง
                 MakerConfig = { type = 28,  r = 12, g = 128, b = 236, alpha = 100, }, 
             },
 
             Distance = { -- ระยะต่างๆ
-                Pickup = 1.20, -- ระยะในการเก็บตอนอยู่ใกล้ Prop งาน
-                Inzone = 1.0, -- เมื่ออยู่ในระยะนี้จะขึ้น Ui 
+                Pickup = 3.20, -- ระยะในการเก็บตอนอยู่ใกล้ Prop งาน
+                Inzone = 25.0, -- เมื่ออยู่ในระยะนี้จะขึ้น Ui 
             },
 
             Progress = 2, -- เวลาในการทำงาน 4 = 4 วิ
             Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
-            AutoFarm = 'weed_a', -- บัตรออโต้ฟาร์ม
+            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
 
             MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
                 -- ['work_x2'] = 2,
@@ -508,19 +563,19 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'prop_cs_heist_bag_02', -- ชื่อ Prop ต่างๆ
-            PropLimit = 1, -- จะให้ Prop เกิดกี่ตัวในงานนี้
+            Object = 'un_hope_prop_herb', -- ชื่อ Prop ต่างๆ
+            PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
-            SpawnRadius = 0.1, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
+            SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'cocaine_a', count = {1,2}},
+                { name = 'chamomile', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                -- { name = 'exp', count = {1,2}, percent = 75, x2 = false},
-                -- { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
-                -- -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
+                -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
     },
