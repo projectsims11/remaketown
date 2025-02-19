@@ -404,10 +404,10 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 60%;
     right: -30%;
     color: white;
-    margin: 2.1vh 2vh 0vh 0vh;
+    margin: 1.1vh 2vh 0vh 0vh;
     height: 3.0vh;
     border-radius: 2vh;
     border: 0.4vh solid rgb(48, 48, 48);
@@ -415,8 +415,8 @@ body {
 }
 
 .job span {
-    margin-left: 1.7vh;
-    font-size: 1.6vh;
+    margin-left: 1.0vh;
+    font-size: 1.5vh;
 }
 
 .job_img {
@@ -425,8 +425,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.5vh;
-    height: 3.5vh;
+    width: 2.7vh;
+    height: 2.7vh;
     transform: rotate(45deg);
     border-radius: 1vh;
     border: 1px solid rgb(31, 122, 226);
