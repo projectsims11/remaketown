@@ -2,7 +2,7 @@ Config = {}
 
 Config['Weapon'] = {
     ["WEAPON_UNARMED"] = {
-        Damage = 4 , 
+        Damage = 3, 
         ----------------------------------------------------
         Critical = false, -- เปิด ให้คริ true // ปิด false [[[[___ได้แต่ไม้___]]]]
         Critical_Chance = 100, -- โอกาสติดคริ เวลาตีหัว         
