@@ -66,7 +66,7 @@ loadScript = function()
 
 
 			local playerHealth = GetEntityHealth(ped) - 100	
-			print(playerHealth) -- SHOW HEALTHA
+			-- print(playerHealth) -- SHOW HEALTHA
 			local armor = GetPedArmour(ped)
 			local player_id = GetPlayerServerId(PlayerId())
 			local FirstName = GetPlayerName(playerId)
