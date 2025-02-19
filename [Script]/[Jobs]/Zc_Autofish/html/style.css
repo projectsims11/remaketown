@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Mitr");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Sarabun");
+
+html,
+body {  
+  margin: 0;
+  height: 99%;
+  overflow: hidden;
+  color: rgb(255, 255, 255);   /* สีตัวหนังสือ */
+  background-color: #00000000;
+  font-family: 'Prompt', sans-serif;
+}
+#body {
+  display: block;
+}
+ 
+.bg-container {     /* ทั้งจอ */
+  width: 100%;
+  height: 100%;
+  /* border: 5px solid red; */
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.rowss {
+  /* margin-bottom: -10%; */
+  margin-bottom: 0%;
+  width: 350px;  /*ขนาดกว้างกรอบล่าง */
+  height: auto;
+  padding: 2.5px; /*ขนาดสูงกรอบล่าง */
+  background-color: #000000e0;
+  border-radius: 10px 10px 0px 0px;
+  align-items: center;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  
+  border-image-source: linear-gradient(to right, #a43ad5, #3a56d5)
+}
+
+
+
+.col.colmain {
+  height: 100%;
+  padding: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.rows {
+  margin-bottom: 0px;
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  background-color: #000000cb;
+  border-radius: 10px 10px 0px 0px;
+  align-items: center;
+}
+
+
+
+.bg-container.ssss {
+  top: 15%;
+  height: 20%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.row.botton {
+  margin: 265px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: 0px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.col.colorcol {
+  padding: 10px;
+  align-items: center;
+}
+
+.col.colmain2 {
+  right: 0%;
+}
+
+/* .buttonAll {
+  border-right: 2px solid #6f00ff;
+  padding-right: 15px;
+  padding: 10px;
+} */
+
+#main2{      /*กล่องข้อควม*/
+  /* right: -40%; */
+  right: 17%;
+}

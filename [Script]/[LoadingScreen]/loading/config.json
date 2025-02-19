@@ -1,0 +1,51 @@
+{
+    "Keys": [
+		{
+			"key": "F1",
+			"title": "Phone",
+			"description": "Handy öffnen mit 'F1'"
+		},
+		{
+			"key": "F2",
+			"title": "Inventar",
+			"description": "Inventar öffnen mit 'F2'"
+		}
+	],
+
+    "News": [
+		{
+			"title": "New Title",
+			"subtitle": "Sub Title",
+			"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+			"image": "new.png"
+		}
+	],
+
+	"Authors": [
+		{
+			"name": "UNKNWON",
+			"rank": "Projektleitung",
+			"image": "user.png" 
+		},
+		{
+			"name": "UNKNWON",
+			"rank": "Projektleitung",
+			"image": "user.png" 
+		},
+		{
+			"name": "UNKNWON",
+			"rank": "Stv. Projektleitung",
+			"image": "user.png" 
+		},
+	],
+
+    "Music": [
+        {
+            "songname": "Babylone",
+            "owner": "Unknown",
+            "path": "musics/babylon.mp3" 
+        }
+    ]
+    
+}
+    

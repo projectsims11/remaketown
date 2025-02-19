@@ -15,6 +15,7 @@ $(function () {
                 }
 
                 if (data.health) {
+                    $('.health-text').html(data.health)
                     $("#health_percent").css({ width: data.health + "%" });
 
                 }
@@ -120,8 +121,8 @@ $(function () {
             case "send_department_data":
                 if (data.job_name && data.job_count) {
                     $(`#count_${data.job_name}`).html(data.job_count)
-                }  else {
-                    $(`#count_${data.job_name}`).html(0)    
+                } else {
+                    $(`#count_${data.job_name}`).html(0)
                 }
                 break;
             case "send_voice_data":
@@ -133,6 +134,12 @@ $(function () {
                     $('.voice-chat-dots .dot2').eq(i).css('background', 'linear-gradient(180deg, rgb(31, 122, 226) 0%, rgb(70, 145, 231) 100%)')
                 }
 
+                break;
+            case "open_health_percent":
+                $('.health-text').css('display', 'block')
+                break;
+            case "close_health_percent":
+                $('.health-text').css('display', 'none')
                 break;
         }
     })

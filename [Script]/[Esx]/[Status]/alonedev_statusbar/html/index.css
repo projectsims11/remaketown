@@ -264,6 +264,13 @@ body {
     margin-left: 1.5%;
 }
 
+.health-text {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    right: 1.5%;
+}
+
 .effect-3dot {
     width: 1vh;
     margin-left: 1vh;

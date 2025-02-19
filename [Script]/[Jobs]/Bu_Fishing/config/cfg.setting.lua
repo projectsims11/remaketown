@@ -1,5 +1,7 @@
 cfg = {}
 
+
+
 cfg.FrameWork = {  ---- รายละเอียด Framework
     Main = "esx:getSharedObject",
     Dropped = "esx:playerDropped",
@@ -40,7 +42,7 @@ cfg.PressKey = {
 cfg.Mode = {
     Afk = 10, -- เวลาในการ AFK ( วินาที )
     Minigame = {
-        PressKey = { "W", "Q", "R", "S" }, -- ปุ่ม MINIGAME สุ่ม
+        PressKey = { W, A, S,D,F }, -- ปุ่ม MINIGAME สุ่ม
         Time = { 5, 7, 9 }, -- เวลาในการ Show ปุ่ม Minigame
         Close = 10, -- หากไม่ได้กดปุ่ม Minigame ภายในเวลา Close จะสุ่ม Minigame ใหม่
         AnitiKey = 5, -- หากผู้เล่นกดปุ่มรัวๆครบจำนวนที่กำหนด จะยกเลิกการตกปลาทันที

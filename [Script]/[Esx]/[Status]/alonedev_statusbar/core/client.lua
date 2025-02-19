@@ -3,6 +3,7 @@ local loadScript
 loadScript = function()
 
     local IsFirstTime = true
+	local HealthPercentDisplay = false
 
 	AddEventHandler(Config.VoiceStateEvent, function(newTalkingRange)  
 		SendNUIMessage({
@@ -11,6 +12,19 @@ loadScript = function()
 		})
 	end)
 
+	RegisterCommand(Config.Command.OpenHealthPercent , function()
+		if HealthPercentDisplay then 
+			SendNUIMessage({
+				action = 'close_health_percent'
+			})
+			HealthPercentDisplay = false
+		else 
+			SendNUIMessage({
+				action = 'open_health_percent'
+			})
+			HealthPercentDisplay = true
+		end
+	end, false)
 
 	RegisterNetEvent(GetCurrentResourceName() .. ':UpdateStatus')
 	AddEventHandler(GetCurrentResourceName() .. ':UpdateStatus' , function(status)

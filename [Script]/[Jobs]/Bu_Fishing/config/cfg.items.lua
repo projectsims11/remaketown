@@ -1,24 +1,24 @@
 cfg.Items = {
-    -- ["General"] = { -- เมื่อเปิดจะตกได้ทุกที่ที่มีน้ำ อันนี้คือปิดยุ
-    --     ItemRod = "fishrod", -- เบ็ด
-    --     ItemBaits = {
-    --         ["bait"] = true,
-    --         ["bait_rare"] = true, -- เหยื่อ
-    --     },
-    --     Remove = { -- ลบเบ็ดเหยื่อ | หากไม่ใช้ให้ -- ไว้
-    --         ItemRod = { Count = 1, Percent = 20.0 },
-    --         ItemBaits = {
-    --             ["fishbait"] = { Count = { 1, 2 }, Percent = 100.0 },
-    --             -- ["bait_rare"] = { Count = { 1, 3 }, Percent = 100.0 }
-    --         },
-    --     },
-    --     Receive = { -- ได้อะไรบ้างแต่ละรอบ
-    --         { Name = "fishing", Count = 1, Percent = 100.0 },
-    --     },
-    --     AfterReceive = function( xPlayer , Name , Count ) -- ฟังคชั่นหลังจากได้รับสิ่งของ
-    --         -- TriggerClientEvent("ชื่อสคริปต์", xPlayer.source, Name, Count)
-    --     end,
-    -- },
+    ["General"] = { -- เมื่อเปิดจะตกได้ทุกที่ที่มีน้ำ อันนี้คือปิดยุ
+        ItemRod = "fishrod", -- เบ็ด
+        ItemBaits = {
+            ["bait"] = true,
+       
+        },
+        Remove = { -- ลบเบ็ดเหยื่อ | หากไม่ใช้ให้ -- ไว้
+            -- ItemRod = { Count = 1, Percent = 20.0 },
+            -- ItemBaits = {
+            --     ["fishbait"] = { Count = { 1, 2 }, Percent = 100.0 },
+            --     -- ["bait_rare"] = { Count = { 1, 3 }, Percent = 100.0 }
+            -- },
+        },
+        Receive = { -- ได้อะไรบ้างแต่ละรอบ
+            -- { Name = "fishing", Count = 1, Percent = 100.0 },
+        },
+        AfterReceive = function( xPlayer , Name , Count ) -- ฟังคชั่นหลังจากได้รับสิ่งของ
+            -- TriggerClientEvent("ชื่อสคริปต์", xPlayer.source, Name, Count)
+        end,
+    },
     [1] = {
         ItemRod = "fishrod", -- normal mini game
         ItemBaits = {
