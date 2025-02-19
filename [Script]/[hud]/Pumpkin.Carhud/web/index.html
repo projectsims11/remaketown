@@ -1,0 +1,178 @@
+<!-- ห้ามนำไปปล่อย หรือ ขายต่อน้าค้าบ พบเจอขอไม่ซับพอร์ตนะค้าบ
+ฺBY : UrUi DC: https://discord.gg/jaFfJejJ4c -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETUP SHOP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="ui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body id="carhub" style="overflow: hidden; opacity: 1;">
+    <div class="container">
+
+        
+        <div class="hud">
+            <div class="set">
+                <div class="left">
+                    <div class="fuel-bar">
+                        <div class="load" id="fuel"></div>
+                    </div>
+                    <div class="rpm-text">RPM</div>
+                    <div class="rpm-box"><span id="Text-rpmx">2000</span></div>
+                    <div class="fuel"></div>
+                    <div class="fuel-text" id="Text-fuel">65%</div>
+                </div>
+
+                <div class="right">
+                    <div class="fix-bar">
+                        <div class="load" id="engine"></div>
+                    </div>
+                    <div class="gear-text">GEAR</div>
+                    <div class="gear-box"><span id="num-gear">2</span></div>
+                    <div class="fix"></div>
+                    <div class="fix-text" id="Text-engine">65%</div>
+                </div>
+
+                <div class="center">
+                    <div class="c-set">
+                        <div class="kmh-text">KM/H</div>
+                        <div class="kmh" id="kmh">250</div>
+                        <div class="pumpkin">Remake&nbsp;TOWN</div>
+
+                        <div class="c-set1" id="lock">
+                            <div class="lock"></div>
+                            <div class="span">LOCK</div>
+                        </div>
+                        <div class="c-set2" id="belt">
+                            <div class="belt"></div>
+                            <div class="span">BELT</div>
+                        </div>
+
+                        <div class="car">
+                            <img src="/web/img/wheel.png" id="wheel">
+                            <img src="/web/img/wheel2.png" id="wheel3">
+                            <img src="/web/img/wheel3.png" id="wheel4">
+                            <img src="/web/img/wheel4.png" id="wheel2">
+                        </div>
+                    </div>
+                    <div class="logo"></div>
+
+                    <div class="c-bar1">
+                        <div class="rpm-load" id="rpmxx"></div>
+                    </div>
+                    <div class="c-bar2">
+                        <div class="rpm-load" id="rpmx"></div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="top-panel">
+                <div class="leftop-panel">
+                    <div class="item-box">
+                        <div class="item-icon" id="frontHood" style="background-image: url(./img/frontHood.png);"></div>
+                        <div class="item-active frontHood"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="windowFrontLeft" style="background-image: url(./img/windowFrontLeft.png);"></div>
+                        <div class="item-active windowFrontLeft"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="doorFrontLeft" style="background-image: url(./img/doorFrontLeft.png);"></div>
+                        <div class="item-active doorFrontLeft"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="seatFrontLeft" style="background-image: url(./img/seatFrontLeft.png);"></div>
+                        <div class="item-active seatFrontLeft"></div>
+                    </div>
+                </div>
+                <div class="righttop-panel">
+                    <div class="item-box">
+                        <div class="item-icon" id="seatFrontRight" style="background-image: url(./img/seatFrontLeft.png);"></div>
+                        <div class="item-active seatFrontRight"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="doorFrontRight" style="background-image: url(./img/doorFrontRight.png);"></div>
+                        <div class="item-active doorFrontRight"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="windowFrontRight" style="background-image: url(./img/windowFrontRight.png);"></div>
+                        <div class="item-active windowFrontRight"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="interiorLight" style="background-image: url(./img/interiorLight.png);"></div>
+                        <div class="item-active interiorLight"></div>
+                    </div>
+                </div>
+                <div class="leftbottom-panel">
+                    <div class="item-box">
+                        <div class="item-icon" id="rearHood" style="background-image: url(./img/rearHood.png);"></div>
+                        <div class="item-active rearHood"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="windowRearLeft" style="background-image: url(./img/windowRearLeft.png);"></div>
+                        <div class="item-active windowRearLeft"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="doorRearLeft" style="background-image: url(./img/doorRearLeft.png);"></div>
+                        <div class="item-active doorRearLeft"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="seatRearLeft" style="background-image: url(./img/seatFrontLeft.png);"></div>
+                        <div class="item-active seatRearLeft"></div>
+                    </div>
+                </div>
+                <div class="rightbottom-panel">
+                    <div class="item-box">
+                        <div class="item-icon" id="seatRearRight" style="background-image: url(./img/seatFrontLeft.png);"></div>
+                        <div class="item-active seatRearRight"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="doorRearRight" style="background-image: url(./img/doorRearRight.png);"></div>
+                        <div class="item-active doorRearRight"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="windowRearRight" style="background-image: url(./img/windowRearRight.png);"></div>
+                        <div class="item-active windowRearRight"></div>
+                    </div>
+                    <div class="item-box">
+                        <div class="item-icon" id="rearHood2" style="background-image: url(./img/rearHood2.png);"></div>
+                        <div class="item-active rearHood2"></div>
+                    </div>
+                </div>
+
+                <div class="item-box-engine">
+                    <div class="item-icon-engine" id="ignition" style="background-image: url(./img/ignition.png);"></div>
+                    <div class="item-active ignition"></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <audio id="belt-sound" loop preload>
+            <source src="./sounds/seatbelt.ogg" type="audio/ogg">
+        </audio>
+        
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="calculate.js"></script>
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
