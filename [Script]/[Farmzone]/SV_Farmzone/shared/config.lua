@@ -19,9 +19,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 00.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }, 
         LeaveVehicle = {
@@ -32,9 +32,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 25.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }
     },
@@ -56,9 +56,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 00.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }, 
         LeaveVehicle = {
@@ -69,9 +69,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 25.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }
     },
@@ -93,9 +93,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 00.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }, 
         LeaveVehicle = {
@@ -106,9 +106,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 25.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }
     },
@@ -130,9 +130,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 00.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }, 
         LeaveVehicle = {
@@ -143,9 +143,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 25.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }
     },
@@ -167,9 +167,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 00.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }, 
         LeaveVehicle = {
@@ -180,9 +180,9 @@ Config.Position = {
                 Color = 1,	            -- สีของ DrawMark
                 Radius = 25.0,         -- ขนาดของวง DrawMark
                 Bold = 100,	            -- ความเข้มวง DrawMark
-                R = 255,                -- CODE สีของวง DrawMark
-                G = 255,                 -- CODE สีของวง DrawMark
-                B = 255                  -- CODE สีของวง DrawMark
+                R = 139,                -- CODE สีของวง DrawMark
+                G = 210,                 -- CODE สีของวง DrawMark
+                B = 236                  -- CODE สีของวง DrawMark
             },
         }
     },
@@ -207,9 +207,9 @@ Config.Position = {
             Color = 1,	            -- สีของ DrawMark
             Radius = 00.0,         -- ขนาดของวง DrawMark
             Bold = 100,	            -- ความเข้มวง DrawMark
-            R = 255,                -- CODE สีของวง DrawMark
-            G = 255,                 -- CODE สีของวง DrawMark
-            B = 255                  -- CODE สีของวง DrawMark
+            R = 139,                -- CODE สีของวง DrawMark
+            G = 210,                 -- CODE สีของวง DrawMark
+            B = 236                  -- CODE สีของวง DrawMark
         },
     }, 
     LeaveVehicle = {
@@ -220,9 +220,9 @@ Config.Position = {
             Color = 1,	            -- สีของ DrawMark
             Radius = 10.0,         -- ขนาดของวง DrawMark
             Bold = 100,	            -- ความเข้มวง DrawMark
-            R = 255,                -- CODE สีของวง DrawMark
-            G = 255,                 -- CODE สีของวง DrawMark
-            B = 255                  -- CODE สีของวง DrawMark
+            R = 139,                -- CODE สีของวง DrawMark
+            G = 210,                 -- CODE สีของวง DrawMark
+            B = 236                  -- CODE สีของวง DrawMark
         },
     }
 },

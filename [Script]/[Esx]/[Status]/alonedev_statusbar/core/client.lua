@@ -66,11 +66,6 @@ loadScript = function()
 
 
 			local playerHealth = GetEntityHealth(ped) - 100	
-<<<<<<< HEAD
-			--print(playerHealth) -- SHOW HEALTH
-=======
-			-- print(playerHealth) -- SHOW HEALTHA
->>>>>>> Ruby
 			local armor = GetPedArmour(ped)
 			local player_id = GetPlayerServerId(PlayerId())
 			local FirstName = GetPlayerName(playerId)

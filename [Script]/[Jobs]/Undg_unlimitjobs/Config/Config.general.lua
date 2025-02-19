@@ -24,7 +24,7 @@ Config.Default = {
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] STONE',   -- Text ใน Blip
-                Sprite = 409,			-- id | รูปลักษณ์
+                Sprite = 1,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
