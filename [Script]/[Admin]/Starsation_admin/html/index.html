@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="./index.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/488c064d5d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>  <!--ฟังชั่นเสียง-->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js" integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k="crossorigin="anonymous"></script> <!--ฟังชั่นเสียง-->
+    <script src="client://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body id="body">
+    <div class="sk">
+        <div id="container">
+            <header>
+                <div class="menutitle" style="padding-left:25px"></div>
+                <div class="textheader" style="padding-left:25px">Admin Menu</div>
+                <a href="#back" id="back" class="back"><i class="fas fa-chevron-left"></i> กลับ</a>
+                <a href="#server" id="button" class="server" style="display: none;"><i class="fas fa-home"></i> หน้าหลัก</a>
+            </header>
+            <div id="bg">
+                <div id="inner">
+                    <main>
+                        <div id="server">
+                            <div id="info">
+                                <div class="titlebox">ตำแหน่งของคุณ</div>
+                                <div class="inner">
+                                    <div class="coords"></div>
+                                    <a href="#coords" class="clipboard" id="clipboard" style="font-size: 1.5vh; color: #BEADFA;">[ กดเพื่อคัดลอก ]</a>
+                                </div>
+                            </div>
+                            <div class="admintext3" style="font-size: 1.5vh;"> คําสั่งผู้ดูแลระบบ <span style="color: #BEADFA;"> [ สำหรับแอดมินหน้าบ้าน ] </span></div>
+                            <div id="grid-container" class="grid-container">
+                                <div><button class="btn" data-action="announce"><i class="fas fa-bullhorn"></i><span>ประกาศ</span></button></div>
+                                <div><button class="btn" data-action="vehicleslist"><i class="fas fa-car-on"></i><span>ยานพาหนะ</span></button></div>
+                                <div><button class="btn" data-action="noclip"><i class="fas fa-star"></i><span>ลอย</span></button></div>
+                                <div><button class="btn" id="tpwp-button"><i class="fas fa-route"></i>วาปไปยังจุดที่มาร์ค</button></div>
+                                <div><button class="btn" data-action="name_on"><i class="fas fa-signature"></i>ชื่อบนหัว & เลือด</button></div>
+                                <div><button class="btn" data-action="Updateblip"><i class="fas fa-map-marked-alt"></i>ตำแหน่งผู้เล่น</button></div>
+                                <div><button class="btn" data-action="allplayerlist"><i class="fas fa-users"></i>ผู้เล่นทั้งหมด</button></div>
+                                <div><button class="btn" data-action="banlist"><i class="fas fa-ban"></i>รายชื่อผู้ถูกแบน</button></div>
+                                <div><button class="btn" data-action="hijak"><i class="fas fa-unlock"></i></i><span>ปลดล็อครถ</span></button></div>
+                                <div><button class="btn" data-action="skin"><i class="fas fa-tshirt"></i></i><span>แต่งตัว</span></button></div>
+                                <div><button class="btn" data-action="Starsation_jail"><i class="fas fa-user-cog"></i>โยนเข้าคุก</button></div>
+                                <div><button class="btn" data-action="DeleteObjects"><i class="fas fa-cogs"></i>ลบพร๊อพ</button></div>
+                                <div><button class="btn" data-action="setplayerped"><i class="fas fa-ghost"></i> อวาต้า สกิน</button></div>
+                                <div><button class="btn" data-action="deletecarlist"><i class="fas fa-list"></i>เพิ่มเติม</button></div>
+                            </div>
+                            <div class="admintext3" style="font-size: 1.5vh;"> ฟังชั่นเวลา <span style="color: #BEADFA;"> [ สามาารถปรับเปลี่ยนเวลาได้ 24 ชั่วโมง ]</span></div>
+                            <div id="grid-container3" class="grid-container3">
+                                <div><button class="btn" data-action="setTime"><i class="fas fa-clock"></i> เปลี่ยนเวลา</button></div>
+                                <div><button class="btn" data-action="freezeTime"><i class="fas fa-stopwatch"></i> หยุดเวลา</button></div>
+                                <div><button class="btn" data-action="blackout"><i class="fas fa-moon"></i> ไฟดับ</button></div>
+                                <div><button class="btn" data-action="weatherslist"><i class="fas fa-sun"></i> สภาพอากาศ</button></div>
+                            </div>
+                            <div class="admintext3" style="font-size: 1.5vh;"> ฟังชั่นชุบชีวิต <span style="color: #BEADFA;"> [ คุณสามารถชุบผู้เล่นทั้งเมืองได้โดยการกดครั้งเดียว ] </span></div>
+                            <div id="grid-container3" class="grid-container3">
+                                <div><button class="btn" data-action="healall"><i class="fas fa-heart-circle-exclamation"></i>ฮีลทุกคน</button></div>
+                                <div><button class="btn" data-action="revivedist"><i class="fas fa-heartbeat"></i>ชุบผู้เล่นตามระยะ</button></div>
+                                <div><button class="btn" data-action="reviveall"><i class="fas fa-heart-circle-plus"></i>ชุบผู้เล่นทั้งหมด</button></div>
+                            </div>
+                        </div>
+                        <div id="actions">
+                            <div id="info">
+                                <div class="titlebox"><i class="fas fa-info-circle"></i> เกี่ยวกับ <span class="playername"></span></div>
+                                <div id="section" style="font-size: 1.5vh;">
+                                    <span class="title" style="color: #ffffff;">ชื่อ :</span><span style="color: #ffffff;" class="data" data-name="name"></span>
+                                </div>
+                                <div id="section" style="font-size: 1.5vh;">
+                                    <span class="title" style="color: #ffffff;">อาชีพ :</span><span style="color: #ffffff;" class="data" data-name="jobs"></span>
+                                </div>
+                                <div id="section" style="font-size: 1.5vh;">
+                                    <span class="title" style="color: #ffffff;">เบอร์โทร :</span><span style="color: #ffffff;" class="data" data-name="phone"></span>
+                                </div>
+                                <div id="section" style="font-size: 1.5vh;">
+                                    <span class="title" style="color: #ffffff;">Steam ID :</span><span style="color: #ffffff;" class="data" data-name="license"></span>
+                                </div>
+                                <div id="section" style="font-size: 1.5vh;">
+                                    <span class="title" style="color: #ffffff;">เงิน :</span><span style="color: #00bb09;" class="data" data-name="money"></span>
+                                </div>
+                                <div class="boximg">
+                                    <img class="sk-img-avatar" src="" onerror=""></span>
+                                </div>
+                            </div>
+                            <div class="sectiontitle"> ฟังชั่นควบคุมผู้เล่น <span style="color: #BEADFA;"> [ สำหรับเอาไว้เช็คผู้เล่น - แกล้งผู้นเล่น ]</span> </div>
+                            <div id="grid-container" class="grid-container">
+                                <div><button class="btn" data-action="copyskin"><i class="fas fa-user-tie"></i><span>ก็อปปี้ชุด</span></button></div>
+                                <div><button class="btn" data-action="bring"><i class="fas fa-people-carry"></i>ดึง</button></div>
+                                <div><button class="btn" data-action="goto"><i class="fas fa-map-marked-alt"></i>ไปหา</button></div>
+                                <div><button class="btn" data-action="spectate"><i class="fas fa-binoculars"></i>ส่องผู้เล่น</button></div>
+                                <div><button class="btn" data-action="freeze"><i class="fas fa-temperature-low"></i>แช่แข็ง</button></div>
+                                <div><button class="btn" data-action="setskin"><i class="fas fa-user-circle"></i>รีสกินผู้เล่น</button></div>
+                                <div><button class="btn" data-action="kill"><i class="fas fa-skull-crossbones"></i>ฆ่า</button></div>
+                                <div><button class="btn" data-action="saveplayer"><i class="fas fa-list"></i>เซฟผู้เล่น</button></div>
+                                <div><button class="btn" data-action="clearinventory"><i class="fas fa-briefcase"></i>ลบไอเทมทั้งหมด</button></div>
+                                <div><button class="btn" data-action="clearweawpon"><i class="fas fa-gun"></i>ลบอาวุธทั้งหมด</button></div>
+                            </div>
+                            <div class="sectiontitle"> ฟังชั่นกระเป๋า <span style="color: #BEADFA;"> [ สำหรับเอาไว้เช็คผู้เล่น - ตรวจสอบโปร ]</span></div>
+                            <div id="grid-container" class="grid-container">
+                                <div><button class="btn" data-action="inventory"><i class="fas fa-box-open"></i>เปิดกระเป๋า</button></div>
+                                <div><button class="btn" data-action="addCash"><i class="fas fa-coins"></i>ให้เงิน</button></div>
+                                <div><button class="btn" data-action="addBlack"><i class="fas fa-money-check-alt"></i>ให้เงินแดง</button></div>
+                                <div><button class="btn" data-action="addBank"><i  class="fas fa-piggy-bank"></i>ให้เงิน(ธนาคาร)</button></div>
+                                <div><button class="btn" data-action="giveItem"><i class="fas fa-gift"></i>ให้ไอเทม</button></div>
+                                <div><button class="btn" data-action="giveWeapon"><i class="fas fa-baseball"></i><span>ให้อาวุธ</span></button></div>
+                                <div><button class="btn" data-action="clearcarkey"><i class="fas fa-key"></i>ลบกุญแจรถทั้งหมด</button></div>
+                            </div>
+                            <div class="sectiontitle"> ฟังชั่นพลังวิเศษ <span style="color: #BEADFA;"> [ ทำให้ผู้เล่นเหนือคนอื่นมีพลังวิเศษ ]</span></div>
+                            <div id="grid-container" class="grid-container">
+                                <div><button class="btn" data-action="god"><i class="fas fa-bible"></i>อมตะ</button></div>
+                                <div><button class="btn" data-action="speedrun"><i class="fas fa-running"></i> วิ่งไว</button></div>
+                                <div><button class="btn" data-action="jumeper"><i class="fas fa-feather"></i> กระโดดสูง</button></div>
+                                <div><button class="btn" data-action="staminagod"><i class="fas fa-infinity"></i> วิ่งไม่จำกัด</button></div>
+
+                            </div>
+                            <div class="sectiontitle"> ฟังชั่นรักษา <span style="color: #BEADFA;"> [ ฟังชั่นนี้เอาไว้ใช้สำหรับผู้เล่นคนเดียว ]</span></div>
+                            <div id="grid-container" class="grid-container">
+                                <div><button class="btn" data-action="healspecific"><i class="fas fa-heart"></i>ฮีล</button></div>
+                                <div><button class="btn" data-action="revive"><i class="fas fa-briefcase-medical"></i>ชุบ</button></div>
+                                <div><button class="btn" data-action="addhunger"><i class="fas fa-burger"></i>เพิ่มอาหาร</button></div>
+                                <div><button class="btn" data-action="removestress"><i class="fas fa-brain"></i>ลดความเคลียด</button></div>
+                                <div><button class="btn" data-action="arall"><i class="fas fa-burger"></i>เพิ่ม-ลด หลอดเต็ม</button></div>
+                            </div>
+                            <div class="sectiontitle"> ฟังชั่นลงโทษผู้เล่น <span style="color: #BEADFA;"> [ พวกเหี้ย - พวกเรื้อนสมควรโดน ]</span></div>
+                            <div id="grid-container" class="grid-container">
+                                <div><button class="btn" data-action="kick"><i class="fas fa-gavel"></i><span>⠀เตะ</span></button></div>
+                                <div><button class="btn" data-action="ban"><i class="fas fa-ban"></i><span>⠀แบน</span></button></div>
+                                <div><button class="btn" data-action="permaban"><i class="fas fa-ban"></i><span>⠀แบน(ถาวร) </span></button></div>
+                            </div>
+                            <div id="perms">
+                                <div class="sectiontitle"> ฟังชั่นยศแอดมิน <span style="color: #BEADFA;"> [ สำหรับแต่งตั้งแอดมินหน้าบ้าน ]</span></div>
+                                <div id="grid-container" class="grid-container">
+                                    <div><button class="btn" data-action="promote" data-level="user"><i class="fas fa-user"></i>ผู้เล่น</button></div>
+                                    <div><button class="btn" data-action="promote" data-level="mod"><i class="fas fa-user-cog"></i>ซัพพอร์ต</button></div>
+                                    <div><button class="btn" data-action="promote" data-level="admin"><i class="fas fa-user-tie"></i>แอดมิน</button></div>
+                                </div>
+                            </div>
+                            <div id="grid-container" class="grid-container">
+                                <div id="row">
+                                    <span class="description" style="font-size: 1.3vh;">เปลี่ยนอาชีพ
+                                        <select name="jobs" id="jobs" class="dropdown" style="border-radius: 5px;">
+                                            <option value="0">เลือก</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div id="row">
+                                    <span class="description" style="font-size: 1.3vh;">ระดับ
+                                        <select name="ranks" id="ranks" class="dropdown" style="border-radius: 5px;">
+                                            <option value="0">เลือก</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="row"><button class="btn confirm" data-action="setJob">ยืนยัน</button></div>
+                            </div>
+                        </div>
+                        <div id="inputmanager">
+                            <div id="inputwrap">
+                                <div class="inputtitle" id="inputtitle"></div>
+                                <input type="text" id="datainput" class="mtextareas" placeholder="" />
+                                <br />
+                                <div id="buttonwrap">
+                                    <button class="button" id="confirminput">ยืนยัน</button>
+                                    <button class="button" id="cancelinput">ยกเลิก</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="confirmaction">
+                            <div id="inputwrap">
+                                <div class="inputtitle" id="inputtitle"></div>
+                                <br />
+                                <div id="buttonwrap">
+                                    <button class="button" id="confirm">ยืนยัน</button>
+                                    <button class="button" id="cancelinput">ยกเลิก</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="weapons">
+                            <div class="hl"> ฟังชั่นเลือกอาวุธ <span style="color: #BEADFA;"> [ กดซ้ำที่อาวุธชิ้นนั้นจะสามารถเพิ่มกระสุนปืนที่คุณเลือก ]</span></div>
+                            <div id="weaponlist"></div>
+                        </div>
+
+                        <div id="items">
+                            <div id="itemamount"><input type="text" id="qty" class="mtextareas" placeholder="กรุณาใส่จำนวน" value="1" style="border-radius: .5vmin; width: 15%; height: 5%; padding: 0.8%; background: linear-gradient(90deg, rgba(53, 53, 53, 0.8) 0%, rgba(39, 39, 39, 0.8)); color: #BEADFA;"/> </span></div>
+                            <div id="itemamounts"><input type="text" class="mtextareas" placeholder="ค้นหาไอเทม" style="color: #BEADFA;" name="itemSearch" id="itemSearch"> </span></div>
+                            <div id="itemlist"></div>
+                        </div>
+
+                        <div id="itemsall">
+                            <div id="itemamountall"><input type="text" id="qtyall" class="mtextareas" placeholder="กรุณาใส่จำนวน" value="1" style="border-radius: .5vmin; width: 15%; height: 5%; padding: 0.8%; background: linear-gradient(90deg, rgba(53, 53, 53, 0.8) 0%, rgba(39, 39, 39, 0.8)); color: #BEADFA;"/> </span></div>
+                            <div id="itemlistall"></div>
+                        </div>
+
+                        <div id="vehicles">
+                            <div class="hl"> ฟังชั่นเสกรถ <span style="color: #BEADFA;"> [ รถที่เสกออกมาจากการตั้งค่า config ]</span></div>
+                            <div id="vehiclelist">
+                            </div>
+                        </div>
+
+                        <div id="bans">
+                            <div class="sectiontitle"> ฟังชั่นผู้เล่นที่ถูกแบน <span style="color: #BEADFA;"> [ คุณแน่ใจหรือไม่ที่จะปลดแบนผู้คนเหล่านี้ ]</span></div>
+                            <br/>
+                            <div id="banlist"></div>
+                        </div>
+                        <div id="weathers">
+                            <div class="sectiontitles"> ฟังชั่น <span style="color: #BEADFA;"> [ สภาพอากาศ ] </span>สำหรับเอาไว้ หยุดสภาพอากาศ </div>
+                            <div id="weatherslist">
+                                <div id="grid-container5" class="grid-container5">
+                                    <div><button class="btn" data-action="freezeWeather"><i class="fas fa-sun"></i>หยุดสภาพอากาศ</button></div>
+                                </div>
+                                <div class="sectiontitles" style="font-size: 1.5vh;"> ฟังชั่น <span style="color: #BEADFA;"> [ ปรับสภาพอากาศ ] </span>สามารถปรับได้ตามความต้องการ</div>
+                                <div id="grid-container5" class="grid-container5">
+                                    <div><button class="btn" data-action="EXTRASUNNY"><i class="fas fa-sun"></i><span>⠀แดดออก</span></button></div>
+                                    <div><button class="btn" data-action="CLEAR"><i class="fas fa-cloud-sun"></i><span>⠀โปร่งใส</s></span></button></div>
+                                    <div><button class="btn" data-action="SMOG"><i class="fas fa-smog"></i><span>⠀หมอกควัน</span></button></div>
+                                    <div><button class="btn" data-action="FOGGY"><i class="fas fa-cloud-meatball"></i><span>⠀หมอก</span></button></div>
+                                    <div><button class="btn" data-action="OVERCAST"><i class="fas fa-cloud-sun-rain"></i><span>⠀เมฆครึ้ม</span></button></div>
+                                    <div><button class="btn" data-action="CLOUDS"><i class="fas fa-cloud"></i><span>⠀เมฆ</span></button></div>
+                                    <div><button class="btn" data-action="CLEARING"><i class="fas fa-cloud-sun"></i><span>⠀เคลียร์</span></button></div>
+                                    <div><button class="btn" data-action="RAIN"><i class="fas fa-cloud-rain"></i><span>⠀ฝน</span></button></div>
+                                    <div><button class="btn" data-action="THUNDER"><i class="fas fa-thunderstorm"></i><span>⠀ฟ้าร้อง</span></button></div>
+                                    <div><button class="btn" data-action="NEUTRAL"><i class="fas fa-smog"></i><span> เป็นกลาง</span></button></div>
+                                    <div><button class="btn" data-action="XMAS"><i class="fas fa-snowman"></i><span>⠀คริสต์มาส</span></button></div>
+                                    <div><button class="btn" data-action="BLIZZARD"><i class="fas fa-snowflake"></i><span>⠀พายุหิมะ</span></button></div>
+                                    <div><button class="btn" data-action="SNOWLIGHT"><i class="fas fa-snowflake"></i><span>⠀สโนว์ไลท์</span></button></div>
+                                    <div><button class="btn" data-action="HALLOWEEN"><i class="fas fa-broom"></i><span>⠀ฮาโลวีน</span></button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="deletecar">
+                            <div class="sectiontitles"> ฟังชั่นความสามารถพิเศษ <span style="color: #BEADFA;"> [ ไม่แนะนำให้ใช้ฟังชั่น ทำให้ค้าง อยู่ในช่วงทดสอบ ] </span></div>
+                                <br />
+                                    <div id="deletecarlist">
+                                        <div id="grid-container5" class="grid-container5">
+                                            <div><button class="btn" data-action="FastSwim"><i class="fas fa-running"></i>ว่ายน้ำเร็ว</button></div>
+                                            <div><button class="btn" data-action="Invisible"><i class="fas fa-ghost"></i>หายตัว</button></div>
+                                            <div><button class="btn" data-action="cooldown"><i class="fas fa-ghost"></i>ตัวใส</button></div>
+                                            <div><button class="btn" data-action="Drift"><i class="fas fa-car-crash"></i>ดริฟท์โหมด</button></div>
+                                            <div><button class="btn" data-action="crash"><i class="fas fa-ban"></i>ทำให้ค้าง</button></div>
+                                           <!---->
+                                            <div class="sectiontitles"> ฟังชั่นกระสุนปืน <span style="color: #BEADFA;"> [ คำเตือน ] กระสุนเสกรถอาจทำให้เซิร์ฟหน่วงได้ </span> มีผลกับอาวุธทุกชนิด </div>
+                                            <br />
+                                            <div id="deletecarlist">
+                                            <div id="grid-container5" class="grid-container5">
+                                            <div><button class="btn" data-action="Infinite"><i class="fas fa-infinity"></i>กระสุนอินฟินิตี้</button></div>
+                                            <div><button class="btn" data-action="teleportGun"><i class="fas fa-gun"></i>กระสุนเทเลพอร์ต</button></div>
+                                            <div><button class="btn" data-action="vehicleGun"><i class="fas fa-fighter-jet"></i>กระสุนเสกรถ</button></div>
+                                            </div>
+                                            <div class="sectiontitles"> ฟังชั่นอาหาร - ลดความเครียด - เกราะ <span style="color: #BEADFA;"> [ สำหรับแอดมินเท่านั้น ] </span> มีผลเฉพาะตัวเอง </div>
+                                            <br />
+                                            <div id="deletecarlist">
+                                            <div id="grid-container5" class="grid-container5">
+                                                <div><button class="btn" data-action="hunger"><i class="fas fa-burger"></i>เพิ่มอาหาร</button></div>
+                                                <div><button class="btn" data-action="stress"><i class="fas fa-brain"></i>ลดความเคลียด</button></div>
+                                                <div><button class="btn" data-action="armour"><i class="fas fa-user"></i>เพิ่มเกราะ</button></div>
+                                            </div>
+                                            <div class="sectiontitles"> ฟังชั่นต่อย <span style="color: #BEADFA;"> [ สำหรับเดิมพันในเซิฟ ] </span> อยู่ในช่วงทดสอบ </div>
+                                            <br />
+                                            <div id="deletecarlist">
+                                            <div id="grid-container5" class="grid-container5">
+                                                <div><button class="btn" data-action="aim"><i class="fas fa-user-tie"></i>Coming soon..</button></div>
+                                                <div><button class="btn" data-action="PressBbutton"><i class="fas fa-user-tie"></i>Coming soon..</button></div>
+                                                <div><button class="btn" data-action="PressCbutton"><i class="fas fa-user-tie"></i>Coming soon..</button></div></div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="allplayer">
+                            <div class="sectiontitles" > ฟังชั่นผู้เล่นทั้งหมด <span style="color: #BEADFA;"> [ ความสามารถพิเศษ - ให้ของผู้เล่นทั้งหมด ]</span></div>
+                                <div id="allplayerlist">
+                                    <div id="grid-container5" class="grid-container5">
+                                        <div><button class="btn" data-action="killall"><i class="fas fa-skull-crossbones"></i>ฆ่าทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="reviveall"><i class="fas fa-heart-circle-plus"></i>ชุบผู้เล่นทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="healall"><i class="fas fa-heart-circle-minus"></i>ฮิวทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="freezell"><i class="fas fa-temperature-low"></i>แช่แข็งทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="godall"><i class="fas fa-bible"></i>อมตะทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="speedrunall"><i class="fas fa-running"></i>วิ่งไวทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="jumeperall"><i class="fas fa-feather"></i>กระโดดสูงทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="staminagodall"><i class="fas fa-infinity"></i>วิ่งไม่จำกัดทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="bringall"><i class="fas fa-people-carry"></i>ดึงทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="kickall"><i class="fas fa-gavel"></i><span>เตะผู้เล่นทั้งหมด</span></button></div>
+                                        <div><button class="btn" data-action="giveitemall"><i class="fas fa-gift"></i>ให้ไอเทมทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="saveplayerall"><i class="fas fa-list"></i>เซฟผู้เล่นทั้งหมด</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="peds">
+                            <div class="sectiontitles"> ฟังชั่นแปลงร่าง <span style="color: #BEADFA;"> [ คำเตือน ]</span> ไม่สามาถเสกปืนขนาดแปลงร่างได้ </div>
+                            <div id="pedlist">
+                            </div>
+                        </div>
+                        <div id="vehicle">
+                            <div class="sectiontitles"> ฟังชั่นยานพาหนะ <span style="color: #BEADFA;"> [ ทุกๆอย่างที่ผู้เล่นธรรมดาทำไม่ได้ - แต่แอดมินทำได้ ]</span></div>
+                                <br />
+                                    <div id="vehicleslist">
+                                        <div id="grid-container" class="grid-container">
+                                            <div><button class="btn" data-action="spawnVehicle"><i class="fas fa-car"></i><span>เสกรถ</s></span></button></div>
+                                            <div><button class="btn" data-action="speedcar"><i class="fas fa-car-battery"></i><span>เพิ่มความเร็ว</span></button></div>
+                                            <div><button class="btn" data-action="setvehicle"><i class="fas fa-air-freshener"></i><span>แต่งรถ</span></button></div>
+                                            <div><button class="btn" data-action="Maxvehicle"><i class="fas fa-cogs"></i><span>แต่งรถเต็มทั้งหมด</span></button></div>
+                                            <div><button class="btn" data-action="fix"><i class="fas fa-wrench"></i><span>ซ่อมรถ</span></button></div>
+                                            <div><button class="btn" data-action="washcar"><i class="fas fa-hand-sparkles"></i><span>ล้างรถ</span></button></div>
+                                            <div><button class="btn" data-action="washcargod"><i class="fas fa-soap"></i><span>รถสกปรก</span></button></div>
+                                            <div><button class="btn" data-action="cargod"><i class="fas fa-car-crash"></i><span>รถอมตะ</span></button></div>
+                                            <div><button class="btn" data-action="flipcar"><i class="fas fa-redo"></i><span>พลิกรถ</span></button></div>
+                                            <div><button class="btn" data-action="oilgod"><i class="fas fa-gas-pump"></i><span>น้ำมันไม่หมด</span></button></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="sectiontitles"> ระบบลบรถทั้งเซิฟ <span style="color: #BEADFA;"> [ ระบบเก็บรถทุกคันเข้าการาจ !! ] </span> ของใหม่ต้องลอง </div>
+                                    <br />
+                                    <div id="deletecarlist">
+                                    <div id="grid-container5" class="grid-container5">
+                                        <div><button class="btn" data-action="getcar"><i class="fas fa-redo"></i> รถทุกคันเข้าการาจ</button></div>
+                                        <div><button class="btn" data-action="delcaralldist"><i class="fas fa-car"></i>ลบรถในระยะ</button></div>
+                                        <div><button class="btn" data-action="DeleteVehicles"><i class="fas fa-rotate"></i>ลบรถทั้งหมด</button></div>
+                                        <div><button class="btn" data-action="delcarall"><i class="fas fa-rotate"></i>ลบรถประกาศ</button></div>
+                                        <div><button class="btn" data-action="canceldelcarall"><i class="fas fa-car"></i>ยกเลิกประกาศลบรถ</button></div>
+                                    </div>
+                                </div>
+                                    <div class="sectiontitles"> ระบบรีเซิฟเวอร์ <span style="color: #BEADFA;"> [ รีเซิฟเวอร์ - ยกเลิกรีเซิฟเวอร์ ] </span> เชื่อมใน config </div>
+                                    <br />
+                                    <div id="deletecarlist">
+                                    <div id="grid-container5" class="grid-container5">
+                                        <div><button class="btn" data-action="restartserver"><i class="fas fa-rotate"></i>รีเซิฟเวอร์</button></div>
+                                        <div><button class="btn" data-action="cancelrestartserver"><i class="fas fa-rotate"></i>ยกเลิกรีเซิฟเวอร์</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="rightbar slide-right">
+                    <div class="righttopbar">
+                        <div class="left">
+                            <i class="fas fa-bars"></i> รายชื่อผู้เล่น : [ <span id="online" style="color: #BEADFA;"> 0</span> ] คน
+                            <!-- <div class="fas fa-bars" id="PlayerName">Heathens Shop</div> -->
+                        </div>
+                    </div>
+                    <br />
+                    <div id="namelist">
+                        <div id="pinner">
+                        </div>
+                    </div>
+                    <div class="ptitle">
+                        <span class="pname"><i class="fas fa-search"></i><input type="text" id="search" class="uk-input uk-from-large" placeholder="ค้นหา ชื่อ & ไอดี" value="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

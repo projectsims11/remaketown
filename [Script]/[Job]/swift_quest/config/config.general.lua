@@ -29,7 +29,10 @@ config.boards = {
         {
             model = "tr_prop_tr_planning_board_01a",
             heading = 162.95,
-            coords = vector3(-415.22, 1161.05, 324.86),
+            -- coords = vector3(-415.22, 1161.05, 324.86),
+            coords = vector3(34.0575, -1081.8229, 38.1522),
+
+            
             radius = 3.0,
             drawText3D = {
                 enabled = false,
@@ -56,8 +59,29 @@ config.quests = {
     },
     tasks = { -- Key ต้องเป็นตัวเลขเท่านั้น (ไม่งั้นอาจทำให้เกิด Error ได้)
         [1] = {
-            label = "ทดสอบ",
+            label = "ทำเควสสำเร็จ",
             count = 10,
+            rewards = {
+                {item = "money", count = 1000}
+            }
+        },
+        [2] = {
+            label = "orange",
+            count = 10,
+            rewards = {
+                {item = "money", count = 1000}
+            }
+        },
+        [3] = {
+            label = "cement",
+            count = 10,
+            rewards = {
+                {item = "money", count = 1000}
+            }
+        },
+        [4] = {
+            label = "Online",
+            count = 30,
             rewards = {
                 {item = "money", count = 1000}
             }

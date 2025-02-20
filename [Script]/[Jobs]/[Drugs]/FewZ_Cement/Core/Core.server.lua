@@ -40,6 +40,9 @@ AddEventHandler(script_name .. ServerEvent[1], function(netid)
 				xPlayer.setInventoryItem(item, xItem.limit)
 			else
 				cachedPlant[netid] = GetGameTimer() + (reset_duration * 1000)
+
+				exports.swift_quest:AddPoint(source, 3, 1) -- QUEST
+
 				xPlayer.addInventoryItem(item, countitem)
 				TriggerClientEvent(script_name .. "fetchCooldown", -1, netid, reset_duration)
 			end

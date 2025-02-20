@@ -29,7 +29,7 @@ end
 --- @param taskId number ไอดีของเควส
 --- @param taskData table ข้อมูลของเควส
 listener.onClaim = function(playerId, taskId, taskData)
-    
+    exports.swift_quest:AddPoint(playerId, 1, 1) 
 end
 
 --- จะถูกเรียกใช้งานเมื่อกระดานเควสถูกรีเซ็ต

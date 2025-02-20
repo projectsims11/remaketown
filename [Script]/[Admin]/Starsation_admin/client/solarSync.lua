@@ -1,4 +1,4 @@
-if Config['สภาพอากาศแบบไดนามิก'] then
+if Config.SettingSystem.WeatherandBlackOut then
     CurrentWeather = Config.StartWeather
     local lastWeather, baseTime, timeOffset, timer, freezeTime, blackout = CurrentWeather, Config.BaseTime, 0, 0, false, false
 
@@ -44,7 +44,7 @@ if Config['สภาพอากาศแบบไดนามิก'] then
         local hour = 0
         local minute = 0
         while true do
-            Citizen.Wait(0)
+            Citizen.Wait(400)
             local newBaseTime = baseTime
             if GetGameTimer() - 500  > timer then
                 newBaseTime = newBaseTime + 0.25

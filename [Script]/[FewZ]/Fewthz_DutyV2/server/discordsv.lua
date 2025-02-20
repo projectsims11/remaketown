@@ -64,6 +64,13 @@ AddEventHandler("utk_sl:jobchanged", function(old, new, method)
                 local duration = os.time() - timers[old][i].time
                 local date = timers[old][i].date
                 local timetext = nil
+                -- local playerId = PlayerId()
+                -- local source = GetPlayerServerId(playerId)
+
+                -- if duration % 2 == 0 then -- quest
+                    
+                --     exports.swift_quest:AddPoint(source, 4, 1) 
+                -- end    
 
                 if duration > 0 and duration < 60 then
                     timetext = tostring(math.floor(duration)).." วินาที"

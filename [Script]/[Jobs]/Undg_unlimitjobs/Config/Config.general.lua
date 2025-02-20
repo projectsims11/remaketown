@@ -39,7 +39,7 @@ Config.Default = {
                 Inzone = 25.0, -- เมื่ออยู่ในระยะนี้จะขึ้น Ui 
             },
 
-            Progress = 2, -- เวลาในการทำงาน 4 = 4 วิ
+            Progress = nil, -- เวลาในการทำงาน 4 = 4 วิ
             Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
             AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
 
