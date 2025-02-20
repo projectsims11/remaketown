@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    overflow: hidden !important;
+    font-family: "Kanit", serif;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+button {
+    font-family: "Kanit", serif;
+}
+
+.focus {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.focus::before {
+    content: '';
+    position: absolute;
+    top: -9vh;
+    left: -9vh;
+    right: -9vh;
+    bottom: -9vh;
+    border: 15vh solid;
+    border-image-slice: 1;
+    border-image-source: rgb(0,0,0);
+    z-index: 0;
+    filter: blur(100px);
+}
+
+.app {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84vh;
+    height: 60vh;
+    border-radius: 4vh;
+    background: rgba(18, 18, 18, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-size: 2.5vh;
+    font-weight: 500;
+    color: rgb(225, 225, 225);
+}
+
+.title i {
+    margin-right: 1.5vh;
+    font-size: 2.2vh;
+}
+
+.line {
+    position: absolute;
+    top: 11%;
+    left: 3%;
+    width: 93.5%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wrapper {
+    position: absolute;
+    top: 3.5%;
+    left: 3.2%;
+    width: 93.5%;
+    height: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2vh;
+}
+
+.close_button {
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background-color: rgb(44, 43, 48);
+    color: rgb(158, 156, 164);
+    font-size: 1.7vh;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close_button:hover {
+    background-color: rgb(54, 53, 58);
+}
+
+.quest-progression {
+    color: rgb(150, 150, 150);
+    font-size: 1.6vh;
+    font-weight: 400;
+    gap: 1vh;
+    display: flex;
+    text-align: left;
+}
+
+.quest-progression i {
+    margin-right: 0.6vh;
+    font-size: 1.4vh;
+}
+
+#current_proress, #success_proress, #reset_timer {
+    display: inline-block;
+    color: white;
+}
+
+#current_proress, #success_proress {
+    min-width: 4vh;
+}
+
+#reset_timer {
+    min-width: 7vh;
+}
+
+.quests {
+    position: absolute;
+    top: 15%;
+    left: 3.2%;
+    width: 93.5%;
+    height: 83%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    gap: 1.5vh;
+}
+
+.quests::-webkit-scrollbar {
+    display: none;
+}
+
+.quest {
+    position: relative;
+    width: 18vh;
+    height: 23vh;
+    border-radius: 2vh;
+    background-color: rgba(27, 27, 27, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.quest-info {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    width: 85%;
+    height: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.info {
+    position: relative;
+    font-size: 1.5vh;
+    font-weight: 400;
+    color: white;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progession {
+    position: relative;
+    width: 100%;
+    height: 2vh;
+    background-color: rgba(150, 150, 150, 0.1);
+    border-radius: 0.6vh;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(10, 122, 255);
+}
+
+.progress-text {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.1vh;
+    font-weight: 300;
+}
+
+.quest-line{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.quest-reward {
+    position: absolute;
+    top: 46%;
+    left: 8%;
+    color: rgb(225, 225, 225);
+    font-size: 1.5vh;
+    font-weight: 300;
+}
+
+.quest-reward i {
+    font-size: 1.3vh;
+    margin-right: 0.5vh;
+}
+
+.rewards {
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    width: 84%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll hidden;
+    gap: 1vh;
+}
+
+.rewards::-webkit-scrollbar {
+    display: none;
+}
+
+.reward-template {
+    position: relative;
+    width: 2.9vh;
+    height: 2.9vh;
+    flex-shrink: 0;
+}
+
+.rt-count {
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    font-size: 1vh;
+    color: white;
+    font-weight: 500;
+}
+
+.reward-template img {
+    width: 100%;
+    height: 100%;
+}
+
+.quest-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 89%;
+    height: 15%;
+    border-radius: 1vh;
+    border: none;
+    background-color: rgba(10, 122, 255, 0.1);
+    color: rgb(10, 122, 255);
+    font-size: 1.5vh;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quest-button:hover {
+    background-color: rgba(10, 122, 255, 0.2);
+}
+
+.quest-button:disabled {
+    background-color: rgba(150, 150, 150, 0.1);
+    color: rgb(150, 150, 150);
+    cursor: default;
+}
+
+.quest-cancel {
+    background-color: rgba(187, 71, 59, 0.1);
+    color: rgb(187, 71, 59);
+}
+
+.quest-cancel:hover {
+    background-color: rgba(187, 71, 59, 0.2);
+}
+
+.quest-complete {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: rgb(46, 204, 113);
+}
+
+.quest-complete:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+}
+
+.quest-claimed {
+    background-color: rgba(150, 150, 150, 0.1);
+    color: rgb(150, 150, 150);
+    cursor: default;
+}
+
+.quest-claimed:hover {
+    background-color: rgba(150, 150, 150, 0.1);
+}
+
+.miniquest {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    width: 25vh;
+    max-height: 78vh;
+    padding: 0.5vh;
+    border-radius: 2vh;
+    background-color: rgba(22, 22, 22, 0.85);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.mq-header {
+    position: relative;
+    width: 90%;
+    margin: 1vh auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.mq-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mq-reset {
+    font-size: 1.2vh;
+}
+
+.mq-reset i {
+    margin-right: 0.5vh;
+    font-size: 1.2vh;
+}
+
+.input {
+    margin-right: 0.5vh;
+    padding: 0 0.5vh;
+    border: 2px solid white;
+    border-radius: 0.6vh;
+    font-size: 1.1vh;
+    font-weight: 500;
+}
+
+.mq-title {
+    font-size: 1.5vh;
+    font-weight: 500;
+    color: white;
+}
+
+.mq-title i {
+    margin-right: 0.5vh;
+    font-size: 1.4vh;
+}
+
+.mq-line {
+    margin-top: 0.5vh;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mq-list {
+    position: relative;
+    margin-top: 1vh;
+    margin: 1vh auto;
+    width: 93.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.mq-template {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    border-radius: 1vh;
+    background-color: rgba(22, 22, 22, 0.3);
+}
+
+.mq-head {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    color: white;
+    font-size: 1.3vh;
+}
+
+.mq-head-name {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mq-head-progress {
+    color: rgb(225, 225, 225);
+    font-weight: 300;
+}
+
+.mq-progression {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 0.4vh;
+    border-radius: 1vh;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.mq-bar {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(10, 122, 255);
+}
+
+.form-open {
+    animation: form-open 300ms cubic-bezier(0.6, 0.05, 0.1, 1);
+}
+
+.form-close {
+    animation: form-close 300ms cubic-bezier(0.6, 0.05, 0.1, 1) forwards;
+}
+
+.miniquest-open {
+    animation: miniquest-open 500ms cubic-bezier(0.6, 0.05, 0.1, 1);
+}
+
+.miniquest-close {
+    animation: miniquest-close 500ms cubic-bezier(0.6, 0.05, 0.1, 1) forwards;
+}
+
+@keyframes form-open {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+}
+
+@keyframes form-close {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.0);
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+}
+
+@keyframes miniquest-open {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.6);
+        left: -20%;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(1.0);
+        left: 2%;
+    }
+}
+
+@keyframes miniquest-close {
+    0% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.0);
+        left: 2%;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.6);
+        left: -20%;
+    }
+}

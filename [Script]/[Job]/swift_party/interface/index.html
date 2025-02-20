@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-panel">
+            <i class="fa-solid fa-layer-group side-icon"></i>
+            <span class="side-title">PARTY</span>
+            <span class="side-madeBy">BY SWIFT</span>
+            <div class="side-panel-line"></div>
+
+            <!-- BUTTON -->
+            <div class="list">
+                <button class="side-button active" id="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>หน้าหลัก</span>
+                </button>
+
+                <button class="side-button" id="find">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>เข้าร่วมปาร์ตี้</span>
+                </button>
+
+                <button class="side-button" id="create">
+                    <i class="fa-solid fa-folder-plus"></i>
+                    <span>สร้างปาร์ตี้</span>
+                </button>
+            </div>
+
+            <div class="in-party-wrapper">
+                <div class="in-party-list">
+                    <button class="side-button inactive" id="leave">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>ออกจากปาร์ตี้</span>
+                    </button>
+
+                    <!-- OWNER MENU -->
+                    <button class="side-button active" id="start-party">
+                        <i class="fa-solid fa-play"></i>
+                        <span>เริ่มปาร์ตี้</span>
+                    </button>
+
+                    <button class="side-button deactive" id="stop-party">
+                        <i class="fa-solid fa-pause"></i>
+                        <span>หยุดปาร์ตี้</span>
+                    </button>
+
+                    <button class="side-button inactive" id="disband">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>ยุบปาร์ตี้</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <!-- NOT IN PARTY -->
+            <div class="home">
+                <span class="page-title">สวัสดี, <span id="player_name">Name</span></span>
+                <div class="stats">
+                    <div class="stats-template">
+                        <span id="totalroom">0</span>
+                        ปาร์ตี้ทั้งหมด
+                    </div>
+                    <div class="stats-template s2">
+                        <span id="avaliableroom">0</span>
+                        ปาร์ตี้ว่าง
+                    </div>
+                    <div class="stats-template s3">
+                        <span id="inqueue">0</span>
+                        กำลังหาปาร์ตี้
+                    </div>
+                    <div class="stats-line"></div>
+                    <div class="stats-line l2"></div>
+                </div>
+
+                <div class="matchmaking">
+                    <span class="mk-title">กำลังหาเพื่อน?</span>
+                    <span class="mk-desc">คุณสามารถกดปุ่ม 'เริ่มจับคู่' เพื่อหาปาร์ตี้</span>
+                    <div class="mk-circle">
+                        <span id="mk-time">IDLE</span>
+                    </div>
+                    <button class="mk-start">เริ่มจับคู่</button>
+                    <button class="mk-stop">ยกเลิกจับคู่</button>
+                </div>
+            </div>
+
+            <div class="find-room">
+                <span class="page-title find-title">รายชื่อปาร์ตี้</span>
+                <span class="totalroom_2">0/10</span>
+                <input type="text" class="search-input" id="search" placeholder="ค้นหา">
+
+                <div class="party-list"></div>
+            </div>
+
+            <div class="create-room">
+                <span class="create-title">PARTY CREATION</span>
+                <input type="text" placeholder="ชื่อปาร์ตี้" class="input" id="input-name">
+                <input type="password" placeholder="รหัสผ่าน (ไม่จำเป็น)" class="input input-password" id="input-password">
+                <button class="create-password-toggle"><i class="fa-solid fa-eye"></i></button>
+                <button class="create-party"><i class="fa-solid fa-circle-plus"></i>สร้างปาร์ตี้</button>
+            </div>
+
+            <!-- IN-PARTY -->
+            <div class="party-menu">
+                <div class="chat">
+                    <input type="text" class="chat-input" placeholder="ข้อความ">
+                    <div class="chat-box"></div>
+                    <div class="player-list"></div>
+
+                    <div class="party-active">
+                        <span class="party-name">ปาร์ตี้: <span id="party-name">LOADING</span></span>
+                        <span class="party-status">สถานะ: <span id="party-status" class="not-started">ยังไม่เริ่ม</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="password-modal">
+                <input type="password" class="modal-input-password" placeholder="รหัสผ่าน" id="input-join-password">
+                <button class="modal-password-toggle"><i class="fa-solid fa-eye"></i></button>
+                <button class="modal-password-confirm" id="password-confirm">ตกลง</button>
+            </div>
+
+            <div class="confirm-modal">
+                <span class="modal-message">คุณแน่ใจหรือไม่ที่จะยุบปาร์ตี้นี้?</span>
+                <button class="modal-password-confirm" id="disband-confirm">ตกลง</button>
+            </div>
+
+            <div class="join-modal">
+                <span class="modal-message">คุณแน่ใจหรือไม่ที่จะเข้าร่วมปาร์ตี้นี้?</span>
+                <button class="modal-password-confirm" id="join-confirm">ตกลง</button>
+            </div>
+
+            <span class="modal-tips">กดบริเวณพื้นหลังเพื่อปิด</span>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

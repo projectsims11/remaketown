@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="focus"></div>
+    <div class="app">
+        <span class="title"><i class="fa-solid fa-clipboard-list"></i>MISSION</span>
+        <div class="line"></div>
+        <div class="wrapper">
+            <button class="close_button"><i class="fa-solid fa-xmark"></i></button>
+            <div class="quest-progression">
+                <span><i class="fa-regular fa-square-minus"></i>เควสที่รับ: <span id="current_proress">0/5</span></span>
+                <span><i class="fa-regular fa-square-check"></i>สำเร็จ: <span id="success_proress">0/10</span></span>
+                <span id="reset_timer_wrapper"><i class="fa-solid fa-repeat"></i>รีเซ็ตในอีก: <span id="reset_timer">00:00:00</span></span>
+            </div>
+        </div>
+        <div class="quests"></div>
+    </div>
+
+    <div class="miniquest">
+        <div class="mq-header">
+            <div class="mq-header-wrapper">
+                <span class="mq-title"><span class="input">F4</span>เควส</span>
+                <span class="mq-reset"><i class="fa-solid fa-repeat"></i><span id="mini_reset_timer">00:00:00</span></span>
+            </div>
+            <div class="mq-line"></div>
+        </div>
+        <div class="mq-list"></div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>

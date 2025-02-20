@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/jquery-ui.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container"> <!-- พื้นหลัง -->
+        <!-- เมนูหลัก -->
+        <div class="title">
+            <i class="fa-solid fa-paper-plane"></i>
+            <div class="title-wrapper">
+                <span class="title-text">เมนูจัดการคดี</span>
+                <span class="title-servername">Swift</span>
+            </div>
+        </div>
+
+        <button class="unjail"><i class="fa-solid fa-user"></i>ปล่อยตัว</button>
+        <input type="text" class="searchbar-input" placeholder="ค้นหา">
+
+        <div class="line"></div>
+
+        <div class="confirm">
+            <span class="totalfine">ค่าปรับ: <span class="highlight spanEditor value" contenteditable>0</span><span class="highlight">$</span></span>
+            <span class="totaljailtime">เวลาจำคุก: <span class="highlight spanEditor value" contenteditable>0</span><span class="highlight"> นาที</span></span>
+            <button class="submit"><i class="fa-solid fa-location-arrow"></i>ส่งเข้าเรือนจำ</button>
+        </div>
+
+        <div class="summary">
+            <span class="summary-title"><i class="fa-solid fa-clipboard-list"></i>สรุปคดี</span>
+            <button class="add-summary"><i class="fa-solid fa-plus"></i></button>
+            <div class="summary-list"></div>
+
+            <label class="checklist">
+                <span>สามารถใช้บัตรลดเวลา</span>
+                <div class="toggle-switch">
+                    <input class="toggle-input" id="allowUnjail" type="checkbox" checked>
+                    <label class="toggle-label" for="allowUnjail"></label>
+                </div>
+            </label>            
+        </div>
+
+        <!-- ลิสต์คดี -->
+        <div class="list"></div>
+
+        <!-- Modal -->
+        <div class="modal">
+            <div class="loader-position">
+                <svg class="loader" x="0px" y="0px" viewBox="0 0 37 37" height="37" width="37"
+                    preserveAspectRatio="xMidYMid meet">
+                    <path class="track" fill="none" stroke-width="5" pathLength="100"
+                        d="M0.37 18.5 C0.37 5.772 5.772 0.37 18.5 0.37 S36.63 5.772 36.63 18.5 S31.228 36.63 18.5 36.63 S0.37 31.228 0.37 18.5">
+                    </path>
+                    <path class="car" fill="none" stroke-width="5" pathLength="100"
+                        d="M0.37 18.5 C0.37 5.772 5.772 0.37 18.5 0.37 S36.63 5.772 36.63 18.5 S31.228 36.63 18.5 36.63 S0.37 31.228 0.37 18.5">
+                    </path>
+                </svg>
+            </div>
+
+            <div class="prisoner">
+                <span class="modal-title"><i class="fa-solid fa-handcuffs"></i>รายชื่อนักโทษ</span>
+                <div class="prisoner-list"></div>
+            </div>
+
+            <div class="confirm-modal">
+                <input type="number" class="id-input" placeholder="ไอดีผู้เล่น">
+
+                <div class="select-wrapper">
+                    <input type="text" class="select-input" id="target_jail" placeholder="เลือกคุก" readonly>
+                    <div class="dropdown-content"></div>
+                </div>
+
+                <button class="search-nearby"><i class="fa-solid fa-search"></i></button>
+                <button class="send-to-jail"><i class="fa-solid fa-check"></i>ตกลง</button>
+            </div>
+
+            <div class="add-summary-modal">
+                <input type="text" class="summary-input" placeholder="ชื่อคดี">
+                <input type="number" class="summary-input-fine" placeholder="ค่าปรับ">
+                <input type="number" class="summary-input-time" placeholder="เวลาจำคุก">
+                <button class="summary-confirm"><i class="fa-solid fa-check"></i>ตกลง</button>
+            </div>
+
+            <span class="close_tip">กดที่บริเวณพื้นหลังเพื่อปิด</span>
+        </div>
+    </div>
+
+    <!-- Search Tips -->
+    <div class="search-tips-container">
+        <div class="search-tips">
+            <span>กด <span class="highlight">SPACEBAR</span> เพื่อรีเฟรชผู้เล่นใกล้เคียง</span>
+            <span>กด <span class="highlight">ESC</span> เพื่อยกเลิกค้นหาผู้เล่นใกล้เคียง</span>
+        </div>
+    </div>
+
+    <!-- Prisoner Menu -->
+    <div class="prisoner-menu">
+        <div class="timer-container">
+            <span class="timeleft-header"><i class="fa-solid fa-clock"></i>เวลาคงเหลือ</span>
+            <span class="timeleft">00:00</span>
+        </div>
+
+        <div class="unjail-tips">
+            <p>กด <span class="context">K</span> เพื่อใช้งานบัตรลดเวลาเจล</p>
+        </div>
+
+        <div class="item-list-display">
+            <div class="item-list">
+                <!-- Unjail Items -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
