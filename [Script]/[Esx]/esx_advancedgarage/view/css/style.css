@@ -245,12 +245,13 @@ ion-icon {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     display: none;
-    position: absolute;
+    position: fixed;
     /* top: 0;
     left: 100%; */
     margin-left: 10px;
     width: 20vh;
-    z-index: 10;
+    z-index: 1000;
+    width: 40vh
 }
 
 /* Show the popup image on hover */
