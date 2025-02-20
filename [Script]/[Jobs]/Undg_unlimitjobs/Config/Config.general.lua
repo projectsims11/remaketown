@@ -281,7 +281,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'un_hope_prop_wheat_rice', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_wheat', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
@@ -337,7 +337,7 @@ Config.Default = {
                 rotation = { x = -70.0, y = 0.10, z = 0.0 }   -- หมุน pickaxe ให้อยู่ในท่าจับที่เหมาะสม
             },                     
 
-            Object = 'un_hope_prop_wheat', -- ชื่อ Prop ต่างๆ
+            Object = 'un_hope_prop_wheat_rice', -- ชื่อ Prop ต่างๆ
             PropLimit = 6, -- จะให้ Prop เกิดกี่ตัวในงานนี้
             MinDistanceBetweenProps = 6.0, -- ระยะห่างขั้นต่ำระหว่าง prop แต่ละตัว
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง

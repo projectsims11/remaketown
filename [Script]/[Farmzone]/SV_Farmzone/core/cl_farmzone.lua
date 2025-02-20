@@ -198,7 +198,7 @@ Citizen.CreateThread(function()
 
             if distance <= maxViewingDistance then
 				canSleep = false
-                DrawMarker(36, v.OpenTrunk.Pos.x, v.OpenTrunk.Pos.y, v.OpenTrunk.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.5, 1.5, 1.0, 100, 197, 215, 255, false, false, 2, true, false, false, false)
+                DrawMarker(36, v.OpenTrunk.Pos.x, v.OpenTrunk.Pos.y, v.OpenTrunk.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.5, 1.5, 1.0, 100, 197, 215, 1, false, false, 2, true, false, false, false)
             end
         end
 		if canSleep then
