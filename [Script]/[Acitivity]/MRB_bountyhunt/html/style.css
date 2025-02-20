@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Barlow', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+}
+
+* {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --thunder: 90deg;
+    --colorBox: 290deg;
+}
+
+body {
+    background-color: none;
+}
+
+.arrest {
+    position: absolute;
+    width: 10vw;
+    height: 14.7vw;
+    background: url(img/bg.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    top: 50%;
+    right: -4vw;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.362) 0.3vw 0.3vw 1vw;
+    display: none;
+}
+
+.maintext {
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Gill Sans';
+    font-weight: bold;
+}
+
+.arrest>img {
+    margin-top: 2%;
+    margin-left: 5%;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0.1vw;
+    width: 90%;
+    height: 50%;
+}
+
+.header,
+.name,
+.price {
+    margin-top: 1%;
+    margin-left: 5%;
+    width: 90%;
+    height: 10%;
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Gill Sans';
+}
+
+.name {
+    margin-top: 0%;
+    font-size: 1.5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+.price {
+    margin-top: 2%;
+    font-weight: 800;
+    font-size: 1.2vw;
+}
+
+.boxlogo {
+    width: 100%;
+    height: 9%;
+    background-color: rgba(165, 42, 42, 0.495);
+}
+
+/* ---------------- */
+
+
+.containerTop {
+    width: 20vw;
+    height: 5vw;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    /* background-color: aqua; */
+   display: none;
+}
+
+.text{
+    position: absolute;
+    width: 12vw;
+    left: 5.5vw;
+    top: 1.5vw;
+    text-align: center;
+    padding-top: 0.5vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1.2vw;
+    font: sans-serif;
+    color: white;
+    /* background-color: aqua; */
+}
+.text:nth-child(2){   
+    position: absolute;
+    width: 12vw;
+    left: 5.5vw;
+    top: 3.2vw;
+    text-align: center;
+    padding-top: 0.5vw;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.8vw;
+    font: sans-serif;
+    color: white;
+    /* background-color: aqua; */
+}
+.containerTop>img{
+    position: absolute;
+    top: 1.5vw;
+    left: 1.7vw;
+    width: 3vw;
+    height:  3vw;
+}

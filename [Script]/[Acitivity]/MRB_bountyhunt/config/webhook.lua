@@ -1,0 +1,5 @@
+Config.webhook = {
+    ['Gets'] = "",
+    ['Bonus'] = ""
+}
+
