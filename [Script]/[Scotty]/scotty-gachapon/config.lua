@@ -48,8 +48,8 @@ Config["gachapon"] = {
 		name = "Gachapon กาชาแฟชั่น",
 		list = {
 
-			{ item = "stone_a", amount = 2, tier = 3 },
-			{ money = 2000, tier = 2 },
+			{ item = "stone_a", amount = 5, tier = 5 },
+			{ money = 2000, tier = 5 },
 			
 		}
 	},

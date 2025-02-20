@@ -221,13 +221,51 @@ $(async function () {
 		playAudio(0)
 	})
 
-	$(window).on("message", function ({ originalEvent: e }) {
-		$(".wrapper .subtitle").text("Loading: " + e.data.name)
-		switch (e.data.eventName) {
-			case 'loadProgress':
-				$(".topper").css("stroke-dashoffset",  convertValue((e.data.loadFraction * 100).toFixed(0), 0, 100, 226, 0))
-				$(".percent span").text((e.data.loadFraction * 100).toFixed(0))
-				break;
-		}
-	})
+	// $(window).on("message", function ({ originalEvent: e }) {
+	// 	$(".wrapper .subtitle").text("Loading: " + e.data.name)
+	// 	switch (e.data.eventName) {
+	// 		case 'loadProgress':
+	// 			$(".topper").css("stroke-dashoffset",  convertValue((e.data.loadFraction * 100).toFixed(0), 0, 100, 226, 0))
+	// 			$(".percent span").text((e.data.loadFraction * 100).toFixed(0))
+	// 			break;
+	// 	}
+	// })
+
+
+	let fakeProgress = 0; // Initialize the fake progress value
+
+$(document).ready(function() {
+    // Simulate progress every second
+    simulateFakeLoadProgress();
+});
+
+function simulateFakeLoadProgress() {
+    const interval = setInterval(function () {
+        if (fakeProgress >= 1) {
+            clearInterval(interval); // Stop once progress reaches 100%
+        } else {
+            fakeProgress += 0.1; // Increase progress by 10% every second
+            updateProgressUI(fakeProgress);
+        }
+    }, 1000); // Update every second
+}
+
+function updateProgressUI(progress) {
+    const progressPercentage = (progress * 100).toFixed(0);
+
+    // Update the percentage display
+    $(".percent span").text(progressPercentage);
+
+    // Update the progress bar (stroke-dashoffset)
+    const strokeOffset = convertValue(progressPercentage, 0, 100, 226, 0); // Assuming 226 is the full circumference of the circle
+    $(".topper").css("stroke-dashoffset", strokeOffset);
+}
+
+// Function to convert percentage to stroke-dashoffset value for the progress bar
+function convertValue(value, min1, max1, min2, max2) {
+    // Map the value from the first range to the second range
+    return (value - min1) * (max2 - min2) / (max1 - min1) + min2;
+}
+
+
 })

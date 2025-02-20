@@ -37,8 +37,43 @@ local delay = 0
 local isPicking = false
 local Boom = false
 coordsfewthz = {}
+
+
+local sphereLocation = Config.Location
+local sphereRadius = Config.FarfromCity
+-- Function to draw a sphere using markers
+function DrawSphereAtLocation(x,y,z,r)
+	-- print("[DEBUG] Sphere script loaded. Location: " .. x ..",".. y ..",".. z .. ", Radius: " .. r)
+        -- Draw markers in a spherical pattern
+        for angle = 0, 360, 10 do
+            local draw_x = x + r * math.cos(math.rad(angle))
+            local draw_y = y + r * math.sin(math.rad(angle))
+            local draw_z = z
+
+            -- Draw a marker at each point
+            DrawMarker(
+                1, -- Type: 1 (vertical cylinder)
+                draw_x, draw_y, draw_z, -- Position
+                0.0, 0.0, 0.0, -- Direction (not used for this marker type)
+                0.0, 0.0, 0.0, -- Rotation
+                r, r, r, -- Scale
+                255, 0, 0, 100, -- Color (red with 40% opacity)
+                false, -- Bob up and down
+                true, -- Face camera
+                2, -- P19 (unknown)
+                false, -- Rotate
+                nil, nil, -- Texture dict and name
+                false -- Draw on entities
+            )
+        end
+end
+
 CreateThread(function()
+
+
     while true do
+		
+		DrawSphereAtLocation(sphereLocation.x, sphereLocation.y, sphereLocation.z, 20)
         local sleep = 1000
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
