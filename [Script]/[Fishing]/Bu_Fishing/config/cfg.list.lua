@@ -16,7 +16,7 @@ cfg.List = {
             Id = 86, -- Blip Id
             Color = 26, -- Blip Size
             Size = 0.8, -- Blip Color
-            Name = "<font face='Sarabun'>ตกเต่า - MINIGAME</font>", -- Blip Name
+            Name = "<font face='Sarabun'>ตกปลาน้ำตื่น/font>", -- Blip Name
             Radius = true, -- Blip Radius
         },
         Status = {}, -- บันทึกค่าสเตตัส
@@ -26,7 +26,7 @@ cfg.List = {
         Mode = "AFK",
         Coords = vector3( -1979.6627, -704.7554, 2.9717), 
         Distance = 50.0, 
-        IsInWater = true,
+        IsInWater = false,
         CustomText = false,
         Passive = true,
         Blips = {
@@ -51,7 +51,7 @@ cfg.List = {
             Id = 86,
             Color = 26,
             Size = 0.8,
-            Name = "<font face='Sarabun'>ตก AFK</font>",
+            Name = "<font face='Sarabun'>ตกปลา AFK</font>",
             Radius = true,
         },
         Status = { },

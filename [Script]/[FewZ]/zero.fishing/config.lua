@@ -6,7 +6,7 @@ Config['Drop'] = {1, 1} -- ดรอปเท่าไหร
 Config['ต้องการให้ลบไอเท็มไหม'] = true -- true ต่องการ false ไม่ต้องการ
 Config['Removeitem'] = "fishbait" -- ลบไอเท็มอะไร
 Config['Timetoadd'] = 12 -- เวลาที่ได้ของ
-Config['AddStatus'] = true -- ปิดลดอาหารระหว่าง afk
+Config['AddStatus'] = false -- ปิดลดอาหารระหว่าง afk
 Config['เพิ่มอาหารไหม'] = false
 
 Config['เปอร์เซ็นที่เบ็ดจะเเตก'] = 0 -- เปอร์เซนเป็นขาด
