@@ -36,7 +36,7 @@ if Debug then
 					duration = 5, -- เวลา timeout ใส่เป็นจำนวนวิ
 					maxLimit = 4, -- กดผิดได้กี่ครั้ง
 					keySize = 4, --  จำนวนตัวอักษรที่ต้องกด
-					keyRandom = {"A", "B", "C", "D", "Z"}, -- ตัวอักษรที่ให้สุ่ม
+					keyRandom = {"W", "A", "S", "D", "E"}, -- ตัวอักษรที่ให้สุ่ม
 				}
 			)
 			print(json.encode(result))

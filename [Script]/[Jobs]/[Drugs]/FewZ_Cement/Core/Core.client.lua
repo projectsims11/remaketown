@@ -73,7 +73,7 @@ CreateThread(function()
 
     while true do
 		
-		DrawSphereAtLocation(sphereLocation.x, sphereLocation.y, sphereLocation.z, 20)
+		-- DrawSphereAtLocation(sphereLocation.x, sphereLocation.y, sphereLocation.z, 20)
         local sleep = 1000
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
