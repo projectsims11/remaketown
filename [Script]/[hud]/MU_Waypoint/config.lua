@@ -15,7 +15,7 @@ mu = {
 }
 
 Config.MU_Enabled_Disabled = {
-    MU_TextureEnabled = true, -- true เปิดใช้ markers แบบlogo กำหนดเอง /-- false ปิดใช้ markers แบบlogo กำหนดเอง 
+    MU_TextureEnabled = false, -- true เปิดใช้ markers แบบlogo กำหนดเอง /-- false ปิดใช้ markers แบบlogo กำหนดเอง 
     textureDict = 'mu', --ชื่อ markers ต้องตรงกัน
     textureName = 'mu', --ชื่อ markers ต้องตรงกัน
     textureMarkerScale = 15.0, -- ระยะ markers
