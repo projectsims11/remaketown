@@ -16,11 +16,12 @@ Config["gachapon_broadcast_top_message"] = true -- ประกาศราง�
 Config["gachapon_broadcast_top_message_duration"] = 2500 -- ระยะเวลาที่ประกาศ
 
 Config["gachapon_broadcast_tier_limit"] = { -- ให้ประกาศเมื่อได้ของ tier อะไร
-	[1] = false, -- Common
-	[2] = true, -- Rare
-	[3] = true, -- Epic
-	[4] = true, -- Unique
-	[5] = false, -- Legendary
+
+	[1] = false, -- Common ขยะ exp ~ % มากสุดในกาชา
+	[2] = false, -- Rare ของทั่วไป แต่ไม่ถึงกับขยะ ~ % ขึ้นอยู่กับจำนวนของในกาชา ของเยอะ % เยอะ ของน้อย % น้อย
+	[3] = false, -- Epic ของงานดำ ~ มากกว่า ของคราฟขึ้นอาวุธ แต่น้อยกว่า 5%
+	[4] = true, -- Unique ของคราฟขึ้นอาวุธ ~ <5% ขึ้นอยู่กับความยากง่ายในการได้กาชา เช่น กาชา กิจกกรม ได้ง่ายกว่ากาชาโปรโมท
+	[5] = true, -- Legendary ของรางวัลใหญ่ รถ, แฟชั่น, บัตร x2, บัตร VIP ~ <1%
 }
 Config["vehicle_plate_length_text"] = 3 -- ความยาวป้ายทะเบียนรถที่จะได้ ตัวอักษร
 Config["vehicle_plate_length_number"] = 3 -- ความยาวป้ายทะเบียนรถที่จะได้ ตัวเลข
@@ -43,33 +44,11 @@ Config["chance"] = {
 
 Config["gachapon"] = {
 	
-	["gacha_01"] = {
+	["gacha_promote"] = {
 		name = "Gachapon กาชาแฟชั่น",
 		list = {
 
-			{ item = "SharkLeon", amount = 2, tier = 3 },
-        	{ item = "StarLeon", amount = 2, tier = 3 },
-        	{ item = "WereWolfLeon", amount = 3, tier = 2 },
-        	{ item = "WolfLeon", amount = 3, tier = 2 },
-        	{ item = "WolfReon", amount = 5, tier = 2 },
-        	{ item = "HatWereWolfLeon", amount = 2, tier = 2 },
-			{ item = "cabinet", amount = 2, tier = 2 },
-			{ item = "coke", amount = 2, tier = 2 },
-			{ item = "coke_pooch", amount = 5, tier = 3 },
-			{ item = "copper_coin", amount = 5, tier = 4 },
-			{ item = "diamond", amount = 5, tier = 3 },
-			{ item = "gold_coin", amount = 5, tier = 4 },
-			{ item = "silver_coin", amount = 5, tier = 4 },
-			{ item = "tumra", amount = 10, tier = 4 },
-			{ item = "water", amount = 5, tier = 1 },
-			{ item = "bread", amount = 5, tier = 1 },
-			{ item = "blueprint_Bat", amount = 2, tier = 4 },
-			{ item = "blueprint_Pool", amount = 2, tier = 4 },
-			{ item = "blueprint_golf", amount = 2, tier = 4 },
-			{ item = "token_fail", amount = 1, tier = 3 },
-			{ money = 500, tier = 1 },
-			{ money = 1000, tier = 2 },
-			{ money = 1500, tier = 2 },
+			{ item = "stone_a", amount = 2, tier = 3 },
 			{ money = 2000, tier = 2 },
 			
 		}
