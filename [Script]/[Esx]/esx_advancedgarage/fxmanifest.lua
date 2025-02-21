@@ -6,8 +6,7 @@ files {
 	'view/index.html',
 	'view/css/style.css',
 	'view/js/app.js',
-	'view/*.mp3',
-	'view/img/*',
+	'view/*.mp3'
 }
 
 ui_page {

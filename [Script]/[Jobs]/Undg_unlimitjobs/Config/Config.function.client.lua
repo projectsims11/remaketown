@@ -18,9 +18,19 @@ GetTimeAddon = function() -- หากจะเชื่อมเวลาฟา
     --     print(party)
     -- end)
 
-    local startparty = exports.swift_party:IsStarted()
-    if startparty then
-        return 2
-    end
-    return 10
+
+
+    --USE
+    -- local startparty = exports.swift_party:IsStarted()
+    -- if startparty then
+    --     return 2
+    -- end
+    -- return 10
+
+    local dur = exports.swift_party:execute(6000)
+    print(dur)
+    print(dur/1000)
+    
+    return dur/1000
+
 end 

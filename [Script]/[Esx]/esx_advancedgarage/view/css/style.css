@@ -3,8 +3,6 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,15 +11,11 @@ body {
     -webkit-user-select: none; 
     margin: 0;
     padding: 0;
-    margin-right: 10vh;
-    margin-top: 20vh;
     display: flex;
     height: 100vh;
     overflow: hidden;
-    /* justify-content: center; */
-    /* align-items: center; */
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .label {
@@ -75,7 +69,6 @@ body {
     box-shadow: inset 0 0 18px 0 rgba(0, 0, 0, 0.25);
     color: #fff;
 }
-/* Position your .item container to the top-right corner */
 
 .items {
     display: flex;
@@ -224,46 +217,3 @@ ion-icon {
         opacity:1;
     }
 }
-
-/* Container for the image */
-.image-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Main image styling */
-.item-image {
-    width: 12vh;
-    border-radius: 0.2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
-}
-
-/* Hidden popup image */
-.image-popup {
-    transform: translate(-50%, -50%);
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    display: none;
-    position: fixed;
-    /* top: 0;
-    left: 100%; */
-    margin-left: 10px;
-    width: 20vh;
-    z-index: 1000;
-    width: 40vh
-}
-
-/* Show the popup image on hover */
-.image-container:hover .image-popup {
-    display: block;
-}
-
-/* Style for the popup image */
-.image-popup img {
-    width: 100%;
-    border-radius: 0.2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
