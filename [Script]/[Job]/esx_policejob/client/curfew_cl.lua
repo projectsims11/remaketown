@@ -26,7 +26,7 @@ end)
 RegisterNetEvent('curfew:start')
 AddEventHandler('curfew:start', function()
 	if kerfil == false then
-			ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'fewz_curfew',
+			ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'curfew_Police',
 		{
 			title = "สถานที่"
 		}, function(data, menu)
@@ -40,7 +40,7 @@ AddEventHandler('curfew:start', function()
 				})
 			else
 				menu.close()
-				TriggerServerEvent('fewz_curfew:send',result)
+				TriggerServerEvent('curfew_Police:send',result)
 			end
 		
 		end, function(data, menu)
@@ -55,7 +55,7 @@ end)
 RegisterNetEvent('curfew:start')
 AddEventHandler('curfew:start', function()
 	if kerfil == false then
-		ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'fewz_curfew',
+		ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'curfew_Police',
 		{
 			title = "สถานที่"
 		}, function(data, menu)
@@ -69,7 +69,7 @@ AddEventHandler('curfew:start', function()
 				})
 			else
 				menu.close()
-				TriggerServerEvent('fewz_curfew:send',result)
+				TriggerServerEvent('curfew_Police:send',result)
 			end
 
 		end, function(data, menu)
@@ -95,7 +95,7 @@ function YesorNo()
         },
         function (data, menu)
           if data.current.value == 'yes' then   
-			TriggerServerEvent('fewz_curfew:send', '')
+			TriggerServerEvent('curfew_Police:send', '')
 			menu.close()			
           end
 			

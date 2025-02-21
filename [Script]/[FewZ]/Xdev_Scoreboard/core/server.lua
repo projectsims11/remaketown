@@ -30,8 +30,8 @@ ESX.RegisterServerCallback('scoreboard:server:getdata', function(source, cb)
                 players = PlayerOnline,
                 MedicConnected = MedicConnected,
                 PoliceConnected = PoliceConnected,
-                MechanicConnected = MechanicConnected,
                 CouncilConnected = CouncilConnected,
+                MechanicConnected = MechanicConnected,
                 PlayerOnline = PlayerOnline
             }
             cb(data)
@@ -116,25 +116,27 @@ AddEventHandler('esx:playerLoaded', function(source)
     if xPlayer.job.name == Config.JobName['2'] then
         MedicConnected = MedicConnected + 1
         PlayerOnline = PlayerOnline + 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline)
     elseif xPlayer.job.name == Config.JobName['1'] then
         PoliceConnected = PoliceConnected + 1
         PlayerOnline = PlayerOnline + 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline) 
     elseif xPlayer.job.name == Config.JobName['3'] then
         MechanicConnected = MechanicConnected + 1
         PlayerOnline = PlayerOnline + 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline) 
     elseif xPlayer.job.name == Config.JobName['4'] then
         CouncilConnected = CouncilConnected + 1
         PlayerOnline = PlayerOnline + 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline) 
     else
@@ -149,36 +151,45 @@ AddEventHandler('esx:setJob', function(playerId, job, lastJob)
     -- OnlinePlayer(playerId)
     if lastJob.name == Config.JobName['1'] then
         PoliceConnected = PoliceConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     elseif lastJob.name == Config.JobName['2'] then
         MedicConnected = MedicConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     elseif lastJob.name == Config.JobName['3'] then
         MechanicConnected = MechanicConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     elseif lastJob.name == Config.JobName['4'] then
         CouncilConnected = CouncilConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     else
         Wait(1000)
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     end
     if ESX.GetPlayerFromId(playerId).job.name == Config.JobName['2'] then
         MedicConnected = MedicConnected + 1
         Wait(1000)
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     elseif ESX.GetPlayerFromId(playerId).job.name == Config.JobName['1'] then
         PoliceConnected = PoliceConnected + 1
         Wait(1000)
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     elseif ESX.GetPlayerFromId(playerId).job.name == Config.JobName['3'] then
         MechanicConnected = MechanicConnected + 1
         Wait(1000)
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     elseif ESX.GetPlayerFromId(playerId).job.name == Config.JobName['4'] then
         CouncilConnected = CouncilConnected + 1
         Wait(1000)
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
     end
 end)
 
@@ -189,25 +200,29 @@ AddEventHandler('esx:playerDropped', function(source)
     if xPlayer.job.name == Config.JobName['2'] then
         PlayerOnline = PlayerOnline - 1
         MedicConnected = MedicConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline)
     elseif xPlayer.job.name == Config.JobName['1'] then
         PlayerOnline = PlayerOnline - 1
         PoliceConnected = PoliceConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline)
     elseif xPlayer.job.name == Config.JobName['3'] then
         PlayerOnline = PlayerOnline - 1
         MechanicConnected = MechanicConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline)
     elseif xPlayer.job.name == Config.JobName['4'] then
         PlayerOnline = PlayerOnline - 1
         CouncilConnected = CouncilConnected - 1
-        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+        TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
         Wait(1000)
         TriggerClientEvent('playeronline', -1, PlayerOnline)
     else    
@@ -237,7 +252,8 @@ AddEventHandler('onResourceStart', function(resource)
         Citizen.CreateThread(function()
             Citizen.Wait(1000)
             CheckPlayer()
-            TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, MechanicConnected, CouncilConnected)
+            TriggerClientEvent('update', -1, MedicConnected, PoliceConnected, CouncilConnected, MechanicConnected)
+        Wait(1000)
             local xPlayers = ESX.GetPlayers()
             for i = 1, #xPlayers, 1 do
                 PlayerOnline = (PlayerOnline + 1)

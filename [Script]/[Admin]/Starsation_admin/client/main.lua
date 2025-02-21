@@ -57,7 +57,7 @@ AddEventHandler('wk:fixVehicle', function()
               SetVehicleUndriveable(vehicle, false)
               SetVehicleEngineOn(vehicle,  true,  true)			  
               --ESX.ShowNotification(('ซ่อมสำเร็จ'))
-			  exports['Starsation_notify']:SendNotify('ซ่อมสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+			  exports['pNotify']:SendNotify('ซ่อมสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
         	end)
         end
     end
@@ -84,7 +84,7 @@ AddEventHandler('admin:hijak', function()
               	SetVehicleDoorsLocked(vehicle, 1)
               	SetVehicleDoorsLockedForAllPlayers(vehicle, false)
               	--ESX.ShowNotification(('ปลดล็อครถสำเร็จ'))
-				exports['Starsation_notify']:SendNotify('ปลดล็อครถสำเร็จ', 'su', 4) -- สีหลอดสีส้ม
+				exports['pNotify']:SendNotify('ปลดล็อครถสำเร็จ', 'su', 4) -- สีหลอดสีส้ม
             end)
         end
     end
@@ -121,12 +121,12 @@ AddEventHandler('Infinite', function()
 	if not infAmmo then
 		infAmmo = true
 		SetPedInfiniteAmmoClip(playerPed, true)
-		exports['Starsation_notify']:SendNotify('[ เปิด ] กระสุนไม่จำกัน', 'su',4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify('[ เปิด ] กระสุนไม่จำกัน', 'su',4) -- สีหลอดสีเขียว
 		--ESX.ShowNotification("เปิดใช้งาน  [กระสุนไม่จำกัน]")
 	else
 		infAmmo = false
 		SetPedInfiniteAmmoClip(playerPed, false)
-		exports['Starsation_notify']:SendNotify('[ ปิด ] กระสุนไม่จำกัน', 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify('[ ปิด ] กระสุนไม่จำกัน', 'fail', 4) -- สีหลอดสีแดง
 		--ESX.ShowNotification("ปิดใช้งาน  [กระสุนไม่จำกัน]")
 	end
 end)
@@ -142,12 +142,12 @@ AddEventHandler('Invisible', function()
 	if not isInvisible then
 		isInvisible = true
 		SetEntityVisible(ped, false, false)
-		exports['Starsation_notify']:SendNotify('[ เปิด ] วิชาหายตัว', 'su', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] วิชาหายตัว', 'su', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("เปิดใช้งาน  [โหมดผี]")
 	else
 		isInvisible = false
 		SetEntityVisible(ped, true, false)
-		exports['Starsation_notify']:SendNotify('[ ปิด ] วิชาหายตัว', 'fail', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] วิชาหายตัว', 'fail', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("ปิดใช้งาน  [โหมดผี]")
 	end
 end)
@@ -164,12 +164,12 @@ AddEventHandler('FastSwim', function(target)
 	if not FastSwim then
 		FastSwim = true
 		SetSwimMultiplierForPlayer(playerID, 1.49)
-		exports['Starsation_notify']:SendNotify('[ เปิด ] ว่ายน้ำเร็ว', 'su', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] ว่ายน้ำเร็ว', 'su', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ เปิด ] ว่ายน้ำเร็ว")
 	else
 		FastSwim = false
 		SetSwimMultiplierForPlayer(playerID, 1.0)
-		exports['Starsation_notify']:SendNotify('[ ปิด ] ว่ายน้ำเร็ว', 'fail', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] ว่ายน้ำเร็ว', 'fail', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ ปิด ] ว่ายน้ำเร็ว")
 	end
 	featurePlayerFastSwimUpdated = false
@@ -185,7 +185,7 @@ AddEventHandler('armour', function()
 	local playerPed = GetPlayerPed(-1)
 	local playerID = PlayerId()
 	SetPedArmour(playerPed, 100)
-	exports['Starsation_notify']:SendNotify('เพิ่มเกราะเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เพิ่มเกราะเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
 	--ESX.ShowNotification("เพิ่มเกราะเรียบร้อยแล้วค่ะ")
 end)
 
@@ -197,7 +197,7 @@ end)
 RegisterNetEvent("hunger") --เพิ่มอาหาร
 AddEventHandler("hunger", function ()
 	TriggerEvent('esx_status:set', 'hunger', 1000000)
-	exports['Starsation_notify']:SendNotify('เพิ่มอาหารเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เพิ่มอาหารเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
 	--ESX.ShowNotification("เพิ่มอาหารแล้วค่ะ")
 end)
 
@@ -209,7 +209,7 @@ end)
 RegisterNetEvent("stress") --ลดความเครียด
 AddEventHandler("stress", function ()
 	TriggerEvent('esx_status:set', 'stress', 0)
-	exports['Starsation_notify']:SendNotify('ลดความเครียดเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ลดความเครียดเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
 	--ESX.ShowNotification("ลดความเครียดแล้วค่ะ")
 end)
 
@@ -242,20 +242,20 @@ RegisterNUICallback("revivedist", function(data) --ชุบตามระย�
     local dist = GetDistanceBetweenCoords(GetEntityCoords(playerPed), playerX + tonumber(data.inputData) , playerY + tonumber(data.inputData) , playerZ + tonumber(data.inputData), true)
     if dist < distx then
         TriggerServerEvent("admin:revivedist")
-		exports['Starsation_notify']:SendNotify('ชุบตามระยะสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify('ชุบตามระยะสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
     else
     end
 end)
 --[[
 RegisterNUICallback("delcarall", function(data) --ลบรถ
     TriggerServerEvent("admin:delcarall", data.inputData)
-	exports['Starsation_notify']:SendNotify('ประกาศลบรถได้เริ่มนับถอยหลังแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
+	exports['pNotify']:SendNotify('ประกาศลบรถได้เริ่มนับถอยหลังแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
 	print(data.inputData)
 end)]]
 
-RegisterNUICallback("Starsation_jail", function(data) --เจลเข้าคุก
-	TriggerEvent("Starsation_jail:openMenu")
-	exports['Starsation_notify']:SendNotify('เปิดเมนูสำเร็จ', 'su',4) -- สีหลอดสีเขียว
+RegisterNUICallback("swift_jail", function(data) --เจลเข้าคุก
+	TriggerEvent("swift_jail:openMenu")
+	exports['pNotify']:SendNotify('เปิดเมนูสำเร็จ', 'su',4) -- สีหลอดสีเขียว
 	SetDisplay(false)
 end)
 
@@ -290,7 +290,7 @@ end)
 
 RegisterNUICallback("saveplayerall", function(data) 
     TriggerServerEvent("admin:saveplayerall")
-	exports['Starsation_notify']:SendNotify('เซฟผู้เล่นทั้งหมดสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เซฟผู้เล่นทั้งหมดสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 	SetDisplay(false)
 end)
 
@@ -301,13 +301,13 @@ end)
 
 RegisterNUICallback("skins",function(data)
     ConfigCL["SetSkin"](data)
-	exports['Starsation_notify']:SendNotify('เปลี่ยนอวาต้าสกินสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เปลี่ยนอวาต้าสกินสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 	SetDisplay(false)
 end)
 
 RegisterNUICallback("saveplayer", function(data)
     TriggerServerEvent("admin:saveplayer", data.playerid)
-	exports['Starsation_notify']:SendNotify('เซฟผู้เล่นสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เซฟผู้เล่นสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 	SetDisplay(false)
 end)
 
@@ -318,25 +318,25 @@ end)
 
 RegisterNUICallback("clearweawpon", function(data) --ลบอาวุธ
     TriggerServerEvent("admin:clearweawpon", data.playerid)
-	exports['Starsation_notify']:SendNotify('ลบอาวุธสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ลบอาวุธสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("clearcarkey", function(data) --ลบกุณแจรถทั้งหมด / ลบรถด้วย
     TriggerServerEvent("admin:clearcarkey", data.playerid)
-	exports['Starsation_notify']:SendNotify('ลบกุณแจรถสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ลบกุณแจรถสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 	SetDisplay(false)
 end)
 
 RegisterNUICallback("addCash", function(data) --เพิ่มเงินเขียว
     local amnt = tonumber(data.inputData)
     TriggerServerEvent("admin:AddCash", data.playerid, amnt)
-	exports['Starsation_notify']:SendNotify('ให้เงินสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ให้เงินสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("addBlack", function(data) --เพิ่มเงินธนาคาร
     local amnt = tonumber(data.inputData)
     TriggerServerEvent("admin:addBlack", data.playerid, amnt)
-	exports['Starsation_notify']:SendNotify('ให้เงินเดงสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ให้เงินเดงสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("add", function(data)
@@ -347,12 +347,12 @@ end)
 RegisterNUICallback("addBank", function(data)
     local amnt = tonumber(data.inputData)
     TriggerServerEvent("admin:AddBank", data.playerid, amnt)
-	exports['Starsation_notify']:SendNotify('ให้เงินธนาคารสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ให้เงินธนาคารสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("inventory", function(data) --เปิดกระเป๋า
 	ConfigCL["Inventory"](data)
-	exports['Starsation_notify']:SendNotify('เปิดกระเป๋าผู้เล่นสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เปิดกระเป๋าผู้เล่นสำเร็จ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("giveitem", function(data) --ในไอเทม
@@ -421,7 +421,7 @@ RegisterNUICallback("setvehicle", function(data) --แต่งรถ
 	if IsPedInAnyVehicle(playerPed, false) then
 		TriggerEvent('jomjam:OpenShopx')
 	else
-		exports['Starsation_notify']:SendNotify('คุณไม่ได้อยู่ในยานพาหนะ! ไม่มียานพาหนะ', 'warn', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('คุณไม่ได้อยู่ในยานพาหนะ! ไม่มียานพาหนะ', 'warn', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("คุณไม่ได้อยู่ในยานพาหนะ! ไม่มียานพาหนะ")
 	end
 	SetDisplay(false)
@@ -435,10 +435,10 @@ RegisterNUICallback("fix", function(data) --ซ่อมรถ
 		SetVehicleEngineOn( vehicle, true, true )
 		SetVehicleFixed(vehicle)
 		SetVehicleDirtLevel(vehicle, 0)
-		exports['Starsation_notify']:SendNotify('ซ่อมรถเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify('ซ่อมรถเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
 		--ESX.ShowNotification("ซ่อมรถเรียบร้อยแล้วค่ะ")
 	else
-		exports['Starsation_notify']:SendNotify('ขึ้นรถก่อนดิ้ไอโง่', 'warn', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('ขึ้นรถก่อนดิ้ไอโง่', 'warn', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("ขึ้นรถก่อนอย่ามึนไอสัสนิ")
 	end
 	SetDisplay(false)
@@ -454,7 +454,7 @@ RegisterNUICallback("washcar", function(data) --ล้างรถ
 	local vehicle = GetVehiclePedIsIn(playerPed, false)
 	if IsPedInAnyVehicle(playerPed, false) then
 		SetVehicleDirtLevel(vehicle, 0.0)
-		exports['Starsation_notify']:SendNotify('ล้างรถเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify('ล้างรถเรียบร้อยแล้ว', 'su', 4) -- สีหลอดสีเขียว
 		--ESX.ShowNotification("ล้างรถเรียบร้อยแล้วค่ะ")
 	end
 end)
@@ -494,7 +494,7 @@ end)
 RegisterNUICallback("washcargod", function(data) --ทำให้รถสกปก / ทำไปเพื่อไรก็ไม่รู้ไอสัส
 	local playerPed = GetPlayerPed(GetPlayerFromServerId(data.playerid))
 	local vehicle = GetVehiclePedIsIn(playerPed, false)
-	exports['Starsation_notify']:SendNotify('ทำให้รถสกปรก', 'su', 4) -- สีหลอดเขียว
+	exports['pNotify']:SendNotify('ทำให้รถสกปรก', 'su', 4) -- สีหลอดเขียว
 	--ESX.ShowNotification("รถสกปรก")
 	SetVehicleDirtLevel(vehicle, 15.0)
 end)
@@ -505,15 +505,15 @@ RegisterNUICallback("cargod", function(data) --รถอมตะ
 	if IsPedInAnyVehicle(playerPed, false) then
 		if not cargod then
 			cargod = true
-			exports['Starsation_notify']:SendNotify('[ เปิด ] รถอมตะ', 'su',4) -- สีหลอดสีเขียว
+			exports['pNotify']:SendNotify('[ เปิด ] รถอมตะ', 'su',4) -- สีหลอดสีเขียว
 			--ESX.ShowNotification("[ เปิด ] รถอมตะ")
 		else 
 			cargod = false
-			exports['Starsation_notify']:SendNotify('[ ปิด ] รถอมตะ', 'fail', 4) -- สีหลอดสีแดง
+			exports['pNotify']:SendNotify('[ ปิด ] รถอมตะ', 'fail', 4) -- สีหลอดสีแดง
 			--ESX.ShowNotification("[ ปิด ] รถอมตะ ")
 		end
 	else
-		exports['Starsation_notify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("ขึ้นรถก่อนไอสัสนิ")
 	end
 end)
@@ -524,15 +524,15 @@ RegisterNUICallback("oilgod", function(data) --น้ำมันอมตะ
 	if IsPedInAnyVehicle(playerPed, false) then
 		if not oilgod then
 			oilgod = true
-			exports['Starsation_notify']:SendNotify('[ เปิด ] น้ำมันไม่หมด', 'su', 4) -- สีหลอดสีเขียว
+			exports['pNotify']:SendNotify('[ เปิด ] น้ำมันไม่หมด', 'su', 4) -- สีหลอดสีเขียว
 			--ESX.ShowNotification("[ เปิด ] น้ำมันไม่หมด")
 		else 
 			oilgod = false
-			exports['Starsation_notify']:SendNotify('[ ปิด ] น้ำมันไม่หมด', 'fail', 4) -- สีหลอดสีแดง
+			exports['pNotify']:SendNotify('[ ปิด ] น้ำมันไม่หมด', 'fail', 4) -- สีหลอดสีแดง
 			--ESX.ShowNotification("[ ปิด ] น้ำมันไม่หมด")
 		end
 	else
-		exports['Starsation_notify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("ขึ้นรถก่อนไอสัสนิ")
 	end
 end)
@@ -549,7 +549,7 @@ RegisterNUICallback("flipcar", function(data)
 		SetEveryoneIgnorePlayer(playerPed, false)
 		SetPoliceIgnorePlayer(playerPed, false)
 	else
-		exports['Starsation_notify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn', 4) -- สีหลอดสีส้ม
 --[[		TriggerEvent("pNotify:SendNotification", {
 			text = '<strong class="green-text">คุณต้องอยู่บนรถก่อนนะ</strong>',
 			type = "success",
@@ -583,10 +583,10 @@ RegisterNUICallback("Maxvehicle", function(vehicle) --แต่งเต็ม�
 			SetVehicleNeonLightEnabled(vehicle, i, true)
 		end
 		SetVehicleNeonLightsColour(vehicle, 55, 140, 191)  -- ESX Blue
-		exports['Starsation_notify']:SendNotify('แต่งเต็มเรียบร้อย', 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify('แต่งเต็มเรียบร้อย', 'su', 4) -- สีหลอดสีเขียว
 		--ESX.ShowNotification("แต่งเต็มเรียบร้อยแล้วค่ะ")
 	else
-		exports['Starsation_notify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn', 4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('ขึ้นรถก่อนไอสัสนิ', 'warn', 4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("รั่วหรอขึ้นรถก่อน")
 	end
 	SetDisplay(false)
@@ -599,7 +599,7 @@ RegisterNUICallback("speedcar", function(data) --เพิ่มความเ�
 	if engine ~= nil and veh then
 		if not IsPedInAnyVehicle(GetPlayerPed(-1)) or GetPedInVehicleSeat(veh, -1)~=GetPlayerPed(-1) then return end
 		SetVehicleEnginePowerMultiplier(veh, engine*1.0)
-		exports['Starsation_notify']:SendNotify('เพิ่มความเร็ว ' ..engine.. ' + ' , 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify('เพิ่มความเร็ว ' ..engine.. ' + ' , 'su', 4) -- สีหลอดสีเขียว
 		--[[TriggerEvent("pNotify:SendNotification", {
 			text = '<strong class="green-text">เพิ่มความเร็วเป็น '..engine..' +</strong>',
 			type = "success",
@@ -623,7 +623,7 @@ AddEventHandler('admin:godall', function()
 		SetEntityProofs(GetPlayerPed(-1), true, true, true, true, true, true, true, true)
 		SetEntityOnlyDamagedByPlayer(GetPlayerPed(-1), false)
 		SetEntityCanBeDamaged(GetPlayerPed(-1), false)
-		exports['Starsation_notify']:SendNotify('[ เปิด ] อมตะทั้งเซิฟเวอร์', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] อมตะทั้งเซิฟเวอร์', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ เปิด ] อมตะทั้งเซิฟเวอร์")
 	elseif godmodeall then
 		godmodeall = false
@@ -634,7 +634,7 @@ AddEventHandler('admin:godall', function()
 		SetEntityProofs(GetPlayerPed(-1), false, false, false, false, false, false, false, false)
 		SetEntityOnlyDamagedByPlayer(GetPlayerPed(-1), true)
 		SetEntityCanBeDamaged(GetPlayerPed(-1), true)
-		exports['Starsation_notify']:SendNotify('[ ปิด ] อมตะทั้งเซิฟเวอร์', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] อมตะทั้งเซิฟเวอร์', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ ปิด ] อมตะทั้งเซิฟเวอร์")
 	end
 end)
@@ -658,7 +658,7 @@ AddEventHandler('admin:freezeall', function()
 		end
 		FreezeEntityPosition(ped, false)
 		SetPlayerInvincible(player, false)
-		exports['Starsation_notify']:SendNotify('[ ปิด ] แช่แข็ง', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] แช่แข็ง', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ ปิด ] แช่แข็ง")
 	else
 		SetEntityCollision(ped, false)
@@ -668,7 +668,7 @@ AddEventHandler('admin:freezeall', function()
 		if not IsPedFatallyInjured(ped) then
 			ClearPedTasksImmediately(ped)
 		end
-		exports['Starsation_notify']:SendNotify('[ เปิด ] แช่แข็ง', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] แช่แข็ง', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ เปิด ] แช่แข็ง")
 	end
 end)
@@ -678,12 +678,12 @@ AddEventHandler('admin:speedrunall', function(target)
 	if not speedrunall then
 		speedrunall = true
 		SetRunSprintMultiplierForPlayer(PlayerId(), 1.49)
-		exports['Starsation_notify']:SendNotify('[ เปิด ] วิ่งเร็ว', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] วิ่งเร็ว', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ เปิด ] วิ่งเร็ว")
 	else
 		speedrunall = false
 		SetRunSprintMultiplierForPlayer(PlayerId(), 1.0)
-		exports['Starsation_notify']:SendNotify('[ ปิด ] วิ่งเร็ว', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] วิ่งเร็ว', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ ปิด ] วิ่งเร็ว")
 	end
 end)
@@ -692,11 +692,11 @@ RegisterNetEvent('admin:jumeperall') --ผู้เล่นกระโดด�
 AddEventHandler('admin:jumeperall', function(target)
 	if not jumeperall then
 		jumeperall = true
-		exports['Starsation_notify']:SendNotify('[ เปิด ] กระโดดสูง', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] กระโดดสูง', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ เปิด ] กระโดดสูง")
 	else
 		jumeperall = false
-		exports['Starsation_notify']:SendNotify('[ ปิด ] กระโดดสูง', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] กระโดดสูง', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ ปิด ] กระโดดสูง")
 	end
 end)
@@ -718,11 +718,11 @@ RegisterNetEvent('admin:staminagodall') --ผู้เล่นทั้งห�
 AddEventHandler('admin:staminagodall', function(target)
 	if not staminagodall then
 		staminagodall = true
-		exports['Starsation_notify']:SendNotify('[ เปิด ] วิ่งไม่จำกัด', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ เปิด ] วิ่งไม่จำกัด', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ เปิด ] วิ่งไม่จำกัด")
 	else
 		staminagodall = false
-		exports['Starsation_notify']:SendNotify('[ ปิด ] วิ่งไม่จำกัด', 'warn',4) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify('[ ปิด ] วิ่งไม่จำกัด', 'warn',4) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("[ ปิด ] วิ่งไม่จำกัด")
 	end
 end)
@@ -730,7 +730,7 @@ end)
 RegisterNetEvent('admin:killall') --เตะทั้งหมด
 AddEventHandler('admin:killall', function()
 	SetEntityHealth(PlayerPedId(), 0)
-	exports['Starsation_notify']:SendNotify('ฆ่าล้างเผ่าพันธุ์', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('ฆ่าล้างเผ่าพันธุ์', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("god", function(data) --เปิดอมตะ
@@ -751,7 +751,7 @@ end)
 
 RegisterNUICallback("bringall", function(data) --ดึงทั้งหมด
     TriggerServerEvent("admin:bringall", data.playerid, "bring")
-	exports['Starsation_notify']:SendNotify('คุณถูกแอดมินดึง', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('คุณถูกแอดมินดึง', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("speedrunall", function(data) --วิ่งเร็วทั้งหมด
@@ -801,101 +801,101 @@ end)
 
 RegisterNUICallback("setTime", function(data) --เซ็ตเวลา
 	TriggerServerEvent("admin:Time", data.inputData)
-	exports['Starsation_notify']:SendNotify('เวลาถูกเปลี่ยนโดนแอดมิน', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('เวลาถูกเปลี่ยนโดนแอดมิน', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("freezeTime", function(data) --แช่แข็งเวลา
 	TriggerServerEvent("admin:freezeTime")
-	exports['Starsation_notify']:SendNotify('หยุดเวลาโดยแอดมิน', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('หยุดเวลาโดยแอดมิน', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("changeWeather", function(data) --เลือกสภาพอากาศอากาศ
 	TriggerServerEvent("admin:Weather", data.weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศอากาศถูกเปลี่ยนโดยแอดมิน', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศอากาศถูกเปลี่ยนโดยแอดมิน', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("EXTRASUNNY", function(data)
 	weather = 'EXTRASUNNY'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ แดดออก', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ แดดออก', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("CLEAR", function(data)
 	weather = 'CLEAR'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ โปร่งใส', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ โปร่งใส', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("NEUTRAL", function(data)
 	weather = 'NEUTRAL'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ เป็นกลาง', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ เป็นกลาง', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("SMOG", function(data)
 	weather = 'SMOG'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ ⠀หมอกควัน', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ ⠀หมอกควัน', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("FOGGY", function(data)
 	weather = 'FOGGY'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ หมอก', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ หมอก', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("OVERCAST", function(data)
 	weather = 'OVERCAST'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ เมฆครึ้ม', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ เมฆครึ้ม', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("CLOUDS", function(data)
 	weather = 'CLOUDS'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ เมฆ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ เมฆ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("CLEARING", function(data)
 	weather = 'CLEARING'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ เคลียร์', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ เคลียร์', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("RAIN", function(data)
 	weather = 'RAIN'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ ฝน', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ ฝน', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("THUNDER", function(data)
 	weather = 'THUNDER'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ ฟ้าร้อง', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ ฟ้าร้อง', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("XMAS", function(data)
 	weather = 'XMAS'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ คริสต์มาส', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ คริสต์มาส', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("BLIZZARD", function(data)
 	weather = 'BLIZZARD'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ พายุหิมะ', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ พายุหิมะ', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("SNOWLIGHT", function(data)
 	weather = 'SNOWLIGHT'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ สโนว์ไลท์', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ สโนว์ไลท์', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("HALLOWEEN", function(data)
 	weather = 'HALLOWEEN'
 	TriggerServerEvent("admin:Weather", weather)
-	exports['Starsation_notify']:SendNotify('สภาพอากาศ ฮาโลวีน', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('สภาพอากาศ ฮาโลวีน', 'su', 4) -- สีหลอดสีเขียว
 end)
 
 RegisterNUICallback("freezeWeather", function(data)
@@ -966,14 +966,14 @@ admin.TeleportToWaypoint = function() ---วาปไปที่มาร์ค
                 end
                 Citizen.Wait(0)
             end
-			exports['Starsation_notify']:SendNotify('เทเลพอร์ตแล้ว', 'su', 4) -- สีหลอดสีเขียว
+			exports['pNotify']:SendNotify('เทเลพอร์ตแล้ว', 'su', 4) -- สีหลอดสีเขียว
             --ESX.ShowNotification("เทเลพอร์ตแล้ว")
         else
-			exports['Starsation_notify']:SendNotify('กรุณามาร์คจุดด้วย', 'warn', 4) -- สีหลอดสีส้ม
+			exports['pNotify']:SendNotify('กรุณามาร์คจุดด้วย', 'warn', 4) -- สีหลอดสีส้ม
             --ESX.ShowNotification("กรุณามาร์คจุดด้วย")
         end
     else
-		exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
 		--[[TriggerEvent("pNotify:SendNotification", {
 			text = " ไม่สามารถใช้คำสั่งได้ ",
 			type = "error",
@@ -1193,12 +1193,12 @@ admin.SpawnVehicle = function(model) --เสกรถ
 		ESX.Game.SpawnVehicle(model, vector3(coords.x + 2.0, coords.y, coords.z), 0.0, function(vehicle) --get vehicle info
 			if DoesEntityExist(vehicle) then
 				TaskWarpPedIntoVehicle(PlayerPedId(),  vehicle, -1)
-				exports['Starsation_notify']:SendNotify('คุณเสกยานพาหนะ '..model, 'su', 4) -- สีหลอดสีเขียว
+				exports['pNotify']:SendNotify('คุณเสกยานพาหนะ '..model, 'su', 4) -- สีหลอดสีเขียว
 				--ESX.ShowNotification("คุณเสกยานพาหนะ "..model)			
 			end		
 		end)
 	else
-		exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
 		--[[TriggerEvent("pNotify:SendNotification", {
 			text = " ไม่สามารถใช้คำสั่งได้ ",
 			type = "error",
@@ -1231,7 +1231,7 @@ admin.Spectate = function(target, bool) --ส่องผู้เล่น
 						local targetx,targety,targetz = table.unpack(GetEntityCoords(targetPed, false))
 						RequestCollisionAtCoord(targetx,targety,targetz)
 						NetworkSetInSpectatorMode(true, targetPed)
-						exports['Starsation_notify']:SendNotify('เริ่มการส่องผู้เล่น '..name, 'su',4 ) -- สีหลอดสีเขียว
+						exports['pNotify']:SendNotify('เริ่มการส่องผู้เล่น '..name, 'su',4 ) -- สีหลอดสีเขียว
 						--ESX.ShowNotification("เริ่มการส่องผู้เล่น "..name)
 						if(IsScreenFadedOut()) then
 							DoScreenFadeIn(1000)
@@ -1239,7 +1239,7 @@ admin.Spectate = function(target, bool) --ส่องผู้เล่น
 					end
 					
 				else
-					exports['Starsation_notify']:SendNotify('ไม่สามารถส่องตัวเองได้', 'fail', 4) -- สีหลอดสีแดง
+					exports['pNotify']:SendNotify('ไม่สามารถส่องตัวเองได้', 'fail', 4) -- สีหลอดสีแดง
 					--ESX.ShowNotification("ไม่สามารถส่องตัวเองได้ เฉพาะหล่อเกินไป")
 				end
 			end,target)
@@ -1264,7 +1264,7 @@ admin.Spectate = function(target, bool) --ส่องผู้เล่น
 				local targetx,targety,targetz = table.unpack(GetEntityCoords(targetPed, false))
 				RequestCollisionAtCoord(targetx,targety,targetz)
 				NetworkSetInSpectatorMode(false, targetPed)
-				exports['Starsation_notify']:SendNotify("ยกเลิกการส่อง " ..name, 'warn',4 ) -- สีหลอดสีส้ม
+				exports['pNotify']:SendNotify("ยกเลิกการส่อง " ..name, 'warn',4 ) -- สีหลอดสีส้ม
 				--ESX.ShowNotification("ยกเลิกการส่อง"..name)
 				if(IsScreenFadedOut()) then
 					DoScreenFadeIn(1000)
@@ -1278,7 +1278,7 @@ admin.Spectate = function(target, bool) --ส่องผู้เล่น
 			end
 		end
 	else
-		exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
         --[[TriggerEvent("pNotify:SendNotification", {
 			text = " ไม่สามารถใช้คำสั่งได้ ",
 			type = "error",
@@ -1298,7 +1298,7 @@ admin.Noclip = function()
 			msg = "เปิด"
 			color = "su"
 		end
-		exports['Starsation_notify']:SendNotify("[ "..msg.." ] ".." โนคลิป", color, 4) -- สีตามตัวแปร color
+		exports['pNotify']:SendNotify("[ "..msg.." ] ".." โนคลิป", color, 4) -- สีตามตัวแปร color
 		--[[TriggerEvent("pNotify:SendNotification", {
 			text = " [ฟังชั่นโนคลิป] " .. msg,
 			type = "success",
@@ -1379,7 +1379,7 @@ admin.Noclip = function()
 			
 		end)
 	else
-		exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
         --[[TriggerEvent("pNotify:SendNotification", {
 			text = " ไม่สามารถใช้คำสั่งได้ ",
 			type = "error",
@@ -1403,7 +1403,7 @@ admin.NoclipSpeed = function()
 			if #Config.Noclip < speed then
 				speed = 1
 			end
-			exports['Starsation_notify']:SendNotify("ความเร็ว : " .. Config.Noclip[speed].text, 'warn',4 ) -- สีหลอดสีส้ม
+			exports['pNotify']:SendNotify("ความเร็ว : " .. Config.Noclip[speed].text, 'warn',4 ) -- สีหลอดสีส้ม
 		--[[TriggerEvent("pNotify:SendNotification", {
 			text = " ความเร็ว : " .. Config.Noclip[speed].text,
 			type = "success",
@@ -1412,7 +1412,7 @@ admin.NoclipSpeed = function()
 			queue = "global"
 		})]]
 		else
-			exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+			exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
 		--[[	TriggerEvent("pNotify:SendNotification", {
 				text = " ไม่สามารถใช้คำสั่งได้ ",
 				type = "error",
@@ -1445,7 +1445,7 @@ RegisterCommand("admin", function(source,args)
     			admin.GetItemList()
     			SetDisplay(true)
     		else
-				exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+				exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
     			--[[TriggerEvent("pNotify:SendNotification", {
 					text = " ไม่สามารถใช้คำสั่งได้ ",
 					type = "error",
@@ -1464,7 +1464,7 @@ RegisterCommand("admin", function(source,args)
 			admin.GetItemList()
 			SetDisplay(true)
 		else
-			exports['Starsation_notify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
+			exports['pNotify']:SendNotify("ไม่สามารถใช้คำสั่งได้", 'fail', 4) -- สีหลอดสีแดง
 			--[[TriggerEvent("pNotify:SendNotification", {
 				text = " ไม่สามารถใช้คำสั่งได้ ",
 				type = "error",
@@ -1548,14 +1548,14 @@ local head_ = false;
 RegisterNUICallback("name_on", function()
 	if not head_  then
     head_ = true
-	exports['Starsation_notify']:SendNotify("[ เปิด ] โชว์ชื่อบนหัว", 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify("[ เปิด ] โชว์ชื่อบนหัว", 'su', 4) -- สีหลอดสีเขียว
 	--ESX.ShowNotification("[เปิดใช้งาน] โชว์ชื่อบนหัว")
     Citizen.CreateThread(function()
         open_name()
 	end)
 else
     head_ = false
-	exports['Starsation_notify']:SendNotify("[ ปิด ] โชว์ชื่อบนหัว", 'fail', 4) -- สีหลอดสีแดง
+	exports['pNotify']:SendNotify("[ ปิด ] โชว์ชื่อบนหัว", 'fail', 4) -- สีหลอดสีแดง
 	--ESX.ShowNotification("[ปิดใช้งาน] โชว์ชื่อบนหัว")
         for i, v in pairs(Starsation.GamerTags) do
             RemoveMpGamerTag(v.tags)
@@ -1641,11 +1641,11 @@ RegisterNetEvent('teleportGun') --กระสุนวาป
 AddEventHandler('teleportGun', function()
 	if not teleportGun then
 		teleportGun = true
-		exports['Starsation_notify']:SendNotify("[ เปิด ] กระสุนวาป", 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify("[ เปิด ] กระสุนวาป", 'su', 4) -- สีหลอดสีเขียว
 		--ESX.ShowNotification("เปิดใช้งาน  [เทเลพอร์ตกัน]")
 	else
 		teleportGun = false
-		exports['Starsation_notify']:SendNotify("[ ปิด ] กระสุนวาป", 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify("[ ปิด ] กระสุนวาป", 'fail', 4) -- สีหลอดสีแดง
 		--ESX.ShowNotification("ปิดใช้งาน  [เทเลพอร์ตกัน]")
 	end
 end)
@@ -1680,11 +1680,11 @@ RegisterNetEvent('vehicleGun') --กระสุนรถ
 AddEventHandler('vehicleGun', function()
 	if not vehicleGun then
 		vehicleGun = true
-		exports['Starsation_notify']:SendNotify("[ เปิด ] กระสุนเสกรถ", 'su', 4) -- สีหลอดสีเขียว
+		exports['pNotify']:SendNotify("[ เปิด ] กระสุนเสกรถ", 'su', 4) -- สีหลอดสีเขียว
 		--ESX.ShowNotification("เปิดใช้งาน  [กระสุนเสกรถ]")
 	else
 		vehicleGun = false
-		exports['Starsation_notify']:SendNotify("[ ปิด ] กระสุนเสกรถ", 'fail', 4) -- สีหลอดสีแดง
+		exports['pNotify']:SendNotify("[ ปิด ] กระสุนเสกรถ", 'fail', 4) -- สีหลอดสีแดง
 		--ESX.ShowNotification("ปิดใช้งาน  [กระสุนเสกรถ]")
 	end
 end)
@@ -1719,7 +1719,7 @@ AddEventHandler('admin:removestress', function(percent)
 end)
 
 RegisterNUICallback("DeleteVehicles", function(data)
-	exports['Starsation_notify']:SendNotify("ระบบได้ทำการลบรถทั้งหมดแล้วค่ะ", 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify("ระบบได้ทำการลบรถทั้งหมดแล้วค่ะ", 'su', 4) -- สีหลอดสีเขียว
 	--ESX.ShowNotification("ระบบได้ทำการลบรถทั้งหมดแล้วค่ะ")
 	DeleteVehicles()
 end)
@@ -1731,7 +1731,7 @@ end)
 RegisterNUICallback("delcaralldist", function(data)
 	local dist = data.inputData
 	TriggerEvent('esx:deleteVehicle', dist)
-	exports['Starsation_notify']:SendNotify("ระบบได้ทำการลบรถในระยะที่กำหนดแล้วค่ะ", 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify("ระบบได้ทำการลบรถในระยะที่กำหนดแล้วค่ะ", 'su', 4) -- สีหลอดสีเขียว
 	--ESX.ShowNotification("ระบบได้ทำการลบรถในระยะที่กำหนดแล้วค่ะ")
 	SetDisplay(false)
 end)
@@ -1777,16 +1777,16 @@ AddEventHandler('Drift', function()
 			local veh = GetVehiclePedIsUsing(ped)
 		if GetDriftTyresEnabled(veh) then
 			SetDriftTyresEnabled(veh, false)
-			exports['Starsation_notify']:SendNotify("[ ปิด ] ดริฟท์โหมด", 'fail', 4) -- สีหลอดสีแดง
+			exports['pNotify']:SendNotify("[ ปิด ] ดริฟท์โหมด", 'fail', 4) -- สีหลอดสีแดง
 			--ESX.ShowNotification("ปิดใช้งาน  [ดริฟท์โหมด]")
 		else
 			Drift = true
 			SetDriftTyresEnabled(veh, true)
-			exports['Starsation_notify']:SendNotify("[ เปิด ] ดริฟท์โหมด", 'su', 4) -- สีหลอดสีเขียว
+			exports['pNotify']:SendNotify("[ เปิด ] ดริฟท์โหมด", 'su', 4) -- สีหลอดสีเขียว
 			--ESX.ShowNotification("เปิดใช้งาน  [ดริฟท์โหมด]")
 		end
 	else
-		exports['Starsation_notify']:SendNotify("ขึ้นรถก่อนไอสัสนิ", 'warn',4 ) -- สีหลอดสีส้ม
+		exports['pNotify']:SendNotify("ขึ้นรถก่อนไอสัสนิ", 'warn',4 ) -- สีหลอดสีส้ม
 		--ESX.ShowNotification("ขึ้นรถก่อนไอสัสนิ")
 		end
 	end
@@ -1993,7 +1993,7 @@ Citizen.CreateThread(function()
   
 function DeleteObjects()
 	Delete = true
-	exports['Starsation_notify']:SendNotify("ลบพร๊อบเรียบร้อยแล้วค่ะ", 'su', 4) -- สีหลอดเขียว
+	exports['pNotify']:SendNotify("ลบพร๊อบเรียบร้อยแล้วค่ะ", 'su', 4) -- สีหลอดเขียว
 	--ESX.ShowNotification("ลบพร๊อบเรียบร้อยแล้วค่ะ")
  	Wait(5000)
 	Delete = false
@@ -2010,10 +2010,10 @@ RegisterNetEvent('cooldown') --กระสุนวาป
 AddEventHandler('cooldown', function()
 if not passive then
 	passive = true
-	exports['Starsation_notify']:SendNotify('[ เปิด ] ใช้งานตัวใส', 'su', 4) -- สีหลอดสีเขียว
+	exports['pNotify']:SendNotify('[ เปิด ] ใช้งานตัวใส', 'su', 4) -- สีหลอดสีเขียว
 else
 	passive = false
-	exports['Starsation_notify']:SendNotify('[ ปิด ] ใช้งานตัวใส', 'fail', 4) -- สีหลอดสีแดง
+	exports['pNotify']:SendNotify('[ ปิด ] ใช้งานตัวใส', 'fail', 4) -- สีหลอดสีแดง
 	end
 end)
 
@@ -2048,30 +2048,30 @@ end)
 
 RegisterNUICallback("getcar", function(data)
 	TriggerServerEvent("getcar")
-	exports['Starsation_notify']:SendNotify("เก็บรถทุกคันเข้าการาจเรียบร้อยแล้วค่ะ", 'warn',4 ) -- สีหลอดสีส้ม
+	exports['pNotify']:SendNotify("เก็บรถทุกคันเข้าการาจเรียบร้อยแล้วค่ะ", 'warn',4 ) -- สีหลอดสีส้ม
 	--SetDisplay(false)
 end)
 
 
 RegisterNUICallback("delcarall", function(data)
     TriggerServerEvent("admin:delcarall", data.inputData)
-	exports['Starsation_notify']:SendNotify('ประกาศลบรถได้เริ่มนับถอยหลังแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
+	exports['pNotify']:SendNotify('ประกาศลบรถได้เริ่มนับถอยหลังแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
 	SetDisplay(false)
 end)
 
 RegisterNUICallback("canceldelcarall", function(data)
     TriggerServerEvent("admin:canceldelcarall")
-	exports['Starsation_notify']:SendNotify('ยกเลิกประกาศลบรถแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
+	exports['pNotify']:SendNotify('ยกเลิกประกาศลบรถแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
 	SetDisplay(false)
 end)
 
 RegisterNUICallback("restartserver", function(data)
     TriggerServerEvent("admin:restartserver", data.inputData)
-	exports['Starsation_notify']:SendNotify('ประกาศรีเซิร์ฟได้เริ่มนับถอยหลังแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
+	exports['pNotify']:SendNotify('ประกาศรีเซิร์ฟได้เริ่มนับถอยหลังแล้วค่ะ', 'warn',4) -- สีหลอดสีส้ม
 	SetDisplay(false)
 end)
 
 RegisterNUICallback("cancelrestartserver", function(data)
     TriggerServerEvent("admin:cancelrestartserver")
-	exports['Starsation_notify']:SendNotify('ยกเลิกประกาศรีเซิร์ฟแล้วค่ะ', 'warn', 4) -- สีหลอดสีส้ม
+	exports['pNotify']:SendNotify('ยกเลิกประกาศรีเซิร์ฟแล้วค่ะ', 'warn', 4) -- สีหลอดสีส้ม
 end)

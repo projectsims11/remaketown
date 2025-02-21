@@ -46,8 +46,8 @@ RegisterCommand('Scoreboard:openNui', function()
             players = PlayerOnline,
             ems = EMS,
             police = POLICE,
-            mechanic = MECHANIC,
             council = COUNCIL,
+            mechanic = MECHANIC,
         })
     end)
     if not display then
@@ -75,8 +75,8 @@ RegisterNetEvent('update')
 AddEventHandler('update', function(e, p, m, c)
     EMS = e
     POLICE = p
-    MECHANIC = m
     COUNCIL = c
+    MECHANIC = m
     Wait(1000)
     updatedata(e, p, m, c)
 end)
@@ -110,8 +110,8 @@ function updatedata(e, p, m, c)
         players = PlayerOnline,
         ems = e,
         police = p,
-        mechanic = m,
         council = c,
+        mechanic = m,
     })
 end
 

@@ -16,15 +16,15 @@ Config.billngPolice = 1500
 Config.NoPolicePound = 0
 
 Config.BlipGarage = {
-	Sprite = 290,
+	Sprite = 50,
 	Color = 38,
 	Display = 2,
 	Scale = 0.6
 }
 
 Config.BlipPound = {
-	Sprite =227,
-	Color = 64,
+	Sprite =225,
+	Color = 49,
 	Display = 2,
 	Scale = 0.8
 }

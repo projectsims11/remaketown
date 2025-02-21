@@ -29,7 +29,7 @@ Config.Electrician           = {
     ['blip'] = {
         show = true,
         blipName = 'Electrician Job',
-        blipType = 643,
+        blipType = 455,
         blipColor = 3,
         blipScale = 0.55
     },

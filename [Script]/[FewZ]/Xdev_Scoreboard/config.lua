@@ -5,6 +5,6 @@ Config.Profile = 'Steam' -- Steam / Discord เลือกเอา 2 อย่
 Config.JobName = { -- ชื่ออาชีพอิงตาม SQL
     ['1'] = 'police', -- อาชีพแรกนับจากซ้ายมือ
     ['2'] = 'ambulance', -- อาชีพสอง
-    -- ['3'] = 'mechanic', -- อาชีพสาม
-    ['3'] = 'council', -- อาชีพสี่
+    ['3'] = 'council', -- อาชีพสาม
+    -- ['4'] = 'mechanic', -- อาชีพสี่
 }

@@ -463,7 +463,7 @@ AddEventHandler("admin:clearcarkey", function(playerID)
             ['@owner'] = GetPlayerIdentifiers(playerID)[1]
         })
         Citizen.Wait(1000)
-        TriggerClientEvent("esx_inventoryhud:getOwnerVehicle", src)
+        TriggerClientEvent("Fewthz_inventory:getOwnerVehicle", src)
         --TriggerClientEvent('esx:showNotification', target.source, 'คุณถูกลบกุญแจรถ')
      else
         admin.Error(source, "noPerms")

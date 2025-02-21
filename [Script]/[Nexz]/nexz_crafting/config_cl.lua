@@ -31,22 +31,6 @@ Config["Image_Source"] = "nui://Fewthz_inventory/html/img/items/" -- ตำแ�
 Config["Animation"] = {"anim@amb@business@coc@coc_unpack_cut_left@","cut_cough_coccutter"}
 Config["Craft_Table"] = {
 	{
-		Position = {x = 1728.0699462890625, y = 3321.840087890625, z = 41.22000122070312, h = 15.00},
-		Table_Name = "โต๊ะคราฟไอเทม",
-		Max_Distance = 2.2,
-		Disable_Model = false, -- ปิดโมเดล
-		Model = GetHashKey("gr_prop_gr_bench_03b"),
-		Name = "~y~โต๊ะคราฟ",
-		Desc = "โต๊ะคราฟใหม่ที่นี่",
-		Map_blip = true,
- 		Blip_name = '<font face="sarabun">เรเบล</font>',
-		Blip_sprite = 255, -- สำหรับเปลี่ยน รูปแบบ ของ blip
-		Blip_scale = 0.8,
-		Blip_color = 1,
-		Category = { 2 , 3 , 4 , 5 , 6 }, -- โต๊ะตัวนี้จะมีหมวดอะไร อิงจาก Config[category]
-	},
-
-	{
 		Position = {x = 1723.1800537109375, y = 3306.330078125, z = 41.22000122070312, h = 15.00},
 		Table_Name = "โต๊ะคราฟยา",
 		Max_Distance = 2.2,

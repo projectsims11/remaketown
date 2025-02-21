@@ -1,6 +1,6 @@
 Config = {}
 
-Config['Itemuse'] = "fishrod" -- คันเบ็ด
+Config['Itemuse'] = "fishbait" -- คันเบ็ด
 Config['Additem'] = "shrimp" -- ดรอปอะไร
 Config['Drop'] = {1, 1} -- ดรอปเท่าไหร
 Config['ต้องการให้ลบไอเท็มไหม'] = true -- true ต่องการ false ไม่ต้องการ

@@ -24,7 +24,7 @@ Config.Default = {
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[CRAFT] STONE',   -- Text ใน Blip
-                Sprite = 1,			-- id | รูปลักษณ์
+                Sprite = 409,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
@@ -80,7 +80,7 @@ Config.Default = {
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[CRAFT] STEEL',   -- Text ใน Bwawlip
-                Sprite = 89,			-- id | รูปลักษณ์
+                Sprite = 119,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
@@ -301,7 +301,7 @@ Config.Default = {
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] RICE',   -- Text ใน Blip
-                Sprite = 60,			-- id | รูปลักษณ์
+                Sprite = 61,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
@@ -469,7 +469,7 @@ Config.Default = {
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[CRAFT] HERB',   -- Text ใน Blip
-                Sprite = 424,			-- id | รูปลักษณ์
+                Sprite = 78,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },
@@ -525,7 +525,7 @@ Config.Default = {
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] TREASURE',   -- Text ใน Blip
-                Sprite = 424,			-- id | รูปลักษณ์
+                Sprite = 137,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
                 Scale = 1.2,			-- ขนาด
             },

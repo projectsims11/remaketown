@@ -32,15 +32,15 @@ Config.Default = {
 
     Zone = {
         [1] = {
-            Coords = vector3(218.44, -729.48, 47.08),
+            Coords = vector3(1728.0931, 3321.7292, 42.0225),
             Distance = 2.0,
             Object = {
                 Enable = true,
                 Name = 'gr_prop_gr_bench_01b',
-                Heading = 249.60,
+                Heading = 15.00,
             },
             Blips = {
-                Enable = true,			
+                Enable = false,			
                 Text = '[Craft] - General',  
                 Sprite = 682,			
                 Color = 45,			
@@ -55,21 +55,21 @@ Config.Default = {
         },
 
         [2] = {
-            Coords = vector3(216.54, -734.54, 47.08),
+            Coords = vector3(1723.1901, 3306.3252, 41.2235),
             Distance = 2.0,
             Object = {
                 Enable = true,
-                Name = 'gr_prop_gr_bench_01b',
-                Heading = 250.30,
+                Name = 'bkr_prop_meth_chiller_01a',
+                Heading = 15.00,
             }, 
             Blips = {
-                Enable = true,			
+                Enable = false,			
                 Text = '[Craft] - General',  
                 Sprite = 682,			
                 Color = 14,			
                 Scale = 1.2,	
             }, 
-            Text = '~y~โต๊ะคราฟไอเทมทั่วไป',
+            Text = '~y~โต๊ะคราฟยา',
             Desc = 'สำหรับไอเทม ~b~ทั่วไป',
             AllowJob = {
                 ['unemployed'],
@@ -77,6 +77,51 @@ Config.Default = {
             Category = {2}
         },
 
+        [3] = {
+            Coords = vector3(-253.6068, -915.9514, 20.5805),
+            Distance = 2.0,
+            Object = {
+                Enable = false,
+                Name = 'bkr_prop_meth_chiller_01a',
+                Heading = 15.00,
+            }, 
+            Blips = {
+                Enable = false,			
+                Text = '[Craft] - Fishing',  
+                Sprite = 682,			
+                Color = 14,			
+                Scale = 1.2,	
+            }, 
+            Text = '~y~โต๊ะคราฟ แฟชั่น',
+            Desc = 'สำหรับคราฟแฟชั่น',
+            AllowJob = {
+                ['unemployed'],
+            },
+            Category = {2}
+        },
+
+        [3] = {
+            Coords = vector3(925.0306, -102.5391, 82.4413),
+            Distance = 2.0,
+            Object = {
+                Enable = true,
+                Name = 'prop_cooker_03',
+                Heading = 149.2054,
+            }, 
+            Blips = {
+                Enable = false,			
+                Text = '<font face="sarabun">เตาทำอาหาร</font>',  
+                Sprite = 266,			
+                Color = 47,			
+                Scale = 0.8,	
+            }, 
+            Text = '~y~เตาทำอาหาร',
+            Desc = 'ปรุงอาหารสดใหม่ที่นี่',
+            AllowJob = {
+                ['unemployed'],
+            },
+            Category = {2}
+        },
     },
 
 }

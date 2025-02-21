@@ -2,8 +2,8 @@ ESX = nil
 ESX = exports['es_extended']:getSharedObject()
 
 local OnZone = false
-RegisterServerEvent('fewz_curfew:send1')
-AddEventHandler('fewz_curfew:send1', function(result)
+RegisterServerEvent('curfew_Police:send1')
+AddEventHandler('curfew_Police:send1', function(result)
     if not OnZone then
         TriggerClientEvent("redzone:setposition1", source, result)
         OnZone = true

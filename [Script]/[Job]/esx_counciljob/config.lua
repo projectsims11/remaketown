@@ -41,11 +41,11 @@ Config.CouncilStations = {
 	LSPD = {
 
 		Blip = {
-			Coords  = vector3(425.1, -979.5, 30.7),
-			Sprite  = 60,
+			Coords  = vector3(292.2448, -2733.0596, 6.0002),
+			Sprite  = 355,
 			Display = 4,
-			Scale   = 1.2,
-			Colour  = 29
+			Scale   = 0.8,
+			Colour  = 0
 		},
 
 		Cloakrooms = {

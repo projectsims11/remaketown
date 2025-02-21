@@ -87,7 +87,7 @@ Config.BaseTime = 2000              --- เวลาเริ่มต้นเ�
 --------------------------- เชื่อมกระเป๋า ----------------------------
 
 ConfigCL["Inventory"] = function(data)                 --- เปิดกระเป๋า
-    TriggerEvent("esx_inventoryhud:openPlayerInventory", data.playerid, '') 
+    TriggerEvent("Fewthz_inventory:openPlayerInventory", data.playerid, '') 
     --exports.nc_inventory:SearchInventory(data.playerid, 'admin') --- ตัวอย่างการเชื่อมกระเป๋า NC Inventory
     SetDisplay(false)
 end

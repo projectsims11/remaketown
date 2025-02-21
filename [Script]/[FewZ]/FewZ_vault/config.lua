@@ -37,8 +37,8 @@ Config.Vault = {
 
 Config.FewZ = {
 	Custom = {
-		Coords = vector3(1733.29, 3328.23, 41.220-0.97),
-		heading = 10.99,
+		Coords = vector3(1721.5317, 3318.7051, 41.2235),
+		heading = 15.00,
 		needItem = true, -- ใช้ needItemLicense เป็นการเปิดตู้
 		needItemLicense = 'vault', -- ไอเทมในการเปิดตู้
 		removeMoney = false, -- ลบเงินเมื่อเปิดตู้

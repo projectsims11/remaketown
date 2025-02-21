@@ -12,7 +12,7 @@ Config.cooldownBody = 3000
 Config.cooldownSignal = (1000 * 60 * 5)   -- แก้ที่เลข หลังสุด -- แจ้งเตือนหมอ
 Config.cooldowntalk = (1000 * 60 * 1)   -- แก้ที่เลข หลังสุด -- แจ้งเตือนหมอ
 Config.cooldownpolice = (1000 * 60 * 5)   -- แก้ที่เลข หลังสุด -- แจ้งเตือนหมอ
-Config.Theme = '#FF9C00'
+Config.Theme = '#0026B4'
 Config.keySignal = 'G'
 Config.keyClearbody = 'X'
 Config.keyTalk = 'R'
@@ -103,8 +103,8 @@ Config.Hospitals = {
 	Pillbox = {
 
 		Blip = {
-			coords = vector3(358.54, -1417.3199462890625, 32.5099983215332),
-			sprite = 61,
+			coords = vector3(1154.9182, -1521.2485, 34.8439),
+			sprite = 383,
 			scale  = 0.8,
 			color  = 0
 		},

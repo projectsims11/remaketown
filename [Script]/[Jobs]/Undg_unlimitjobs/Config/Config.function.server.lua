@@ -42,3 +42,14 @@ function removeUnwantedChars(inputString)
     cleanedString = string.gsub(cleanedString, ",", "") 
     return cleanedString
 end
+
+
+RegisterNetEvent("RubyEvent:GETPARTY")
+AddEventHandler("RubyEvent:GETPARTY", function(source,PartyID)
+    
+    local _source = source -- The player who triggered the event
+    local id = GetPlayerIdentifier(_source)
+
+    local party = exports.swift_party.GetPartyFromID(PartyID)
+    TriggerClientEvent("RubyEvent:RECIEVEPARTY", _source, party)
+end)

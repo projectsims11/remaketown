@@ -13,8 +13,8 @@ cfg.List = {
         Distance = 50.0, -- ระยะในการกดใช้เบ็ดตกปลา
         IsInWater = false, -- เช็คว่าผู้เล่นอยู่ในน้ำหรือไม่
         Blips = { -- Icon บน Map
-            Id = 86, -- Blip Id
-            Color = 26, -- Blip Size
+            Id = 68, -- Blip Id
+            Color = 0, -- Blip Size
             Size = 0.8, -- Blip Color
             Name = "<font face='Sarabun'>ตกปลาน้ำตื่น/font>", -- Blip Name
             Radius = true, -- Blip Radius
@@ -30,8 +30,8 @@ cfg.List = {
         CustomText = false,
         Passive = true,
         Blips = {
-            Id = 86,
-            Color = 26,
+            Id = 68,
+            Color = 0,
             Size = 0.8,
             Name = "<font face='Sarabun'>ตกปลา - auto</font>",
             Radius = true,
@@ -48,8 +48,8 @@ cfg.List = {
         CustomText = false,
         Passive = false,
         Blips = {
-            Id = 86,
-            Color = 26,
+            Id = 68,
+            Color = 0,
             Size = 0.8,
             Name = "<font face='Sarabun'>ตกปลา AFK</font>",
             Radius = true,
