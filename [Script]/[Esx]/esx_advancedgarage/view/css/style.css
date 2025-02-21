@@ -30,11 +30,7 @@ body {
     justify-content: space-between;
 }
 
-.data-side {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
+
 
 .header {
     display: flex;
@@ -225,15 +221,12 @@ ion-icon {
     }
 }
 
-/* Container for the image */
-.image-container {
-    position: relative;
-    display: inline-block;
-}
+
+
 
 /* Main image styling */
 .item-image {
-    width: 12vh;
+    width: 100%;
     border-radius: 0.2vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
@@ -242,16 +235,13 @@ ion-icon {
 /* Hidden popup image */
 .image-popup {
     transform: translate(-50%, -50%);
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 50%;
+    left: 50%;
     display: none;
     position: fixed;
-    /* top: 0;
-    left: 100%; */
     margin-left: 10px;
-    width: 20vh;
+    width: 40vh;
     z-index: 1000;
-    width: 40vh
 }
 
 /* Show the popup image on hover */
@@ -265,5 +255,80 @@ ion-icon {
     border-radius: 0.2vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+
+/* Title and metadata layout */
+.data-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Info section (Engine, Fuel, Body) */
+.data-submeta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Flex style for icons and values */
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Align button to the right */
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 80px;
+}
+
+/* Button styling */
+.btn {
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text from breaking */
+}
+
+/* Wrapper for all items - Enables scrolling */
+.item-list {
+    max-height: 90vh; /* Prevent exceeding screen height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Prevent scrollbar overlap */
+}
+
+/* Flex container for individual car items */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional: separate items visually */
+    max-height: 90vh; /* Prevent UI from exceeding screen height */
+    overflow-y: auto; /* Scroll if content is too long */
+    padding: 10px;
+}
+
+
+
+/* Ensures image and info align properly */
+.image-container {
+    flex-shrink: 0;
+    width: 12vh;
+}
+
+.data-side {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
 
 

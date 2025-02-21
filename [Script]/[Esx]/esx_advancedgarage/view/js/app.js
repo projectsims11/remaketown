@@ -116,26 +116,32 @@ function sender(name, item, zone) {
 // `;
 
 let template = (data, fuel, func) => `
-<div class="item">
-    <div class="label">
-        <div class="data-side">
-            <div class="data-title">
-                <div class="plate">${data.plate}</div>
-                <div class="model">(${data.name})</div>
-            </div>
-            <div class="data-submeta">
-                <!-- Image container with hover effect -->
-                <div class="image-container">
-                    <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="${data.name} Image" class="item-image">
-                    <div class="image-popup">
-                        <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="popup image">
-                    </div>
-                </div>
-                <div class="engine flex"><ion-icon name="build-outline"></ion-icon> Engine: ${data.engine / 10}</div>
-                <div class="fuel flex"><ion-icon name="water-outline"></ion-icon> Gas: ${fuel}</div>
-                <div class="body flex"><ion-icon name="car-sport-outline"></ion-icon> Body: ${data.body / 10}</div>
-            </div>
+<div class="item-list">
+
+<div class="item flex-container">
+    <!-- Image on the left -->
+    <div class="image-container">
+        <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="${data.name} Image" class="item-image">
+        <div class="image-popup">
+            <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="popup image">
         </div>
+    </div>
+
+    <!-- Data in the middle -->
+    <div class="data-side">
+        <div class="data-title">
+            <div class="plate">${data.plate}</div>
+            <div class="model">(${data.name})</div>
+        </div>
+        <div class="data-submeta">
+            <div class="engine flex"><ion-icon name="build-outline"></ion-icon> Engine: ${data.engine / 10}</div>
+            <div class="fuel flex"><ion-icon name="water-outline"></ion-icon> Gas: ${fuel}</div>
+            <div class="body flex"><ion-icon name="car-sport-outline"></ion-icon> Body: ${data.body / 10}</div>
+        </div>
+    </div>
+
+    <!-- Button on the right -->
+    <div class="btn-container">
         <button type="button" class="btn" onclick="sender('${func}', '${data.plate2}', '${data.super}')">
             <ion-icon name="arrow-forward-circle" class="first-check"></ion-icon>
             <ion-icon name="arrow-forward-circle-outline" class="second-check"></ion-icon>
@@ -143,4 +149,7 @@ let template = (data, fuel, func) => `
         </button>
     </div>
 </div>
+    <!-- Car items will be inserted here -->
+</div>
 `;
+
