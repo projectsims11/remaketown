@@ -28,9 +28,9 @@ config.boards = {
     list = {
         {
             model = "tr_prop_tr_planning_board_01a",
-            heading = 162.95,
+            heading =  340.0,
             -- coords = vector3(-415.22, 1161.05, 324.86),
-            coords = vector3(34.0575, -1081.8229, 38.1522),
+            coords = vector3(-300.7934, -931.9169, 31.0606),
 
             
             radius = 3.0,
@@ -50,7 +50,7 @@ config.boards = {
 config.quests = {
     AutoRefresh = {
         enabled = true, -- เปิด/ปิด รีเซ็ตเควสทั้งเซิฟเวอร์อัตโนมัติตามเวลา
-        time = "22:00" -- เวลาที่จะรีเซ็ต
+        time = "00:00" -- เวลาที่จะรีเซ็ต
     },
     MaxActiveQuests = 5, -- สามารถรับเควสพร้อมกันได้กี่เควส
     MaxCompletedQuestsPerRefresh = 10, -- สามารถทำเควสได้สูงสุดกี่เควส
@@ -66,22 +66,22 @@ config.quests = {
             }
         },
         [2] = {
-            label = "orange",
-            count = 10,
+            label = "เก็บส้ม 100 ครั้ง",
+            count = 100,
             rewards = {
                 {item = "money", count = 1000}
             }
         },
         [3] = {
-            label = "cement",
-            count = 10,
+            label = "ขโมยปูน 5 ถุง",
+            count = 5,
             rewards = {
                 {item = "money", count = 1000}
             }
         },
         [4] = {
-            label = "Online",
-            count = 30,
+            label = "Online 2 HR.",
+            count = 120,
             rewards = {
                 {item = "money", count = 1000}
             }
