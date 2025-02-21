@@ -2,6 +2,7 @@
 $(function () {
 
     let dive = false
+    let open_health_percent = true
 
     window.addEventListener("message", ({ data }) => {
         switch (data.action) {
@@ -15,8 +16,14 @@ $(function () {
                 }
 
                 if (data.health) {
+                    
                     $('.health-text').html(data.health)
                     $("#health_percent").css({ width: data.health + "%" });
+
+                    const hpElement = document.querySelector('.bar-text');
+                    if (hpElement) {
+                        hpElement.textContent = `HP: ${data.health}`;
+                    }
 
                 }
 

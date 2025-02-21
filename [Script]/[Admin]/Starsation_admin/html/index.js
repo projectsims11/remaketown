@@ -1,4 +1,4 @@
-let itemImageURL = "nui://esx_inventoryhud/html/img/items/";
+let itemImageURL = "nui://Fewthz_inventory/html/img/items/";
 var id = 0,
     playerData = [];
 $(function () {
@@ -72,10 +72,10 @@ $(function () {
                             let e = i.itemslist.filter(item => item.name.includes(name));
                             $.each(e, function (e, a) {
                               $("#itemlist").append(
-                                `<div id="inventoryitemwrap"><div class = "inventoryitem" data-itemname=${a.name}><div class="img"><img src="nui://esx_inventoryhud/html/img/items//${a.name}.png" width="100px" height="100px" /></div><div class = "name">${a.label}</div></div></div>`
+                                `<div id="inventoryitemwrap"><div class = "inventoryitem" data-itemname=${a.name}><div class="img"><img src="nui://Fewthz_inventory/html/img/items//${a.name}.png" width="100px" height="100px" /></div><div class = "name">${a.label}</div></div></div>`
                               );
                               let t = new Image();
-                              (t.src = `nui://esx_inventoryhud/html/img/items//${a.name}.png`),
+                              (t.src = `nui://Fewthz_inventory/html/img/items//${a.name}.png`),
                                 (t.onerror = function () {
                                   $('.inventoryitem[data-itemname="' + a.name + '"] > .img').html(
                                     '<i class="fas fa-box centered" style="color:#ffffff;font-size:48px;"></i>'
@@ -90,10 +90,10 @@ $(function () {
                           let e = i.itemslist;
                           $.each(e, function (e, a) {
                             $("#itemlist").append(
-                              `<div id="inventoryitemwrap"><div class = "inventoryitem" data-itemname=${a.name}><div class="img"><img src="nui://esx_inventoryhud/html/img/items//${a.name}.png" width="100px" height="100px" /></div><div class = "name">${a.label}</div></div></div>`
+                              `<div id="inventoryitemwrap"><div class = "inventoryitem" data-itemname=${a.name}><div class="img"><img src="nui://Fewthz_inventory/html/img/items//${a.name}.png" width="100px" height="100px" /></div><div class = "name">${a.label}</div></div></div>`
                             );
                             let t = new Image();
-                            (t.src = `nui://esx_inventoryhud/html/img/items//${a.name}.png`),
+                            (t.src = `nui://Fewthz_inventory/html/img/items//${a.name}.png`),
                               (t.onerror = function () {
                                 $('.inventoryitem[data-itemname="' + a.name + '"] > .img').html(
                                   '<i class="fas fa-box centered" style="color:#ffffff;font-size:48px;"></i>'

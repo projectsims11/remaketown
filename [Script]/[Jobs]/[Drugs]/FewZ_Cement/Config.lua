@@ -15,7 +15,7 @@ Config.ItemNeed = {             --[ไอเทมที่ต้องใช้
 
 Config.UseFarfromCity = true	--[กำหนดขอบเขตการขโมยปูน false ปิดขโมยได้ทุกที่ true กำหนดขอบเขต]
 Config.Location = vector3(-258.0, -978.2, 31.2)
-Config.FarfromCity = 1200  	    --[ระยะห่างจากเมืองหลวง JobCenter]
+Config.FarfromCity = 1400  	    --[ระยะห่างจากเมืองหลวง JobCenter]
 
 Config.Cops = 1                 --[จำนวน ตำรวจ]
 
