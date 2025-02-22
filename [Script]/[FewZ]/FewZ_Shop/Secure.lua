@@ -64,84 +64,60 @@ PNOTIFY_SETTING = {
 GlobaConfig["Zones"] = {
     TwentyFourSeven = {
 		Items = {
-			-- item = ชื่อใน ITEM IN DATABASE
-			-- label = ชื่อที่แสดงในร้านค้า
-			-- price = ราคา
-			-- limit = ซื้อ ITEM ได้ทีล่ะกี่อัน  coin_sergeant2
-			-- { 
-			-- 	item = 'bandage' , 
-			-- 	label = 'ผ้าพันแผล' , 
-			-- 	price = 500 , 
-			-- 	limit = 20
-			-- },
-			{ 
-				item = 'cigarett' , 
-				label = 'Cigarett' , 
-				price = 200 , 
-				limit = 100
-			},
 			{ 
 				item = 'fixkit' , 
-				label = 'Repair Kit' , 
-				price = 500 , 
-				limit = 100
-			},
-			{ 
-				item = 'Pig' , 
-				label = 'Pig' , 
-				price = 100 , 
-				limit = 100
-			},
-			{ 
-				item = 'foodPig' , 
-				label = 'Pig Food' , 
-				price = 50 , 
-				limit = 100
-			},
-			{ 
-				item = 'Cow' , 
-				label = 'Cow' , 
-				price = 100 , 
-				limit = 100
-			},
-			{ 
-				item = 'foodCow' , 
-				label = 'Cow Food' , 
-				price = 50 , 
-				limit = 100
-			},
-			{ 
-				item = 'radio' , 
-				label = 'radio' , 
-				price = 15000 , 
+				label = 'กล่องซ่อม' , 
+				price = 2500 , 
 				limit = 100
 			},
 			{ 
 				item = 'phone' , 
-				label = 'Phone' , 
-				price = 1000 , 
+				label = 'มือถือ' , 
+				price = 10000 , 
 				limit = 1
 			},
 			{ 
-				item = 'lighter' , 
-				label = 'Lighter' , 
-				price = 100 , 
+				item = 'fishbait' , 
+				label = 'เหยื่อตกปลา' , 
+				price = 20 , 
 				limit = 100
 			},
 			{ 
-				item = 'water' , 
-				label = 'Water' , 
-				price = 50 , 
+				item = 'skateboard' , 
+				label = 'สเกตบอร์ด' , 
+				price = 20000 , 
 				limit = 100
 			},
 			{ 
-				item = 'bread' , 
-				label = 'Bread' , 
-				price = 50 , 
+				item = 'jobcard' , 
+				label = 'บัตรทำงาน' , 
+				price = 5000 , 
 				limit = 100
 			},
-			
-		
+			{ 
+				item = 'fixkit' , 
+				label = ' กล่องซ่อม' , 
+				price = 2500 , 
+				limit = 100
+			},
+			{ 
+				item = 'fixkit' , 
+				label = ' กล่องซ่อม' , 
+				price = 2500 , 
+				limit = 100
+			},
+			{ 
+				item = 'fixkit' , 
+				label = ' กล่องซ่อม' , 
+				price = 2500 , 
+				limit = 100
+			},
+			{ 
+				item = 'fixkit' , 
+				label = ' กล่องซ่อม' , 
+				price = 2500 , 
+				limit = 100
+			},
 		},
 		-- Require = { -- ไม่ต้องการปิดได้เลย
 			-- ITEM ที่ต้องมีถึงจะเปิด SHOP ได้ ( มีแค่อย่างได้อย่างนึงก็เปิดได้ )

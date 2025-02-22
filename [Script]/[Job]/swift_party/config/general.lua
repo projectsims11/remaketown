@@ -7,9 +7,10 @@ config.network = {
 
 config.userInterface = {
     commandEnabled = true,
-    command = "swift:internal:party",
+    --command = "swift:internal:party",
+    command = "party",
     keybindEnabled = true, -- ui.commandEnabled ต้องเป็น true ถึงจะใช้ได้
-    keybind = "F4"
+    keybind = ""
 }
 
 config.requireItem = false -- ต้องการใช้ไอเทมเพื่อเปิด UI หรือไม่
