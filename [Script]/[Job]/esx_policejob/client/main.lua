@@ -15,6 +15,21 @@ local HasAlreadyEnteredMarker, isDead, isHandcuffed, hasAlreadyJoined, playerInS
 local LastStation, LastPart, LastPartNum, LastEntity, CurrentAction, CurrentActionMsg
 dragStatus.isDragged, isInShopMenu = false, false
 
+CreateThread(function()
+	while true do
+		Citizen.Wait(100)
+		if  IsControlPressed(1,19)  and IsControlJustRelease(1,Config.ArrestKey) then
+			playerheading = GetEntityHeading(GetPlayerPed(-1))
+			playerlocation = GetEntityForwardVector(PlayerPedId())
+			playerCoords = GetEntityCoords(GetPlayerPed(-1))
+			TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer), playerheading, playerCoords, playerlocation)
+		end
+		if IsControlPressed(1,19)   and IsControlJustRelease(1,Config.Search) then
+			OpenBodySearchMenu(closestPlayer)
+		end
+	end
+end)	
+
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
 	ESX.PlayerData = xPlayer

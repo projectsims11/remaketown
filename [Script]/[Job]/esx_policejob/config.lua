@@ -1,5 +1,8 @@
 Config                            = {}
 
+Config.ArrestKey = 32 -- W = 32
+Config.Search = 38 -- E = 38
+
 Config.billpolice = {
 	bill = {
 		bill1 = 100,		--ฝ่าไฟแดง
