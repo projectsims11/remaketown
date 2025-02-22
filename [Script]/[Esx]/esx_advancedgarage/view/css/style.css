@@ -9,7 +9,6 @@ body {
     -o-background-size: cover;
     background-size: cover;
     -webkit-user-select: none; 
-
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,32 +16,6 @@ body {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-=======
-}
-
-.data-submeta {
-    display: flex;
-    justify-content: space-between; /* Distributes items evenly across the container */
-    align-items: center; /* Vertically centers the items */
-    text-align: center; /* Centers the text inside each div */
-    width: 100%; /* Ensures full width for alignment */
-}
-
-.data-submeta .engine, 
-.data-submeta .fuel, 
-.data-submeta .body {
-    display: flex;
-    flex-direction: column; /* Stack the icon and text */
-    justify-content: center; /* Vertically center the text */
-    align-items: center; /* Horizontally center the icon and text */
-    width: 33%; /* Ensure equal width for each item */
-}
-
-.data-submeta ion-icon {
-    font-size: 1.5rem; /* Adjust icon size */
-    margin-bottom: 5px; /* Space between icon and text */
->>>>>>> Ruby
 }
 
 .label {
@@ -61,8 +34,8 @@ body {
     display: flex;
     align-items: center;
     background: rgba(44, 44, 44, 0.9);
-    background: linear-gradient(135deg, rgb(28, 4, 104) 0%, hsla(252, 79%, 23%, 1) 29%, hsla(234, 100%, 58%, 1) 100%);
-    margin-bottom: 4px;
+    background-image: linear-gradient(to right, rgb(255, 196, 0), rgb(255, 207, 48));
+    margin-bottom: 6px;
     border-radius: 8px;
     padding: 8px 30px;
     font-weight: bold;
@@ -81,11 +54,10 @@ body {
 
 .header ion-icon {
     margin-right: 8px;
-    
 }
 
 .item {
-    background: rgba(206, 169, 228, 0.2);
+    background: rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 8px;
     cursor: pointer;
@@ -93,81 +65,36 @@ body {
 }
 
 .item:hover {
-    background: rgba(53, 73, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 0 18px 0 rgba(0, 0, 0, 0.25);
-    color: #ffffff;
-}
-
-.row {
-    display: flex; /* Enables flexbox layout */
-    gap: 10px; /* Adds spacing between columns */
-    align-items: stretch; /* Ensures all columns are the same height */
-    padding: 1vh;
-}
-
-.col1 {
-    flex: 1; /* Makes both columns equal width */
-    display: flex;
-    flex-direction: column; /* Ensures content stacks properly */
-    
-    justify-content: center; /* Centers content vertically */
-    align-items: center;
-    min-width: 200px; /* Prevents columns from becoming too small */
-}
-.col2 {
-    margin-left: 0.7vh;
-    flex: 2; /* Makes both columns equal width */
-    display: flex;
-    flex-direction: column; /* Ensures content stacks properly */
-    justify-content: top; /* Centers content vertically */
-    align-items: top; /* Centers content horizontally */
-    min-width: 350px; /* Prevents columns from becoming too small */
-}
-
-.item-image {
-    width: 20vh; /* Keeps the size consistent */
-    height: 11.5vh; /* Keeps the size consistent */
-    object-fit: cover; /* Fills the container while maintaining aspect ratio */
-    display: block; /* Prevents extra space below images */
-    border-radius: 5%; /* Makes the image circular */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: Helps with transparent images */
+    color: #fff;
 }
 
 .items {
-    display: block;
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(11, 1, 156, 0.8) 0%, hsla(252, 55%, 38%, 0.8) 35%, hsla(234, 100%, 58%, 0.8) 100%);
+    width: 50vh;
+    background-color: rgba(29, 29, 29, 0.8);
     font-size: 1rem;
     min-height: 50vh;
     max-height: 80vh;
     overflow: scroll;
     border-radius: 8px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 30px;
     color: rgb(255, 255, 255);
 }
 
 .data-title,
 .data-submeta {
-   
+    display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
 }
 
 .data-title {
-    margin-bottom: 1.3vh;
     justify-content: flex-start;
     font-weight: bold;
-}
-
-.data-title .plate,
-.data-title .model {
-    display: block; /* Forces them to be on separate lines */
-    margin-bottom: 5px; /* Optional: Adds spacing between the plate and model */
 }
 
 .data-submeta {
@@ -188,10 +115,8 @@ ion-icon {
 }
 
 .plate {
-    margin-right: 6px;   
+    margin-right: 6px;
 }
-
-
 
 .container {
     -webkit-animation: fadein 1s; /* Safari and Chrome */
@@ -210,7 +135,7 @@ ion-icon {
     align-items: center;
     border: 0;
     outline: 0;
-    background: linear-gradient(135deg, rgb(28, 4, 104) 0%, hsla(252, 79%, 23%, 1) 29%, hsla(234, 100%, 58%, 1) 100%);
+    background-image: linear-gradient(to right, rgb(255, 196, 0), rgb(255, 207, 48));
     padding: 5px 20px;
     border-radius: 8px;
     font-size: 1.6vh;
@@ -227,7 +152,7 @@ ion-icon {
 }
 
 .btn:hover {
-    background-color: rgb(79, 82, 255);
+    background-color: rgb(240, 152, 25);
     cursor: pointer;
 }
 
@@ -240,7 +165,7 @@ ion-icon {
 }
 
 .btn:focus {
-    box-shadow: 0 0 0 3px rgb(122, 152, 252);
+    box-shadow: 0 0 0 4px rgb(112, 69, 9);
 }
 
 .items::-webkit-scrollbar {
