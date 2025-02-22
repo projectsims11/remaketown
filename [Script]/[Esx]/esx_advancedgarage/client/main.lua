@@ -94,9 +94,12 @@ function ListOwnedCarsMenu()
 				local enginpersen = json.decode(v.health_vehicles).health_engine
                 local bodypersen = json.decode(v.health_vehicles).health_body
                 local fuelpersen = json.decode(v.health_vehicles).fuel
-                local fuel = tostring(math.ceil(GetVehicleFuelLevel(fuelpersen)))
+                local fuel = tostring(math.ceil(fuelpersen))
                 local engine = tostring(math.ceil(enginpersen))
                 local body = tostring(math.ceil(bodypersen))
+
+			
+
 
 				SendNUIMessage({
 					garage = 'car',
