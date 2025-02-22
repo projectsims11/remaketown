@@ -16,16 +16,27 @@ local LastStation, LastPart, LastPartNum, LastEntity, CurrentAction, CurrentActi
 dragStatus.isDragged, isInShopMenu = false, false
 
 CreateThread(function()
+	
+	
 	while true do
-		Citizen.Wait(100)
-		if  IsControlPressed(1,19)  and IsControlJustRelease(1,Config.ArrestKey) then
-			playerheading = GetEntityHeading(GetPlayerPed(-1))
-			playerlocation = GetEntityForwardVector(PlayerPedId())
-			playerCoords = GetEntityCoords(GetPlayerPed(-1))
-			TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer), playerheading, playerCoords, playerlocation)
-		end
-		if IsControlPressed(1,19)   and IsControlJustRelease(1,Config.Search) then
-			OpenBodySearchMenu(closestPlayer)
+		Citizen.Wait(1)
+		local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
+		if closestPlayer ~= -1 and closestDistance <= 3.0 then
+			if  IsControlPressed(1,19)  then
+				if IsControlJustReleased(1,44) then
+			
+					playerheading = GetEntityHeading(GetPlayerPed(-1))
+					playerlocation = GetEntityForwardVector(PlayerPedId())
+					playerCoords = GetEntityCoords(GetPlayerPed(-1))
+					TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(closestPlayer), playerheading, playerCoords, playerlocation)
+					Citizen.Wait(5000)
+				end
+
+		
+				if IsControlJustReleased(1,38) then
+				OpenBodySearchMenu(closestPlayer)
+				end
+			end
 		end
 	end
 end)	

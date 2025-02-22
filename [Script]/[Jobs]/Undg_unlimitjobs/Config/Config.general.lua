@@ -66,7 +66,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'stone_a', count = {1,2}},
+                { name = 'stone_a', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -177,7 +177,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'wood', count = {1,2}},
+                { name = 'wood', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -232,7 +232,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'orange', count = {1,2}},
+                { name = 'orange', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -287,7 +287,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'wheat', count = {1,2}},
+                { name = 'wheat', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -343,7 +343,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'rice', count = {1,2}},
+                { name = 'rice', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -399,7 +399,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'cabbage', count = {1,2}},
+                { name = 'cabbage', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -455,7 +455,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'chemical', count = {1,2}},
+                { name = 'chemical', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
@@ -566,7 +566,7 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'treasure', count = {1,2}},
+                { name = 'treasure', count = {1,1}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
