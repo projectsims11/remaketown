@@ -1,6 +1,8 @@
+
 window.addEventListener('message', function (event) {
     let item = event.data;
-    let data = item;
+    let data = item;    
+
     if(item.clear == true) {
         $('.items').empty();
         $('.shop').html();
@@ -19,7 +21,6 @@ window.addEventListener('message', function (event) {
      * Initial
      */
     if(data.plate !== undefined) {
-        
         let fuel = '0';
         if (data.fuel !== undefined) {
             fuel = data.fuel.toString();
@@ -27,19 +28,19 @@ window.addEventListener('message', function (event) {
 
         if (data.garage == 'car') {
             // console.log('Garage');
-            $('.items').append(template(data, fuel, 'garage'));
+            $('.items').append(template(data, 'garage'));
         } if (data.garage == 'pound') {
             // console.log('Pound');
-            $('.items').append(template(data, fuel, 'pound'));
+            $('.items').append(template(data, 'pound'));
         } if (data.garage == 'pound_police_taken') {
             // console.log('Pounded by police');
-            $('.items').append(template(data, fuel, 'police'));
+            $('.items').append(template(data, 'police'));
         } if (data.garage == 'helicopter') {
             // console.log('Helicopter');
-            $('.items').append(template(data, fuel, 'helicopter'));
+            $('.items').append(template(data, 'helicopter'));
         } if (data.garage == 'boat') {
             // console.log('Boat');
-            $('.items').append(template(data, fuel, 'boat'));
+            $('.items').append(template(data, 'boat'));
         }
 
         $('#headerText').text(`(${data.garage})`);
@@ -61,95 +62,34 @@ function sender(name, item, zone) {
     $.post('http://esx_advancedgarage/focusOff');
 }
 
-// let template = (data, fuel, func) => `
-//     <div class="item">
-//         <div class="label">
-//             <div class="data-side">
-//                 <div class="data-title">
-//                     <div class="plate">${data.plate}</div>
-//                     <div class="model">(${data.name})</div>
-//                 </div>
-//                 <div class="data-submeta">
-//                     <div class="engine flex"><ion-icon name="build-outline"></ion-icon> Engine: ${data.engine / 10}</div>
-//                     <div class="fuel flex"><ion-icon name="water-outline"></ion-icon> Gas: ${fuel}</div>
-//                     <div class="body flex"><ion-icon name="car-sport-outline"></ion-icon> Body: ${data.body / 10}</div>
-//                 </div>
-//             </div>
-//             <button type="button" class="btn" onclick="sender('${func}', '${data.plate2}', '${data.super}')">
-//                 <ion-icon name="arrow-forward-circle" class="first-check"></ion-icon> 
-//                 <ion-icon name="arrow-forward-circle-outline" class="second-check"></ion-icon>
-//                 เบิก
-//             </button>
-//         </div>
-//     </div>
-// `;
-
-
-// let template = (data, fuel, func) => `
-//     <div class="item">
-//         <div class="label">
-//             <div class="data-side">
-//                 <div class="data-title">
-//                     <div class="plate">${data.plate}</div>
-//                     <div class="model">(${data.name})</div>
-                    
-//                 </div>
-//                 <div class="data-submeta">
-//                  <!-- Dynamic image -->
-//                 <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="${data.name} Image" style="width: 12vh; border-radius: 0.2vh; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-top: 10px;">
-//                     <div class="engine flex"><ion-icon name="build-outline"></ion-icon> Engine: ${data.engine / 10}</div>
-//                     <div class="fuel flex"><ion-icon name="water-outline"></ion-icon> Gas: ${fuel}</div>
-//                     <div class="body flex"><ion-icon name="car-sport-outline"></ion-icon> Body: ${data.body / 10}</div>
-//                 </div>
-                
-                
-               
-               
-//             </div>
-//             <button type="button" class="btn" onclick="sender('${func}', '${data.plate2}', '${data.super}')">
-//                 <ion-icon name="arrow-forward-circle" class="first-check"></ion-icon> 
-//                 <ion-icon name="arrow-forward-circle-outline" class="second-check"></ion-icon>
-//                 เบิก
-//             </button>
-//         </div>
-//     </div>
-// `;
-
-let template = (data, fuel, func) => `
-<div class="item-list">
-
-<div class="item flex-container">
-    <!-- Image on the left -->
-    <div class="image-container">
-        <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="${data.name} Image" class="item-image">
-        <div class="image-popup">
-            <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="popup image">
+let template = (data, func) => `
+    <div class="row item">
+        <div class="col1">
+            <div class="carlist">
+                  <img src="nui://esx_advancedgarage/view/img/${data.name}.png" alt="${data.name} Image" class="item-image" onError="this.onerror=null;this.src='nui://esx_advancedgarage/view/img/default.png';"> 
+            </div>
+        </div>
+        <div class="col2">
+            <div class="carlist">
+                <div class="label">
+                    <div class="data-side">
+                        <div class="data-title">
+                            <div class="plate">${data.plate}</div>
+                            <div class="model">[${data.name}]</div>
+                        </div>
+                        <div class="data-submeta">
+                            <div class="engine flex"><ion-icon name="build-outline"></ion-icon> Engine: ${data.engine / 10}</div>
+                            <div class="fuel flex"><ion-icon name="water-outline"></ion-icon> Gas: ${data.fuel}</div>
+                            <div class="body flex"><ion-icon name="car-sport-outline"></ion-icon> Body: ${data.body / 10}</div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" onclick="sender('${func}', '${data.plate2}', '${data.super}')">
+                        <ion-icon name="arrow-forward-circle" class="first-check"></ion-icon> 
+                        <ion-icon name="arrow-forward-circle-outline" class="second-check"></ion-icon>
+                        เบิก
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Data in the middle -->
-    <div class="data-side">
-        <div class="data-title">
-            <div class="plate">${data.plate}</div>
-            <div class="model">(${data.name})</div>
-        </div>
-        <div class="data-submeta">
-            <div class="engine flex"><ion-icon name="build-outline"></ion-icon> Engine: ${data.engine / 10}</div>
-            <div class="fuel flex"><ion-icon name="water-outline"></ion-icon> Gas: ${fuel}</div>
-            <div class="body flex"><ion-icon name="car-sport-outline"></ion-icon> Body: ${data.body / 10}</div>
-        </div>
-    </div>
-
-    <!-- Button on the right -->
-    <div class="btn-container">
-        <button type="button" class="btn" onclick="sender('${func}', '${data.plate2}', '${data.super}')">
-            <ion-icon name="arrow-forward-circle" class="first-check"></ion-icon>
-            <ion-icon name="arrow-forward-circle-outline" class="second-check"></ion-icon>
-            เบิก
-        </button>
-    </div>
-</div>
-    <!-- Car items will be inserted here -->
-</div>
 `;
-
