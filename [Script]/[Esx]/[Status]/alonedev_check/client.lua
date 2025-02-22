@@ -94,9 +94,13 @@ end
 function CheckJobOnline(JOB, amount)
 	if JOB then
 		if players_table[JOB] == nil or players_table[JOB].count == nil then 
-			if cfg.Debug then 
-				TriggerServerEvent('alonedev_check:Notify', "Error [CheckJobOnline] : Job Not Found" , true)
-			end
+			-- if cfg.Debug then 
+			-- 	TriggerServerEvent('alonedev_check:Notify', "Error [CheckJobOnline] : Job " ..JOB .. " Not Found" , true)
+			-- end
+			-- return 0
+			
+				TriggerServerEvent('alonedev_check:Notify', "Error [CheckJobOnline] : Job " ..JOB .. " Not Found" , true)
+		else
 			return 0
 		end
 
