@@ -2,7 +2,8 @@
 $(function () {
 
     let dive = false
-    let open_health_percent = true
+    // let open_health_percent = false
+    // let close_health_percent = true
 
     window.addEventListener("message", ({ data }) => {
         switch (data.action) {
@@ -17,12 +18,14 @@ $(function () {
 
                 if (data.health) {
                     
-                    $('.health-text').html(data.health)
+                    // $('.health-text').html(data.health)
                     $("#health_percent").css({ width: data.health + "%" });
 
-                    const hpElement = document.querySelector('.bar-text');
+                    const hpElement = document.querySelector('.Ruby1_bar-text');
+                    const arElement = document.querySelector('.Ruby2_bar-text');
                     if (hpElement) {
-                        hpElement.textContent = `HP: ${data.health}`;
+                        hpElement.textContent = `${data.health}`;
+                        arElement.textContent = `${data.armor}`;
                     }
 
                 }
@@ -143,10 +146,12 @@ $(function () {
 
                 break;
             case "open_health_percent":
-                $('.health-text').css('display', 'block')
+                $('.Ruby1_bar-text').css('display', 'none')
+                $('.Ruby2_bar-text').css('display', 'none')
                 break;
             case "close_health_percent":
-                $('.health-text').css('display', 'none')
+                $('.Ruby1_bar-text').css('display', 'block')
+                $('.Ruby2_bar-text').css('display', 'block')
                 break;
         }
     })

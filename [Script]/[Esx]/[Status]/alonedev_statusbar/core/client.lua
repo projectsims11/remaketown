@@ -3,7 +3,7 @@ local loadScript
 loadScript = function()
 
     local IsFirstTime = true
-	local HealthPercentDisplay = false
+	local HealthPercentDisplay = true
 
 	AddEventHandler(Config.VoiceStateEvent, function(newTalkingRange)  
 		SendNUIMessage({

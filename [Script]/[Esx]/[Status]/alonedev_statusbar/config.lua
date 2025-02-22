@@ -3,7 +3,7 @@ Config = Config or {}
 Config.VoiceStateEvent = 'pma-voice:setTalkingMode'
 
 Config.Command = {
-	OpenHealthPercent = 'remake_town'
+	OpenHealthPercent = 'health'
 }
 
 Config.SetPlayerUp = {
