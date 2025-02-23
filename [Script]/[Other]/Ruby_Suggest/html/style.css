@@ -1,0 +1,51 @@
+.main-context {
+    background-image: url('../html/img/main.png');
+    position: relative;
+    z-index: -1;
+    width: 404px;
+    height: 505px;
+    margin-top: 15%;
+    border-radius: 5%;
+    -webkit-transform: translateX(-200%); /* -50% to left */
+    -moz-transform: translateX(-200%); /* -50% to left */
+    -ms-transform: translateX(-200%); /* -50% to left */
+    transform: translateX(-200%); /* -50% to left */
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap to the next row */
+    justify-content: flex-start;  /* Align items to the left */
+}
+
+.column {
+    margin-top: 5%;
+    width: 45%;  /* Each column takes up 48% of the container width */
+    margin-right: 2%;  /* Add spacing between columns */
+    margin-bottom: 10px;  /* Add space at the bottom of each column */
+}
+
+.row {
+    display: flex;
+    justify-content: left;
+    margin-top: 1vh;
+    margin-left: 4vh;
+    width: 100%;  /* Ensure each row takes up full width */
+}
+
+.col {
+    position: relative;
+    z-index: 1;
+    color: rgb(215, 224, 250);
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.4vh;
+    margin-right: 10px;  /* Add spacing between columns */
+}
+
+.col-1 {
+    color: rgb(235, 195, 85);
+    font-weight: 500;
+}
