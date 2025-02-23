@@ -19,11 +19,23 @@
     justify-content: flex-start;  /* Align items to the left */
 }
 
+.col-head{
+    color: rgb(255, 255, 255);
+    font-family: "Kanit", serif;
+    font-style: normal;
+    padding-top: 10px;
+    font-size: 3vh;
+    font-weight: 600;
+    margin: 0px;
+    max-height: 2px;
+}
+
+
 .column {
-    margin-top: 5%;
-    width: 45%;  /* Each column takes up 48% of the container width */
+    
+    width: 40%;  /* Each column takes up 48% of the container width */
     margin-right: 2%;  /* Add spacing between columns */
-    margin-bottom: 10px;  /* Add space at the bottom of each column */
+    margin-bottom: 0px;  /* Add space at the bottom of each column */
 }
 
 .row {
@@ -49,3 +61,4 @@
     color: rgb(235, 195, 85);
     font-weight: 500;
 }
+

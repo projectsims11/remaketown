@@ -19,7 +19,7 @@ end
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-        if IsControlJustReleased(0, 47) then
+        if IsControlJustReleased(0, Config.Toggle) then
             -- print("J Pressed!") -- Debugging
             ToggleUI()
         end

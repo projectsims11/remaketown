@@ -1,5 +1,6 @@
 Config = {}
 
+Config.Toggle = 47 -- G
 
 Config.Text = {
     [1] ={
@@ -59,12 +60,12 @@ Config.Text = {
         Description = "14"
     },
     [15] ={
-        Key = "W",
-        Description = "15"
+        Key = "/party",
+        Description = "ปาร์ตี้"
     },
     [16] ={
-        Key = "W",
-        Description = "16"
+        Key = "/health",
+        Description = "เปิด/ปิดเลือด"
     },
 
 }

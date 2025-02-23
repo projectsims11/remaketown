@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Ryuby'
-description 'Check online time every 1 Min'
+author 'Ruby'
+description 'Check online time every 1 Min and 1Hr reward'
 version '1.0.0'
 
 -- Server and Client Scripts

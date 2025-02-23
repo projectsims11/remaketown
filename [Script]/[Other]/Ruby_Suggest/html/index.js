@@ -31,7 +31,7 @@ $(document).ready(function () {
             $('<div class="column"></div>').appendTo('.main-context');
         }
 
-        if (rowCount === 13) {
+        if (rowCount === 11) {
             // Create a new column after 13 rows
             $('<div class="column"></div>').appendTo('.main-context');
             rowCount = 0; // Reset row count for new column
@@ -48,7 +48,7 @@ $(document).ready(function () {
     function template(data) {
         return `
             <div class="row">
-                <div class="col col-1">[ ${data.Key} ]</div>
+                <div class="col col-1">${data.Key}</div>
                 <div class="col"> - ${data.Description}</div>
             </div>
         `;
