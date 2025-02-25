@@ -4,8 +4,8 @@ config.textuiStyle = 1 -- 1 = loop, 2 = show/hide
 config.textui = function(state)
     if state then
         -- Show
-        if GetResourceState("nnaridz_textui") == "started" then
-            exports.nnaridz_textui:display('~INPUT_CONTEXT~ เพื่อเปิดเมนูเควส')
+        if GetResourceState("Fewthz_TextUI") == "started" then
+            exports.Fewthz_TextUI:ShowHelpNotification('~INPUT_CONTEXT~ เพื่อเปิดเมนูเควส')
         else
             ESX.ShowHelpNotification('~INPUT_CONTEXT~ to open Quest Board', true)
         end

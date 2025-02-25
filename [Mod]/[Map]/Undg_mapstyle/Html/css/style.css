@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@450;500&display=swap"); 
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    /* font-family: "Prompt", sans-serif; */
+    color: rgb(214, 212, 212);
+    user-select: none;
+    font-size: 1.2vh;
+    font-style: normal;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background: radial-gradient(rgba(0, 0, 0, 0.3), rgb(0, 0, 0));
+}
+
+.Hud {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Box-Mains {
+    position: relative;
+    width: 100vh;
+    height: 34vh;
+    /* top: -15vh; */
+}
+
+.Box-Maps {
+    position: relative;
+    width: 100vh;
+    height: 34vh;
+    justify-content: center;
+    /* background-color: rebeccapurple; */
+}
+
+.Header {
+    position: relative;
+    text-align: center;
+    font-size: 3vh;
+    height: 6vh;
+}
+
+.Header p {
+    position: relative;
+    text-align: center;
+    font-size: 1.6vh;
+    top: -0.6vh;
+}
+
+.Box-Logs {
+    display: flex;
+    position: relative;
+    width: 100%;
+    top: 2vh;
+    justify-content: center;
+    /* background-color: rebeccapurple; */
+}
+
+.Logs {
+    position: relative;
+    width: 15vh;
+    height: 17vh;
+    background-color: rgba(31, 31, 31, 0.897);
+    border-radius: 1vh;
+    margin-left: 2vh;
+    left: -1vh;
+    filter: grayscale(10%);
+    transition-duration: 0.4s;
+}
+
+.Logs:hover {
+    transform: scale(1.08);
+    transition-duration: 0.4s;
+    filter: grayscale(0%);
+    filter: drop-shadow(rgba(19, 18, 18, 0.624) 0vh 0px 1vh);
+}
+
+.Logs img {
+    position: relative;
+    width: 15vh;
+    height: 17vh;
+    border-radius: 1vh;
+}
+
+.Logs span {
+    position: absolute;
+    left: 0vh;
+    width: 100%;
+    text-align: center;
+    top: 17vh;
+    font-variant: all-petite-caps;
+    font-size: 1.6vh;
+    color: #eeeeee;
+}
+
+.Box-confirm {
+    display: flex;
+    position: relative;
+    width: 100%;
+    top: 6vh;
+    justify-content: center;
+}
+
+.confirm {
+    display: flex;
+    position: relative;
+    height: 4vh;
+    background: linear-gradient(100deg, #0568c5, #0c80ec);
+    width: 16vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6vh;
+    font-size: 1.8vh;
+}
+
+.confirm:hover {
+    position: relative;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background: linear-gradient(100deg, #0e7adf, rgb(12, 128, 236));
+}
+
+.fa-circle-check {
+    position: relative;
+    left: -0.5vh;
+    font-size: 1.4vh;
+    top: 0.1vh;
+}
+
+.loader-dot {
+    zoom: 73%;
+    position: absolute;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.6vh;
+    /* left: 4vh; */
+    top: 7vh;
+    background-color: rgb(12, 128, 236);
+    color: rgb(12, 128, 236);
+    animation: dot 1s infinite linear alternate;
+    animation-delay: .2s;
+    filter: drop-shadow(rgba(12, 128, 236, 0.624) 0vh 0px 3vh);
+  }
+  
+  .loader-dot::before,
+  .loader-dot::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .loader-dot::before {
+    left: -1.4vh;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 1vh;
+    background-color: rgb(12, 128, 236);
+    color: rgb(12, 128, 236);
+    animation: dot 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  
+  .loader-dot::after {
+    left: 1.4vh;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 1vh;
+    background-color: rgb(12, 128, 236);
+    color: rgb(12, 128, 236);
+    animation: dot 1s infinite alternate;
+    animation-delay: .2s;
+  }
+  
+  @keyframes dot {
+    0% {
+        background-color: rgb(12, 128, 236);
+    }
+  
+    50%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+.targets {
+    display: flex;
+    position: absolute;
+    width: 15vh;
+    height: 17vh;
+    border-radius: 1vh;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    font-size: 2vh;
+    transition-duration: 0.4s;
+}
+
+.fa-star {
+    font-size: 1.4vh;
+    color: #ffbc00;
+    filter: drop-shadow(rgba(241, 174, 28, 0.624) 0vh 0px 1vh);
+    top: 1vh;
+    left: 1vh;
+    transition-duration: 0.4s;
+    position: relative;
+    filter: grayscale(0%);
+}
