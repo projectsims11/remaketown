@@ -68,6 +68,10 @@ function sendNotify(options){
 								</div>
 							</div>`
 
+						if ($("#item_list .box-item").length >= 5) {
+							$("#item_list .box-item:first").remove();
+						}
+
 						$("#item_list").append(html_items);
 						$(`#item-${options.name}`).css('animation', `moveIn 0.3s forwards`)
 
@@ -101,6 +105,10 @@ function sendNotify(options){
 									</div>
 								</div>
 							</div>`
+
+						if ($("#item_list .box-item").length >= 5) {
+							$("#item_list .box-item:first").remove();
+						}
 
 						$("#item_list").append(html_items);
 						$(`#item-${options.name}`).css('animation', `moveIn 0.3s forwards`)

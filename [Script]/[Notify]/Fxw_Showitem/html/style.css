@@ -17,6 +17,7 @@ body {
   display: flex;
   width: 15.5rem;
   position: absolute;
+  
 }
 
 .layout-uptodown {
@@ -24,9 +25,9 @@ body {
   top: 50px;
 }
 .layout-downtoup {
-  bottom: 8%;
+  bottom: 18%;
   right: 1.4rem;
-
+  
   flex-direction: column;
 }
 
