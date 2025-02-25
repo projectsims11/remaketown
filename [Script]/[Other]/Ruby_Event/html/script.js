@@ -9,13 +9,13 @@ $(document).ready(function () {
            
             if (TimeEventlog != UImsg.TimeTrig){
                 TimeEventlog = UImsg.TimeTrig
-                console.log("Start "+UImsg.eventdata + " at ->" +TimeEventlog)
+                // console.log("Start "+UImsg.eventdata + " at -> " +TimeEventlog)
         
                 $("#container").css("display", "block"); // Show the UI    
                 $("#poster-img").attr("src","images/" + UImsg.eventdata + ".png");
 
                 audio.play().then(() => {
-                    console.log("Audio played successfully.");
+                    // console.log("Audio played successfully.");
                 }).catch(error => {
                     console.error("Audio playback failed:", error);
                 });

@@ -12,8 +12,6 @@ files {
     'html/style.css',
     'html/index.js',
     'html/img/main.png'
-
-    
 }
 
 client_script {
