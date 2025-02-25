@@ -972,7 +972,7 @@ input[name=dialog-count]::-webkit-inner-spin-button {
 	top: 12.5%;
 	left: 50%;
 	transform: translate(-50%, 0%);
-	background-color: rgba(24,24,24,0.75);
+	background-color: rgba(17, 68, 163, 0.75);
 	border-radius: 1vh;
 	font-size: 1.5vh;
 	color: white;

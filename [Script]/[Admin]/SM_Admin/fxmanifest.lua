@@ -30,7 +30,9 @@ files {
 	"html/index.html",
 	"html/styles.css",
 	"html/script.js",
+	"html/sound/*.mp3",
 	"html/sound/*.ogg",
 	"html/img/*.png",
 	"html/img/vehicles/*.png",
+	
 }

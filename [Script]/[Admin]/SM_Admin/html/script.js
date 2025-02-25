@@ -10,7 +10,10 @@ var playerPed = undefined
 var jobLists = undefined
 var playerLists = undefined
 
+
 window.addEventListener('message', function(event) {
+	let alert1 = new Audio("sound/alert1.mp3");
+	alert1.volume = 0.3;
 	var data = event.data;
 	
 	if (data !== undefined) {
@@ -51,6 +54,11 @@ window.addEventListener('message', function(event) {
 			if (data.message) {
 				$(".container-showAnm").stop(true, true).fadeIn();
 				$(".container-showAnm").html(`<span>ประกาศจากนายก : ${data.message}</span>`);
+				alert1.play().then(() => {
+					console.log("Audio played successfully.");
+				}).catch(error => {
+					console.error("Audio playback failed:", error);
+				});
 				
 				clearTimeout(SM.announceTimer);
 				SM.announceTimer = setTimeout(() => {
