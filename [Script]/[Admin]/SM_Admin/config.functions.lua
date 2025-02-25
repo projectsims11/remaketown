@@ -84,7 +84,7 @@ end
 
 -- Function เปิดกระเป๋าผู้เล่น (client)
 Config["openInventory"] = function(playerid)
-	TriggerEvent("esx_inventoryhud:openPlayerInventory", playerid)
+	TriggerEvent("Fewthz_inventory:openPlayerInventory", playerid)
 	return true
 end
 

@@ -1,7 +1,7 @@
 Config = {}
 Config["EventRoute"] = {
 	["getSharedObject"] = "esx:getSharedObject",  -- Default: "esx:getSharedObject"
-	["InventoryImages"] = "nui://esx_inventoryhud/html/img/items/",  -- ที่อยู่ของรูปภาพไอเทม (กำหนดตามสคิปกระเป๋าที่ใช้อยู่)
+	["InventoryImages"] = "nui://Fewthz_inventory/html/img/items/",  -- ที่อยู่ของรูปภาพไอเทม (กำหนดตามสคิปกระเป๋าที่ใช้อยู่)
 }
 
 Config["Options"] = {
