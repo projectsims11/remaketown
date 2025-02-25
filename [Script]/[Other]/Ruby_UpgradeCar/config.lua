@@ -1,4 +1,4 @@
 Config = {}
 
-Config.Commandtxt = "zigzak"
+Config.Commandtxt = "zz"
 Config.Permission = "superadmin"

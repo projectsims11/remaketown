@@ -42,4 +42,13 @@ $(document).ready(function () {
     }
 });
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     setTimeout(() => {
+//         window.postMessage({
+//             Open: true, 
+//             eventdata: "flag"
+//         }, "*");
+//     }, 2000); // Delays the fake event by 2 seconds
+// });
+
 

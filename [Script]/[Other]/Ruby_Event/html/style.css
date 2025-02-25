@@ -9,19 +9,20 @@ body {
     z-index: -10;
     font-family: 'Digital-7', sans-serif;
     position: fixed;
-    bottom: 60px;
-    left: 200px;
+    bottom: 120px;
+    right: 200px;
     text-align: center;
     display: none;
 }
 
 #countdown-clock {
-    font-size: 20px;
+    margin-left: 100%;
+    font-size: 15px;
     font-weight: bold;
     color: white;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 12px;
-    border-radius: 10px 10px 5px 5px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2px 5px;
+    border-radius: 0px 0px 12px 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
     min-width: 60px;
@@ -34,4 +35,7 @@ body {
     width: 200px; /* Adjust based on poster size */
     height: auto;
     display: block;
+    position: absolute; 
+    z-index: -1;
+
 }
