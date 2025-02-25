@@ -1,0 +1,1317 @@
+
+* {
+	user-select: none;
+	overflow: hidden;
+}
+
+body {
+	overflow: hidden;
+	height: 1080px;
+    width: 100%;
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kanit;
+	user-select: none;
+	background: transparent;
+    /*display: none;*/
+}
+
+.SM {
+	position: absolute;
+	height: 100%;
+    width: 100%;
+	display: none;
+}
+
+.container {
+	/* display: none; */
+	scale: .9;
+    position: absolute;
+	width: 50vh;
+	height: 70vh;
+	top: 50%;
+	right: 1%;
+	transform: translate(0%, -50%);
+	background-color: rgba(29,29,28,0.9);
+	border-radius: 2vh;
+}
+
+.header {
+	position: absolute;
+	width: 95%;
+	height: 5vh;
+	top: 3%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: 1vh;
+}
+
+.header > i {
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#header-text {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+.close-menu, .close-menu-user-actions {
+	cursor: pointer;
+	position: absolute;
+	top: 60%;
+	right: 3%;
+	transform: translate(0%, -50%);
+	text-align: right;
+	font-size: 2vh;
+	color: white;
+}
+
+.close-menu:hover, .close-menu-user-actions:hover {
+	opacity: .7;
+}
+
+.menu-actions {
+	position: absolute;
+	width: 95%;
+	height: 22vh;
+	top: 12%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.menu-actions > i {
+	position: absolute;
+	top: 7%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#actions-text {
+	position: absolute;
+	top: 7%;
+	left: 9%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.actions-list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+    height: 18vh;
+    bottom: 0%;
+	left: 0%;
+    /* background: green; */
+}
+
+.actions-list::-webkit-scrollbar {
+    display: none;
+}
+
+.actions-item-list {
+	cursor: pointer;
+	float: left;
+    position: relative;
+	padding: 0.6vh 1vh;
+	min-width: 8.5vh;
+	margin-bottom: 0.7vh;
+	margin-left: 1vh;
+	top: 1vh;
+    background-color: rgb(60, 60, 60);
+	border-radius: 0.8vh;
+	font-weight: 100;
+	text-align: center;
+	font-size: 1.5vh;
+	color: rgb(200, 200, 200);
+}
+
+.actions-item-list:hover {
+	color: white;
+}
+
+.menu-self {
+	position: absolute;
+	width: 23.3vh;
+	height: 15vh;
+	top: 45%;
+	left: 2.5%;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.menu-self > i {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#self-text {
+	position: absolute;
+	top: 10%;
+	left: 17%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.self-list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+    height: 10vh;
+    bottom: 0%;
+	left: 0%;
+    /* background: green; */
+}
+
+.self-list::-webkit-scrollbar {
+    display: none;
+}
+
+.self-item-list {
+	cursor: pointer;
+	float: left;
+    position: relative;
+	padding: 0.6vh 1vh;
+	min-width: 8.2vh;
+	margin-bottom: 0.7vh;
+	margin-left: 1vh;
+    background-color: rgb(60, 60, 60);
+	border-radius: 0.8vh;
+	font-weight: 100;
+	text-align: center;
+	font-size: 1.5vh;
+	color: rgb(200, 200, 200);
+}
+
+.self-item-list:hover {
+	color: white;
+}
+
+.menu-allplayer {
+	position: absolute;
+	width: 23.3vh;
+	height: 15vh;
+	top: 45%;
+	right: 2.5%;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.menu-allplayer > i {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#allplayer-text {
+	position: absolute;
+	top: 10%;
+	left: 17%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.allplayer-list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+    height: 10vh;
+    bottom: 0%;
+	left: 0%;
+    /* background: green; */
+}
+
+.allplayer-list::-webkit-scrollbar {
+    display: none;
+}
+
+.allplayer-item-list {
+	cursor: pointer;
+	float: left;
+    position: relative;
+	padding: 0.6vh 1vh;
+	min-width: 8.2vh;
+	margin-bottom: 0.7vh;
+	margin-left: 1vh;
+    background-color: rgb(60, 60, 60);
+	border-radius: 0.8vh;
+	font-weight: 100;
+	text-align: center;
+	font-size: 1.5vh;
+	color: rgb(200, 200, 200);
+}
+
+.allplayer-item-list:hover {
+	color: white;
+}
+
+.menu-announce {
+	position: absolute;
+	width: 95%;
+	height: 20vh;
+	top: 68%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.menu-announce > i {
+	position: absolute;
+	top: 7%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#announce-text {
+	position: absolute;
+	top: 7%;
+	left: 9%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.announce-btn-submit {
+	cursor: pointer;
+	position: absolute;
+	padding: 0.5vh 3vh;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: 1vh;
+	text-align: center;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.announce-btn-submit:hover {
+	opacity: .7;
+}
+
+.announce-boxtext {
+	position: absolute;
+	width: 95%;
+	height: 45%;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+}
+
+#announce {
+	position: absolute;
+	width: 95%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: transparent;
+	border: none;
+	resize: none;
+	text-align: left;
+	font-family: Kanit;
+	font-size: 1.5vh;
+	color: white;
+}
+
+textarea:focus {
+	outline: none !important;
+}
+
+.container-online {
+	/* display: none; */
+	scale: .9;
+	position: absolute;
+	width: 35vh;
+	height: 70vh;
+	top: 50%;
+	left: 1%;
+	transform: translate(0%, -50%);
+	background-color: rgba(29,29,28,0.9);
+	border-radius: 2vh;
+}
+
+.online-header {
+	position: absolute;
+	width: 93%;
+	height: 4vh;
+	top: 3%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: 1vh;
+}
+
+.reload-online {
+	cursor: pointer;
+	position: absolute;
+	top: 60%;
+	right: 3%;
+	transform: translate(0%, -50%);
+	text-align: right;
+	font-size: 1.7vh;
+	color: white;
+}
+
+.reload-online:hover {
+	opacity: .7;
+}
+
+#online-header-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 1.7vh;
+	color: white;
+}
+
+.online-all > i {
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 1.7vh;
+	color: white;
+}
+
+.online-all > span {
+	position: absolute;
+	top: 50%;
+	left: 12%;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 1.7vh;
+	color: white;
+}
+
+input[name=online-search] {
+	position: absolute;
+	width: 93%;
+	height: 4vh;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+	border: none;
+	font-size: 1.5vh;
+	font-family: Kanit;
+	text-align: center;
+	color: white;
+}
+
+input[name=online-search]::placeholder { 
+	color: #D8D8D8;
+}
+
+input[name=online-search]:focus {
+	outline: none!important;
+	color: #D8D8D8;
+}
+
+.online-list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 95%;
+    height: 56vh;
+    top: 18%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+    /* background: green; */
+}
+
+.online-list::-webkit-scrollbar {
+    display: none;
+}
+
+.player-list {
+	cursor: pointer;
+	float: left;
+    position: relative;
+	width: 100%;
+	height: 4vh;
+	margin-bottom: 0.5vh;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.player-list:hover, .player-list-active {
+	background-color: rgb(60, 60, 60);
+}
+
+.box-playerid > span {
+	position: absolute;
+	top: 55%;
+	left: 13%;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 1.5vh;
+	font-weight: 100;
+	color: white;
+}
+
+.box-playername > i {
+	position: absolute;
+	top: 55%;
+	left: 5%;
+	transform: translate(0%, -50%);
+	text-align: center;
+	font-size: 1.5vh;
+	font-weight: 100;
+	color: white;
+}
+
+.box-playername > span {
+	position: absolute;
+	top: 55%;
+	left: 35%;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 1.5vh;
+	font-weight: 100;
+	color: white;
+}
+
+.container-dialog {
+	display: none;
+	position: absolute;
+	width: 60vh;
+	height: 70vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(29,29,28,0.9);
+	border-radius: 2vh;
+}
+
+.dialog-closemenu {
+	cursor: pointer;
+	position: absolute;
+	width: 95%;
+	height: 5vh;
+	bottom: 3%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgb(224, 50, 50);
+	border-radius: 1vh;
+}
+
+.dialog-closemenu > span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 2vh;
+	color: white;
+}
+
+.dialog-closemenu:hover {
+	opacity: .7;
+}
+
+.dialog-header {
+	position: absolute;
+	width: 95%;
+	height: 5vh;
+	top: 3%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: 1vh;
+}
+
+#dialog-text {
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 2vh;
+	color: white;
+}
+
+input[name=dialog-search] {
+	position: absolute;
+	width: 70%;
+	height: 4vh;
+	top: 12%;
+	left: 3%;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+	border: none;
+	font-size: 1.5vh;
+	font-family: Kanit;
+	text-align: center;
+	color: white;
+}
+
+input[name=dialog-search]::placeholder { 
+	color: #D8D8D8;
+}
+
+input[name=dialog-search]:focus {
+	outline: none!important;
+	color: #D8D8D8;
+}
+
+input[name=dialog-count] {
+	position: absolute;
+	width: 21%;
+	height: 4vh;
+	top: 12%;
+	right: 3%;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+	border: none;
+	font-size: 1.5vh;
+	font-family: Kanit;
+	text-align: center;
+	color: white;
+}
+
+input[name=dialog-count]::placeholder { 
+	color: #D8D8D8;
+}
+
+input[name=dialog-count]:focus {
+	outline: none!important;
+	color: #D8D8D8;
+}
+
+input[name=dialog-count]::-webkit-outer-spin-button,
+input[name=dialog-count]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.dialog-list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 95%;
+    height: 47.5vh;
+    top: 20%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+	gap: 1vh;
+    /* background: green; */
+}
+
+.dialog-list::-webkit-scrollbar {
+    width: 0.7vh;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.dialog-list::-webkit-scrollbar-thumb {
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: 1vh;
+}
+
+.dialog-item-list {
+	cursor: pointer;
+    position: relative;
+	width: 13vh;
+	height: 15vh;
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	will-change: transform, opacity;
+}
+
+.dialog-item-list:hover {
+	background-color: rgb(60, 60, 60);
+}
+
+.dialog-itemimg {
+	position: absolute;
+	width: 10vh;
+    height: 10vh;
+    top: 8%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	/* background-color: red; */
+	object-fit: contain;
+}
+
+.dialog-itemname {
+	position: absolute;
+	width: 90%;
+    height: 2.5vh;
+    bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+}
+
+.dialog-itemname > span {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: absolute;
+	width: 90%;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 1.2vh;
+	font-weight: 100;
+	text-align: center;
+}
+
+.box-infos {
+	position: absolute;
+	width: 95%;
+	height: 15vh;
+	top: 12%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.infos-playerimg {
+	position: absolute;
+	width: 9vh;
+	height: 9vh;
+	top: 8%;
+	left: 2%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+}
+
+.infos-playerid {
+	position: absolute;
+	width: 9vh;
+	height: 3vh;
+	top: 75%;
+	left: 2%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 0.5vh;
+}
+
+.infos-playerid > span {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 1.5vh;
+	text-align: center;
+}
+
+.infos-playername {
+	position: absolute;
+	width: 75%;
+	height: 4vh;
+	top: 8%;
+	left: 23%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 0.5vh;
+}
+
+.infos-playername > span {
+	position: absolute;
+	top: 55%;
+	left: 1vh;
+	transform: translate(0%, -50%);
+	color: white;
+	font-size: 1.5vh;
+	text-align: left;
+}
+
+.infos-money {
+	position: absolute;
+	width: 36.5%;
+	height: 4vh;
+	top: 40%;
+	left: 23%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 0.5vh;
+}
+
+.infos-money > span {
+	position: absolute;
+	top: 55%;
+	left: 1vh;
+	transform: translate(0%, -50%);
+	color: white;
+	font-size: 1.5vh;
+	text-align: left;
+}
+
+.infos-bank {
+	position: absolute;
+	width: 36.5%;
+	height: 4vh;
+	top: 40%;
+	right: 2%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 0.5vh;
+}
+
+.infos-bank > span {
+	position: absolute;
+	top: 55%;
+	left: 1vh;
+	transform: translate(0%, -50%);
+	color: white;
+	font-size: 1.5vh;
+	text-align: left;
+}
+
+.menu-setjob {
+	position: absolute;
+	width: 95%;
+	height: 10vh;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.setjob-text {
+	position: absolute;
+	width: 95%;
+	height: 4vh;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgb(60, 60, 60);
+	border-radius: .7vh;
+}
+
+.setjob-text > span {
+	position: absolute;
+	top: 55%;
+	left: 1vh;
+	transform: translate(0%, -50%);
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.btn-setjob {
+	cursor: pointer;
+	position: absolute;
+	padding: 0.5vh 2vh;
+	bottom: 10%;
+	right: 2%;
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: .7vh;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.btn-setjob:hover {
+	opacity: .7;
+}
+
+.jobs {
+	cursor: pointer;
+	position: absolute;
+	width: 17.5vh;
+	height: 3.5vh;
+	bottom: 10%;
+	left: 2.5%;
+	background-color: rgb(60, 60, 60);
+	border-radius: .7vh;
+	font-family: Kanit;
+	font-size: 1.5vh;
+	text-align: center;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+.ranks {
+	cursor: pointer;
+	position: absolute;
+	width: 17.5vh;
+	height: 3.5vh;
+	bottom: 10%;
+	right: 22%;
+	background-color: rgb(60, 60, 60);
+	border-radius: .7vh;
+	font-family: Kanit;
+	font-size: 1.5vh;
+	text-align: center;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+.menu-useractions {
+	position: absolute;
+	width: 95%;
+	height: 32.5vh;
+	top: 51%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.menu-useractions > i {
+	position: absolute;
+	top: 5%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#useractions-text {
+	position: absolute;
+	top: 5%;
+	left: 9%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.useractions-list {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+    height: 28vh;
+    bottom: 0%;
+	left: 0%;
+    /* background: green; */
+}
+
+.useractions-list::-webkit-scrollbar {
+    display: none;
+}
+
+.useractions-item-list {
+	cursor: pointer;
+	float: left;
+    position: relative;
+	padding: 0.6vh 1vh;
+	min-width: 8.5vh;
+	margin-bottom: 0.7vh;
+	margin-left: 1vh;
+	top: 1vh;
+    background-color: rgb(60, 60, 60);
+	border-radius: 0.8vh;
+	font-weight: 100;
+	text-align: center;
+	font-size: 1.5vh;
+	color: rgb(200, 200, 200);
+}
+
+.useractions-item-list:hover {
+	color: white;
+}
+
+.container-showAnm {
+	display: none;
+    position: absolute;
+	padding: 1vh 2vh;
+	top: 12.5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(24,24,24,0.75);
+	border-radius: 1vh;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.container-showHelp {
+	display: none;
+    position: absolute;
+	padding: 1vh 2vh;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgb(24,24,24);
+	border-radius: 1vh;
+	font-size: 1.5vh;
+	color: white;
+}
+
+#setWeather-actions, 
+#setTime-actions,
+#kickban-actions,
+#giveMoney-actions {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container-setWeather, 
+.container-setTime,
+.container-kickban,
+.container-giveMoney {
+	position: absolute;
+	width: 40vh;
+	height: 17vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(29,29,28,0.9);
+	border-radius: 2vh;
+}
+
+.setWeather-header, 
+.setTime-header,
+.kickban-header,
+.giveMoney-header {
+	position: absolute;
+	width: 95%;
+	height: 85%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.setWeather-header > i, 
+.setTime-header > i,
+.kickban-header > i,
+.giveMoney-header > i {
+	position: absolute;
+	top: 10%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#setWeather-text, 
+#setTime-text,
+#kickban-text,
+#giveMoney-text {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.setWeather-btn-submit, 
+.setTime-btn-submit,
+.kickban-btn-submit,
+.giveMoney-btn-submit {
+	cursor: pointer;
+	position: absolute;
+	padding: 0.5vh 3vh;
+	min-width: 55%;
+	bottom: 5%;
+	left: 2%;
+    background: #8ed55f;
+    background: linear-gradient(180deg, #8ed55f, #276100);
+	border-radius: 1vh;
+	text-align: center;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.setWeather-closemenu, 
+.setTime-closemenu,
+.kickban-closemenu,
+.giveMoney-closemenu {
+	cursor: pointer;
+	position: absolute;
+	padding: 0.5vh 0;
+	min-width: 23%;
+	bottom: 5%;
+	right: 2%;
+	background-color: rgb(224, 50, 50);
+	border-radius: 1vh;
+	text-align: center;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.setWeather-btn-submit:hover, 
+.setWeather-closemenu:hover, 
+.setTime-btn-submit:hover, 
+.setTime-closemenu:hover,
+.kickban-btn-submit:hover,
+.kickban-closemenu:hover,
+.giveMoney-btn-submit:hover,
+.giveMoney-closemenu:hover {
+	opacity: .7;
+}
+
+.weatherTypes,
+.timeTypes {
+	cursor: pointer;
+	position: absolute;
+	width: 95%;
+	height: 3.5vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(60, 60, 60);
+	border-radius: .7vh;
+	font-family: Kanit;
+	font-size: 1.5vh;
+	text-align: center;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+input[name=kickban] {
+	position: absolute;
+	width: 90%;
+	height: 3.5vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+	border: none;
+	font-size: 1.5vh;
+	font-family: Kanit;
+	text-align: center;
+	color: white;
+}
+
+input[name=kickban]::placeholder { 
+	color: #D8D8D8;
+}
+
+input[name=kickban]:focus {
+	outline: none!important;
+	color: #D8D8D8;
+}
+
+input[name=moneyAmount] {
+	position: absolute;
+	width: 90%;
+	height: 3.5vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+	border: none;
+	font-size: 1.5vh;
+	font-family: Kanit;
+	text-align: center;
+	color: white;
+}
+
+input[name=moneyAmount]::placeholder { 
+	color: #D8D8D8;
+}
+
+input[name=moneyAmount]:focus {
+	outline: none!important;
+	color: #D8D8D8;
+}
+
+input[name=moneyAmount]::-webkit-outer-spin-button,
+input[name=moneyAmount]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.moneyType {
+	cursor: pointer;
+	position: absolute;
+	width: 35%;
+	height: 3.5vh;
+	top: 5%;
+	right: 2%;
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+	font-family: Kanit;
+	font-size: 1.5vh;
+	text-align: center;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+.box-banlists {
+	position: absolute;
+	width: 95%;
+	height: 85%;
+	top: 12%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: rgba(40, 40, 40, 0.9);
+	border-radius: 1vh;
+}
+
+.box-banlists > i {
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+#banlists-text {
+	position: absolute;
+	top: 3%;
+	left: 9%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.list-banlists {
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	width: 100%;
+    height: 53vh;
+    bottom: 2%;
+	left: 0%;
+    /* background: green; */
+}
+
+.list-banlists::-webkit-scrollbar {
+	display: none;
+}
+
+.item-banlists {
+    position: relative;
+	width: 95%;
+	height: 8vh;
+	margin-left: 1vh;
+	margin-bottom: 1vh;
+	background-color: rgb(60, 60, 60);
+	border-radius: 1vh;
+}
+
+.banlists-name > i {
+	position: absolute;
+	top: 20%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+.banlists-name > span {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: absolute;
+	width: 90%;
+	top: 20%;
+	left: 9%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.banlists-reason > i {
+	position: absolute;
+	top: 60%;
+	left: 3%;
+	text-align: left;
+	font-size: 2vh;
+	color: white;
+}
+
+.banlists-reason > span {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: absolute;
+	width: 65%;
+	top: 60%;
+	left: 9%;
+	text-align: left;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.banlists-submit {
+	cursor: pointer;
+	position: absolute;
+	padding: 0.5vh 2vh;
+	bottom: 10%;
+	right: 2%;
+	background-color: rgb(224, 50, 50);
+	border-radius: 1vh;
+	text-align: center;
+	font-size: 1.5vh;
+	color: white;
+}
+
+.banlists-submit:hover {
+	opacity: .7;
+}
+
+#banlists-notinfo {
+	position: absolute;
+	top: 1vh;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	font-size: 1.5vh;
+	color: white;
+}
