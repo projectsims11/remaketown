@@ -14,7 +14,7 @@ ShowNumberNotification = true -- Show Number or Contact Name when you receive ne
 
 Config.UseTokoVoIP = false
 Config.UseMumbleVoip = true
-Config.WebhookURLPhoto = 'https://discord.com/api/webhooks/1028741727131025540/qye9v7WXhDBQRiOYh-keQHZsQYn8i31vCyn2pr7yIgOT2HcIo2FCtiNEbwfZ0zLt0hBn'
+Config.WebhookURLPhoto = 'https://discord.com/api/webhooks/1343976689037738025/isD-A-Cc0k2TwhYMXXNoilVKGq0Ow-HqQyUsrVqglGvW_7CWMVcfB1xxmu34Tj9uFQpI'
 
 Config.newsJobName = "news"
 Config.newsBlip = vector3(-595.67, -932.5, 28.0) -- News add blip, for news job

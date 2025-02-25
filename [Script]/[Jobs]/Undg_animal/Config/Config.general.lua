@@ -45,7 +45,7 @@ Config.Default = {
                 Scale = 1.2,			-- ขนาด
             },
             Price = 500,      -- ราคาในการซื้อ
-            Coords = vector3(2378.76, 5050.12, 46.44),
+            Coords = vector3(2378.9563, 5053.0083, 46.4446),
             Distance = 20.0,  -- ระยะในการเปิดเมนู
             AllowJob = false,
 

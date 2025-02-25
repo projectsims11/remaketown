@@ -335,6 +335,43 @@ LeaveVehicle = {
 }
 },
 
+["Pig"] = {   -- 2376.2151, 5089.3145, 47.1947, 49.9343
+Distance = 100.0, 
+SpawnPoint = {x=2376.2151, y=5089.3145, z=47.1947, h=49.934}, 
+OpenTrunk = {
+    Pos = {x=2376.2463, y=5077.2163, z=47.0290},-- NPC 2376.2463, 5077.2163, 47.0290, 
+    Model   =  "s_m_m_movspace_01",
+    Heading = 188.4203,
+    Distance = 5.0
+},
+StoreVehicle = {
+    Pos = {x=2378.9563, y=5053.0083, z=46.4446},  -- วงเก็บรถ
+    DrawMark = {
+        Type = 28,
+        Hide = true,            -- เปิด-ปิด การแสดงวง // true คือเปิดใช้งาน ** ถ้าเปิดใช้งาน Resmon จะเพิ่มขึ้นนิดหนึ่ง
+        Color = 1,	            -- สีของ DrawMark
+        Radius = 14.0,         -- ขนาดของวง DrawMark
+        Bold = 100,	            -- ความเข้มวง DrawMark
+        R = 139,                -- CODE สีของวง DrawMark
+        G = 210,                 -- CODE สีของวง DrawMark
+        B = 236                  -- CODE สีของวง DrawMark
+    },
+}, 
+LeaveVehicle = {
+    Pos = {x=2378.9563, y=5053.0083, z=46.4446},  -- วงเก็บรถ
+    DrawMark = {
+        Type = 28,
+        Hide = true,            -- เปิด-ปิด การแสดงวง // true คือเปิดใช้งาน ** ถ้าเปิดใช้งาน Resmon จะเพิ่มขึ้นนิดหนึ่ง
+        Color = 1,	            -- สีของ DrawMark
+        Radius = 14.0,         -- ขนาดของวง DrawMark
+        Bold = 100,	            -- ความเข้มวง DrawMark
+        R = 139,                -- CODE สีของวง DrawMark
+        G = 210,                 -- CODE สีของวง DrawMark
+        B = 236                  -- CODE สีของวง DrawMark
+    },
+}
+},
+
 
 
 
