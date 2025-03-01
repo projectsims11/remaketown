@@ -13,7 +13,7 @@ var playerLists = undefined
 
 window.addEventListener('message', function(event) {
 	let alert1 = new Audio("sound/alert1.mp3");
-	alert1.volume = 0.3;
+	alert1.volume = 0.1;
 	var data = event.data;
 	
 	if (data !== undefined) {

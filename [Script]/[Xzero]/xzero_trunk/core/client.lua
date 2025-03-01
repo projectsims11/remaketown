@@ -476,8 +476,10 @@ xZero.VehicleDebugInfoInit = function()
 						class_name = a4.class_name:lower(),
 						displayname = a4.displayname:lower(),
 						model = tostring(a4.model)
+						
 					}
 					a0 = true
+					print(a1.model)
 				else
 					a0 = false;
 					a1 = nil
@@ -489,6 +491,7 @@ xZero.VehicleDebugInfoInit = function()
 		while true do
 			Wait(1)
 			if _Debug_Enabled and a0 and a1 then
+				
 				xZero.Funcs.DrawText(('Plate: ~y~%s~s~ \n Class Name: ~y~%s~s~ \n DisplayName: ~y~%s~s~ \n Model: ~y~%s~s~'):format(a1.plate, a1.class_name, a1.displayname, a1.model), 0.4, 0.5, 0.5)
 			else
 				Wait(1500)
