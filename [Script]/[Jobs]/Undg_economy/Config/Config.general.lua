@@ -24,7 +24,7 @@ Config.Default = {
 
         Category = {
             [1] = {
-                name = 'ทั้งหมด',
+                name = 'All',
                 icon = '<ion-icon name="briefcase"></ion-icon>',
                 itemList = 'all',
             },
@@ -82,31 +82,31 @@ Config.Default = {
         Listitem = {
             [1] = {
                 name = 'wood',
-                randomPrice = {15,20}
+                randomPrice = {1,3} -- แก้ราคาแล้ว 3/5/25
             },
             [2] = {
                 name = 'orange',
-                randomPrice = {15,25}
+                randomPrice = {15,18} -- แก้ราคาแล้ว 3/5/25
             },
             [3] = {
                 name = 'wheat',
-                randomPrice = {15,25}
+                randomPrice = {17,20} -- แก้ราคาแล้ว 3/5/25
             },
             [4] = {
                 name = 'rice',
-                randomPrice = {15,25}
+                randomPrice = {17,20} -- แก้ราคาแล้ว 3/5/25
             },
             [5] = {
                 name = 'cabbage',
-                randomPrice = {15,25}
+                randomPrice = {15,18} -- แก้ราคาแล้ว 3/5/25
             },
             [6] = {
                 name = 'chemical',
-                randomPrice = {15,25}
+                randomPrice = {12,14} -- แก้ราคาแล้ว 3/5/25
             },
             [7] = {
                 name = 'herb',
-                randomPrice = {1,3}
+                randomPrice = {5,10} -- แก้ราคาแล้ว 3/5/25
             },
             [8] = {
                 name = 'treasure',
@@ -126,28 +126,28 @@ Config.Default = {
             },
             [12] = {
             name = 'stone_a',
-             randomPrice = {15,25}      
+             randomPrice = {1,3} -- แก้ราคาแล้ว 3/5/25      
                 
             },
             [13] = {
              name = 'cabbage_process',
-            randomPrice = {50,70}             
+            randomPrice = {30,35} -- แก้ราคาแล้ว 3/5/25             
             },
             [14] = {
              name = 'chemi_process',
-             randomPrice = {50,70}        
+             randomPrice = {24,28} -- แก้ราคาแล้ว 3/5/25        
            },
            [15] = {
             name = 'orange_process',
-            randomPrice = {50,70}        
+            randomPrice = {30,35} -- แก้ราคาแล้ว 3/5/25        
            },
            [16] = {
             name = 'rice_process',
-            randomPrice = {50,70}        
+            randomPrice = {33,39} -- แก้ราคาแล้ว 3/5/25        
           },
           [17] = {
             name = 'wheat_process',
-            randomPrice = {50,70}        
+            randomPrice = {33,39} -- แก้ราคาแล้ว 3/5/25        
          },
         },
     },

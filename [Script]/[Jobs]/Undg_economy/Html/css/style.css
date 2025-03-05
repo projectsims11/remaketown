@@ -120,21 +120,22 @@ body {
 }
 
 .Log-Category {
-    position: relative;
-    margin: 2.4vh;
-    transition-duration: 0.4s;
+  font-size: 1vh;
+  position: relative;
+  margin: auto;
+  transition-duration: 0.4s;
 }
 
 .Log-Category:hover {
-    color: rgb(13, 135, 228);
-    transition-duration: 0.4s;
+  color: rgb(13, 135, 228);
+  transition-duration: 0.4s;
 }
 
 ion-icon {
-    font-size: 1.1vh;
-    position: relative;
-    left: -0.6vh;
-    top: 0.3vh;
+  font-size: 1.8vh;
+  position: relative;
+  left: -0.6vh;
+  top: 0.3vh;
 
 }
 
