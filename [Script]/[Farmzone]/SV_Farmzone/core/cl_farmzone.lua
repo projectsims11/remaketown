@@ -300,42 +300,80 @@ function SaveDamage(vehicle, vehicleProps)
 	TriggerServerEvent(GetCurrentResourceName() .. ':modifyDepositDamage', vehicleProps.plate, damage)
 end
 
-function SpawnVehicle(vehicle, plate, damage, position , DepositKey)
-	local cb_veh = nil
-	ESX.Game.SpawnVehicle(vehicle.model, {
-		x = position.x,
-		y = position.y,
-		z = position.z + 1
-	}, position.h, function(callback_vehicle)
-		print('ฝากรถ ทะเบียน ' ..plate .. ' ที่ ' ..DepositKey)
-		SetEntityVisible(vehicle, false, 0)
-            SetTimeout(10000, function()
-                SetEntityVisible(vehicle, true, 0)
-            end)
-		
-	-- exports.nc_discordlogs:Discord({
-	-- 	webhook = 'farmzonespawn',
-	-- 	title = 'ฝากรถ',
-	-- 	description = 'เบิกรถ ทะเบียน ' ..plate .. ' ที่ ' ..DepositKey,
-	-- 	color = 'fff',
-	-- 	screenshot = true
-	-- })
-		ESX.Game.SetVehicleProperties(callback_vehicle, vehicle)
-		cb_veh = callback_vehicle
-		SetDamage(callback_vehicle, damage)
-		SetVehRadioStation(callback_vehicle, "OFF")
-		TaskWarpPedIntoVehicle(GetPlayerPed(-1), callback_vehicle, -1)
-	end)
+function SpawnVehicle(vehicle, plate, damage, position, DepositKey)
+    local cb_veh = nil
+    ESX.Game.SpawnVehicle(vehicle.model, {
+        x = position.x,
+        y = position.y,
+        z = position.z + 1
+    }, position.h, function(callback_vehicle)
+        print('ฝากรถ ทะเบียน ' .. plate .. ' ที่ ' .. DepositKey)
 
-	TriggerServerEvent(GetCurrentResourceName() .. ':setDepositVehicleState', plate, false)
+        ESX.Game.SetVehicleProperties(callback_vehicle, vehicle)
+        cb_veh = callback_vehicle
+        SetDamage(callback_vehicle, damage)
+        SetVehRadioStation(callback_vehicle, "OFF")
+        TaskWarpPedIntoVehicle(GetPlayerPed(-1), callback_vehicle, -1)
+
+        -- Set vehicle alpha (transparency) to 150 (semi-transparent)
+        SetEntityAlpha(cb_veh, 150, false)
+
+        -- Disable collisions with other vehicles for 10 seconds
+        local startTime = GetGameTimer()
+        local endTime = startTime + 10000 -- 10 seconds in milliseconds
+
+        Citizen.CreateThread(function()
+            while GetGameTimer() < endTime do
+                -- Disable collisions with all other vehicles
+                for otherVehicle in EnumerateVehicles() do
+                    if otherVehicle ~= cb_veh then
+                        SetEntityNoCollisionEntity(cb_veh, otherVehicle, true)
+                    end
+                end
+                Citizen.Wait(0)
+            end
+
+            -- Re-enable collisions after 10 seconds
+            for otherVehicle in EnumerateVehicles() do
+                if otherVehicle ~= cb_veh then
+                    SetEntityNoCollisionEntity(cb_veh, otherVehicle, false)
+                end
+            end
+
+            -- Reset vehicle alpha to fully opaque (255)
+            SetEntityAlpha(cb_veh, 255, false)
+        end)
+    end)
+
+    TriggerServerEvent(GetCurrentResourceName() .. ':setDepositVehicleState', plate, false)
     TriggerServerEvent(GetCurrentResourceName() .. ':setDepositVehicleDepositCar', plate, nil)
 
-	Wait(500)
-	print("damage.fuel = ",damage.fuel)
-	-- SetVehicleFuelLevel(cb_veh, damage.fuel or 1000)
-	SetVehicleFuelLevel(cb_veh, damage.fuel)
-	DecorSetFloat(cb_veh, '_FUEL_LEVEL', GetVehicleFuelLevel(cb_veh))
+    Wait(500)
+    print("damage.fuel = ", damage.fuel)
+    SetVehicleFuelLevel(cb_veh, damage.fuel)
+    DecorSetFloat(cb_veh, '_FUEL_LEVEL', GetVehicleFuelLevel(cb_veh))
+end
 
+-- Helper function to enumerate vehicles
+function EnumerateVehicles()
+    return coroutine.wrap(function()
+        local iter, id = FindFirstVehicle()
+        if not id or id == 0 then
+            EndFindVehicle(iter)
+            return
+        end
+
+        local enum = {handle = iter, destructor = EndFindVehicle}
+        setmetatable(enum, entityEnumerator)
+
+        local next = ids
+        repeat
+            coroutine.yield(id)
+            next, id = FindNextVehicle(iter)
+        until not next
+
+        enum.destructor(enum.handle)
+    end)
 end
 
 SetDamage = function(callback_vehicle, damage)
