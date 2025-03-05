@@ -1,0 +1,95 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js'></script>
+<body>
+   <div class="plaka">
+      <div class="orta">
+         <input type="number"  class="inp" value="1" min="0" max="9" />
+         <input type="number" class="inp" value="1" min="0" max="9"  />
+         <input type="number" class="inp" value="1" min="0" max="9"  />
+         <input type="text" class="inp" value="A"  maxlength="1" />
+         <input type="text" class="inp" value="B"  maxlength="1" />
+         <input type="text" class="inp" value="C"  maxlength="1"  />
+         <input type="number" class="inp" value="1" min="0" max="9"  />
+         <input type="number" class="inp" value="1" min="0" max="9"  />
+         <br>
+         <div class="alt" style="display:flex">
+            <button class="btn-plakax" style="font-size: 1vw; height: 60px;"  > CANCEL</button>
+            <button class="btn-plaka" data-type="buy" style=" top: 0vh; left: -2vw; width: 19vw;font-size: 1vw; height: 60px;" onclick="plakaonay()"   > 15.000$ APPROVAL</span> </button>
+         </div>
+      </div>
+   </div>
+   
+      <div class="sag">
+         <div class="vehtype">
+            <div class="vehtitle"></div>
+            <button class="circle-btn" style=" float:left; left: unset; "  data-type="previous" ><i class="fal fa-chevron-left"></i></button>
+            <div class="vehcat"></div>
+            <button class="circle-btn" data-type="next"  ><i class="fal fa-chevron-right"></i></button>
+         </div>
+         <div class="vehlist">
+         </div>
+         <button class="btn-plaka" data-type="show">PLATE<br/> <span style="font-size:18px">CUSTOMIZE</span> </button>
+      </div>
+      <div class="sol">
+         <div class="colorpicker" style="z-index:1000;"></div>
+         <img src="upgrd.png" style="background-size: cover; width:3.5vw; height:3.5vw; float:left; position: relative; top: 13vh;" />
+         BEFORE PURCHASING <br/> YOU CAN PAINT THE VEHICLE 
+         <div class="colors">
+            <span>CHOOSE COLOR</span><br>
+            <div style="background:white" class="pick-color"></div>
+            <div style="background:black" class="pick-color"></div>
+            <div style="background:yellow" class="pick-color"></div>
+            <div style="background:green" class="pick-color"></div>
+            <div style="background:red" class="pick-color"></div>
+            <div style="background:blue" class="pick-color"></div>
+            <div style="background:cyan" class="pick-color"></div>
+            <div style="background: linear-gradient(45deg , #1839b1, #ff1b1b); animation: rainbow-bg 7s infinite;" class="pick-color2"></div>
+         </div>
+      </div>
+      <div id="vehname"></div>
+      <div id="price" style="display: none;"></div>
+      <div id="bmprice" style="display: none;"></div>
+      <div class="atlmenu">
+         <button class="turn-left" id="tl" ><i class="fal fa-chevron-left"></i></button>
+         <button class="turn-right" id="tr" ><i class="fal fa-chevron-right"></i></button>
+		 <button class="buy" style="display: none;" > BUY<br/> <span>CASH</span> </button>
+         <button class="buy" id="bm" style="display: none;">  BUY<br/> <span>BLACMONEY</span> </button>
+         <button class="btn-testdrive" >TEST DRIVE</button>       
+      </div>
+      <div class="ust">
+         <div class="kutu">
+            <center>
+               <div class="icon" style="background: url(oiltank.png) center center no-repeat;"></div>
+               <span>FUEL TANK</span><br>
+               <span id="fuel"></span>
+            </center>
+         </div>
+         <br>
+         <div class="kutu">
+            <center>
+               <div class="icon" style=" height: 3vw; width: 3.6vw;  zoom: 90%;background: url(spending.png) center center no-repeat;"></div>
+               <span>CONSUMPTION</span><br>
+               <span id="consum">18 KG</span>
+            </center>
+         </div>
+         <br>
+         <div class="kutu">
+
+         </div>
+         <br>
+         <div class="kutu">
+            <center>
+               <div class="icon" style=" height: 3vw; zoom: 90%; background: url(handling.png) center center no-repeat;"></div>
+               <span>HANDLING</span><br>
+               <span id="handling">STABLE</span>
+            </center>
+         </div>
+      </div>
+ 
+   <script src="./js.js"></script>
+</body>

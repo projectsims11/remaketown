@@ -1,58 +1,98 @@
-Config                            = {}
-Config.DrawDistance               = 100.0
-Config.MarkerColor                = { r = 120, g = 120, b = 240 }
-Config.EnablePlayerManagement     = false -- enables the actual car dealer job. You'll need esx_addonaccount, esx_billing and esx_society
-Config.EnableOwnedVehicles        = true
-Config.EnableSocietyOwnedVehicles = false -- use with EnablePlayerManagement disabled, or else it wont have any effects
-Config.ResellPercentage           = 0
+Config = {}
 
-Config.Locale                     = 'en'
+Config.TrunkCapacity = 18;
 
-Config.LicenseEnable = false -- require people to own drivers license when buying vehicles? Only applies if EnablePlayerManagement is disabled. Requires esx_license
+Config.TrunkVanCapacity = 50;
 
--- looks like this: 'LLL NNN'
--- The maximum plate length is 8 chars (including spaces & symbols), don't go past it!
+Config.Vehicles = {}
+Config.Boat = {}
+
+Config.PlatePrice = 15000
+
+Config.PlatePayItem = false
+
+Config.KeySystemByItem = true
+
 Config.PlateLetters  = 3
 Config.PlateNumbers  = 3
 Config.PlateUseSpace = true
+Config.PlayerCount	= 10
 
-Config.Zones = {
+Config.Vehicles["offroad150Kg"] = {
+{ label = "Blazer2", name = "Blazer2", price = 1000000 },
+-- { label = "Sandking2", name = "sandking2", price = 60000 },
+} 
 
-	ShopEntering = {
-		Pos   = { x = -33.777, y = -1102.021, z = 25.422 },
-		Size  = { x = 1.5, y = 1.5, z = 1.0 },
-		Type  = 1
-	},
-
-	ShopInside = {
-		Pos     = { x = -47.570, y = -1097.221, z = 25.422 },
-		Size    = { x = 1.5, y = 1.5, z = 1.0 },
-		Heading = -20.0,
-		Type    = -1
-	},
-
-	ShopOutside = {
-		Pos     = { x = -40.35, y = -1077.74, z = 26.66 },
-		Size    = { x = 1.5, y = 1.5, z = 1.0 },
-		Heading = 62.0,
-		Type    = -1
-	},
-
-	BossActions = {
-		Pos   = { x = -32.065, y = -1114.277, z = 25.422 },
-		Size  = { x = 1.5, y = 1.5, z = 1.0 },
-		Type  = -1
-	},
-
-	GiveBackVehicle = {
-		Pos   = { x = -18.227, y = -1078.558, z = 25.675 },
-		Size  = { x = 3.0, y = 3.0, z = 1.0 },
-		Type  = (Config.EnablePlayerManagement and 1 or -1)
-	},
-
-	ResellVehicle = {
-		Pos   = { x = -45.36, y = -1082.85, z = 25.71 },
-		Size  = { x = 3.0, y = 3.0, z = 1.0 },
-		Type  = -1
-	}
+  
+Config.Vehicles["sports"] = {
+  { label = "Tenf", name = "Tenf", price = 500000 },
+  { label = "Sultan", name = "Sultan", price = 500000 },
+  { label = "Reaper", name = "Reaper", price = 500000 },
+ 
 }
+
+Config.Vehicles["Cycles"] = {
+  { label = "bmx", name = "bmx", price = 5000 },
+  { label = "cruiser", name = "cruiser", price = 5000 },
+  { label = "fixter", name = "fixter", price = 5000 },
+  { label = "scorcher", name = "scorcher", price = 5000 },
+  { label = "tribike", name = "tribike", price = 5000 },
+  { label = "tribike2", name = "tribike2", price = 5000 },
+  { label = "tribike3", name = "tribike3", price = 5000 },
+}
+-- Config.Boat["Main"] = {
+--   { label = "tug", name = "tug", price = 1000 },
+-- } 
+ 
+ 
+
+
+ 
+
+Config.Shops = {
+  { 
+    name = "<font face='font4thai'>ร้านขายรถ</font>", 
+    Vehicles = Config.Vehicles,
+    type = "car", -- car  --- boat -- helicopter
+    job = false,
+    MoneyIsItem = false,  -- if u change false using 
+    blackMoney = false, 
+    testDrive = true,
+    showroom = false, 
+    editPlate = false,
+    coord = vector3(-33.9900016784668, -1101.93994140625, 26.019999313354495),
+    camCoord = vector3(403.01068115234, -962.32613525391, -97.504096984863),
+    camRot = vector3(215.5, 180.00, 12.00),
+    dist = 2.0,
+    carSpawnCoord = vector4(404.90100097656, -966.78149414063, -99.004096984863, 43.07537841797),
+    deliveryCoord = vector4(-48.906772613525, -1077.6535644531, 26.81402015686, 66.28524017334),
+  },
+
+  -- {  -- 1262.903, y=-3344.805,z = 5.908319
+  --   name = "Galery", 
+  --   Vehicles = Config.Boat, 
+	--   type = "boat", -- car  --- boat -- helicopter
+  --   job = false,
+	--   MoneyIsItem = false,  -- if u change false using 
+  --   blackMoney = false, 
+	--   testDrive = false,
+  --   showroom = false, 
+	--   editPlate = false,
+  --   coord = vector3(-3427.19, 967.16, 8.34), -- 1236.513, -3355.634, 3.029732, 175.81
+  --   camCoord = vector3(-3398.76, 1059.14, 15.45), -- มุมกล้อง
+  --   camRot = vector3(215.5, 180.00, 1.00),
+  --   dist = 2.0,
+  --   carSpawnCoord = vector4(-3396.87, 1038.69, 0.59 , 267.50),
+  --   deliveryCoord = vector4(-3441.7, 977.05, 3.06, 79.9),
+  -- },
+ 
+}
+
+
+Config.TestDrive = {
+	seconds = 15,
+	coords  = vector3(-966.5, -3355.7, 13.9),
+	range   = 400,
+}
+
+ 

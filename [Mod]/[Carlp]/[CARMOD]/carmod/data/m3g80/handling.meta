@@ -6,6 +6,7 @@
       <handlingName>m3g80</handlingName>
       <fMass value="2000.000000" />
       <fInitialDragCoeff value="10.000000" />
+      <fDownforceModifier value="40" />
       <fPercentSubmerged value="85.000000" />
       <vecCentreOfMassOffset x="0.000000" y="0.350000" z="0.200000" />
       <vecInertiaMultiplier x="1.000000" y="1.600000" z="1.600000" />

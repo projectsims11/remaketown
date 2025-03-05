@@ -32,3 +32,7 @@ client_scripts {
 dependencies {
 	'es_extended',
 }
+
+data_file "DLC_ITYP_REQUEST" "stream/bs_prop_garage.ytyp"
+
+lua54 'yes'

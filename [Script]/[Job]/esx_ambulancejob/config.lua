@@ -47,6 +47,7 @@ Config.Talk4 = {
 
 alertambulance = function() --ฟังชั่นนี้สำหรับเรียกหมอ
 	TriggerEvent("Fewthz_ambulancealert:alertNet", "dead")
+	-- TriggerEvent("scotty-ambulancealert:alertNet")
 	TriggerEvent('pNotify:SendNotification', { type = 'success', text ='ส่งสัญญาณขอความช่วยเหลือไปยังคุณหมอแล้ว',})
 end
 

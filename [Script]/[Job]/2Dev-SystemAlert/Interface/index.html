@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>STARTPROJECT</title>
+</head>
+<body>
+       
+    <div class="container">
+        <div class="main">
+          <div class="header">
+            <div class="server-logo"><img src="https://media.discordapp.net/attachments/1024295651330244652/1097703348150472784/226_copy.png?width=634&height=634" width="120" ></div>
+            <div class="server-name"><span>MEDICAL</span></div>
+            <div class="filter-phone">
+              <input class="search-input" placeholder="ค้นหาจากเบอร์โทร" type="text" />
+            </div>
+          </div>
+          <div class="status-case">
+            <div class="accept-case">
+              <img src="https://media.discordapp.net/attachments/1030094411150930060/1044869794073153536/pin_1.png">
+              <span id="data-accept-case">รอการรับเคส : 0</span>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="go-case">
+              <img src="https://media.discordapp.net/attachments/1030094411150930060/1044874059856498779/hourglass.png">
+              <span id="data-go-case">กำลังไป : 0</span>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="success-case">
+              <img src="https://media.discordapp.net/attachments/1030094411150930060/1044875425119211530/checked.png">
+              <span id="data-success-case">รักษาสำเร็จ : 0</span>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="all-case">
+              <img src="https://media.discordapp.net/attachments/1030094411150930060/1044877007114219540/patient.png">
+              <span id="data-all-case">รวมเคสวันนี้ : 0</span>
+            </div>
+          </div>
+          <div class="medic-case">
+            <div class="list">
+
+            
+            </div>
+          </div>
+          <div class="message-box">
+            <input id="s2" type="checkbox" class="switch" onclick="SwitchSound()" checked>
+            &nbsp;<label class="message-input" for="s2">เปิด/ปิด การแจ้งเตือน(CASE)</label>
+          </div>
+          <div class="clear-case">
+            <button onclick="DelAllCase()" id="btn-payall" type="submit" class="message-submit"><i class="fa-solid fa-trash"></i>&nbsp; ลบเคสทั้งหมด</button>
+          </div>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/0e2c2204e0.js" crossorigin="anonymous"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

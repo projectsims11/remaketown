@@ -41,10 +41,14 @@ function OpenMobileAmbulanceActionsMenu()
 		align    = 'right',
 		elements = {
 			{label = _U('ems_menu'), value = 'citizen_interaction'},
+			{ label = 'เคสหมอ', value = 'casemed'}
 			-- {label = "Squad",               value = 'squad'}
 		}
 	}, function(data, menu)
-		if data.current.value == 'citizen_interaction' then
+		if data.current.value == 'casemed' then
+			TriggerEvent('2Dev-SystemAlert:OpenUi')
+			ESX.UI.Menu.CloseAll()
+		elseif data.current.value == 'citizen_interaction' then
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'citizen_interaction', {
 				title    = _U('ems_menu_title'),
 				align    = 'right',

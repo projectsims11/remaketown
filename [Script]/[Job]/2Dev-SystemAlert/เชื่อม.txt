@@ -1,0 +1,7 @@
+{ label = 'เคสหมอ', value = 'casemed'}
+
+if data.current.value == 'casemed' then
+	TriggerEvent('2Dev-SystemAlert:OpenUi')
+	ESX.UI.Menu.CloseAll() 
+
+TriggerEvent("scotty-ambulancealert:alertNet")

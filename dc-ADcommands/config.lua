@@ -1,0 +1,9 @@
+Config = {}
+Config.ESX = true
+Config.BotToken = "จำเป็น"
+Config.WebHook = "Discord webhook Logs"
+Config.ChannelID = "จำเป็น"
+Config.ReplyUserName = "Bot"
+Config.AvatarURL = ""
+Config.Prefix = "!"
+Config.WaitEveryTick = 5000  -- ITS MS

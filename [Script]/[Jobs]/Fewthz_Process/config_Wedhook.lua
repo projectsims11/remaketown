@@ -1,0 +1,1 @@
+Config.DISCORD_URL = "<URL>"

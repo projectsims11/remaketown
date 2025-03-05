@@ -1,0 +1,35 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>dow_rebeln_dock.ymap</Item>
+    <Item>hei_po1_06.ymap</Item>
+    <Item>hei_po1_06_critical_0.ymap</Item>
+    <Item>hei_po1_06_long_0.ymap</Item>
+    <Item>hei_po1_06_long_1.ymap</Item>
+    <Item>hei_po1_06_strm_0.ymap</Item>
+    <Item>hei_po1_06_strm_9.ymap</Item>
+    <Item>vw_distlodlights_medium020.ymap</Item>
+    <Item>vw_lodlights_medium020.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>dow_rebeln1_base.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames>
+    <Item>dow_rebeln1_base.ydr</Item>
+    <Item>dow_rebeln1_floor.ydr</Item>
+    <Item>dow_rebeln1_light_cl.ydr</Item>
+    <Item>dow_rebeln1_logo.ydr</Item>
+    <Item>dow_rebeln1_safe.ydr</Item>
+    <Item>po1_06_tgrnd3_deca.ydr</Item>
+  </YdrFilenames>
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+</CodeWalkerProject>

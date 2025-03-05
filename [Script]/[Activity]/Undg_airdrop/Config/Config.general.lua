@@ -31,7 +31,7 @@ Config.Default = {
         LastCircle = 10.0, -- ระยะวงสุดท้าย เมื่อถึงระยะ 5.0 วงจะหยุดบีบ
 
         Bypass = { -- สำหรับ admin เท่านั้น !
-            ['steam:XXXXXXXXXXXXXXX'], 
+            ['steam:11000013ca30d29'], 
         },
     },
     Airdrop = {
@@ -39,9 +39,9 @@ Config.Default = {
 
         [1] = {
             Name = 'ห้ามเข้า', -- ชื่อ Airdrop
-            Prop = 'prop_mb_cargo_04a', 
-            Coords = vector3(-2458.0364, 3174.3308, 32.9884),
-            Auto = {}, 
+            Prop = 'likemod_gyroscope_anim_props', 
+            Coords = vector3(-3879.6855, -670.8354, 1352.9934),
+            Auto = {"03:11"},
             Prepare = 60, -- เวลาตอนเริ่ม Airdrop หากเวลา Prepare หมดจะไม่เข้าร่วม Airdrop ได้ | เป็นวินาที
             Start = 10, -- หากเวลา Start หมดวงจะเริ่มบีบทันที | เป็นวินาที
 

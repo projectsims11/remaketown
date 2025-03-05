@@ -1,0 +1,6 @@
+SERVER = {}
+SERVER.UTILS = {}
+
+SERVER.FRAMEWORK = {
+    BASE = 'esx', --[ @ BASE FRAME WORK.
+}

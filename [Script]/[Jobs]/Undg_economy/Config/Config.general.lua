@@ -25,19 +25,19 @@ Config.Default = {
         Category = {
             [1] = {
                 name = 'ทั้งหมด',
-                icon = '<ion-icon name="cube-outline"></ion-icon>',
+                icon = '<ion-icon name="briefcase"></ion-icon>',
                 itemList = 'all',
             },
             [2] = {
                 name = 'Mining',
-                icon = '<ion-icon name="key-outline"></ion-icon>',
+                icon = '<ion-icon name="hammer"></ion-icon>',
                 itemList = {
-                    'stone_b',
+                    'stone_a',
                 },
             },
             [3] = {
                 name = 'Fishing',
-                icon = '<ion-icon name="body-outline"></ion-icon>',
+                icon = '<ion-icon name="fish"></ion-icon>',
                 itemList = {
                     'shrimp',
                     'dolly_fish',
@@ -46,80 +46,118 @@ Config.Default = {
             },
             [4] = {
                 name = 'White job',
-                icon = '<ion-icon name="hammer-outline"></ion-icon>',
+                icon = '<ion-icon name="logo-usd"></ion-icon>',
                 itemList = {
-                    'carrot',
+                    'orange',
+                    'wheat',
                     'rice',
-                    'honey',
-                    'pumpkin',
-                    'strawberry',
+                    'cabbage',
+                    'chemical',
+                    'treasure',
                 },
             },
             [5] = {
                 name = 'Others',
                 icon = '<ion-icon name="fast-food-outline"></ion-icon>',
                 itemList = {
-                    'chamomile',
+                    'herb',
                     'wood',
 
                 },
+            },
+                [6] = {
+                    name = 'Process',
+                    icon = '<ion-icon name="basket"></ion-icon>',
+                    itemList = {
+                    'cabbage_process', 
+                    'chemi_process',
+                    'orange_process',
+                    'rice_process',
+                    'wheat_process',
+    
+                    },
             },
         },
 
         Listitem = {
             [1] = {
-                name = 'carrot',
-                randomPrice = {54,80}
+                name = 'wood',
+                randomPrice = {15,20}
             },
             [2] = {
-                name = 'honey',
-                randomPrice = {80,120}
+                name = 'orange',
+                randomPrice = {15,25}
             },
             [3] = {
-                name = 'pumpkin',
-                randomPrice = {54,80}
+                name = 'wheat',
+                randomPrice = {15,25}
             },
             [4] = {
                 name = 'rice',
-                randomPrice = {67,100}
+                randomPrice = {15,25}
             },
             [5] = {
-                name = 'wood',
-                randomPrice = {20,30}
+                name = 'cabbage',
+                randomPrice = {15,25}
             },
             [6] = {
-                name = 'strawberry',
-                randomPrice = {80,120}
+                name = 'chemical',
+                randomPrice = {15,25}
             },
             [7] = {
-                name = 'stone_b',
+                name = 'herb',
                 randomPrice = {1,3}
             },
             [8] = {
-                name = 'chamomile',
-                randomPrice = {20,30}
+                name = 'treasure',
+                randomPrice = {15,25}
             },
             [9] = {
-                name = 'shrimp',
-                randomPrice = {88,117}
+                name = 'dolly_fish',
+                randomPrice = {15,25}
             },
             [10] = {
-                name = 'dolly_fish',
-                randomPrice = {250,334}
+                name = 'squid',
+                randomPrice = {15,25}
             },
             [11] = {
-                name = 'squid',
-                randomPrice = {400,534}
+                name = 'shrimp',
+                randomPrice = {15,25}
             },
+            [12] = {
+            name = 'stone_a',
+             randomPrice = {15,25}      
+                
+            },
+            [13] = {
+             name = 'cabbage_process',
+            randomPrice = {50,70}             
+            },
+            [14] = {
+             name = 'chemi_process',
+             randomPrice = {50,70}        
+           },
+           [15] = {
+            name = 'orange_process',
+            randomPrice = {50,70}        
+           },
+           [16] = {
+            name = 'rice_process',
+            randomPrice = {50,70}        
+          },
+          [17] = {
+            name = 'wheat_process',
+            randomPrice = {50,70}        
+         },
         },
     },
 
     Zone = {
         [1] = {
-            Coords = vector3(-427.5072, 1116.7429, 326.7816),
+            Coords = vector3(288.4881, -1601.3280, 31.2658),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
-                Text = '[ECONOMY] MAIN',   -- Text ใน Blip
+                Text = "<font face='font4thai'>[ECO] ตลาดขายของ</font>",   -- Text ใน Blip
                 Sprite = 276,			-- id | รูปลักษณ์
                 Color = 73,				-- สี
                 Scale = 1.2,			-- ขนาด
@@ -144,18 +182,23 @@ Config.Default = {
             },
             Distance = 4.0,  -- ระยะในการเปิดเมนู
             Listitem = {
-                'rice',
-                'carrot',
-                'honey',
-                'pumpkin',
                 'wood',
-                'strawberry',
-                'stone_b',
-                'chamomile',
-                'shrimp',
+                'orange',
+                'wheat',
+                'rice',
+                'cabbage',
+                'chemical',
+                'herb',
+                'treasure',
                 'dolly_fish',
                 'squid',
-
+                'shrimp',
+                'stone_a',
+                'cabbage_process',
+                'chemi_process',       
+                'orange_process',                   
+                'rice_process',
+                'wheat_process',
             },
         },
 

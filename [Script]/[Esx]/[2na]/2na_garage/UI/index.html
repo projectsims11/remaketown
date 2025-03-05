@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/script.js"></script>
+    <title>2na_garage</title>
+  </head>
+  <body>
+    <div style="background-image: url(images/background.png)" class="container">
+      <div class="wrapper">
+        <div class="left-part">
+          <div class="brand">
+            <p class="text-glow">PREMIUM</p>
+            <p id="menu_type">GARAGE</p>
+          </div>
+          <div class="vehicle-details">
+            <div class="vehicle-details-title">
+              <div style="right: 15px; bottom: 20px" class="lines">
+                <div class="line line-reverse"></div>
+                <div class="line line-reverse"></div>
+                <div class="line line-reverse"></div>
+              </div>
+              <h1>SPECIFICATONS</h1>
+              <div style="left: 15px; top: 20px" class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+
+            <div class="short-info-container">
+              <div class="short-info">
+                <div class="short-info-logo">
+                  <img src="images/dollar-sign.png" />
+                </div>
+                <div class="short-info-text">
+                  <p style="font-size: 11px">WORTH OF THE VEHICLE</p>
+                  <p id="worth">&nbsp;</p>
+                </div>
+              </div>
+              <div class="short-info">
+                <div class="short-info-logo">
+                  <img src="images/licence-plate.png" />
+                </div>
+                <div class="short-info-text">
+                  <p>LICENSE PLATE</p>
+                  <p id="license_plate">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="short-info-container">
+              <div
+                style="justify-content: flex-start; margin-left: 5px"
+                class="short-info"
+              >
+                <div class="short-info-logo">
+                  <img src="images/park.png" />
+                </div>
+                <div class="short-info-text">
+                  <p>PARK STATUS</p>
+                  <p id="park_status">&nbsp;</p>
+                </div>
+              </div>
+              <div class="short-info">
+                <div class="short-info-logo">
+                  <img src="images/park.png" />
+                </div>
+                <div class="short-info-text">
+                  <p>PARK LOCATION</p>
+                  <p id="park_location">&nbsp;</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="long-info-container">
+              <div class="long-info">
+                <div class="long-info-logo">
+                  <img src="images/engine.png" />
+                </div>
+                <div class="long-info-other">
+                  <div class="long-info-text">ENGINE</div>
+                  <div id="engine_bar" class="long-info-bar">
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                  </div>
+                  <div class="long-info-text">0</div>
+                </div>
+              </div>
+
+              <div class="long-info">
+                <div class="long-info-logo">
+                  <img src="images/engine.png" />
+                </div>
+                <div class="long-info-other">
+                  <div class="long-info-text">ENGINE <br />HEALTH</div>
+                  <div id="engine-health_bar" class="long-info-bar">
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                  </div>
+                  <div class="long-info-text">0</div>
+                </div>
+              </div>
+
+              <div class="long-info">
+                <div class="long-info-logo">
+                  <img src="images/break.png" />
+                </div>
+                <div class="long-info-other">
+                  <div class="long-info-text">BREAK</div>
+                  <div id="break_bar" class="long-info-bar">
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                  </div>
+                  <div class="long-info-text">0</div>
+                </div>
+              </div>
+
+              <div class="long-info">
+                <div class="long-info-logo">
+                  <img src="images/suspension.png" />
+                </div>
+                <div class="long-info-other">
+                  <div style="font-size: 13px" class="long-info-text">
+                    SUSPENSION
+                  </div>
+                  <div id="suspension_bar" class="long-info-bar">
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                  </div>
+                  <div class="long-info-text">0</div>
+                </div>
+              </div>
+
+              <div class="long-info">
+                <div class="long-info-logo">
+                  <img src="images/speedometer.png" />
+                </div>
+                <div class="long-info-other">
+                  <div class="long-info-text">
+                    MAX <br />
+                    SPEED
+                  </div>
+                  <div id="max-speed_bar" class="long-info-bar">
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                  </div>
+                  <div class="long-info-text">0</div>
+                </div>
+              </div>
+
+              <div class="long-info">
+                <div class="long-info-logo">
+                  <img src="images/fuel.png" />
+                </div>
+                <div class="long-info-other">
+                  <div class="long-info-text">FUEL</div>
+                  <div id="fuel_bar" class="long-info-bar">
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                    <div class="long-info-small-bar"></div>
+                  </div>
+                  <div class="long-info-text">0</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vehicle-interactions-container">
+              <div id="spawn-vehicle_btn" class="vehicle-interaction-btn">
+                <div class="vehicle-interaction-btn-bg"></div>
+                <p>Spawn Vehicle</p>
+                <p class="vehicle-interaction-btn-cost" id="spawn-vehicle_cost">
+                  $250
+                </p>
+              </div>
+              <div id="repair-vehicle_btn" class="vehicle-interaction-btn">
+                <div class="vehicle-interaction-btn-bg"></div>
+                <p>Repair vehicle Engine</p>
+                <p class="vehicle-interaction-btn-cost" id="engine-repair_cost">
+                  500$
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-part">
+          <div class="upper">
+            <div id="quit_btn" class="quit">ESC</div>
+            <div class="search-vehicle-container">
+              <div class="search-vehicle">
+                <input
+                  type="text"
+                  id="search_vehicle"
+                  placeholder="Search any vehicle by its name"
+                />
+                <div class="search-vehicle-logo">
+                  <img src="images/search.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lower">
+            <div class="vehicles"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

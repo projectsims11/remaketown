@@ -308,6 +308,11 @@ function SpawnVehicle(vehicle, plate, damage, position , DepositKey)
 		z = position.z + 1
 	}, position.h, function(callback_vehicle)
 		print('ฝากรถ ทะเบียน ' ..plate .. ' ที่ ' ..DepositKey)
+		SetEntityVisible(vehicle, false, 0)
+            SetTimeout(10000, function()
+                SetEntityVisible(vehicle, true, 0)
+            end)
+		
 	-- exports.nc_discordlogs:Discord({
 	-- 	webhook = 'farmzonespawn',
 	-- 	title = 'ฝากรถ',

@@ -1,137 +1,82 @@
-.progress-container{
-    display:none;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+html {
+    overflow: scroll;
 }
-html{
-    overflow:scroll;
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
-::-webkit-scrollbar{
-    width:0pt;
+
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
-body{
-    background:transparent;
+
+.progress-container {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+    color: #fff;
+    font-family: 'Bungee Spice', cursive;
+    width: 22%;
+    position: fixed;
+    bottom: 5.2%;
+    left: 36.8%;   /*  ของเดิม 40% */
 }
-.progress-container{
-    z-index:5;
+
+.progress-labels {
+    width: 100%;
+    top: 20px;
+    height: 25px;
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap
 }
-.progress-container{
-    color:#fff;
+
+.progress-labels div {
+    font-size: 15px;
+    margin-top: -150px;
+    position: relative;
+    color: #ffffff;
+    z-index: 500;
+    text-shadow: 1px 1px black;
+    background: linear-gradient(270deg, rgba(162, 0, 255, 0) 0%, #9143B1 50%, rgba(0, 255, 213, 0) 100%);
+    width: 300px;
+    left: 46.5%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 2px 5px;
+    font-family: 'Bungee Spice', cursive;
 }
-.progress-container{
-    font-family:Arial;
+
+.progress-bar-container {
+    width: 300px;
+    height: 300px;
+    background-image: url(https://i.ibb.co/FqYPnvLJ/BB.png);
+    background-color: rgba(0, 0, 0, 0);
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* border-radius: 10px; */
+    margin-left: 22%;
+    margin-top: -206px;
+    position: absolute;
+    overflow: hidden;
 }
-::-webkit-scrollbar{
-    background:transparent;
-}
-.progress-container{
-    width:15%;
-}
-.bg,.progress-container{
-    position:fixed;
-}
-body{
-    margin-left:0;
-}
-.progress-container{
-    bottom:10%;
-}
-.progress-container,.bg{
-    left:50%;
-}
-body{
-    margin-bottom:0;
-}
-.progress-container,.bg{
-    transform:translateX(-50%);
-}
-.bg{
-    z-index:1;
-}
-.bg{
-    height:150px;
-}
-.bg{
-    width:18.75pc;
-}
-body{
-    margin-right:0;
-}
-body{
-    margin-top:0;
-}
-body{
-    padding-left:0;
-}
-.bg{
-    bottom:-1.5625in;
-}
-.bg{
-    background-image:url("https://cdn.discordapp.com/attachments/905956681417105438/1087127164933128262/-01.png");
-}
-.bg{
-    background-size:100%;
-}
-.bg{
-    background-repeat:no-repeat;
-}
-body{
-    padding-bottom:0;
-}
-[class~=progress-bar-container]{
-    bottom:-.541666667in;
-}
-body{
-    padding-right:0;
-}
-[class~=progress-bar-container]{
-    left:-10px;
-}
-[class~=progress-bar-container]{
-    width:90%;
-}
-body{
-    padding-top:0;
-}
-[class~=progress-bar-container]{
-    height:.9375pc;
-}
-[class~=progress-bar-container]{
-    background-color:#000;
-}
-[class~=progress-bar-container]{
-    border-radius:1.25pc;
-}
-[class~=progress-bar-container]{
-    text-align:left;
-}
-[class~=progress-bar-container],body{
-    overflow:hidden;
-}
-[class~=progress-bar-container]{
-    margin-left:10%;
-}
-[class~=progress-bar-container]{
-    position:absolute;
-}
-body,.progress-bar{
-    width:100%;
-}
-.progress-bar{
-    background: linear-gradient(45deg,rgb(0, 27, 190),rgb(0, 27, 190),rgb(0, 27, 190));
-}
-body,.progress-bar{
-    height:100%;
-}
-.progress-bar{
-    transition:width .3s;
-}
-.progress-bar{
-    transition-timing-function:ease-out;
-}
-@keyframes animate-stripes{
-    0%{
-        background-position:0 0;
-    }
-    100%{
-        background-position:60px 0;
-    }
+
+.progress-bar {
+    width: 300px;
+    height: 300px;
+    background-image: url(https://i.ibb.co/XxHw2qyP/CL.png);
+    background-color: rgba(0, 0, 0, 0);
+    background-size: auto;
+    background-repeat: no-repeat;
+    transition: width 0.3s;
+    transition-timing-function: ease-out;
 }

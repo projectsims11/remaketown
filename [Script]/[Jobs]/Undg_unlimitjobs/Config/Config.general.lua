@@ -41,10 +41,10 @@ Config.Default = {
 
             Progress = nil, -- เวลาในการทำงาน 4 = 4 วิ
             Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
-            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
+            -- AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
 
             MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
-                -- ['work_x2'] = 2,
+                ['work_x2'] = 2,
             },
 
             Animation = { 
@@ -66,11 +66,11 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'stone_a', count = {1,1}},
+                { name = 'stone_a', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 -- { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
@@ -97,10 +97,10 @@ Config.Default = {
 
             Progress = nil, -- เวลาในการทำงาน 4 = 4 วิ
             Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
-            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
+            -- AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
 
             MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
-                -- ['work_x2'] = 2,
+                ['work_x2'] = 2,
             },
 
             Animation = { 
@@ -126,18 +126,18 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
         ['wood'] = {
-            Coords = vector3(-1633.8335, 4737.3618, 53.2360),
+            Coords = vector3(-1820.3399658203127, 2635.25, 2.85999989509582),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[CRAFT] WOOD',   -- Text ใน Bwawlip
                 Sprite = 89,			-- id | รูปลักษณ์
                 Color = 0,				-- สี
-                Scale = 1.2,			-- ขนาด
+                Scale = 1.2,			-- ขนาด  
             },
             ShowMarkerArea = {        
                 Show = false,         -- เปิดวงเลี้ยงสัตว์หรือไม่ ถ้าหากเปิดจะเพิ่มการทำงานของสคริป 0.02
@@ -149,13 +149,12 @@ Config.Default = {
                 Pickup = 4.20, -- ระยะในการเก็บตอนอยู่ใกล้ Prop งาน
                 Inzone = 25.0, -- เมื่ออยู่ในระยะนี้จะขึ้น Ui 
             },
-
             Progress = nil, -- เวลาในการทำงาน 4 = 4 วิ
             Equipment = false, -- เช็คบัตรทำงานไหม หากใช้ให้ใส่แบบนี้ Equipment = 'stone_b',
-            AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
+            -- AutoFarm = 'jobcard', -- บัตรออโต้ฟาร์ม
 
             MultiplyItem = { -- ไอเทมคุณ 2 ใส่ได้หลายอัน
-                -- ['work_x2'] = 2,
+                ['work_x2'] = 2,
             },
 
             Animation = { 
@@ -177,16 +176,16 @@ Config.Default = {
             SpawnRadius = 12.0, -- ระยะรัศมีในการ spawn prop จากจุดกึ่งกลาง
 
             Items = { -- ใส่ได้ 1 เท่านั้นสำหรับไอเทมหลัก
-                { name = 'wood', count = {1,1}},
+                { name = 'wood', count = {1,2}},
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
         ['orange'] = {
-            Coords = vector3(337.0147,3571.4290,33.3405-1), 
+            Coords = vector3(-678.3200073242188, 2592.699951171875, 46.20999908447265), 
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] ORANGE',   -- Text ใน Blip
@@ -236,13 +235,13 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
         ['wheat'] = {
-            Coords = vector3(570.5230, 6486.4790, 30.6890),
+            Coords = vector3(-393.8399963378906, 4345.4599609375, 55.7599983215332),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] WHEAT',   -- Text ใน Blip
@@ -291,13 +290,13 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
         ['rice'] = {
-            Coords = vector3(-693.9963, 6076.7842, 2.6592),
+            Coords = vector3(-1639.5899658203125, 4585.759765625, 43.25),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] RICE',   -- Text ใน Blip
@@ -347,13 +346,13 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
         ['cabbage'] = {
-            Coords = vector3(-3105.2300, 3241.9221, 2.0250),
+            Coords = vector3(302.2000122070313, 4311.9599609375, 46.93000030517578),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] CABBAGE',   -- Text ใน Blip
@@ -403,13 +402,13 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
         },
         ['chemical'] = {
-            Coords = vector3(1873.2518, 4798.8008, 44.4854),
+            Coords = vector3(-65.62000274658203, 1901.3900146484375, 196.07000732421875),
             Blips = {
                 enable = true,			-- เปิด true / ปิด false | แสดง Blips บนแผนที่
                 Text = '[FARM] CHEMICAL',   -- Text ใน Blip
@@ -459,7 +458,7 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
@@ -515,7 +514,7 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },
@@ -570,7 +569,7 @@ Config.Default = {
             },
 
             Bonus = { -- โบนัสไอเทมใส่ได้เรื่อยๆ
-                { name = 'exp', count = {1,2}, percent = 75, x2 = false},
+                { name = 'exp', count = {1,2}, percent = 50, x2 = true},
                 { name = 'oc_coin', count = {1,2}, percent = 5, x2 = false},
                 -- { name = 'gacha_farm', count = {1,2}, percent = 5, x2 = false},
             },

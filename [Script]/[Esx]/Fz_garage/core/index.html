@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Mitr&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+<body>
+  
+   
+    <div class="box-body">
+        <div class="header-top">
+            <div class="text-header">
+                <i class='bx bxs-car-garage' ></i>&nbsp;BASICTOWN GARAGE
+            </div>
+            <ion-icon name="ellipsis-horizontal" class="ic-header"></ion-icon>
+        </div>
+        <div class="container">
+            <div class="box-itemlist">
+                <div class="itemlist">
+                    <div class="logo-car">
+                        <ion-icon name="car-sport" class="ic-car"></ion-icon>
+                            
+                    </div>
+                    <div class="name-car">
+                        BRI AAAAA8888
+                    </div>
+                    <div class="engin">
+                        <div class="text-engin">
+                            <i class='bx bxs-car-mechanic' ></i>&nbsp;ENGIN
+                        </div>
+                        <div class="box-percent-engin">
+                            <div class="load-engin" id="loadengin"></div>
+                        </div>
+                        <div class="percent-engin">
+                            100%
+                        </div>
+                    </div>
+                    <div class="fuel">
+                        <div class="text-fuel">
+                            <ion-icon name="water"></ion-icon>&nbsp;FUEL
+                        </div>
+                        <div class="box-percent-fuel">
+                            <div class="load-fuel" id="loadfuel"></div>
+                        </div>
+                        <div class="percent-fuel">
+                            150%
+                        </div>
+                    </div>
+                    <div class="confrim">
+                        เบิกรถ&nbsp;<ion-icon name="arrow-down-circle"></ion-icon>
+                    </div>
+                </div>
+                
+           
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    $(document).keyup(function (e) {
+        if (e.key === "Escape") {
+            $(".box-itemlist").empty();
+            $(".box-body").fadeOut(100);
+            $.post('http://Fz_garage/focusOff');
+        }
+    });
+    </script>
+
+<script type="text/javascript">
+    const audio1 = new Audio();
+    audio1.src = "click.mp3";
+    audio1.volume = 1.0;
+
+    const audio = new Audio();
+    audio.src = "click1.mp3";
+    audio.volume = 1.0;
+</script>
+
+</body>
+</html>

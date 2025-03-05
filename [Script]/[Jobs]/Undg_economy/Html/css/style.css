@@ -131,7 +131,7 @@ body {
 }
 
 ion-icon {
-    font-size: 1.4vh;
+    font-size: 1.1vh;
     position: relative;
     left: -0.6vh;
     top: 0.3vh;
@@ -210,7 +210,7 @@ ion-icon {
     position: relative;
     width: 11vh;
     font-variant: all-small-caps;
-    font-size: 1.6vh;
+    font-size: 1.8vh;
     text-align: center;
 }
 
